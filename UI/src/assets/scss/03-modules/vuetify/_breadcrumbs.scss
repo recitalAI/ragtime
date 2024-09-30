@@ -1,0 +1,38 @@
+.v-breadcrumbs {
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: -4px;
+  position: relative;
+  z-index: 5;
+
+  li {
+    margin-top: 4px;
+    margin-left: 4px;
+    padding: 0;
+  }
+
+  &__item--disabled {
+    color: grey !important;
+  }
+
+  a,
+  div {
+    font-size: rem(12);
+    line-height: rem(16);
+  }
+
+  a {
+    transition: color 0.3s ease-in-out;
+    color: black !important;
+    text-decoration: underline !important;
+
+    &:hover {
+      color: rgb(var(--v-theme-primary-lighten1));
+    }
+  }
+
+  .v-icon {
+    font-size: rem(8);
+  }
+}
