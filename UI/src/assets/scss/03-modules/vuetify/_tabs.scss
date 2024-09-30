@@ -1,0 +1,31 @@
+.v-tabs {
+  &-bar {
+    background-color: transparent !important;
+    height: 30px;
+    margin-bottom: -6px;
+  }
+
+  .v-tab {
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: rem(24);
+    letter-spacing: initial;
+    color: rgb(var(--v-theme-grey-darken2));
+    padding: 0 24px;
+    text-transform: none;
+    margin-left: 0 !important;
+    border-bottom: 1px solid rgb(var(--v-theme-grey-darken2));
+
+    &::before {
+      display: none;
+    }
+
+    .v-ripple__container {
+      display: none;
+    }
+  }
+}
+
+.v-slide-group-item--active {
+  border-bottom: 2px solid rgb(var(--v-theme-primary)) !important;
+}
