@@ -6,14 +6,21 @@ services:
     build: .
     ports:
       - 8887:5000
-    command: gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
+    command: >
+      sh -c "
+        if [ ! -f .env ]; then
+          echo '# Default environment variables' > .env;
+          echo 'DEBUG=False' >> .env;
+          echo 'SECRET_KEY=default_secret_key_change_me' >> .env;
+        fi &&
+        gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
+      "
     volumes:
       - ./UI/backend:/app
-      - ./.env:/app/.env
       - ./logs:/app/logs
       - ./classes.py:/app/app/services/classes.py
     networks:
-       -  MyNetwork
+       - MyNetwork
 
   frontend:
     container_name: frontend
@@ -23,10 +30,16 @@ services:
     volumes:
       - ./UI:/app
       - /app/node_modules
-      - ./.env:/app/.env
     networks:
       - MyNetwork
-    command: npm run serve
+    command: >
+      sh -c "
+        if [ ! -f .env ]; then
+          echo '# Default environment variables' > .env;
+          echo 'VUE_APP_API_URL=http://localhost:8887' >> .env;
+        fi &&
+        npm run serve
+      "
 
 networks:
    MyNetwork:
