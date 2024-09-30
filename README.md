@@ -14,7 +14,7 @@ This README provides instructions for setting up and customizing the Ragtime pro
 1. Clone the repository:
 
    ```
-   git clone [repository_url] # URL will be added when the repo is on GitHub
+   git clone https://github.com/recitalAI/ragtime.git
    ```
 
 2. Navigate to the project directory:
