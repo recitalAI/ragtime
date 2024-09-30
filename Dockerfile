@@ -22,3 +22,8 @@ COPY /UI/backend /app
 RUN rm -rf \
   /tmp/requirements.txt \
   /tmp/package
+
+# Create a default .env file if it doesn't exist
+RUN touch .env && \
+  echo "# Default environment variables" >> .env && \
+  echo "DEBUG=False" >> .env
