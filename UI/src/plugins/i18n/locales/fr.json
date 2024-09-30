@@ -1,0 +1,36 @@
+{
+  "name": "Nom",
+  "date": "Date",
+  "questions": "Questions",
+  "facts": "Facts",
+  "chunks": "Chunks",
+  "answers": "Réponses",
+  "models": "Modèles",
+  "not_found": "Aucun ensemble de validation trouvé",
+  "no_results": "Aucun résultat",
+  "delete": "Supprimer",
+  "login": {
+    "lostPassword": {
+      "reset": "Réinitialiser le mot de passe",
+      "reset_and_email": "Réinitialiser et envoyer e-mail"
+    },
+    "lost_password": "Mot de passe perdu",
+    "we_will_email": "Nous vous enverrons par e-mail les instructions pour récupérer votre mot de passe.",
+    "expired_password": "Votre mot de passe a expiré.",
+    "reset_password": "Réinitialiser",
+    "back": "Retour à la page de connexion",
+    "need_help": "As-tu besoin d'aide? Nous sommes à un clic :",
+    "email_team": "Envoyez un e-mail à notre équipe d'assistance",
+    "log_in": "Connexion",
+    "forgot_password": "Mot de passe oublié ?"
+  },
+  "forms": {
+    "password": "Mot de passe",
+    "email": "E-mail",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "email_required": "L'e-mail est requis",
+    "email_must_valid": "L'e-mail doit être valide",
+    "password_required": "Le mot de passe est requis"
+  }
+}
