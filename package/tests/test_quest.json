@@ -1,0 +1,36 @@
+[
+    {
+        "question": {
+            "text": "Qui a inventé le télégraphe électrique ?  A) Samuel Morse B) Charles Wheatstone C) William Fothergill Cooke",
+            "meta": {
+                "transco": {
+                    "A": "Américain",
+                    "B": "Anglais",
+                    "C": "Anglais"
+                }
+            }
+        }
+    },
+    {
+        "question": {
+            "text": "Qui a inventé la photographie ?  A) Louis Daguerre B) William Henry Fox Talbot",
+            "meta": {
+                "transco": {
+                    "A": "Français",
+                    "B": "Anglais"
+                }
+            }
+        }
+    },
+    {
+        "question": {
+            "text": "Qui a inventé le moteur à vapeur ?  A) Thomas Newcomen B) Denis Papin",
+            "meta": {
+                "transco": {
+                    "A": "Anglais",
+                    "B": "Français"
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  ragtime:
+    container_name: ragtime
+    build: .
+    ports:
+      - 8887:5000
+    command: gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
+    volumes:
+      - ./UI/backend:/app
+      - ./.env:/app/.env
+      - ./logs:/app/logs
+      - ./classes.py:/app/app/services/classes.py
+    networks:
+       -  MyNetwork
+
+  frontend:
+    container_name: frontend
+    build: ./UI/
+    ports:
+      - 8080:8080
+    volumes:
+      - ./UI:/app
+      - /app/node_modules
+      - ./.env:/app/.env
+    networks:
+      - MyNetwork
+    command: npm run serve
+
+networks:
+   MyNetwork:
+     name: mynetwork
