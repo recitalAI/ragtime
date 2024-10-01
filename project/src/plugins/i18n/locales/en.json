@@ -1,0 +1,44 @@
+{
+  "name": "Name",
+  "date": "Date",
+  "questions": "Questions",
+  "facts": "Facts",
+  "chunks": "Chunks",
+  "answers": "Answers",
+  "models": "Models",
+  "no_results": "No results",
+  "delete": "Delete",
+  "validation_sets": {
+    "title": "Validation sets",
+    "not_found": "No validation sets found"
+  },
+  "datatable": {
+    "footer": {
+      "per_page": "Items per page"
+    }
+  },
+  "login": {
+    "lostPassword": {
+      "reset": "Reset password",
+      "reset_and_email": "Reset and send email"
+    },
+    "lost_password": "Lost password",
+    "we_will_email": "We will email you instructions to recover your password.",
+    "expired_password": "Your password has expired.",
+    "reset_password": "Reset password",
+    "back": "Back to login",
+    "need_help": "Do you need help? We are a click away:",
+    "email_team": "Email our support team",
+    "forgot_password": "Forgot your password?",
+    "log_in": "Log in"
+  },
+  "forms": {
+    "password": "Password",
+    "email": "Email",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "email_required": "Email is required",
+    "email_must_valid": "Email must be valid",
+    "password_required": "Password is required"
+  }
+}
