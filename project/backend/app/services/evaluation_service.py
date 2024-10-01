@@ -1,6 +1,6 @@
 from ragtime.expe import Expe, StartFrom, Eval, Answer
 from ragtime.generators import EvalGenerator, EvalGeneratorChunks
-from .classes import EvalPrompterAlbertV2, EvalPrompterChunksV2
+from ragtime.prompters import EvalPrompterFRV2, EvalPrompterChunks
 from ragtime.llms import LLM, LiteLLM
 import os
 import logging
@@ -15,8 +15,8 @@ class EvaluationService:
         return cls._instance
 
     def __init__(self):
-        self.answer_prompter = EvalPrompterAlbertV2()
-        self.chunk_prompter = EvalPrompterChunksV2()
+        self.answer_prompter = EvalPrompterFRV2()
+        self.chunk_prompter = EvalPrompterChunks()
         self.model = None
 
     def set_model(self, model_name: str):
