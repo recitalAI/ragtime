@@ -1,4 +1,4 @@
-# Ragtime Project
+# Ragtime
 
 This README provides instructions for setting up and customizing the Ragtime project, a framework for experimenting with and evaluating language models and retrieval systems.
 
@@ -14,7 +14,7 @@ This README provides instructions for setting up and customizing the Ragtime pro
 1. Clone the repository:
 
    ```
-   git clone https://github.com/recitalAI/ragtime.git
+   git clone [repository_url] # URL will be added when the repo is on GitHub
    ```
 
 2. Navigate to the project directory:
