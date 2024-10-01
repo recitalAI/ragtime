@@ -1,0 +1,49 @@
+@mixin desktop {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: 1264px) {
+    @content;
+  }
+}
+
+@mixin desktopDown {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin activeItem {
+  background-image: url('/marker-center.svg');
+  background-size: cover;
+  position: relative;
+  color: white;
+  z-index: 2;
+  padding: 4px;
+  overflow: visible;
+
+  &::before,
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    width: rem(30);
+  }
+
+  &::before {
+    left: -#{rem(15)};
+    top: 0;
+    background-image: url('/marker-left.svg');
+  }
+
+  &::after {
+    right: -#{rem(15)};
+    top: 0;
+    background-image: url('/marker-right.svg');
+  }
+}
