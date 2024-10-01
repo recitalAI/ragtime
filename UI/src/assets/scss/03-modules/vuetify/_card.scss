@@ -1,0 +1,60 @@
+.v-stepper {
+  background-color: white;
+  border-radius: rem(5);
+  box-shadow: 0 2px 4px 3px rgba(#000, 0.03) !important;
+  color: rgb(var(--v-theme-dark));
+  padding: 28px;
+}
+
+.v-stepper__step__step .v-icon.v-icon {
+  font-size: 0.8rem;
+}
+
+.v-card {
+  background-color: white;
+  border-radius: rem(5);
+  box-shadow: 0 2px 4px 3px rgba(#000, 0.03) !important;
+  color: rgb(var(--v-theme-dark));
+  padding: 28px !important;
+
+  &--little {
+    padding: 24px !important;
+
+    .v-card__title {
+      padding-bottom: 24px !important;
+    }
+  }
+
+  &__actions .v-btn {
+    padding: 0 16px;
+  }
+
+  &__title {
+    padding: 0 !important;
+    padding-bottom: 28px !important;
+    border-radius: 0 !important;
+    word-break: normal;
+  }
+
+  &__text {
+    padding: 0 !important;
+    color: rgb(var(--v-theme-dark)) !important;
+  }
+
+  &__actions {
+    padding: 0;
+    display: block;
+
+    .v-btn + .v-btn {
+      margin-left: 0 !important;
+
+      @include desktop {
+        margin-left: 8px !important;
+      }
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
+}
