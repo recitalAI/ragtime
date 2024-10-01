@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   ragtime:
     container_name: ragtime
@@ -8,39 +6,32 @@ services:
       - 8887:5000
     command: >
       sh -c "
-        if [ ! -f .env ]; then
-          echo '# Default environment variables' > .env;
-          echo 'DEBUG=False' >> .env;
-          echo 'SECRET_KEY=default_secret_key_change_me' >> .env;
+        mkdir -p /app &&
+        if [ ! -f /app/.env ]; then
+          echo '# Default environment variables' > /app/.env;
         fi &&
         gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
-      "
+      "    
     volumes:
-      - ./UI/backend:/app
+      - ./project/backend:/app
       - ./logs:/app/logs
       - ./classes.py:/app/app/services/classes.py
     networks:
-       - MyNetwork
+      - MyNetwork
 
   frontend:
     container_name: frontend
-    build: ./UI/
+    build: ./project/
     ports:
       - 8080:8080
     volumes:
-      - ./UI:/app
+      - ./project:/app
       - /app/node_modules
+      - ./.env:/app/.env
     networks:
       - MyNetwork
-    command: >
-      sh -c "
-        if [ ! -f .env ]; then
-          echo '# Default environment variables' > .env;
-          echo 'VUE_APP_API_URL=http://localhost:8887' >> .env;
-        fi &&
-        npm run serve
-      "
+    command: npm run serve
 
 networks:
-   MyNetwork:
-     name: mynetwork
+  MyNetwork:
+    name: mynetwork
