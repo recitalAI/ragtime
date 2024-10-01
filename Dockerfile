@@ -11,13 +11,13 @@ ENV PYTHONUNBUFFERED 1
 # install dependencies
 RUN pip install --upgrade pip
 
-COPY ./project/requirements.txt /tmp/requirements.txt
+COPY ./UI/requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 COPY ./package /tmp/package/
 RUN pip install /tmp/package
 
-COPY /project/backend /app
+COPY /UI/backend /app
 
 RUN rm -rf \
   /tmp/requirements.txt \

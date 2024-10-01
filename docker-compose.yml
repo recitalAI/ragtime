@@ -13,7 +13,7 @@ services:
         gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
       "    
     volumes:
-      - ./project/backend:/app
+      - ./UI/backend:/app
       - ./logs:/app/logs
       - ./classes.py:/app/app/services/classes.py
     networks:
@@ -21,13 +21,12 @@ services:
 
   frontend:
     container_name: frontend
-    build: ./project/
+    build: ./UI/
     ports:
       - 8080:8080
     volumes:
-      - ./project:/app
+      - ./UI:/app
       - /app/node_modules
-      - ./.env:/app/.env
     networks:
       - MyNetwork
     command: npm run serve
