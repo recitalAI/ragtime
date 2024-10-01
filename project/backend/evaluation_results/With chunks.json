@@ -1,0 +1,958 @@
+{
+  "meta": {
+    "validation_set": "Test 4",
+    "retriever_name": "Albert_LLM (built-in retriever)"
+  },
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "meta": {},
+        "text": "Qu'est-ce que l'estimateur de Monte-Carlo ?"
+      },
+      "facts": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. L'estimateur de Monte-Carlo est défini par la formule ˆθn:=1/n∑n i=1Zi."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "hash": "101d8964aeef94bc",
+              "sid": "F16832",
+              "title": "Comment connaître le prix d'un logement ou d'un terrain ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F16832",
+              "introduction": "Si vous souhaitez estimer votre bien immobilier ou connaître le prix au mètre carré de votre logement ou de votre terrain, vous pouvez consulter des bases de données de l'administration fiscale sur internet ou un professionnel de l'immobilier.",
+              "context": "",
+              "theme": "Logement, Logement",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [
+                {
+                  "question": "Comment obtenir des renseignements immobiliers ?",
+                  "sid": "F17759",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F17759"
+                }
+              ],
+              "web_services": [
+                {
+                  "title": "Consulter les dernières transactions immobilières (demande de valeurs foncières)",
+                  "institution": "Direction générale des finances publiques",
+                  "url": "https://app.dvf.etalab.gouv.fr/",
+                  "type": "Simulateur"
+                },
+                {
+                  "title": "Patrim : rechercher des transactions immobilières pour aider à estimer la valeur d'un bien immobilier",
+                  "institution": "Ministère chargé des finances",
+                  "url": "https://cfspart.impots.gouv.fr/LoginAccess",
+                  "type": "Simulateur"
+                }
+              ]
+            },
+            "text": "Patrim: Pour avoir une estimation de votre construction, vous pouvez utiliser l'outil Patrim, qui est un simulateur des impôts. Ces données sont uniquement accessibles depuis votre compte sur www.impots.gouv.fr. L'estimation peut être utile pour déclarer l'impôt sur la fortune immobilière (Ifi), une succession, une donation, un contrôle fiscal, une expropriation ou pour calculer vos aides au logement. L'accès à cette base de données est gratuite. (Attention: Patrim ne couvre pas encore les ventes de biens situés dans les départements du Haut-Rhin, du Bas-Rhin, de la Moselle et Mayotte.)\nCas Chez un professionnel: Pour avoir une estimation de votre bien immobilier, vous pouvez vous rapprocher de la chambre des notaires ou d'une agence immobilière."
+          },
+          {
+            "meta": {
+              "hash": "99d49259c03012d3",
+              "sid": "F2152",
+              "title": "Accident de la route : indemnisation des dégâts matériels de la voiture",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2152",
+              "introduction": "Si votre voiture a subi des dégâts matériels lors d'un accident de la circulation, vous pouvez être indemnisé par l'assurance, mais pas systématiquement. L'indemnisation des dégâts matériels dépend des garanties que vous souscrites dans votre contrat, des circonstances de l'accident et de votre niveau de responsabilité. Avant l'indemnisation, l'assureur va évaluer les dommages et peut demander une expertise des véhicules accidentés.",
+              "context": "Comment se fait l'évaluation des dommages ?",
+              "theme": "Argent - Impôts - Consommation, Argent - Impôts - Consommation",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [
+                {
+                  "question": "Est-on assuré quand on utilise son véhicule personnel pour le travail ?",
+                  "sid": "F2635",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2635"
+                },
+                {
+                  "question": "Épave : que devient la voiture gravement accidentée ?",
+                  "sid": "F2682",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2682"
+                },
+                {
+                  "question": "Accident : comment sont indemnisés les dommages matériels autres que les dégâts à la voiture ?",
+                  "sid": "F31609",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F31609"
+                },
+                {
+                  "question": "Franchise d'assurance auto : comment ça marche ?",
+                  "sid": "F2706",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2706"
+                },
+                {
+                  "question": "Assurance auto : comment se déroule l'expertise ?",
+                  "sid": "F31268",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F31268"
+                },
+                {
+                  "question": "Êtes-vous couvert par votre assurance si vous prêtez votre voiture à quelqu'un ?",
+                  "sid": "F2632",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2632"
+                }
+              ],
+              "web_services": [
+                {
+                  "title": "Contester l'offre d'indemnisation de son assureur pour son véhicule accidenté",
+                  "institution": "Institut national de la consommation (INC)",
+                  "url": "https://www.inc-conso.fr/content/vous-contestez-loffre-dindemnisation-de-votre-assureur-pour-votre-vehicule-accidente",
+                  "type": "Modèle de document"
+                }
+              ]
+            },
+            "text": "Si vous avez un accident avec votre voiture, la compagnie d'assurance chargée de votre indemnisation doit vous proposer de réaliser une expertise. L'expert mandaté par l'assurance est chargé des missions suivantes :\n- Identifier la voiture, constater les dommages et contrôler leur vraisemblance avec les circonstances déclarées de l'accident\n- Déterminer le ou les point(s) de choc\n- Établir les possibilités de réparation (techniquement et économiquement)\n- Valider le prix des réparations facturé par le garagiste\n- Définir un éventuel taux de vétusté (sur les pneus ou le radiateur par exemple)\n- Calculer la valeur de remplacement à dire d'expert ( Vrade ) du véhicule\n- Indiquer si le véhicule peut encore circuler dans les conditions normales de sécurité.\nLe rapport d'expertise, habituellement établi sous 8 à 12 jours calendaires, vous sera adressé, de même qu'à l'assureur. Si vous souhaitez contester les conclusions de l'expert, vous pouvez commander une contre-expertise, mais vous devrez régler les honoraires de cet expert."
+          },
+          {
+            "meta": {
+              "hash": "a7350c4956f47b17",
+              "sid": "F31268",
+              "title": "Assurance auto : comment se déroule l'expertise ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F31268",
+              "introduction": "La loi peut imposer à le recours à l'expertise dans certains cas. En dehors de ces cas, c'est l'assureur qui décide, suite à une déclaration de sinistre, si une expertise est nécessaire ou non. Quel est le rôle de l'expert ? Est-il possible de contester ses conclusions  ? Nous vous présentons les règles applicables.",
+              "context": "Quelles sont les qualifications de l'expert en assurance auto ?",
+              "theme": "Argent - Impôts - Consommation",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "L'expert d’assurance auto est une personne qui a des connaissances techniques approfondies sur les véhicules, et qui maîtrise les règles juridiques applicables aux contrats d’assurance et aux mécanismes d’indemnisation. L'expert doit posséder un titre professionnel et être inscrit sur la liste nationale des experts en automobile."
+          },
+          {
+            "meta": {
+              "hash": "92ecbe49afc516a9",
+              "sid": "F34473",
+              "title": "Qu'est-ce que l'indemnité de compensation de la hausse CSG dans la fonction publique ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F34473",
+              "introduction": "En 2018, une indemnité compensatrice a été attribuée aux agents publics en compensation de la hausse de la CSG . Le montant de cette indemnité varie selon que vous avez été nommé ou recruté avant 2018 ou à partir de 2018.",
+              "context": "",
+              "theme": "Travail - Formation",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "En 2018, une indemnité compensatrice a été attribuée aux agents publics en compensation de la hausse de la CSG . Le montant de cette indemnité varie selon que vous avez été nommé ou recruté avant 2018 ou à partir de 2018."
+          },
+          {
+            "meta": {
+              "hash": "a73b5fb21edc53da",
+              "sid": "F2050",
+              "title": "Comment sont classés les hôtels de tourisme ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2050",
+              "introduction": "Un hôtel peut faire l'objet d'un classement (de 1 à 5 étoiles, y compris la \"distinction Palace\") ou bénéficier d'un label (Tourisme & Handicap, Écolabel Européen). Le classement ou le label est demandé par l'hôtelier.",
+              "context": "",
+              "theme": "Loisirs - Sports - Culture, Loisirs - Sports - Culture, Loisirs - Sports - Culture",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [
+                {
+                  "question": "Un hôtel ou un loueur de chambres d'hôtes doit-il donner une facture au client ?",
+                  "sid": "F18960",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F18960"
+                },
+                {
+                  "question": "Qu'est-ce que la taxe de séjour ?",
+                  "sid": "F2048",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2048"
+                }
+              ],
+              "web_services": [
+                {
+                  "title": "Rechercher un hébergement touristique classé",
+                  "institution": "Atout France - Agence de développement touristique de la France",
+                  "url": "https://www.classement.atout-france.fr/hebergements-classes",
+                  "type": "Téléservice"
+                },
+                {
+                  "title": "Rechercher un établissement touristique labellisé Tourisme & Handicap",
+                  "institution": "Ministère chargé de l'économie",
+                  "url": "https://www.tourisme-handicap.gouv.fr/fr/trouver-etablissement-accessible-labellise-tourisme-handicap",
+                  "type": "Outil de recherche"
+                }
+              ]
+            },
+            "text": "Un hôtel peut faire l'objet d'un classement (de 1 à 5 étoiles, y compris la \"distinction Palace\") ou bénéficier d'un label (Tourisme & Handicap, Écolabel Européen). Le classement ou le label est demandé par l'hôtelier.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'est ce que le classement d'un hôtel ?\n- Qu'est ce que le label Tourisme &amp; Handicap ?\n- Qu'est ce que l'Écolabel Européen ?"
+          },
+          {
+            "meta": {
+              "hash": "773095ada3423f26",
+              "sid": "F31417",
+              "title": "Comment assurer une voiture de collection ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F31417",
+              "introduction": "Une voiture de collection qui circule doit être assurée par son propriétaire, au minimum avec une assurance responsabilité civile (au tiers).",
+              "context": "",
+              "theme": "Argent - Impôts - Consommation, Argent - Impôts - Consommation",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [
+                {
+                  "question": "Assurance auto : qu'est-ce que la garantie responsabilité civile ?",
+                  "sid": "F31258",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F31258"
+                },
+                {
+                  "question": "Franchise d'assurance auto : comment ça marche ?",
+                  "sid": "F2706",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2706"
+                }
+              ],
+              "web_services": []
+            },
+            "text": "qu'il n'ait pas été responsable d'accident pendant les 2 années qui précèdent la souscription du contrat."
+          },
+          {
+            "meta": {
+              "hash": "eb4f42abf53f76a4",
+              "sid": "F934",
+              "title": "En quoi consiste l'usufruit ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F934",
+              "introduction": "Vous venez d'hériter de l'usufruit d'un bien et vous vous demandez de quoi il s'agit ? L'usufruit est le droit d'utiliser un bien et d'en percevoir les revenus, sans en être propriétaire. Le droit à l'usufruit est temporaire. Voici les règles à connaître.",
+              "context": "Comment est évalué l'usufruit ?",
+              "theme": "Famille - Scolarité",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [
+                {
+                  "question": "Usufruit, nue-propriété, pleine propriété : quelles différences ?",
+                  "sid": "F33076",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F33076"
+                },
+                {
+                  "question": "L'usufruit du conjoint survivant peut-il être transformé en rente ou en capital ?",
+                  "sid": "F2132",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2132"
+                }
+              ],
+              "web_services": [
+                {
+                  "title": "Simulateur : barème fiscal de l'usufruit et de la nue-propriété",
+                  "institution": "Direction de l'information légale et administrative (Dila) - Premier ministre",
+                  "url": "https://www.service-public.fr/simulateur/calcul/bareme-fiscal-usufruit",
+                  "type": "Simulateur"
+                }
+              ]
+            },
+            "text": "La répartition de la valeur d'un bien entre usufruitier et nu-propriétaire est déterminée par un barème fiscal. Ce barème est établi en fonction de l'âge de l'usufruitier.\nBarème fiscal de l'usufruit et de la nue-propriété:\n| Age de l'usufruitier | Valeur de l'usufruit | Valeur de la nue-propriété | \n| - | - | - | \n| Moins de 21 ans révolus | 90% | 10% | \n| Moins de 31 ans révolus | 80% | 20% | \n| Moins de 41 ans révolus | 70% | 30% | \n| Moins de 51 ans révolus | 60% | 40% | \n| Moins de 61 ans révolus | 50% | 50% | \n| Moins de 71 ans révolus | 40% | 60% | \n| Moins de 81 ans révolus | 30% | 70% | \n| Moins de 91 ans révolus | 20% | 80% | \n| Plus de 91 ans révolus | 10% | 90% | \nIl permet notamment de calculer le montant des droits d'enregistrement en cas de donation, succession, vente, etc. En cas de vente du bien, l'usufruitier et le nu-propriétaire reçoivent chacun la fraction du prix correspondant à la valeur de son droit. Pour connaitre la répartition de la valeur du bien, vous pouvez utiliser le simulateur suivant :"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": " Je suis désolé, mais je ne dispose pas d'informations sur l'estimateur de Monte-Carlo. Je vous recommande de consulter le site officiel du service public ou de contacter les professionnels compétents dans le domaine pour obtenir des informations précises sur ce sujet. ",
+              "prompt": {
+                "meta": {},
+                "user": "Qu'est-ce que l'estimateur de Monte-Carlo ?",
+                "system": "",
+                "prompter": "AnsPrompterBase"
+              },
+              "name": "AgentPublic/albertlight-7b",
+              "full_name": "AgentPublic/albertlight-7b",
+              "timestamp": "Mon, 29 Jul 2024 13:21:50 GMT",
+              "duration": 7.830422,
+              "chunks": [
+                {
+                  "hash": "101d8964aeef94bc",
+                  "sid": "F16832",
+                  "title": "Comment connaître le prix d'un logement ou d'un terrain ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F16832",
+                  "introduction": "Si vous souhaitez estimer votre bien immobilier ou connaître le prix au mètre carré de votre logement ou de votre terrain, vous pouvez consulter des bases de données de l'administration fiscale sur internet ou un professionnel de l'immobilier.",
+                  "text": "Patrim: Pour avoir une estimation de votre construction, vous pouvez utiliser l'outil Patrim, qui est un simulateur des impôts. Ces données sont uniquement accessibles depuis votre compte sur www.impots.gouv.fr. L'estimation peut être utile pour déclarer l'impôt sur la fortune immobilière (Ifi), une succession, une donation, un contrôle fiscal, une expropriation ou pour calculer vos aides au logement. L'accès à cette base de données est gratuite. (Attention: Patrim ne couvre pas encore les ventes de biens situés dans les départements du Haut-Rhin, du Bas-Rhin, de la Moselle et Mayotte.)\nCas Chez un professionnel: Pour avoir une estimation de votre bien immobilier, vous pouvez vous rapprocher de la chambre des notaires ou d'une agence immobilière.",
+                  "context": "",
+                  "theme": "Logement, Logement",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [
+                    {
+                      "question": "Comment obtenir des renseignements immobiliers ?",
+                      "sid": "F17759",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F17759"
+                    }
+                  ],
+                  "web_services": [
+                    {
+                      "title": "Consulter les dernières transactions immobilières (demande de valeurs foncières)",
+                      "institution": "Direction générale des finances publiques",
+                      "url": "https://app.dvf.etalab.gouv.fr/",
+                      "type": "Simulateur"
+                    },
+                    {
+                      "title": "Patrim : rechercher des transactions immobilières pour aider à estimer la valeur d'un bien immobilier",
+                      "institution": "Ministère chargé des finances",
+                      "url": "https://cfspart.impots.gouv.fr/LoginAccess",
+                      "type": "Simulateur"
+                    }
+                  ]
+                },
+                {
+                  "hash": "99d49259c03012d3",
+                  "sid": "F2152",
+                  "title": "Accident de la route : indemnisation des dégâts matériels de la voiture",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2152",
+                  "introduction": "Si votre voiture a subi des dégâts matériels lors d'un accident de la circulation, vous pouvez être indemnisé par l'assurance, mais pas systématiquement. L'indemnisation des dégâts matériels dépend des garanties que vous souscrites dans votre contrat, des circonstances de l'accident et de votre niveau de responsabilité. Avant l'indemnisation, l'assureur va évaluer les dommages et peut demander une expertise des véhicules accidentés.",
+                  "text": "Si vous avez un accident avec votre voiture, la compagnie d'assurance chargée de votre indemnisation doit vous proposer de réaliser une expertise. L'expert mandaté par l'assurance est chargé des missions suivantes :\n- Identifier la voiture, constater les dommages et contrôler leur vraisemblance avec les circonstances déclarées de l'accident\n- Déterminer le ou les point(s) de choc\n- Établir les possibilités de réparation (techniquement et économiquement)\n- Valider le prix des réparations facturé par le garagiste\n- Définir un éventuel taux de vétusté (sur les pneus ou le radiateur par exemple)\n- Calculer la valeur de remplacement à dire d'expert ( Vrade ) du véhicule\n- Indiquer si le véhicule peut encore circuler dans les conditions normales de sécurité.\nLe rapport d'expertise, habituellement établi sous 8 à 12 jours calendaires, vous sera adressé, de même qu'à l'assureur. Si vous souhaitez contester les conclusions de l'expert, vous pouvez commander une contre-expertise, mais vous devrez régler les honoraires de cet expert.",
+                  "context": "Comment se fait l'évaluation des dommages ?",
+                  "theme": "Argent - Impôts - Consommation, Argent - Impôts - Consommation",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [
+                    {
+                      "question": "Est-on assuré quand on utilise son véhicule personnel pour le travail ?",
+                      "sid": "F2635",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2635"
+                    },
+                    {
+                      "question": "Épave : que devient la voiture gravement accidentée ?",
+                      "sid": "F2682",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2682"
+                    },
+                    {
+                      "question": "Accident : comment sont indemnisés les dommages matériels autres que les dégâts à la voiture ?",
+                      "sid": "F31609",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F31609"
+                    },
+                    {
+                      "question": "Franchise d'assurance auto : comment ça marche ?",
+                      "sid": "F2706",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2706"
+                    },
+                    {
+                      "question": "Assurance auto : comment se déroule l'expertise ?",
+                      "sid": "F31268",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F31268"
+                    },
+                    {
+                      "question": "Êtes-vous couvert par votre assurance si vous prêtez votre voiture à quelqu'un ?",
+                      "sid": "F2632",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2632"
+                    }
+                  ],
+                  "web_services": [
+                    {
+                      "title": "Contester l'offre d'indemnisation de son assureur pour son véhicule accidenté",
+                      "institution": "Institut national de la consommation (INC)",
+                      "url": "https://www.inc-conso.fr/content/vous-contestez-loffre-dindemnisation-de-votre-assureur-pour-votre-vehicule-accidente",
+                      "type": "Modèle de document"
+                    }
+                  ]
+                },
+                {
+                  "hash": "a7350c4956f47b17",
+                  "sid": "F31268",
+                  "title": "Assurance auto : comment se déroule l'expertise ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F31268",
+                  "introduction": "La loi peut imposer à le recours à l'expertise dans certains cas. En dehors de ces cas, c'est l'assureur qui décide, suite à une déclaration de sinistre, si une expertise est nécessaire ou non. Quel est le rôle de l'expert ? Est-il possible de contester ses conclusions  ? Nous vous présentons les règles applicables.",
+                  "text": "L'expert d’assurance auto est une personne qui a des connaissances techniques approfondies sur les véhicules, et qui maîtrise les règles juridiques applicables aux contrats d’assurance et aux mécanismes d’indemnisation. L'expert doit posséder un titre professionnel et être inscrit sur la liste nationale des experts en automobile.",
+                  "context": "Quelles sont les qualifications de l'expert en assurance auto ?",
+                  "theme": "Argent - Impôts - Consommation",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "92ecbe49afc516a9",
+                  "sid": "F34473",
+                  "title": "Qu'est-ce que l'indemnité de compensation de la hausse CSG dans la fonction publique ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F34473",
+                  "introduction": "En 2018, une indemnité compensatrice a été attribuée aux agents publics en compensation de la hausse de la CSG . Le montant de cette indemnité varie selon que vous avez été nommé ou recruté avant 2018 ou à partir de 2018.",
+                  "text": "En 2018, une indemnité compensatrice a été attribuée aux agents publics en compensation de la hausse de la CSG . Le montant de cette indemnité varie selon que vous avez été nommé ou recruté avant 2018 ou à partir de 2018.",
+                  "context": "",
+                  "theme": "Travail - Formation",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "a73b5fb21edc53da",
+                  "sid": "F2050",
+                  "title": "Comment sont classés les hôtels de tourisme ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2050",
+                  "introduction": "Un hôtel peut faire l'objet d'un classement (de 1 à 5 étoiles, y compris la \"distinction Palace\") ou bénéficier d'un label (Tourisme & Handicap, Écolabel Européen). Le classement ou le label est demandé par l'hôtelier.",
+                  "text": "Un hôtel peut faire l'objet d'un classement (de 1 à 5 étoiles, y compris la \"distinction Palace\") ou bénéficier d'un label (Tourisme & Handicap, Écolabel Européen). Le classement ou le label est demandé par l'hôtelier.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'est ce que le classement d'un hôtel ?\n- Qu'est ce que le label Tourisme &amp; Handicap ?\n- Qu'est ce que l'Écolabel Européen ?",
+                  "context": "",
+                  "theme": "Loisirs - Sports - Culture, Loisirs - Sports - Culture, Loisirs - Sports - Culture",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [
+                    {
+                      "question": "Un hôtel ou un loueur de chambres d'hôtes doit-il donner une facture au client ?",
+                      "sid": "F18960",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F18960"
+                    },
+                    {
+                      "question": "Qu'est-ce que la taxe de séjour ?",
+                      "sid": "F2048",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2048"
+                    }
+                  ],
+                  "web_services": [
+                    {
+                      "title": "Rechercher un hébergement touristique classé",
+                      "institution": "Atout France - Agence de développement touristique de la France",
+                      "url": "https://www.classement.atout-france.fr/hebergements-classes",
+                      "type": "Téléservice"
+                    },
+                    {
+                      "title": "Rechercher un établissement touristique labellisé Tourisme & Handicap",
+                      "institution": "Ministère chargé de l'économie",
+                      "url": "https://www.tourisme-handicap.gouv.fr/fr/trouver-etablissement-accessible-labellise-tourisme-handicap",
+                      "type": "Outil de recherche"
+                    }
+                  ]
+                },
+                {
+                  "hash": "773095ada3423f26",
+                  "sid": "F31417",
+                  "title": "Comment assurer une voiture de collection ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F31417",
+                  "introduction": "Une voiture de collection qui circule doit être assurée par son propriétaire, au minimum avec une assurance responsabilité civile (au tiers).",
+                  "text": "qu'il n'ait pas été responsable d'accident pendant les 2 années qui précèdent la souscription du contrat.",
+                  "context": "",
+                  "theme": "Argent - Impôts - Consommation, Argent - Impôts - Consommation",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [
+                    {
+                      "question": "Assurance auto : qu'est-ce que la garantie responsabilité civile ?",
+                      "sid": "F31258",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F31258"
+                    },
+                    {
+                      "question": "Franchise d'assurance auto : comment ça marche ?",
+                      "sid": "F2706",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2706"
+                    }
+                  ],
+                  "web_services": []
+                },
+                {
+                  "hash": "eb4f42abf53f76a4",
+                  "sid": "F934",
+                  "title": "En quoi consiste l'usufruit ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F934",
+                  "introduction": "Vous venez d'hériter de l'usufruit d'un bien et vous vous demandez de quoi il s'agit ? L'usufruit est le droit d'utiliser un bien et d'en percevoir les revenus, sans en être propriétaire. Le droit à l'usufruit est temporaire. Voici les règles à connaître.",
+                  "text": "La répartition de la valeur d'un bien entre usufruitier et nu-propriétaire est déterminée par un barème fiscal. Ce barème est établi en fonction de l'âge de l'usufruitier.\nBarème fiscal de l'usufruit et de la nue-propriété:\n| Age de l'usufruitier | Valeur de l'usufruit | Valeur de la nue-propriété | \n| - | - | - | \n| Moins de 21 ans révolus | 90% | 10% | \n| Moins de 31 ans révolus | 80% | 20% | \n| Moins de 41 ans révolus | 70% | 30% | \n| Moins de 51 ans révolus | 60% | 40% | \n| Moins de 61 ans révolus | 50% | 50% | \n| Moins de 71 ans révolus | 40% | 60% | \n| Moins de 81 ans révolus | 30% | 70% | \n| Moins de 91 ans révolus | 20% | 80% | \n| Plus de 91 ans révolus | 10% | 90% | \nIl permet notamment de calculer le montant des droits d'enregistrement en cas de donation, succession, vente, etc. En cas de vente du bien, l'usufruitier et le nu-propriétaire reçoivent chacun la fraction du prix correspondant à la valeur de son droit. Pour connaitre la répartition de la valeur du bien, vous pouvez utiliser le simulateur suivant :",
+                  "context": "Comment est évalué l'usufruit ?",
+                  "theme": "Famille - Scolarité",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [
+                    {
+                      "question": "Usufruit, nue-propriété, pleine propriété : quelles différences ?",
+                      "sid": "F33076",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F33076"
+                    },
+                    {
+                      "question": "L'usufruit du conjoint survivant peut-il être transformé en rente ou en capital ?",
+                      "sid": "F2132",
+                      "url": "https://www.service-public.fr/particuliers/vosdroits/F2132"
+                    }
+                  ],
+                  "web_services": [
+                    {
+                      "title": "Simulateur : barème fiscal de l'usufruit et de la nue-propriété",
+                      "institution": "Direction de l'information légale et administrative (Dila) - Premier ministre",
+                      "url": "https://www.service-public.fr/simulateur/calcul/bareme-fiscal-usufruit",
+                      "type": "Simulateur"
+                    }
+                  ]
+                }
+              ]
+            },
+            "meta": {},
+            "text": "<p>Je suis désolé, mais je ne dispose pas d'informations sur l'estimateur de Monte-Carlo. Je vous recommande de consulter le site officiel du service public ou de contacter les professionnels compétents dans le domaine pour obtenir des informations précises sur ce sujet. </p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. [NOT FOUND] - Le paragraphe ne fournit aucune information sur l'estimateur de Monte-Carlo ou sa formule.\n   Partie dans le paragraphe : \"[Je suis désolé, mais je ne dispose pas d'informations sur l'estimateur de Monte-Carlo.]\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. L'estimateur de Monte-Carlo est défini par la formule ˆθn:=1/n∑n i=1Zi.\n\n-- PARAGRAPH --\n<p>Je suis désolé, mais je ne dispose pas d'informations sur l'estimateur de Monte-Carlo. Je vous recommande de consulter le site officiel du service public ou de contacter les professionnels compétents dans le domaine pour obtenir des informations précises sur ce sujet. </p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n- [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n- la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n- la partie dans le PARAGRAPHE liée à la raison\nÀ la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n- Hors sujet\n- Elle donne des informations différentes des idées factuelles.\n- Contexte supplémentaire non désiré.\n\n## Format de réponse :\n\n1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n...\n\n[EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "EvalPrompterAlbertV2"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "Mon, 29 Jul 2024 13:22:06 GMT",
+                "duration": 5.48401,
+                "cost": 0.01827,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [
+                  1
+                ],
+                "nb_missing": 1,
+                "ok": [],
+                "nb_ok": 0,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<ol>\n<li>[NOT FOUND] - Le paragraphe ne fournit aucune information sur l'estimateur de Monte-Carlo ou sa formule.\n   Partie dans le paragraphe : \"[Je suis désolé, mais je ne dispose pas d'informations sur l'estimateur de Monte-Carlo.]\"</li>\n</ol>\n<p>[EXTRA] = 0</p>",
+              "auto": 0
+            },
+            "extra_eval": {
+              "meta": {},
+              "text": ""
+            }
+          },
+          {
+            "llm_answer": {
+              "name": "Missings Eval",
+              "full_name": "Missings Eval"
+            },
+            "meta": {},
+            "text": "",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "[Fait 1]\n\nStatut : [MISSING]\nExplication : Aucun des chunks ne mentionne ou ne soutient le fait que l'estimateur de Monte-Carlo est défini par la formule ˆθn:=1/n∑n i=1Zi.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- QUESTION --\nQu'est-ce que l'estimateur de Monte-Carlo ?\n\n-- FAITS --\n1. L'estimateur de Monte-Carlo est défini par la formule ˆθn:=1/n∑n i=1Zi.\n\n-- CHUNK --\n\n\n Chunk_1. Patrim: Pour avoir une estimation de votre construction, vous pouvez utiliser l'outil Patrim, qui est un simulateur des impôts. Ces données sont uniquement accessibles depuis votre compte sur www.impots.gouv.fr. L'estimation peut être utile pour déclarer l'impôt sur la fortune immobilière (Ifi), une succession, une donation, un contrôle fiscal, une expropriation ou pour calculer vos aides au logement. L'accès à cette base de données est gratuite. (Attention: Patrim ne couvre pas encore les ventes de biens situés dans les départements du Haut-Rhin, du Bas-Rhin, de la Moselle et Mayotte.)\nCas Chez un professionnel: Pour avoir une estimation de votre bien immobilier, vous pouvez vous rapprocher de la chambre des notaires ou d'une agence immobilière.\n\n\n Chunk_2. Si vous avez un accident avec votre voiture, la compagnie d'assurance chargée de votre indemnisation doit vous proposer de réaliser une expertise. L'expert mandaté par l'assurance est chargé des missions suivantes :\n- Identifier la voiture, constater les dommages et contrôler leur vraisemblance avec les circonstances déclarées de l'accident\n- Déterminer le ou les point(s) de choc\n- Établir les possibilités de réparation (techniquement et économiquement)\n- Valider le prix des réparations facturé par le garagiste\n- Définir un éventuel taux de vétusté (sur les pneus ou le radiateur par exemple)\n- Calculer la valeur de remplacement à dire d'expert ( Vrade ) du véhicule\n- Indiquer si le véhicule peut encore circuler dans les conditions normales de sécurité.\nLe rapport d'expertise, habituellement établi sous 8 à 12 jours calendaires, vous sera adressé, de même qu'à l'assureur. Si vous souhaitez contester les conclusions de l'expert, vous pouvez commander une contre-expertise, mais vous devrez régler les honoraires de cet expert.\n\n\n Chunk_3. L'expert d’assurance auto est une personne qui a des connaissances techniques approfondies sur les véhicules, et qui maîtrise les règles juridiques applicables aux contrats d’assurance et aux mécanismes d’indemnisation. L'expert doit posséder un titre professionnel et être inscrit sur la liste nationale des experts en automobile.\n\n\n Chunk_4. En 2018, une indemnité compensatrice a été attribuée aux agents publics en compensation de la hausse de la CSG . Le montant de cette indemnité varie selon que vous avez été nommé ou recruté avant 2018 ou à partir de 2018.\n\n\n Chunk_5. Un hôtel peut faire l'objet d'un classement (de 1 à 5 étoiles, y compris la \"distinction Palace\") ou bénéficier d'un label (Tourisme & Handicap, Écolabel Européen). Le classement ou le label est demandé par l'hôtelier.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'est ce que le classement d'un hôtel ?\n- Qu'est ce que le label Tourisme &amp; Handicap ?\n- Qu'est ce que l'Écolabel Européen ?\n\n\n Chunk_6. qu'il n'ait pas été responsable d'accident pendant les 2 années qui précèdent la souscription du contrat.\n\n\n Chunk_7. La répartition de la valeur d'un bien entre usufruitier et nu-propriétaire est déterminée par un barème fiscal. Ce barème est établi en fonction de l'âge de l'usufruitier.\nBarème fiscal de l'usufruit et de la nue-propriété:\n| Age de l'usufruitier | Valeur de l'usufruit | Valeur de la nue-propriété | \n| - | - | - | \n| Moins de 21 ans révolus | 90% | 10% | \n| Moins de 31 ans révolus | 80% | 20% | \n| Moins de 41 ans révolus | 70% | 30% | \n| Moins de 51 ans révolus | 60% | 40% | \n| Moins de 61 ans révolus | 50% | 50% | \n| Moins de 71 ans révolus | 40% | 60% | \n| Moins de 81 ans révolus | 30% | 70% | \n| Moins de 91 ans révolus | 20% | 80% | \n| Plus de 91 ans révolus | 10% | 90% | \nIl permet notamment de calculer le montant des droits d'enregistrement en cas de donation, succession, vente, etc. En cas de vente du bien, l'usufruitier et le nu-propriétaire reçoivent chacun la fraction du prix correspondant à la valeur de son droit. Pour connaitre la répartition de la valeur du bien, vous pouvez utiliser le simulateur suivant :",
+                  "system": "Évaluez la réponse du LLM par rapport à la QUESTION et aux CHUNKS fournis.\n\n1. Pour chaque FAIT dans les CHUNKS du LLM, déterminez s'il est :\n   [OK] - Correct et soutenu par les CHUNKS\n   [HALLU] - Incorrect ou contredit par les CHUNKS\n   [MISSING] - Absent des CHUNKS\n2. Dans le cas [OK] ou [HALLU], une explication des points de contradiction ou d'accord entre le CHUNK et le FAIT.\n3. citez la partie pertinente des CHUNKS dans le PARAGRAPHE liée au fait.\n\nFormat de réponse :\n\n[Fait 1]\n\nStatut : [OK/HALLU/MISSING]\nExplication : [Votre analyse]\nLes chunks (si applicable) : \"[numéro des CHUNKS]\"\nSource (si applicable) : \"[Citation des CHUNKS]\"\n\n[Fait 2]\n...\n\nN.B. : \n- Donne le numéro du fait tel qu'il est présenté dans le message, sans tenir compte de l'ordre.\n- N'évaluez les faits dans les CHUNKS que lorsque la réponse du LLM présente une erreur ([HALLU] ou [MISSING]).\n- Répondez de manière concise et directe, en suivant strictement le format demandé.\n- Assurez-vous d'évaluer tous les FAITS présents dans les CHUNKS du LLM.\n        ",
+                  "prompter": "EvalPrompterChunksV2"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "Mon, 29 Jul 2024 13:22:22 GMT",
+                "duration": 5.915926,
+                "cost": 0.04995,
+                "chunks": []
+              },
+              "meta": {
+                "missing": [
+                  "1"
+                ],
+                "nb_missing": 1,
+                "ok": [],
+                "nb_ok": 0,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<p>[Fait 1]</p>\n<p>Statut : [MISSING]\nExplication : Aucun des chunks ne mentionne ou ne soutient le fait que l'estimateur de Monte-Carlo est défini par la formule ˆθn:=1/n∑n i=1Zi.</p>"
+            },
+            "extra_eval": {
+              "meta": {},
+              "text": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "meta": {},
+        "text": "Qu'est-ce qu'un modèle Bayésien ?"
+      },
+      "facts": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Un modèle Bayésien est la donnée pour une variable aléatoire."
+          },
+          {
+            "meta": {},
+            "text": "2. Ce modèle comprend une loi conditionnelle."
+          },
+          {
+            "meta": {},
+            "text": "3. Il comprend également une loi a priori."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "hash": "f3e826809e83227b",
+              "sid": "F2655",
+              "title": "Bonus-malus dans l'assurance automobile",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+              "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+              "context": "Qu'appelle-t-on bonus-malus ?",
+              "theme": "Argent - Impôts - Consommation",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "Le système du bonus-malus, encore appelé coefficient de réduction-majoration, est une clause contenue dans les contrats d'assurance auto. Il s'agit d'une formule de réduction ou de majoration de la prime d'assurance, à chaque échéance annuelle, en fonction de votre comportement. Le principe est que votre coefficient de réduction-majoration est majoré lorsque vous avez des sinistres impliquant votre responsabilité, et minoré en l'absence de sinistre, sur une période de référence. Chaque année, votre coefficient de réduction-majoration est appliqué à la prime de référence, c'est-à-dire la prime calculée lors de la souscription, pour déterminer le nouveau montant à payer. Si votre coefficient a baissé, vous aurez une réduction de la prime de référence et vous paierez moins cher votre assurance. Si votre coefficient a augmenté, vous aurez une majoration de la prime de référence et vous payerez un tarif plus élevé."
+          },
+          {
+            "meta": {
+              "hash": "b5f4f9d7fdf0de31",
+              "sid": "F2655",
+              "title": "Bonus-malus dans l'assurance automobile",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+              "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+              "context": "",
+              "theme": "Argent - Impôts - Consommation",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'appelle-t-on bonus-malus ?\n- Quels sont les véhicules concernés par le bonus-malus ?\n- Quels sont les sinistres pris en compte pour le bonus-malus ?\n- Quelle est la période prise en compte pour calculer le bonus-malus ?\n- Quelles sont les règles de calcul du bonus et du malus ?\n- Que devient le bonus-malus en cas de changement de véhicule ou d'assurance ?"
+          },
+          {
+            "meta": {
+              "hash": "e7aac30fdc6b33eb",
+              "sid": "F34800",
+              "title": "Phishing (hameçonnage)",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F34800",
+              "introduction": "Le phishing ou hameçonnage est une forme d'escroquerie qui se déroule sur internet. Cela consiste à récupérer vos données personnelles par la tromperie, puis à les utiliser de manière malveillante, par exemple pour faire des achats. Si vous recevez un mail d'un expéditeur qui se fait passer pour un organisme officiel ou familier (banque, impôts, Caf ) et qui veut avoir accès à vos données personnelles sur internet, vous devez refuser.",
+              "context": "",
+              "theme": "Justice",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": [
+                {
+                  "title": "Signaler un site de phishing",
+                  "institution": "Ministère chargé de l'intérieur",
+                  "url": "https://phishing-initiative.fr",
+                  "type": "Téléservice"
+                },
+                {
+                  "title": "Signaler un contenu internet illégal (internet-signalement : Pharos)",
+                  "institution": "Ministère chargé de l'intérieur",
+                  "url": "https://www.internet-signalement.gouv.fr",
+                  "type": "Téléservice"
+                }
+              ]
+            },
+            "text": "Le phishing ou hameçonnage est une forme d'escroquerie qui se déroule sur internet. Cela consiste à récupérer vos données personnelles par la tromperie, puis à les utiliser de manière malveillante, par exemple pour faire des achats. Si vous recevez un mail d'un expéditeur qui se fait passer pour un organisme officiel ou familier (banque, impôts, Caf ) et qui veut avoir accès à vos données personnelles sur internet, vous devez refuser.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Comment se passe le phishing ?\n- Comment traiter le message ?\n- Faire un signalement\n- Comment se protéger ?"
+          },
+          {
+            "meta": {
+              "hash": "ebfead1dfd43c389",
+              "sid": "F2655",
+              "title": "Bonus-malus dans l'assurance automobile",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+              "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+              "context": "Quels sont les sinistres pris en compte pour le bonus-malus ?",
+              "theme": "Argent - Impôts - Consommation",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "Les sinistres pris en compte pour l'application du bonus-malus sont ceux dans lesquels vous avez une responsabilité et qui ont entraîné une indemnisation de l'assureur. Votre responsabilité peut être totale ou partielle, mais il faut qu'elle ait été établie après discussion entre les assureurs, pas seulement par le conducteur avec qui vous avez eu un accident."
+          },
+          {
+            "meta": {
+              "hash": "46d1a3abdc1d6f45",
+              "sid": "F1515",
+              "title": "Abus de confiance",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F1515",
+              "introduction": "Qu'est-ce que l'abus de confiance ? Que risque l'auteur ? Quels sont les recours de la victime ? Nous vous expliquons quelles sont les situations et vous indiquons les démarches.",
+              "context": "",
+              "theme": "Justice, Justice",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": [
+                {
+                  "title": "Pré-plainte en ligne",
+                  "institution": "Ministère chargé de l'intérieur",
+                  "url": "https://www.pre-plainte-en-ligne.gouv.fr/",
+                  "type": "Téléservice"
+                },
+                {
+                  "title": "Porter plainte auprès du procureur de la République",
+                  "institution": "Direction de l'information légale et administrative (Dila) - Premier ministre",
+                  "url": "https://www.service-public.fr/simulateur/calcul/Porter_plainte",
+                  "type": "Modèle de document"
+                }
+              ]
+            },
+            "text": "Qu'est-ce que l'abus de confiance ? Que risque l'auteur ? Quels sont les recours de la victime ? Nous vous expliquons quelles sont les situations et vous indiquons les démarches.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Quand parle-t-on d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance ?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance?"
+          },
+          {
+            "meta": {
+              "hash": "74594b27d0c70e89",
+              "sid": "F2655",
+              "title": "Bonus-malus dans l'assurance automobile",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+              "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+              "context": "Quelles sont les règles de calcul du bonus et du malus ?",
+              "theme": "Argent - Impôts - Consommation",
+              "surtitre": "Fiche pratique",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "Cas Malus: Pour chaque accident responsable, l'assuré subit une majoration de 25 %. Pour déterminer le coefficient qui résultera de cette majoration, on prend le coefficient avant l'accident que l'on multiplie par 1,25. (Exemple: Exemple : Vous avez un coefficient de 0,68. Un 1 er accident entraînera un nouveau coefficient, à savoir : 0,68 * 1,25 = 0,85. Si vous avez un second accident la même année, votre coefficient passera à : 0,85 * 1,25 = 1,06.)\n Le coefficient maximal est fixé à 3,5. Ainsi, pour une prime de référence de 1 000 € , le montant maximum de prime est de 3 500 € . Si vous avez une responsabilité partielle dans l'accident, la majoration est de 12,5%. Dans cette hypothèse, le coefficient reviendra à nouveau à 1 si vous n'avez pas d'accident responsable pendant 2 ans. (À savoir: si vous avez un coefficient de 0,50 depuis au moins 3 ans, le 1 er accident responsable qui survient n'entraîne pas l'application du malus.)"
+          },
+          {
+            "meta": {
+              "hash": "5cfceb103381532b",
+              "sid": "F34128",
+              "title": "Qu'est-ce que le rapport civil dans une succession ?",
+              "url": "https://www.service-public.fr/particuliers/vosdroits/F34128",
+              "introduction": "Vous avez fait une donation à l'un de vos héritiers et vous vous demandez si elle sera prise en compte lors du partage de votre succession ? Le rapport civil permet de vérifier que les donations réalisées respectent les droits des héritiers au moment du partage de votre succession.",
+              "context": "Exemple simplifié pour expliquer le principe du rapport civil",
+              "theme": "Famille - Scolarité, Famille - Scolarité, Famille - Scolarité, Famille - Scolarité",
+              "surtitre": "Question-réponse",
+              "source": "service-public",
+              "related_questions": [],
+              "web_services": []
+            },
+            "text": "Vous avez fait de votre vivant des donations à chacun de vos 3 enfants :\n- 1 er enfant : 10 000 €\n- 2 e enfant : 20 000 €\n- 3 e enfant : 30 000 €\nLe total des donations est donc de 60 000 €. Vous décédez en laissant un patrimoine de 120 000 €. Le rapport civil de ces donations à votre patrimoine permet d'augmenter la valeur de celui-ci de 60 000 €, ce qui porte son total à 180 000 €. Le partage de ce patrimoine fictif de 180 000 € entre vos 3 enfants donne à chacun un héritage théorique de 60 000 €. Mais il faut déduire de la part de chacun la valeur de la donation dont il avait bénéficié de votre vivant.\n- Le 1 er enfant aura donc 60 000 € - 10 000 € = 50 000 €\n- Le 2 e aura 60 000 € - 20 000 € = 40 000 €\n- Le 3 e aura 60 000 € - 30 000 € = 30 000 € .\nLa somme de la part de chacun correspond à la valeur de votre patrimoine : 50 000 € + 40 000 € + 30 000 € = 120 000 €. (À savoir: Le rapport civil prend en compte la valeur du bien donné au moment du partage de la succession.)"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": " Je suis désolé, mais je ne dispose pas des éléments nécessaires pour répondre à votre question sur le modèle Bayésien. Le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données et les préférences. Il est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle. Si vous avez des questions spécifiques sur le modèle Bayésien, je serais heureux de vous fournir des informations supplémentaires. ",
+              "prompt": {
+                "meta": {},
+                "user": "Qu'est-ce qu'un modèle Bayésien ?",
+                "system": "",
+                "prompter": "AnsPrompterBase"
+              },
+              "name": "AgentPublic/albertlight-7b",
+              "full_name": "AgentPublic/albertlight-7b",
+              "timestamp": "Mon, 29 Jul 2024 13:21:58 GMT",
+              "duration": 8.07265,
+              "chunks": [
+                {
+                  "hash": "f3e826809e83227b",
+                  "sid": "F2655",
+                  "title": "Bonus-malus dans l'assurance automobile",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+                  "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+                  "text": "Le système du bonus-malus, encore appelé coefficient de réduction-majoration, est une clause contenue dans les contrats d'assurance auto. Il s'agit d'une formule de réduction ou de majoration de la prime d'assurance, à chaque échéance annuelle, en fonction de votre comportement. Le principe est que votre coefficient de réduction-majoration est majoré lorsque vous avez des sinistres impliquant votre responsabilité, et minoré en l'absence de sinistre, sur une période de référence. Chaque année, votre coefficient de réduction-majoration est appliqué à la prime de référence, c'est-à-dire la prime calculée lors de la souscription, pour déterminer le nouveau montant à payer. Si votre coefficient a baissé, vous aurez une réduction de la prime de référence et vous paierez moins cher votre assurance. Si votre coefficient a augmenté, vous aurez une majoration de la prime de référence et vous payerez un tarif plus élevé.",
+                  "context": "Qu'appelle-t-on bonus-malus ?",
+                  "theme": "Argent - Impôts - Consommation",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "b5f4f9d7fdf0de31",
+                  "sid": "F2655",
+                  "title": "Bonus-malus dans l'assurance automobile",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+                  "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+                  "text": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'appelle-t-on bonus-malus ?\n- Quels sont les véhicules concernés par le bonus-malus ?\n- Quels sont les sinistres pris en compte pour le bonus-malus ?\n- Quelle est la période prise en compte pour calculer le bonus-malus ?\n- Quelles sont les règles de calcul du bonus et du malus ?\n- Que devient le bonus-malus en cas de changement de véhicule ou d'assurance ?",
+                  "context": "",
+                  "theme": "Argent - Impôts - Consommation",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "e7aac30fdc6b33eb",
+                  "sid": "F34800",
+                  "title": "Phishing (hameçonnage)",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F34800",
+                  "introduction": "Le phishing ou hameçonnage est une forme d'escroquerie qui se déroule sur internet. Cela consiste à récupérer vos données personnelles par la tromperie, puis à les utiliser de manière malveillante, par exemple pour faire des achats. Si vous recevez un mail d'un expéditeur qui se fait passer pour un organisme officiel ou familier (banque, impôts, Caf ) et qui veut avoir accès à vos données personnelles sur internet, vous devez refuser.",
+                  "text": "Le phishing ou hameçonnage est une forme d'escroquerie qui se déroule sur internet. Cela consiste à récupérer vos données personnelles par la tromperie, puis à les utiliser de manière malveillante, par exemple pour faire des achats. Si vous recevez un mail d'un expéditeur qui se fait passer pour un organisme officiel ou familier (banque, impôts, Caf ) et qui veut avoir accès à vos données personnelles sur internet, vous devez refuser.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Comment se passe le phishing ?\n- Comment traiter le message ?\n- Faire un signalement\n- Comment se protéger ?",
+                  "context": "",
+                  "theme": "Justice",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": [
+                    {
+                      "title": "Signaler un site de phishing",
+                      "institution": "Ministère chargé de l'intérieur",
+                      "url": "https://phishing-initiative.fr",
+                      "type": "Téléservice"
+                    },
+                    {
+                      "title": "Signaler un contenu internet illégal (internet-signalement : Pharos)",
+                      "institution": "Ministère chargé de l'intérieur",
+                      "url": "https://www.internet-signalement.gouv.fr",
+                      "type": "Téléservice"
+                    }
+                  ]
+                },
+                {
+                  "hash": "ebfead1dfd43c389",
+                  "sid": "F2655",
+                  "title": "Bonus-malus dans l'assurance automobile",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+                  "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+                  "text": "Les sinistres pris en compte pour l'application du bonus-malus sont ceux dans lesquels vous avez une responsabilité et qui ont entraîné une indemnisation de l'assureur. Votre responsabilité peut être totale ou partielle, mais il faut qu'elle ait été établie après discussion entre les assureurs, pas seulement par le conducteur avec qui vous avez eu un accident.",
+                  "context": "Quels sont les sinistres pris en compte pour le bonus-malus ?",
+                  "theme": "Argent - Impôts - Consommation",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "46d1a3abdc1d6f45",
+                  "sid": "F1515",
+                  "title": "Abus de confiance",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F1515",
+                  "introduction": "Qu'est-ce que l'abus de confiance ? Que risque l'auteur ? Quels sont les recours de la victime ? Nous vous expliquons quelles sont les situations et vous indiquons les démarches.",
+                  "text": "Qu'est-ce que l'abus de confiance ? Que risque l'auteur ? Quels sont les recours de la victime ? Nous vous expliquons quelles sont les situations et vous indiquons les démarches.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Quand parle-t-on d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance ?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance?",
+                  "context": "",
+                  "theme": "Justice, Justice",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": [
+                    {
+                      "title": "Pré-plainte en ligne",
+                      "institution": "Ministère chargé de l'intérieur",
+                      "url": "https://www.pre-plainte-en-ligne.gouv.fr/",
+                      "type": "Téléservice"
+                    },
+                    {
+                      "title": "Porter plainte auprès du procureur de la République",
+                      "institution": "Direction de l'information légale et administrative (Dila) - Premier ministre",
+                      "url": "https://www.service-public.fr/simulateur/calcul/Porter_plainte",
+                      "type": "Modèle de document"
+                    }
+                  ]
+                },
+                {
+                  "hash": "74594b27d0c70e89",
+                  "sid": "F2655",
+                  "title": "Bonus-malus dans l'assurance automobile",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F2655",
+                  "introduction": "Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.",
+                  "text": "Cas Malus: Pour chaque accident responsable, l'assuré subit une majoration de 25 %. Pour déterminer le coefficient qui résultera de cette majoration, on prend le coefficient avant l'accident que l'on multiplie par 1,25. (Exemple: Exemple : Vous avez un coefficient de 0,68. Un 1 er accident entraînera un nouveau coefficient, à savoir : 0,68 * 1,25 = 0,85. Si vous avez un second accident la même année, votre coefficient passera à : 0,85 * 1,25 = 1,06.)\n Le coefficient maximal est fixé à 3,5. Ainsi, pour une prime de référence de 1 000 € , le montant maximum de prime est de 3 500 € . Si vous avez une responsabilité partielle dans l'accident, la majoration est de 12,5%. Dans cette hypothèse, le coefficient reviendra à nouveau à 1 si vous n'avez pas d'accident responsable pendant 2 ans. (À savoir: si vous avez un coefficient de 0,50 depuis au moins 3 ans, le 1 er accident responsable qui survient n'entraîne pas l'application du malus.)",
+                  "context": "Quelles sont les règles de calcul du bonus et du malus ?",
+                  "theme": "Argent - Impôts - Consommation",
+                  "surtitre": "Fiche pratique",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                },
+                {
+                  "hash": "5cfceb103381532b",
+                  "sid": "F34128",
+                  "title": "Qu'est-ce que le rapport civil dans une succession ?",
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F34128",
+                  "introduction": "Vous avez fait une donation à l'un de vos héritiers et vous vous demandez si elle sera prise en compte lors du partage de votre succession ? Le rapport civil permet de vérifier que les donations réalisées respectent les droits des héritiers au moment du partage de votre succession.",
+                  "text": "Vous avez fait de votre vivant des donations à chacun de vos 3 enfants :\n- 1 er enfant : 10 000 €\n- 2 e enfant : 20 000 €\n- 3 e enfant : 30 000 €\nLe total des donations est donc de 60 000 €. Vous décédez en laissant un patrimoine de 120 000 €. Le rapport civil de ces donations à votre patrimoine permet d'augmenter la valeur de celui-ci de 60 000 €, ce qui porte son total à 180 000 €. Le partage de ce patrimoine fictif de 180 000 € entre vos 3 enfants donne à chacun un héritage théorique de 60 000 €. Mais il faut déduire de la part de chacun la valeur de la donation dont il avait bénéficié de votre vivant.\n- Le 1 er enfant aura donc 60 000 € - 10 000 € = 50 000 €\n- Le 2 e aura 60 000 € - 20 000 € = 40 000 €\n- Le 3 e aura 60 000 € - 30 000 € = 30 000 € .\nLa somme de la part de chacun correspond à la valeur de votre patrimoine : 50 000 € + 40 000 € + 30 000 € = 120 000 €. (À savoir: Le rapport civil prend en compte la valeur du bien donné au moment du partage de la succession.)",
+                  "context": "Exemple simplifié pour expliquer le principe du rapport civil",
+                  "theme": "Famille - Scolarité, Famille - Scolarité, Famille - Scolarité, Famille - Scolarité",
+                  "surtitre": "Question-réponse",
+                  "source": "service-public",
+                  "related_questions": [],
+                  "web_services": []
+                }
+              ]
+            },
+            "meta": {},
+            "text": "<p>Je suis désolé, mais je ne dispose pas des éléments nécessaires pour répondre à votre question sur le modèle Bayésien. Le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données et les préférences. Il est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle. Si vous avez des questions spécifiques sur le modèle Bayésien, je serais heureux de vous fournir des informations supplémentaires. </p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. [OK] - Le paragraphe mentionne que le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données, ce qui soutient le fait que le modèle Bayésien est la donnée pour une variable aléatoire.\n   Partie dans le paragraphe : \"Le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données\"\n\n2. [NOT FOUND] - Le paragraphe ne mentionne pas la loi conditionnelle, qui est une partie du modèle Bayésien.\n   Partie dans le paragraphe : \"[Aucune citation pertinente dans le paragraphe]\"\n\n3. [NOT FOUND] - Le paragraphe ne mentionne pas la loi a priori, qui est également une partie du modèle Bayésien.\n   Partie dans le paragraphe : \"[Aucune citation pertinente dans le paragraphe]\"\n\n[EXTRA] = 2. Le paragraphe mentionne que le modèle Bayésien est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle, et offre de fournir des informations supplémentaires sur le modèle Bayésien si nécessaire. Ces informations ne sont pas mentionnées dans les faits.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Un modèle Bayésien est la donnée pour une variable aléatoire.\n2. 2. Ce modèle comprend une loi conditionnelle.\n3. 3. Il comprend également une loi a priori.\n\n-- PARAGRAPH --\n<p>Je suis désolé, mais je ne dispose pas des éléments nécessaires pour répondre à votre question sur le modèle Bayésien. Le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données et les préférences. Il est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle. Si vous avez des questions spécifiques sur le modèle Bayésien, je serais heureux de vous fournir des informations supplémentaires. </p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n- [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n- la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n- la partie dans le PARAGRAPHE liée à la raison\nÀ la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n- Hors sujet\n- Elle donne des informations différentes des idées factuelles.\n- Contexte supplémentaire non désiré.\n\n## Format de réponse :\n\n1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n...\n\n[EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "EvalPrompterAlbertV2"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "Mon, 29 Jul 2024 13:22:06 GMT",
+                "duration": 15.585856,
+                "cost": 0.0345,
+                "chunks": []
+              },
+              "meta": {
+                "extra": ". Le paragraphe mentionne que le modèle Bayésien est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle, et offre de fournir des informations supplémentaires sur le modèle Bayésien si nécessaire. Ces informations ne sont pas mentionnées dans les faits.",
+                "nb_extra": 2,
+                "missing": [
+                  2,
+                  3
+                ],
+                "nb_missing": 2,
+                "ok": [
+                  1
+                ],
+                "nb_ok": 1,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<ol>\n<li>\n<p>[OK] - Le paragraphe mentionne que le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données, ce qui soutient le fait que le modèle Bayésien est la donnée pour une variable aléatoire.\n   Partie dans le paragraphe : \"Le modèle Bayésien est un modèle statistique utilisé pour estimer la probabilité d'une hypothèse en prenant en compte les données\"</p>\n</li>\n<li>\n<p>[NOT FOUND] - Le paragraphe ne mentionne pas la loi conditionnelle, qui est une partie du modèle Bayésien.\n   Partie dans le paragraphe : \"[Aucune citation pertinente dans le paragraphe]\"</p>\n</li>\n<li>\n<p>[NOT FOUND] - Le paragraphe ne mentionne pas la loi a priori, qui est également une partie du modèle Bayésien.\n   Partie dans le paragraphe : \"[Aucune citation pertinente dans le paragraphe]\"</p>\n</li>\n</ol>\n<p>[EXTRA] = 2. Le paragraphe mentionne que le modèle Bayésien est principalement utilisé en apprentissage automatique et dans les domaines de la machine learning et de l'intelligence artificielle, et offre de fournir des informations supplémentaires sur le modèle Bayésien si nécessaire. Ces informations ne sont pas mentionnées dans les faits.</p>",
+              "auto": 0
+            },
+            "extra_eval": {
+              "meta": {},
+              "text": ""
+            }
+          },
+          {
+            "llm_answer": {
+              "name": "Missings Eval",
+              "full_name": "Missings Eval"
+            },
+            "meta": {},
+            "text": "",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "[Fait 2]\n\nStatut : [MISSING]\nExplication : Le fait que le modèle Bayésien comprend une loi conditionnelle n'est mentionné dans aucun des chunks.\nLes chunks (si applicable) : \"Aucun\"\n\n[Fait 3]\n\nStatut : [MISSING]\nExplication : Le fait que le modèle Bayésien comprend également une loi a priori n'est mentionné dans aucun des chunks.\nLes chunks (si applicable) : \"Aucun\"",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- QUESTION --\nQu'est-ce qu'un modèle Bayésien ?\n\n-- FAITS --\n2. Ce modèle comprend une loi conditionnelle.\n3. Il comprend également une loi a priori.\n\n-- CHUNK --\n\n\n Chunk_1. Le système du bonus-malus, encore appelé coefficient de réduction-majoration, est une clause contenue dans les contrats d'assurance auto. Il s'agit d'une formule de réduction ou de majoration de la prime d'assurance, à chaque échéance annuelle, en fonction de votre comportement. Le principe est que votre coefficient de réduction-majoration est majoré lorsque vous avez des sinistres impliquant votre responsabilité, et minoré en l'absence de sinistre, sur une période de référence. Chaque année, votre coefficient de réduction-majoration est appliqué à la prime de référence, c'est-à-dire la prime calculée lors de la souscription, pour déterminer le nouveau montant à payer. Si votre coefficient a baissé, vous aurez une réduction de la prime de référence et vous paierez moins cher votre assurance. Si votre coefficient a augmenté, vous aurez une majoration de la prime de référence et vous payerez un tarif plus élevé.\n\n\n Chunk_2. Vous avez eu un accident de la circulation et vous vous demandez quel sera son impact sur votre contrat d'assurance auto ? Le sinistre peut affecter votre bonus-malus, qui est un système de modulation de la prime d'assurance en fonction de votre comportement sur la route. Nous vous expliquons comment fonctionne le système du bonus-malus.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Qu'appelle-t-on bonus-malus ?\n- Quels sont les véhicules concernés par le bonus-malus ?\n- Quels sont les sinistres pris en compte pour le bonus-malus ?\n- Quelle est la période prise en compte pour calculer le bonus-malus ?\n- Quelles sont les règles de calcul du bonus et du malus ?\n- Que devient le bonus-malus en cas de changement de véhicule ou d'assurance ?\n\n\n Chunk_3. Le phishing ou hameçonnage est une forme d'escroquerie qui se déroule sur internet. Cela consiste à récupérer vos données personnelles par la tromperie, puis à les utiliser de manière malveillante, par exemple pour faire des achats. Si vous recevez un mail d'un expéditeur qui se fait passer pour un organisme officiel ou familier (banque, impôts, Caf ) et qui veut avoir accès à vos données personnelles sur internet, vous devez refuser.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Comment se passe le phishing ?\n- Comment traiter le message ?\n- Faire un signalement\n- Comment se protéger ?\n\n\n Chunk_4. Les sinistres pris en compte pour l'application du bonus-malus sont ceux dans lesquels vous avez une responsabilité et qui ont entraîné une indemnisation de l'assureur. Votre responsabilité peut être totale ou partielle, mais il faut qu'elle ait été établie après discussion entre les assureurs, pas seulement par le conducteur avec qui vous avez eu un accident.\n\n\n Chunk_5. Qu'est-ce que l'abus de confiance ? Que risque l'auteur ? Quels sont les recours de la victime ? Nous vous expliquons quelles sont les situations et vous indiquons les démarches.\n\nVoici une liste de différentes questions ou thématiques relatives à ce sujet :\n- Quand parle-t-on d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance ?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance ?\n- Quels sont les recours de la victime d'abus de confiance?\n- Quelles sont les peines prévues pour l'auteur d'abus de confiance?\n\n\n Chunk_6. Cas Malus: Pour chaque accident responsable, l'assuré subit une majoration de 25 %. Pour déterminer le coefficient qui résultera de cette majoration, on prend le coefficient avant l'accident que l'on multiplie par 1,25. (Exemple: Exemple : Vous avez un coefficient de 0,68. Un 1 er accident entraînera un nouveau coefficient, à savoir : 0,68 * 1,25 = 0,85. Si vous avez un second accident la même année, votre coefficient passera à : 0,85 * 1,25 = 1,06.)\n Le coefficient maximal est fixé à 3,5. Ainsi, pour une prime de référence de 1 000 € , le montant maximum de prime est de 3 500 € . Si vous avez une responsabilité partielle dans l'accident, la majoration est de 12,5%. Dans cette hypothèse, le coefficient reviendra à nouveau à 1 si vous n'avez pas d'accident responsable pendant 2 ans. (À savoir: si vous avez un coefficient de 0,50 depuis au moins 3 ans, le 1 er accident responsable qui survient n'entraîne pas l'application du malus.)\n\n\n Chunk_7. Vous avez fait de votre vivant des donations à chacun de vos 3 enfants :\n- 1 er enfant : 10 000 €\n- 2 e enfant : 20 000 €\n- 3 e enfant : 30 000 €\nLe total des donations est donc de 60 000 €. Vous décédez en laissant un patrimoine de 120 000 €. Le rapport civil de ces donations à votre patrimoine permet d'augmenter la valeur de celui-ci de 60 000 €, ce qui porte son total à 180 000 €. Le partage de ce patrimoine fictif de 180 000 € entre vos 3 enfants donne à chacun un héritage théorique de 60 000 €. Mais il faut déduire de la part de chacun la valeur de la donation dont il avait bénéficié de votre vivant.\n- Le 1 er enfant aura donc 60 000 € - 10 000 € = 50 000 €\n- Le 2 e aura 60 000 € - 20 000 € = 40 000 €\n- Le 3 e aura 60 000 € - 30 000 € = 30 000 € .\nLa somme de la part de chacun correspond à la valeur de votre patrimoine : 50 000 € + 40 000 € + 30 000 € = 120 000 €. (À savoir: Le rapport civil prend en compte la valeur du bien donné au moment du partage de la succession.)",
+                  "system": "Évaluez la réponse du LLM par rapport à la QUESTION et aux CHUNKS fournis.\n\n1. Pour chaque FAIT dans les CHUNKS du LLM, déterminez s'il est :\n   [OK] - Correct et soutenu par les CHUNKS\n   [HALLU] - Incorrect ou contredit par les CHUNKS\n   [MISSING] - Absent des CHUNKS\n2. Dans le cas [OK] ou [HALLU], une explication des points de contradiction ou d'accord entre le CHUNK et le FAIT.\n3. citez la partie pertinente des CHUNKS dans le PARAGRAPHE liée au fait.\n\nFormat de réponse :\n\n[Fait 1]\n\nStatut : [OK/HALLU/MISSING]\nExplication : [Votre analyse]\nLes chunks (si applicable) : \"[numéro des CHUNKS]\"\nSource (si applicable) : \"[Citation des CHUNKS]\"\n\n[Fait 2]\n...\n\nN.B. : \n- Donne le numéro du fait tel qu'il est présenté dans le message, sans tenir compte de l'ordre.\n- N'évaluez les faits dans les CHUNKS que lorsque la réponse du LLM présente une erreur ([HALLU] ou [MISSING]).\n- Répondez de manière concise et directe, en suivant strictement le format demandé.\n- Assurez-vous d'évaluer tous les FAITS présents dans les CHUNKS du LLM.\n        ",
+                  "prompter": "EvalPrompterChunksV2"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "Mon, 29 Jul 2024 13:22:22 GMT",
+                "duration": 6.560682,
+                "cost": 0.06096,
+                "chunks": []
+              },
+              "meta": {
+                "missing": [
+                  "2",
+                  "3"
+                ],
+                "nb_missing": 2,
+                "ok": [],
+                "nb_ok": 0,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<p>[Fait 2]</p>\n<p>Statut : [MISSING]\nExplication : Le fait que le modèle Bayésien comprend une loi conditionnelle n'est mentionné dans aucun des chunks.\nLes chunks (si applicable) : \"Aucun\"</p>\n<p>[Fait 3]</p>\n<p>Statut : [MISSING]\nExplication : Le fait que le modèle Bayésien comprend également une loi a priori n'est mentionné dans aucun des chunks.\nLes chunks (si applicable) : \"Aucun\"</p>"
+            },
+            "extra_eval": {
+              "meta": {},
+              "text": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
