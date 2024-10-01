@@ -1,0 +1,952 @@
+{
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Comment faire un dispositif France Connect pour une personne de nationalité belge"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Une personne de nationalité belge ne peut pas faire un dispositif France Connect.\n2. France Connect est un dispositif créé par l'état français pour faciliter l'accès aux services publics français.\n3. Il n'existe pas de dispositif similaire à France Connect pour les personnes de nationalité belge.\n4. Les personnes de nationalité belge peuvent se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect. France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française. Il n'y a pas de dispositif similaire pour les personnes de nationalité belge. Cependant, il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.\nQUESTION: Comment faire un dispositif France Connect pour une personne de nationalité belge",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.784527",
+          "duration": 22.655198,
+          "cost": 0.01362
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Une personne de nationalité belge ne peut pas faire un dispositif France Connect."
+          },
+          {
+            "meta": {},
+            "text": "2. France Connect est un dispositif créé par l'état français pour faciliter l'accès aux services publics français."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect. France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française. Il n'y a pas de dispositif similaire pour les personnes de nationalité belge. Cependant, il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect\" which supports the first fact. \nPart in the paragraph: \"Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect.\"\n\n2.[OK] - The paragraph states that \"France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française\" which supports the second fact.\nPart in the paragraph: \"France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française.\"\n\n3.[OK] - The paragraph states that \"Il n'y a pas de dispositif similaire pour les personnes de nationalité belge\" which supports the third fact.\nPart in the paragraph: \"Il n'y a pas de dispositif similaire pour les personnes de nationalité belge.\"\n\n4.[OK] - The paragraph states that \"il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges\" which supports the fourth fact.\nPart in the paragraph: \"il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Une personne de nationalité belge ne peut pas faire un dispositif France Connect.\n2. 2. France Connect est un dispositif créé par l'état français pour faciliter l'accès aux services publics français.\n3. 3. Il n'existe pas de dispositif similaire à France Connect pour les personnes de nationalité belge.\n4. 4. Les personnes de nationalité belge peuvent se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.\n\n-- PARAGRAPH --\nPour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect. France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française. Il n'y a pas de dispositif similaire pour les personnes de nationalité belge. Cependant, il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.112120",
+                "duration": 48.436816,
+                "cost": 0.039900000000000005
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "nb_ok": 4,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect\" which supports the first fact. \nPart in the paragraph: \"Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect.\"\n\n2.[OK] - The paragraph states that \"France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française\" which supports the second fact.\nPart in the paragraph: \"France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française.\"\n\n3.[OK] - The paragraph states that \"Il n'y a pas de dispositif similaire pour les personnes de nationalité belge\" which supports the third fact.\nPart in the paragraph: \"Il n'y a pas de dispositif similaire pour les personnes de nationalité belge.\"\n\n4.[OK] - The paragraph states that \"il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges\" which supports the fourth fact.\nPart in the paragraph: \"il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.\"\n\n[EXTRA] = 0",
+              "human": 1,
+              "auto": 1
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Doit-on rembourser des prestations familiales versées à tort ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Il est possible de devoir rembourser des prestations familiales versées à tort.\n2. La Caisse d'allocations familiales ou la Mutualité sociale agricole peut demander de rembourser les prestations versées à tort pendant une période de 2 ans.\n3. Si les prestations sont attribuées suite à une fraude ou de fausses déclarations, le remboursement peut être demandé pendant une période de 5 ans.\n4. Après ces délais, le remboursement ne peut plus être demandé.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Oui, il est possible de devoir rembourser des prestations familiales versées à tort. La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans. Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans. Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.\nQUESTION: Doit-on rembourser des prestations familiales versées à tort ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.820986",
+          "duration": 23.393536,
+          "cost": 0.015780000000000002
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Il est possible de devoir rembourser des prestations familiales versées à tort."
+          },
+          {
+            "meta": {},
+            "text": "2. La Caisse d'allocations familiales ou la Mutualité sociale agricole peut demander de rembourser les prestations versées à tort pendant une période de 2 ans."
+          },
+          {
+            "meta": {},
+            "text": "3. Si les prestations sont attribuées suite à une fraude ou de fausses déclarations, le remboursement peut être demandé pendant une période de 5 ans."
+          },
+          {
+            "meta": {},
+            "text": "4. Après ces délais, le remboursement ne peut plus être demandé."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Oui, il est possible de devoir rembourser des prestations familiales versées à tort. La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans. Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans. Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"il est possible de devoir rembourser des prestations familiales versées à tort\" which supports the first fact. \nPart in the paragraph: \"Oui, il est possible de devoir rembourser des prestations familiales versées à tort.\"\n\n2.[OK] - The paragraph states that \"La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans\" which supports the second fact.\nPart in the paragraph: \"La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans.\"\n\n3.[OK] - The paragraph states that \"Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans\" which supports the third fact.\nPart in the paragraph: \"Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans.\"\n\n4.[OK] - The paragraph states that \"Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement\" which supports the fourth fact.\nPart in the paragraph: \"Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Il est possible de devoir rembourser des prestations familiales versées à tort.\n2. 2. La Caisse d'allocations familiales ou la Mutualité sociale agricole peut demander de rembourser les prestations versées à tort pendant une période de 2 ans.\n3. 3. Si les prestations sont attribuées suite à une fraude ou de fausses déclarations, le remboursement peut être demandé pendant une période de 5 ans.\n4. 4. Après ces délais, le remboursement ne peut plus être demandé.\n\n-- PARAGRAPH --\nOui, il est possible de devoir rembourser des prestations familiales versées à tort. La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans. Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans. Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.177060",
+                "duration": 55.465718,
+                "cost": 0.04599
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "nb_ok": 4,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"il est possible de devoir rembourser des prestations familiales versées à tort\" which supports the first fact. \nPart in the paragraph: \"Oui, il est possible de devoir rembourser des prestations familiales versées à tort.\"\n\n2.[OK] - The paragraph states that \"La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans\" which supports the second fact.\nPart in the paragraph: \"La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans.\"\n\n3.[OK] - The paragraph states that \"Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans\" which supports the third fact.\nPart in the paragraph: \"Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans.\"\n\n4.[OK] - The paragraph states that \"Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement\" which supports the fourth fact.\nPart in the paragraph: \"Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.\"\n\n[EXTRA] = 0",
+              "human": 1,
+              "auto": 1
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Comment créer un compte SIA Chasseur ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Pour créer un compte SIA Chasseur, il faut s'adresser à un armurier, un courtier agréé ou un particulier en présence d'un armurier.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier. Il est obligatoire d'avoir créé un compte SIA pour acheter une arme en tant que chasseur. L'arme achetée sera transférée automatiquement dans votre râtelier numérique. Vous devrez confirmer l'achat de l'arme en ligne via votre compte SIA. Si vous ne le faites pas, l'achat sera validé automatiquement au bout de 5 jours.\nQUESTION: Comment créer un compte SIA Chasseur ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.841742",
+          "duration": 18.715561,
+          "cost": 0.01026
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Pour créer un compte SIA Chasseur, il faut s'adresser à un armurier, un courtier agréé ou un particulier en présence d'un armurier."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier. Il est obligatoire d'avoir créé un compte SIA pour acheter une arme en tant que chasseur. L'arme achetée sera transférée automatiquement dans votre râtelier numérique. Vous devrez confirmer l'achat de l'arme en ligne via votre compte SIA. Si vous ne le faites pas, l'achat sera validé automatiquement au bout de 5 jours.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier\" which supports the first fact. \nPart in the paragraph: \"Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier.\"\n\n[EXTRA] = 4\n- It is mandatory to have created a SIA account to buy a weapon as a hunter.\n- The purchased weapon will be automatically transferred to your digital rack.\n- You will have to confirm the purchase of the weapon online via your SIA account.\n- If you do not do so, the purchase will be automatically validated after 5 days.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Pour créer un compte SIA Chasseur, il faut s'adresser à un armurier, un courtier agréé ou un particulier en présence d'un armurier.\n\n-- PARAGRAPH --\nPour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier. Il est obligatoire d'avoir créé un compte SIA pour acheter une arme en tant que chasseur. L'arme achetée sera transférée automatiquement dans votre râtelier numérique. Vous devrez confirmer l'achat de l'arme en ligne via votre compte SIA. Si vous ne le faites pas, l'achat sera validé automatiquement au bout de 5 jours.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.201868",
+                "duration": 120.068471,
+                "cost": 0.030780000000000002
+              },
+              "meta": {
+                "extra": "- It is mandatory to have created a SIA account to buy a weapon as a hunter.",
+                "nb_extra": 4,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1
+                ],
+                "nb_ok": 1,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier\" which supports the first fact. \nPart in the paragraph: \"Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier.\"\n\n[EXTRA] = 4\n- It is mandatory to have created a SIA account to buy a weapon as a hunter.\n- The purchased weapon will be automatically transferred to your digital rack.\n- You will have to confirm the purchase of the weapon online via your SIA account.\n- If you do not do so, the purchase will be automatically validated after 5 days.",
+              "human": 1,
+              "auto": 0
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Comment demander une carte grise Française pour l'achat d'un véhicule en Allemagne?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Il faut vérifier si le véhicule acheté en Allemagne est conforme aux normes françaises.\n2. Après l'achat du véhicule, il faut obtenir une carte grise allemande en fournissant une facture d'achat, une pièce d'identité et un justificatif de domicile en Allemagne.\n3. La carte grise allemande doit être traduite en français par un service de traduction officiel.\n4. La carte grise allemande traduite doit être transmise à la préfecture ou à la sous-préfecture en France avec une facture d'achat, une pièce d'identité et un justificatif de domicile en France.\n5. Après avoir transmis les documents, il faut attendre la réponse de la direction des impôts et payer la TVA si nécessaire.\n6. Les étapes peuvent varier en fonction du département de domicile et de la situation spécifique de l'achat, il est donc recommandé de contacter la préfecture ou la sous-préfecture pour obtenir des informations précises.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour obtenir une carte grise française en Allemagne, vous devez suivre les étapes suivantes :\n1. Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises. Si ce n'est pas le cas, vous devrez peut-être effectuer des modifications pour qu'il puisse être homologué en France.\n\n2. Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\n\n3. Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\n\n4. Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\n\n5. Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\n\nIl est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.\nQUESTION: Comment demander une carte grise Française pour l'achat d'un véhicule en Allemagne?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.848661",
+          "duration": 28.380137,
+          "cost": 0.032100000000000004
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Il faut vérifier si le véhicule acheté en Allemagne est conforme aux normes françaises."
+          },
+          {
+            "meta": {},
+            "text": "2. Après l'achat du véhicule, il faut obtenir une carte grise allemande en fournissant une facture d'achat, une pièce d'identité et un justificatif de domicile en Allemagne."
+          },
+          {
+            "meta": {},
+            "text": "3. La carte grise allemande doit être traduite en français par un service de traduction officiel."
+          },
+          {
+            "meta": {},
+            "text": "4. La carte grise allemande traduite doit être transmise à la préfecture ou à la sous-préfecture en France avec une facture d'achat, une pièce d'identité et un justificatif de domicile en France."
+          },
+          {
+            "meta": {},
+            "text": "5. Après avoir transmis les documents, il faut attendre la réponse de la direction des impôts et payer la TVA si nécessaire."
+          },
+          {
+            "meta": {},
+            "text": "6. Les étapes peuvent varier en fonction du département de domicile et de la situation spécifique de l'achat, il est donc recommandé de contacter la préfecture ou la sous-préfecture pour obtenir des informations précises."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour obtenir une carte grise française en Allemagne, vous devez suivre les étapes suivantes :\n1. Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises. Si ce n'est pas le cas, vous devrez peut-être effectuer des modifications pour qu'il puisse être homologué en France.\n\n2. Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\n\n3. Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\n\n4. Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\n\n5. Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\n\nIl est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises.\" which supports the first fact. \nPart in the paragraph: \"Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises.\"\n\n2.[OK] - The paragraph states that \"Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\" which supports the second fact.\nPart in the paragraph: \"Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\"\n\n3.[OK] - The paragraph states that \"Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\" which supports the third fact.\nPart in the paragraph: \"Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\"\n\n4.[OK] - The paragraph states that \"Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\" which supports the fourth fact.\nPart in the paragraph: \"Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\"\n\n5.[OK] - The paragraph states that \"Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\" which supports the fifth fact.\nPart in the paragraph: \"Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\"\n\n6.[OK] - The paragraph states that \"Il est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.\" which supports the sixth fact.\nPart in the paragraph: \"Il est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Il faut vérifier si le véhicule acheté en Allemagne est conforme aux normes françaises.\n2. 2. Après l'achat du véhicule, il faut obtenir une carte grise allemande en fournissant une facture d'achat, une pièce d'identité et un justificatif de domicile en Allemagne.\n3. 3. La carte grise allemande doit être traduite en français par un service de traduction officiel.\n4. 4. La carte grise allemande traduite doit être transmise à la préfecture ou à la sous-préfecture en France avec une facture d'achat, une pièce d'identité et un justificatif de domicile en France.\n5. 5. Après avoir transmis les documents, il faut attendre la réponse de la direction des impôts et payer la TVA si nécessaire.\n6. 6. Les étapes peuvent varier en fonction du département de domicile et de la situation spécifique de l'achat, il est donc recommandé de contacter la préfecture ou la sous-préfecture pour obtenir des informations précises.\n\n-- PARAGRAPH --\nPour obtenir une carte grise française en Allemagne, vous devez suivre les étapes suivantes :\n1. Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises. Si ce n'est pas le cas, vous devrez peut-être effectuer des modifications pour qu'il puisse être homologué en France.\n\n2. Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\n\n3. Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\n\n4. Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\n\n5. Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\n\nIl est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.222988",
+                "duration": 132.768439,
+                "cost": 0.09078
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "nb_ok": 6,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises.\" which supports the first fact. \nPart in the paragraph: \"Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises.\"\n\n2.[OK] - The paragraph states that \"Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\" which supports the second fact.\nPart in the paragraph: \"Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\"\n\n3.[OK] - The paragraph states that \"Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\" which supports the third fact.\nPart in the paragraph: \"Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\"\n\n4.[OK] - The paragraph states that \"Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\" which supports the fourth fact.\nPart in the paragraph: \"Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\"\n\n5.[OK] - The paragraph states that \"Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\" which supports the fifth fact.\nPart in the paragraph: \"Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\"\n\n6.[OK] - The paragraph states that \"Il est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.\" which supports the sixth fact.\nPart in the paragraph: \"Il est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.\"\n\n[EXTRA] = 0",
+              "human": 1,
+              "auto": 1
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Est-ce qu'une personne peut déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts même si le logement n'est pas loué ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué.\n2. Le DPE est obligatoire pour les logements loués.\n3. Les charges associées à la réalisation du DPE ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Non, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué. Le DPE est obligatoire pour les logements loués, et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.\nQUESTION: Est-ce qu'une personne peut déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts même si le logement n'est pas loué ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.856771",
+          "duration": 20.99536,
+          "cost": 0.01329
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué."
+          },
+          {
+            "meta": {},
+            "text": "2. Le DPE est obligatoire pour les logements loués."
+          },
+          {
+            "meta": {},
+            "text": "3. Les charges associées à la réalisation du DPE ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Non, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué. Le DPE est obligatoire pour les logements loués, et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué\" which supports the first fact. \nPart in the paragraph: \"Non, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué.\"\n\n2.[OK] - The paragraph states that \"Le DPE est obligatoire pour les logements loués\" which supports the second fact.\nPart in the paragraph: \"Le DPE est obligatoire pour les logements loués\"\n\n3.[OK] - The paragraph states that \"Les charges associées à la réalisation du DPE ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé\" which supports the third fact.\nPart in the paragraph: \"et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué.\n2. 2. Le DPE est obligatoire pour les logements loués.\n3. 3. Les charges associées à la réalisation du DPE ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.\n\n-- PARAGRAPH --\nNon, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué. Le DPE est obligatoire pour les logements loués, et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.255287",
+                "duration": 99.512845,
+                "cost": 0.036000000000000004
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3
+                ],
+                "nb_ok": 3,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué\" which supports the first fact. \nPart in the paragraph: \"Non, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué.\"\n\n2.[OK] - The paragraph states that \"Le DPE est obligatoire pour les logements loués\" which supports the second fact.\nPart in the paragraph: \"Le DPE est obligatoire pour les logements loués\"\n\n3.[OK] - The paragraph states that \"Les charges associées à la réalisation du DPE ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé\" which supports the third fact.\nPart in the paragraph: \"et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.\"\n\n[EXTRA] = 0",
+              "human": 1,
+              "auto": 1
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Comment activer le CESU avance immédiate ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Pour activer le CESU avance immédiate, il faut d'abord vérifier si on remplit les conditions nécessaires.\n2. Ces conditions incluent avoir un compte Cesu, un numéro fiscal correspondant à l'état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit du salarié.\n3. Si ces conditions ne sont pas remplies, il faut contacter les services fiscaux pour obtenir des informations supplémentaires.\n4. Si les conditions sont remplies, on peut se rendre dans la rubrique \"Avantage fiscal\" de l'espace personnel sur le site du Cesu.\n5. Dans cette rubrique, il faut cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n6. Si on est un employeur qui utilise un organisme ou une entreprise de services à la personne, on peut demander à cet organisme de proposer de bénéficier de l'avance immédiate.\n7. Si cette proposition est acceptée, l'organisme fournit les informations nécessaires à l'Urssaf.\n8. Une fois l'avance immédiate activée, on reçoit les demandes de paiement de l'organisme sur le compte Cesu.\n9. Le montant du crédit d'impôt est déduit du montant de la prestation et on dispose de 2 jours pour valider ou contester une demande de paiement.\n10. Si on n'a pas de compte Cesu, on peut le créer grâce à un lien dans le mail de l'Urssaf reçu après avoir activé l'avance immédiate.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes :\n1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate. Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\n2. Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\n3. Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\n4. Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n5. Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\n6. Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu. Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\n7. Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\n\nIl est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles et de consulter les services fiscaux pour obtenir des informations précises et à jour sur la procédure d'activation du CESU avance immédiate.\nQUESTION: Comment activer le CESU avance immédiate ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.881142",
+          "duration": 31.77217,
+          "cost": 0.03909
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Pour activer le CESU avance immédiate, il faut d'abord vérifier si on remplit les conditions nécessaires."
+          },
+          {
+            "meta": {},
+            "text": "2. Ces conditions incluent avoir un compte Cesu, un numéro fiscal correspondant à l'état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit du salarié."
+          },
+          {
+            "meta": {},
+            "text": "3. Si ces conditions ne sont pas remplies, il faut contacter les services fiscaux pour obtenir des informations supplémentaires."
+          },
+          {
+            "meta": {},
+            "text": "4. Si les conditions sont remplies, on peut se rendre dans la rubrique \"Avantage fiscal\" de l'espace personnel sur le site du Cesu."
+          },
+          {
+            "meta": {},
+            "text": "5. Dans cette rubrique, il faut cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données."
+          },
+          {
+            "meta": {},
+            "text": "6. Si on est un employeur qui utilise un organisme ou une entreprise de services à la personne, on peut demander à cet organisme de proposer de bénéficier de l'avance immédiate."
+          },
+          {
+            "meta": {},
+            "text": "7. Si cette proposition est acceptée, l'organisme fournit les informations nécessaires à l'Urssaf."
+          },
+          {
+            "meta": {},
+            "text": "8. Une fois l'avance immédiate activée, on reçoit les demandes de paiement de l'organisme sur le compte Cesu."
+          },
+          {
+            "meta": {},
+            "text": "9. Le montant du crédit d'impôt est déduit du montant de la prestation et on dispose de 2 jours pour valider ou contester une demande de paiement."
+          },
+          {
+            "meta": {},
+            "text": "10. Si on n'a pas de compte Cesu, on peut le créer grâce à un lien dans le mail de l'Urssaf reçu après avoir activé l'avance immédiate."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes :\n1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate. Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\n2. Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\n3. Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\n4. Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n5. Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\n6. Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu. Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\n7. Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\n\nIl est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles et de consulter les services fiscaux pour obtenir des informations précises et à jour sur la procédure d'activation du CESU avance immédiate.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes : 1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate.\" which supports the first fact. \nPart in the paragraph: \"Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes : 1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate.\"\n\n2.[OK] - The paragraph states that \"Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\" which supports the second fact.\nPart in the paragraph: \"Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\"\n\n3.[OK] - The paragraph states that \"Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\" which supports the third fact.\nPart in the paragraph: \"Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\"\n\n4.[OK] - The paragraph states that \"Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\" which supports the fourth fact.\nPart in the paragraph: \"Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\"\n\n5.[OK] - The paragraph states that \"Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\" which supports the fifth fact.\nPart in the paragraph: \"Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\"\n\n6.[OK] - The paragraph states that \"Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\" which supports the sixth fact.\nPart in the paragraph: \"Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\"\n\n7.[OK] - The paragraph states that \"Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu.\" which supports the seventh fact.\nPart in the paragraph: \"Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu.\"\n\n8.[OK] - The paragraph states that \"Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\" which supports the eighth fact.\nPart in the paragraph: \"Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\"\n\n9.[OK] - The paragraph states that \"Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\" which supports the ninth fact.\nPart in the paragraph: \"Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\"\n\n[EXTRA] = 1 - The paragraph includes an extra idea that \"Il est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Pour activer le CESU avance immédiate, il faut d'abord vérifier si on remplit les conditions nécessaires.\n2. 2. Ces conditions incluent avoir un compte Cesu, un numéro fiscal correspondant à l'état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit du salarié.\n3. 3. Si ces conditions ne sont pas remplies, il faut contacter les services fiscaux pour obtenir des informations supplémentaires.\n4. 4. Si les conditions sont remplies, on peut se rendre dans la rubrique \"Avantage fiscal\" de l'espace personnel sur le site du Cesu.\n5. 5. Dans cette rubrique, il faut cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n6. 6. Si on est un employeur qui utilise un organisme ou une entreprise de services à la personne, on peut demander à cet organisme de proposer de bénéficier de l'avance immédiate.\n7. 7. Si cette proposition est acceptée, l'organisme fournit les informations nécessaires à l'Urssaf.\n8. 8. Une fois l'avance immédiate activée, on reçoit les demandes de paiement de l'organisme sur le compte Cesu.\n9. 9. Le montant du crédit d'impôt est déduit du montant de la prestation et on dispose de 2 jours pour valider ou contester une demande de paiement.\n10. 10. Si on n'a pas de compte Cesu, on peut le créer grâce à un lien dans le mail de l'Urssaf reçu après avoir activé l'avance immédiate.\n\n-- PARAGRAPH --\nPour activer le CESU avance immédiate, vous devez suivre les étapes suivantes :\n1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate. Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\n2. Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\n3. Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\n4. Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n5. Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\n6. Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu. Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\n7. Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\n\nIl est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles et de consulter les services fiscaux pour obtenir des informations précises et à jour sur la procédure d'activation du CESU avance immédiate.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.277635",
+                "duration": 135.538029,
+                "cost": 0.10008
+              },
+              "meta": {
+                "extra": "- The paragraph includes an extra idea that \"Il est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles",
+                "nb_extra": 1,
+                "missing": [
+                  10
+                ],
+                "nb_missing": 1,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ],
+                "nb_ok": 9,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes : 1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate.\" which supports the first fact. \nPart in the paragraph: \"Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes : 1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate.\"\n\n2.[OK] - The paragraph states that \"Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\" which supports the second fact.\nPart in the paragraph: \"Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\"\n\n3.[OK] - The paragraph states that \"Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\" which supports the third fact.\nPart in the paragraph: \"Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\"\n\n4.[OK] - The paragraph states that \"Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\" which supports the fourth fact.\nPart in the paragraph: \"Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\"\n\n5.[OK] - The paragraph states that \"Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\" which supports the fifth fact.\nPart in the paragraph: \"Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\"\n\n6.[OK] - The paragraph states that \"Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\" which supports the sixth fact.\nPart in the paragraph: \"Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\"\n\n7.[OK] - The paragraph states that \"Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu.\" which supports the seventh fact.\nPart in the paragraph: \"Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu.\"\n\n8.[OK] - The paragraph states that \"Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\" which supports the eighth fact.\nPart in the paragraph: \"Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\"\n\n9.[OK] - The paragraph states that \"Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\" which supports the ninth fact.\nPart in the paragraph: \"Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\"\n\n[EXTRA] = 1 - The paragraph includes an extra idea that \"Il est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles",
+              "human": 1,
+              "auto": 0.85
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Où déclarer l'installation de panneaux photovoltaïques sur la déclaration d'impôts ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. L'installation de panneaux photovoltaïques est déclarée dans la section des revenus professionnels de la déclaration d'impôts.\n2. Le montant des dépenses pour l'installation de panneaux photovoltaïques doit être indiqué sur la déclaration d'impôts.\n3. Le montant de la prime à l'investissement reçue pour la vente du surplus d'électricité doit aussi être mentionné sur la déclaration d'impôts.\n4. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le crédit d'impôt doit être rendu.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels. Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt.\nQUESTION: Où déclarer l'installation de panneaux photovoltaïques sur la déclaration d'impôts ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.894284",
+          "duration": 24.043694,
+          "cost": 0.01686
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. L'installation de panneaux photovoltaïques est déclarée dans la section des revenus professionnels de la déclaration d'impôts."
+          },
+          {
+            "meta": {},
+            "text": "2. Le montant des dépenses pour l'installation de panneaux photovoltaïques doit être indiqué sur la déclaration d'impôts."
+          },
+          {
+            "meta": {},
+            "text": "3. Le montant de la prime à l'investissement reçue pour la vente du surplus d'électricité doit aussi être mentionné sur la déclaration d'impôts."
+          },
+          {
+            "meta": {},
+            "text": "4. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le crédit d'impôt doit être rendu."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels. Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels\" which supports the first fact. \nPart in the paragraph: \"Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels\"\n\n2.[OK] - The paragraph states that \"le contribuable doit indiquer le montant de ses dépenses\" which supports the second fact.\nPart in the paragraph: \"le contribuable doit indiquer le montant de ses dépenses\"\n\n3.[OK] - The paragraph states that \"Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité\" which supports the third fact.\nPart in the paragraph: \"Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité\"\n\n4.[OK] - The paragraph states that \"En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt\" which supports the fourth fact.\nPart in the paragraph: \"En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt\"\n\n[EXTRA] = 0",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. L'installation de panneaux photovoltaïques est déclarée dans la section des revenus professionnels de la déclaration d'impôts.\n2. 2. Le montant des dépenses pour l'installation de panneaux photovoltaïques doit être indiqué sur la déclaration d'impôts.\n3. 3. Le montant de la prime à l'investissement reçue pour la vente du surplus d'électricité doit aussi être mentionné sur la déclaration d'impôts.\n4. 4. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le crédit d'impôt doit être rendu.\n\n-- PARAGRAPH --\nPour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels. Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.296397",
+                "duration": 39.955049,
+                "cost": 0.045270000000000005
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "nb_ok": 4,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels\" which supports the first fact. \nPart in the paragraph: \"Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels\"\n\n2.[OK] - The paragraph states that \"le contribuable doit indiquer le montant de ses dépenses\" which supports the second fact.\nPart in the paragraph: \"le contribuable doit indiquer le montant de ses dépenses\"\n\n3.[OK] - The paragraph states that \"Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité\" which supports the third fact.\nPart in the paragraph: \"Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité\"\n\n4.[OK] - The paragraph states that \"En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt\" which supports the fourth fact.\nPart in the paragraph: \"En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt\"\n\n[EXTRA] = 0",
+              "human": 1,
+              "auto": 1
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Je dois déclarer mes biens immobiliers, comment procéder ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Il faut vérifier si on est soumis à l'impôt sur la fortune immobilière (IFI) en fonction de son patrimoine immobilier.\n2. Si on est soumis à l'IFI, il faut déclarer ses biens immobiliers sur le formulaire de déclaration de l'IFI.\n3. En cas de vente d'un bien immobilier soumis à la TVA immobilière, il faut déclarer la TVA immobilière.\n4. Si on a réalisé une plus-value immobilière lors de la vente d'un bien, il faut déclarer cette plus-value immobilière sur sa déclaration d'impôt sur le revenu.\n5. En cas de questions ou d'incertitudes, on peut contacter le service des impôts pour obtenir des renseignements supplémentaires.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour déclarer vos biens immobiliers, vous devez suivre les étapes suivantes :\n\n1. Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de l'IFI.\n\n2. Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI. Vous pouvez le remplir en ligne ou le déposer auprès de votre service des impôts des entreprises.\n\n3. Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien. Vous pouvez faire cette déclaration mensuellement ou trimestriellement en fonction de la valeur annuelle de la TVA immobilière exigible. Vous pouvez utiliser le service d'information des impôts pour obtenir plus de détails sur les délais et les procédures de déclaration.\n\n4. Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de la plus-value immobilière et les délais de déclaration.\n\n5. Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\n\nJ'espère que ces informations vous seront utiles pour procéder à la déclaration de vos biens immobiliers.\nQUESTION: Je dois déclarer mes biens immobiliers, comment procéder ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:06.907010",
+          "duration": 22.684762,
+          "cost": 0.02703
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Il faut vérifier si on est soumis à l'impôt sur la fortune immobilière (IFI) en fonction de son patrimoine immobilier."
+          },
+          {
+            "meta": {},
+            "text": "2. Si on est soumis à l'IFI, il faut déclarer ses biens immobiliers sur le formulaire de déclaration de l'IFI."
+          },
+          {
+            "meta": {},
+            "text": "3. En cas de vente d'un bien immobilier soumis à la TVA immobilière, il faut déclarer la TVA immobilière."
+          },
+          {
+            "meta": {},
+            "text": "4. Si on a réalisé une plus-value immobilière lors de la vente d'un bien, il faut déclarer cette plus-value immobilière sur sa déclaration d'impôt sur le revenu."
+          },
+          {
+            "meta": {},
+            "text": "5. En cas de questions ou d'incertitudes, on peut contacter le service des impôts pour obtenir des renseignements supplémentaires."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour déclarer vos biens immobiliers, vous devez suivre les étapes suivantes :\n\n1. Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de l'IFI.\n\n2. Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI. Vous pouvez le remplir en ligne ou le déposer auprès de votre service des impôts des entreprises.\n\n3. Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien. Vous pouvez faire cette déclaration mensuellement ou trimestriellement en fonction de la valeur annuelle de la TVA immobilière exigible. Vous pouvez utiliser le service d'information des impôts pour obtenir plus de détails sur les délais et les procédures de déclaration.\n\n4. Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de la plus-value immobilière et les délais de déclaration.\n\n5. Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\n\nJ'espère que ces informations vous seront utiles pour procéder à la déclaration de vos biens immobiliers.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier\" which supports the first fact. \nPart in the paragraph: \"Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier.\"\n\n2.[OK] - The paragraph states that \"Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI\" which supports the second fact.\nPart in the paragraph: \"Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI.\"\n\n3.[OK] - The paragraph states that \"Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien\" which supports the third fact.\nPart in the paragraph: \"Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien.\"\n\n4.[OK] - The paragraph states that \"Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu\" which supports the fourth fact.\nPart in the paragraph: \"Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu.\"\n\n5.[OK] - The paragraph states that \"Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires\" which supports the fifth fact.\nPart in the paragraph: \"Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\"\n\n[EXTRA] = 1 - The paragraph provides additional information about the possibility to consult the information on the service-public.fr website and the possibility to fill in the IFI declaration form online or to drop it off at the tax office, which is not mentioned in the facts.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Il faut vérifier si on est soumis à l'impôt sur la fortune immobilière (IFI) en fonction de son patrimoine immobilier.\n2. 2. Si on est soumis à l'IFI, il faut déclarer ses biens immobiliers sur le formulaire de déclaration de l'IFI.\n3. 3. En cas de vente d'un bien immobilier soumis à la TVA immobilière, il faut déclarer la TVA immobilière.\n4. 4. Si on a réalisé une plus-value immobilière lors de la vente d'un bien, il faut déclarer cette plus-value immobilière sur sa déclaration d'impôt sur le revenu.\n5. 5. En cas de questions ou d'incertitudes, on peut contacter le service des impôts pour obtenir des renseignements supplémentaires.\n\n-- PARAGRAPH --\nPour déclarer vos biens immobiliers, vous devez suivre les étapes suivantes :\n\n1. Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de l'IFI.\n\n2. Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI. Vous pouvez le remplir en ligne ou le déposer auprès de votre service des impôts des entreprises.\n\n3. Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien. Vous pouvez faire cette déclaration mensuellement ou trimestriellement en fonction de la valeur annuelle de la TVA immobilière exigible. Vous pouvez utiliser le service d'information des impôts pour obtenir plus de détails sur les délais et les procédures de déclaration.\n\n4. Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de la plus-value immobilière et les délais de déclaration.\n\n5. Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\n\nJ'espère que ces informations vous seront utiles pour procéder à la déclaration de vos biens immobiliers.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:12.315222",
+                "duration": 114.464235,
+                "cost": 0.06603
+              },
+              "meta": {
+                "extra": "- The paragraph provides additional information about the possibility to consult the information on the service-public.fr website and the possibility to fill in the IFI declaration form online or to drop it off at the tax office, which is not mentioned in the facts.",
+                "nb_extra": 1,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "nb_ok": 5,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier\" which supports the first fact. \nPart in the paragraph: \"Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier.\"\n\n2.[OK] - The paragraph states that \"Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI\" which supports the second fact.\nPart in the paragraph: \"Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI.\"\n\n3.[OK] - The paragraph states that \"Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien\" which supports the third fact.\nPart in the paragraph: \"Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien.\"\n\n4.[OK] - The paragraph states that \"Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu\" which supports the fourth fact.\nPart in the paragraph: \"Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu.\"\n\n5.[OK] - The paragraph states that \"Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires\" which supports the fifth fact.\nPart in the paragraph: \"Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\"\n\n[EXTRA] = 1 - The paragraph provides additional information about the possibility to consult the information on the service-public.fr website and the possibility to fill in the IFI declaration form online or to drop it off at the tax office, which is not mentioned in the facts.",
+              "human": 1,
+              "auto": 0.95
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Une femme a fait une demande de RSA sur son espace personnel de la CAF en février 2024. En juin 2024, sans nouvelles, elle consulte ses démarches et ne retrouve pas trace de sa demande. Comment la retrouver dans son espace personnel ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. La femme doit se connecter à son compte personnel sur le site de la CAF.\n2. Elle doit ensuite sélectionner \"Demandes en cours\" dans le menu.\n3. Elle doit rechercher sa demande de RSA en utilisant les informations de la demande initiale, comme la date de demande et le motif.\n4. Si la demande n'apparaît pas, elle peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Pour retrouver sa demande de RSA dans son espace personnel de la CAF, la femme peut suivre les étapes suivantes :\n1. Se connecter à son compte personnel sur le site de la CAF.\n2. Sélectionner \"Demandes en cours\" dans le menu.\n3. Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\n4. Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\n\nIl est important de noter que la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.\nQUESTION: Une femme a fait une demande de RSA sur son espace personnel de la CAF en février 2024. En juin 2024, sans nouvelles, elle consulte ses démarches et ne retrouve pas trace de sa demande. Comment la retrouver dans son espace personnel ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:09.276788",
+          "duration": 19.472423,
+          "cost": 0.018660000000000003
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. La femme doit se connecter à son compte personnel sur le site de la CAF."
+          },
+          {
+            "meta": {},
+            "text": "2. Elle doit ensuite sélectionner \"Demandes en cours\" dans le menu."
+          },
+          {
+            "meta": {},
+            "text": "3. Elle doit rechercher sa demande de RSA en utilisant les informations de la demande initiale, comme la date de demande et le motif."
+          },
+          {
+            "meta": {},
+            "text": "4. Si la demande n'apparaît pas, elle peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Pour retrouver sa demande de RSA dans son espace personnel de la CAF, la femme peut suivre les étapes suivantes :\n1. Se connecter à son compte personnel sur le site de la CAF.\n2. Sélectionner \"Demandes en cours\" dans le menu.\n3. Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\n4. Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\n\nIl est important de noter que la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"La femme doit se connecter à son compte personnel sur le site de la CAF\" which supports the first fact. \nPart in the paragraph: \"Se connecter à son compte personnel sur le site de la CAF.\"\n\n2.[OK] - The paragraph states that \"Elle doit ensuite sélectionner \"Demandes en cours\" dans le menu\" which supports the second fact.\nPart in the paragraph: \"Sélectionner \"Demandes en cours\" dans le menu.\"\n\n3.[OK] - The paragraph states that \"Elle doit rechercher sa demande de RSA en utilisant les informations de la demande initiale, comme la date de demande et le motif\" which supports the third fact.\nPart in the paragraph: \"Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\"\n\n4.[OK] - The paragraph states that \"Si la demande n'apparaît pas, elle peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires\" which supports the fourth fact.\nPart in the paragraph: \"Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\"\n\n[EXTRA] = 1 - The paragraph includes an extra idea that \"la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.\" which is not mentioned in the facts.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. La femme doit se connecter à son compte personnel sur le site de la CAF.\n2. 2. Elle doit ensuite sélectionner \"Demandes en cours\" dans le menu.\n3. 3. Elle doit rechercher sa demande de RSA en utilisant les informations de la demande initiale, comme la date de demande et le motif.\n4. 4. Si la demande n'apparaît pas, elle peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires.\n\n-- PARAGRAPH --\nPour retrouver sa demande de RSA dans son espace personnel de la CAF, la femme peut suivre les étapes suivantes :\n1. Se connecter à son compte personnel sur le site de la CAF.\n2. Sélectionner \"Demandes en cours\" dans le menu.\n3. Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\n4. Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\n\nIl est important de noter que la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:14.831795",
+                "duration": 113.102298,
+                "cost": 0.05004
+              },
+              "meta": {
+                "extra": "- The paragraph includes an extra idea that \"la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.\" which is not mentioned in the facts.",
+                "nb_extra": 1,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "nb_ok": 4,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"La femme doit se connecter à son compte personnel sur le site de la CAF\" which supports the first fact. \nPart in the paragraph: \"Se connecter à son compte personnel sur le site de la CAF.\"\n\n2.[OK] - The paragraph states that \"Elle doit ensuite sélectionner \"Demandes en cours\" dans le menu\" which supports the second fact.\nPart in the paragraph: \"Sélectionner \"Demandes en cours\" dans le menu.\"\n\n3.[OK] - The paragraph states that \"Elle doit rechercher sa demande de RSA en utilisant les informations de la demande initiale, comme la date de demande et le motif\" which supports the third fact.\nPart in the paragraph: \"Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\"\n\n4.[OK] - The paragraph states that \"Si la demande n'apparaît pas, elle peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires\" which supports the fourth fact.\nPart in the paragraph: \"Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\"\n\n[EXTRA] = 1 - The paragraph includes an extra idea that \"la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.\" which is not mentioned in the facts.",
+              "human": 1,
+              "auto": 0.9375
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Dans le privé, en poste en CDI depuis moins d'un an, quel est le délai pour envoyer une lettre de démission ?"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Le délai pour envoyer une lettre de démission est de 1 mois.\n2. Ce délai commence à compter du dépôt de la demande.",
+          "prompt": {
+            "meta": {},
+            "user": "PARAGRAPHE: Dans le privé, en poste en CDI depuis moins d'un an, le délai pour envoyer une lettre de démission est de 1 mois à compter du dépôt de la demande.\nQUESTION: Dans le privé, en poste en CDI depuis moins d'un an, quel est le délai pour envoyer une lettre de démission ?",
+            "system": "Génère des phrases numérotées courtes et simples qui décrivent ce PARAGRAPHE.\nGénère le moins de phrases possibles.\nNe génère que des phrases qui permettent de répondre à la QUESTION.\nChaque phrase ne doit contenir qu'une seule information.\nLes phrases ne doivent pas contenir de référence à un document, un paragraphe, une source ou une page.\nNe génère aucune phrase redondante.",
+            "prompter": "FactPrompterJazz"
+          },
+          "name": "gpt-4",
+          "full_name": "gpt-4-0613",
+          "timestamp": "2024-06-28T18:25:09.290732",
+          "duration": 16.913588,
+          "cost": 0.007890000000000001
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Le délai pour envoyer une lettre de démission est de 1 mois."
+          },
+          {
+            "meta": {},
+            "text": "2. Ce délai commence à compter du dépôt de la demande."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "items": [
+          {
+            "llm_answer": null,
+            "meta": {},
+            "text": "Dans le privé, en poste en CDI depuis moins d'un an, le délai pour envoyer une lettre de démission est de 1 mois à compter du dépôt de la demande.",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1.[OK] - The paragraph states that \"le délai pour envoyer une lettre de démission est de 1 mois\" which supports the first fact. \nPart in the paragraph: \"le délai pour envoyer une lettre de démission est de 1 mois\"\n\n2.[OK] - The paragraph states that \"Ce délai commence à compter du dépôt de la demande\" which supports the second fact.\nPart in the paragraph: \"à compter du dépôt de la demande.\"\n\n[EXTRA] = 1 - The paragraph includes the information \"Dans le privé, en poste en CDI depuis moins d'un an,\" which is not related to the facts provided.",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Le délai pour envoyer une lettre de démission est de 1 mois.\n2. 2. Ce délai commence à compter du dépôt de la demande.\n\n-- PARAGRAPH --\nDans le privé, en poste en CDI depuis moins d'un an, le délai pour envoyer une lettre de démission est de 1 mois à compter du dépôt de la demande.",
+                  "system": "\n    For each fact in a list of FACTS, determine whether the fact is supported in the PARAGRAPH or not and return :\n- [OK] if the fact is supported, [NOT FOUND] if it is not supported and [HALLU] if an opposite fact is supported\n- the reason why you return OK, NOT FOUND or HALLU\n- the part in the PARAGRAPH related to the reason\nAt the end of the answer, add \"[EXTRA] = number of ideas found in the PARAGRAPH that don't match the factual ideas.\" An idea is considered as [EXTRA] if:\n-Off topic\n-It gives information different from the facts ideas.\n-Undesired extra context.\nExemple :\n-> Input :\n\nFACTS :\n1. L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov.\n2. Cette chaîne de Markov doit admettre g comme mesure invariante.\n3. Z ne doit pas apparaître dans le noyau de transition de cette chaîne.\n\nPARAGRAPH\nL'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov qui admette g comme mesure invariante et telle que Z n'apparaisse pas dans le noyau de transition.\n-> Output :\n1.[OK] - The paragraph states that \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\" which supports the first fact. \nPart in the paragraph: \"L'algorithme de Metropolis-Hastings cherche à obtenir une chaîne de Markov\"\n\n2.[OK] - The paragraph states that \"Cette chaîne de Markov doit admettre g comme mesure invariante\" which supports the second fact.\nPart in the paragraph: \"qui admette g comme mesure invariante\"\n\n3.[OK] - The paragraph states that \"Z ne doit pas apparaître dans le noyau de transition\" which supports the third fact.\nPart in the paragraph: \"et telle que Z n'apparaisse pas dans le noyau de transition.\"\n\n[EXTRA] = 0\n        ",
+                  "prompter": "EvalPrompterAlbert"
+                },
+                "name": "gpt-4",
+                "full_name": "gpt-4-0613",
+                "timestamp": "2024-06-28T21:09:14.847632",
+                "duration": 104.61323,
+                "cost": 0.02583
+              },
+              "meta": {
+                "extra": "- The paragraph includes the information \"Dans le privé, en poste en CDI depuis moins d'un an,\" which is not related to the facts provided.",
+                "nb_extra": 1,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2
+                ],
+                "nb_ok": 2,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "1.[OK] - The paragraph states that \"le délai pour envoyer une lettre de démission est de 1 mois\" which supports the first fact. \nPart in the paragraph: \"le délai pour envoyer une lettre de démission est de 1 mois\"\n\n2.[OK] - The paragraph states that \"Ce délai commence à compter du dépôt de la demande\" which supports the second fact.\nPart in the paragraph: \"à compter du dépôt de la demande.\"\n\n[EXTRA] = 1 - The paragraph includes the information \"Dans le privé, en poste en CDI depuis moins d'un an,\" which is not related to the facts provided.",
+              "human": 1,
+              "auto": 0.875
+            },
+            "isEditing": false,
+            "isGolden": true
+          }
+        ]
+      }
+    }
+  ]
+}
