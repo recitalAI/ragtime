@@ -29,19 +29,19 @@ class AnswerGeneratorService:
         retriever = None
         retriever_classes = get_retriever_classes()
         llm_classes = get_llm_classes()
-        llm_class = next((cls for cls in llm_classes if cls.__name__ == model), None)
-        retriever_class = next((cls for cls in retriever_classes if cls.__name__ == retriever_type), None)
-
-        if use_retriever and retriever_type:
-            if retriever_class :
-                if llm_class and getattr(llm_class, 'built_in_retriever', True) :
-                    retriever = None
-                else :
-                    retriever = retriever_class()
-            else:
-                logging.warning(f"No retriever class found for type: {retriever_type}")
-
         for model in self.models:
+            llm_class = next((cls for cls in llm_classes if cls.__name__ == model), None)
+
+            if use_retriever and retriever_type:
+                retriever_class = next((cls for cls in retriever_classes if cls.__name__ == retriever_type), None)
+                if retriever_class :
+                    if llm_class and getattr(llm_class, 'built_in_retriever', True) :
+                        retriever = None
+                    else :
+                        retriever = retriever_class()
+                else:
+                    logging.warning(f"No retriever class found for type: {retriever_type}")
+
             if llm_class:
                 prompter = AnsPrompterBase() if getattr(llm_class, 'built_in_retriever', True) else (AnsPrompterWithRetrieverFR() if use_retriever else AnsPrompterBase())
                 self.llms.append(llm_class(prompter=prompter))
