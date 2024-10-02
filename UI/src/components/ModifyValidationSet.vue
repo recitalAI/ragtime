@@ -210,6 +210,14 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+
+    <v-snackbar
+      v-model="showSnackbar"
+      :color="snackbarColor"
+      :timeout="5000"
+    >
+      {{ message }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -248,6 +256,9 @@ export default {
     const importedFiles = ref([]);
     const fileInputRef = ref(null);
     const isLoading = ref(false);
+    const message = ref('');
+    const showSnackbar = ref(false);
+    const snackbarColor = ref('');
 
     const triggerFileInput = () => {
       fileInputRef.value.click();
@@ -257,6 +268,12 @@ export default {
       openai: true,
       mistral: true
     });
+
+    const showMessage = (msg, type) => {
+      message.value = msg;
+      snackbarColor.value = type === 'success' ? 'success' : 'error';
+      showSnackbar.value = true;
+    };
 
     const fetchApiKeyAvailability = async () => {
       try {
@@ -294,7 +311,8 @@ export default {
         hasUnsavedChanges.value = false;
       } catch (error) {
         console.error('Error loading validation set:', error);
-        alert('Error loading validation set. Please try again.');
+        showMessage('Error loading validation set. Please try again.', 'error');
+
       }
     };
 
@@ -320,7 +338,7 @@ export default {
       try {
         for (let file of files) {
           if (importedFiles.value.includes(file.name)) {
-            alert(`File "${file.name}" has already been imported.`);
+            showMessage(`File "${file.name}" has already been imported.`, 'error');
             continue;
           }
 
@@ -339,7 +357,7 @@ export default {
         await nextTick();
       } catch (error) {
         console.error('Error loading file:', error);
-        alert(`Error loading file: ${error.message}`);
+        showMessage(`Error loading file: ${error.message}`, 'error');
       } finally {
         isLoading.value = false;
         if (fileInputRef.value) {
@@ -390,10 +408,11 @@ export default {
           }
         }));
         hasUnsavedChanges.value = true;
-        alert('Answers generated successfully!');
+        showMessage('Answers generated successfully!', 'success');
+
       } catch (error) {
         console.error('Error generating answers:', error);
-        alert('Error generating answers. Please check the console for details.');
+        showMessage('Error generating answers. Please check the console for details.', 'error');
       } finally {
         isGeneratingAll.value = false;
       }
@@ -405,7 +424,7 @@ export default {
       );
 
       if (invalidQuestions.length > 0) {
-        alert(`Please ensure that each question has exactly one answer. ${invalidQuestions.length} question(s) do not meet this criteria.`);
+        showMessage(`Please ensure that each question has exactly one answer. ${invalidQuestions.length} question(s) do not meet this criteria.`, 'error');
         return;
       }
 
@@ -417,7 +436,7 @@ export default {
         );
         
         if (questionsWithValidatedAnswers.length === 0) {
-          alert('No questions with validated answers found. Please validate at least one answer before generating facts.');
+          showMessage('No questions with validated answers found. Please validate at least one answer before generating facts.', 'error');
           return;
         }
 
@@ -427,10 +446,11 @@ export default {
           return updatedQ ? { ...q, facts: updatedQ.facts } : q;
         });
         hasUnsavedChanges.value = true;
-        alert('Facts generated successfully!');
+        showMessage('Facts generated successfully!', 'success');
+
       } catch (error) {
         console.error('Error generating facts:', error);
-        alert('Error generating facts. Please check the console for details.');
+        showMessage('Error generating facts. Please check the console for details.', 'error');
       } finally {
         isGeneratingFacts.value = false;
       }
@@ -438,13 +458,13 @@ export default {
 
     const saveQuestions = async () => {
       if (!fileName.value.trim()) {
-        alert('Please enter a file name.');
+        showMessage('Please enter a file name.', 'error');
         return;
       }
 
       const questionsWithoutFacts = qa.value.filter(q => !q.facts || q.facts.items.length === 0);
       if (questionsWithoutFacts.length > 0) {
-        alert(`${questionsWithoutFacts.length} question(s) do not have facts generated. Please generate facts for all questions before saving.`);
+        showMessage(`${questionsWithoutFacts.length} question(s) do not have facts generated. Please generate facts for all questions before saving.`, 'error');
         return;
       }
 
@@ -481,7 +501,8 @@ export default {
         }
       } catch (error) {
         console.error('Error saving file:', error);
-        alert('Error saving file. Please try again.');
+        showMessage('Error saving file. Please try again.', 'error');
+
       }
     };
 
@@ -568,6 +589,9 @@ export default {
       triggerFileInput,
       removeImportedFile,
       apiKeyAvailability,
+      snackbarColor,
+      showSnackbar,
+      message,
       proceedToExperiment
     };
   }
