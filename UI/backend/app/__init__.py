@@ -29,7 +29,6 @@ def create_app(config_class=Config):
     app.logger.addHandler(file_handler)
 
     app.logger.setLevel(logging.INFO)
-    app.logger.info('Ragtime startup')
 
     from app.routes import main
     app.register_blueprint(main)

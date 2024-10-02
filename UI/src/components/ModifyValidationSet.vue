@@ -399,7 +399,6 @@ export default {
     const generateAnswers = async () => {
       isGeneratingAll.value = true;
       try {
-        console.log(`Generating answers with model: ${selectedAnswerModel.value}`);
         const updatedQuestions = await answerGeneratorService.generateAnswers(qa.value, selectedAnswerModel.value);
         qa.value = qa.value.map((q, index) => ({
           ...q,
@@ -430,7 +429,6 @@ export default {
 
       isGeneratingFacts.value = true;
       try {
-        console.log(`Generating facts with model: ${selectedFactModel.value}`);
         const questionsWithValidatedAnswers = qa.value.filter(q => 
           q.answers && q.answers.items && q.answers.items.some(a => a.eval && a.eval.human === 1)
         );

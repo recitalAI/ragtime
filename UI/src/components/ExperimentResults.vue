@@ -793,7 +793,6 @@ export default {
           text: qaChunks[parseInt(num) - 1]?.text || 'Chunk not found',
           isVisible: false
         }));
-        console.log('Created chunk buttons:', chunkButtons);
 
         const formattedEval = `
           ${source ? `<p>Source : ${source}</p>` : ''}

@@ -105,8 +105,6 @@ def save_api_keys():
     data = request.json
     new_keys = data.get('apiKeys', [])
     deleted_keys = data.get('deletedKeys', [])
-    current_app.logger.info(f"Saving new API keys: {new_keys}")
-    current_app.logger.info(f"Deleting API keys: {deleted_keys}")
 
     # Remove existing keys from database
     APIKey.query.filter_by(user_id='default').delete()
