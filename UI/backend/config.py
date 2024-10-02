@@ -49,18 +49,12 @@ class Config:
             key = APIKey.query.filter_by(
                 user_id=user_id, name=key_name).first()
             if key:
-                current_app.logger.info(
-                    f"Using API key {key_name} from database: {key.value[:5]}...")
                 return key.value
 
         env_value = os.environ.get(key_name)
         if env_value:
-            current_app.logger.info(
-                f"Using API key {key_name} from environment variable: {env_value[:5]}...")
             return env_value
 
-        current_app.logger.warning(
-            f"API key {key_name} not found in database or environment variables")
         return None
 
     @classmethod

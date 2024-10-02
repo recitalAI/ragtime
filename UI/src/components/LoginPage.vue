@@ -42,18 +42,14 @@ export default {
     const error = ref('');
 
     const handleSubmit = async () => {
-      console.log('Login attempt started');
       try {
         const response = await http.post('login', {
           email: email.value,
           password: password.value
         });
-        console.log('Login response:', response.data);
         
         if (response.data.access_token) {
-          console.log('Token received:', response.data.access_token);
           localStorage.setItem('jwt_token', response.data.access_token);
-          console.log('Token stored in localStorage:', localStorage.getItem('jwt_token'));
           router.push('/');
         } else {
           console.error('No token in response');

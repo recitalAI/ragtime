@@ -3,9 +3,7 @@ import { http } from '@/plugins/axios';
 
 export async function saveJsonFile(data, filename) {
   try {
-    console.log('Sending save request to server...');
     const response = await http.post('save-json', { data, filename });
-    console.log('Received response from server:', response.data);
     return response.data;
   } catch (error) {
     console.error('Error saving JSON file:', error);
