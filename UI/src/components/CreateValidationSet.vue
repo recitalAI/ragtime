@@ -217,6 +217,14 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+
+    <v-snackbar
+      v-model="showSnackbar"
+      :color="snackbarColor"
+      :timeout="5000"
+    >
+      {{ message }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -252,6 +260,9 @@ export default {
     const importedFiles = ref([]);
     const fileInputRef = ref(null);
     const isLoading = ref(false);
+    const message = ref('');
+    const showSnackbar = ref(false);
+    const snackbarColor = ref('');
 
     const triggerFileInput = () => {
       fileInputRef.value.click();
@@ -281,6 +292,12 @@ export default {
       } catch (error) {
         console.error('Error fetching API key availability:', error);
       }
+    };
+
+    const showMessage = (msg, type) => {
+      message.value = msg;
+      snackbarColor.value = type === 'success' ? 'success' : 'error';
+      showSnackbar.value = true;
     };
 
     const goHome = () => {
@@ -320,7 +337,7 @@ export default {
         for (let file of files) {
           // Check if the file has already been imported
           if (importedFiles.value.includes(file.name)) {
-            alert(`File "${file.name}" has already been imported.`);
+            showMessage(`File "${file.name}" has already been imported.`, 'error');
             continue;
           }
 
@@ -358,7 +375,7 @@ export default {
         saveToLocalStorage();
       } catch (error) {
         console.error('Error loading file:', error);
-        alert(`Error loading file: ${error.message}`);
+        showMessage(`Error loading file: ${error.message}`, 'error');
       } finally {
         isLoading.value = false;
         // Reset the file input
@@ -421,9 +438,7 @@ export default {
       
       isGeneratingAll.value = true;
       try {
-        console.log(`Generating answers with model: ${selectedAnswerModel.value}`);
         const updatedQuestions = await answerGeneratorService.generateAnswers(qa.value, selectedAnswerModel.value);
-        console.log(selectedAnswerModel.value);
         qa.value = qa.value.map((q, index) => {
           const updatedQ = updatedQuestions[index];
           return {
@@ -436,10 +451,10 @@ export default {
         hasUnsavedChanges.value = true;
         await nextTick();
         saveToLocalStorage();
-        alert('Answers generated successfully!');
+        showMessage('Answers generated successfully!', 'success');
       } catch (error) {
         console.error('Error generating answers:', error);
-        alert('Error generating answers. Please check the console for details.');
+        showMessage('Error generating answers. Please check the console for details.', 'error');
       } finally {
         isGeneratingAll.value = false;
       }
@@ -453,13 +468,12 @@ export default {
       );
 
       if (invalidQuestions.length > 0) {
-        alert(`Please ensure that each question has exactly one answer. ${invalidQuestions.length} question(s) do not meet this criteria.`);
+        showMessage(`Please ensure that each question has exactly one answer. ${invalidQuestions.length} question(s) do not meet this criteria.`, 'error');
         return;
       }
 
       isGeneratingFacts.value = true;
       try {
-        console.log(`Generating facts with model: ${selectedFactModel.value}`);
         const questionsWithValidatedAnswers = qa.value.filter(q => 
           q.answers && q.answers.items && q.answers.items.some(a => a.eval && a.eval.human === 1)
         ).map(q => ({
@@ -477,7 +491,7 @@ export default {
         }));
         
         if (questionsWithValidatedAnswers.length === 0) {
-          alert('No questions with validated answers found. Please validate at least one answer before generating facts.');
+          showMessage('No questions with validated answers found. Please validate at least one answer before generating facts.', 'error');
           return;
         }
 
@@ -489,10 +503,10 @@ export default {
         hasUnsavedChanges.value = true;
         await nextTick();
         saveToLocalStorage();
-        alert('Facts generated successfully!');
+        showMessage('Facts generated successfully!', 'success');
       } catch (error) {
         console.error('Error generating facts:', error);
-        alert('Error generating facts. Please check the console for details.');
+        showMessage('Error generating facts. Please check the console for details.', 'error');
       } finally {
         isGeneratingFacts.value = false;
       }
@@ -501,13 +515,14 @@ export default {
 
     const saveQuestions = async () => {
       if (!fileName.value.trim()) {
-        alert('Please enter a file name.');
+        showMessage('Please enter a file name.', 'error');
         return;
       }
 
       const questionsWithoutFacts = qa.value.filter(q => !q.facts || q.facts.items.length === 0);
       if (questionsWithoutFacts.length > 0) {
-        alert(`${questionsWithoutFacts.length} question(s) do not have facts generated. Please generate facts for all questions before saving.`);
+        showMessage(`${questionsWithoutFacts.length} question(s) do not have facts generated. Please generate facts for all questions before saving.`, 'error');
+
         return;
       }
 
@@ -546,8 +561,7 @@ export default {
           throw new Error('Failed to save file');
         }
       } catch (error) {
-        console.error('Error saving file:', error);
-        alert('Error saving file. Please try again.');
+        showMessage('Error saving file. Please try again.', 'error');
       }
     };
 
@@ -663,6 +677,9 @@ export default {
       factModelOptions,
       answerModelOptions,
       apiKeyAvailability,
+      showSnackbar,
+      snackbarColor,
+      message,
       proceedToExperiment
     };
   }

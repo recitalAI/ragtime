@@ -326,6 +326,14 @@
         </v-card-actions>
       </v-form>
     </v-card>
+
+    <v-snackbar
+      v-model="showSnackbar"
+      :color="snackbarColor"
+      :timeout="5000"
+    >
+      {{ message }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -367,8 +375,10 @@ export default {
     const withCSV = ref(false);
     const selectedModels = ref([]);
     const hasChunks = ref(false);
+    const message = ref('');
+    const showSnackbar = ref(false);
+    const snackbarColor = ref('');
 
-    // Log-related refs
     const liveLogs = ref([]);
     const isShowingLogs = ref(false);
     const autoScroll = ref(true);
@@ -396,8 +406,14 @@ export default {
         validationSetData.value = data;
       } catch (error) {
         console.error('Error fetching validation set data:', error);
-        alert('Failed to fetch validation set data. Please try again.');
+        showMessage('Failed to fetch validation set data. Please try again.', 'error');
       }
+    };
+
+    const showMessage = (msg, type) => {
+      message.value = msg;
+      snackbarColor.value = type === 'success' ? 'success' : 'error';
+      showSnackbar.value = true;
     };
 
     const openAIModels = ['gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'];
@@ -547,7 +563,7 @@ export default {
         } else if (file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) {
           await readExcelFile(file);
         } else {
-          alert('Please upload a CSV or Excel file');
+          showMessage('Please upload a CSV or Excel file', 'error');
           clearFileUpload();
           return;
         }
@@ -599,8 +615,6 @@ export default {
         if (availableRetrievers.value.length > 0) {
           selectedRetriever.value = availableRetrievers.value[0];
         }
-        console.log('Fetched custom models:', models);
-        console.log('Fetched available retrievers:', availableRetrievers.value);
       } catch (error) {
         console.error('Error fetching available models and retrievers:', error);
       }
@@ -634,7 +648,7 @@ export default {
       const headers = fileData.value[0].map(header => header.trim().toLowerCase());
       const questionIndex = headers.indexOf('question');
       if (questionIndex === -1) {
-        alert('File must contain a "question" column');
+        showMessage('File must contain a "question" column', 'error');
         return;
       }
       withCSV.value = true;
@@ -648,8 +662,6 @@ export default {
         return acc;
       }, []);
 
-      console.log('Chunk indexes:', chunkIndexes);
-
 
       let hasAnyChunks = false;
 
@@ -659,13 +671,6 @@ export default {
         const fileAnswer = answerIndex !== -1 ? values[answerIndex]?.trim() : '';
         const fileChunks = chunkIndexes.map(index => values[index]?.trim()).filter(Boolean);
         const modelName = modelIndex !== -1 ? values[modelIndex]?.trim() : '';
-
-
-        console.log(`Processing row ${i}:`);
-        console.log('  Question:', fileQuestion);
-        console.log('  Answer:', fileAnswer);
-        console.log('  Chunks:', fileChunks);
-        console.log('  Model:', modelName);
 
         if (!fileQuestion) continue; 
 
@@ -738,7 +743,7 @@ export default {
           );
         } catch (error) {
           console.error('Error fetching validation set data:', error);
-          alert('Failed to fetch validation set data');
+          showMessage('Failed to fetch validation set data', 'error');
         }
       }
     };
@@ -763,7 +768,6 @@ export default {
         const response = await logService.getLiveLogs(lastLogTimestamp);
         
         if (response.logs && Array.isArray(response.logs) && response.logs.length > 0) {
-          console.log("Fetched new logs:", response.logs);
           liveLogs.value = [...liveLogs.value, ...response.logs];
           lastLogTimestamp = response.lastTimestamp;
           
@@ -780,7 +784,6 @@ export default {
 
         isExperimentComplete = response.isComplete;
         if (isExperimentComplete && logPollingInterval) {
-          console.log("Experiment complete, stopping log fetching");
           clearInterval(logPollingInterval);
           logPollingInterval = null;
         }
@@ -812,7 +815,7 @@ export default {
 
     const startExperiment = async () => {
       if (!validationSetData.value) {
-        alert('Validation set data is not loaded. Please select a validation set.');
+        showMessage('Validation set data is not loaded. Please select a validation set.', 'error');
         return;
       }
       isExperimentRunning.value = true;
@@ -883,7 +886,7 @@ export default {
 
       try {
         const result = await experimentService.startExperiment(experimentConfig);
-        alert(`Experiment completed successfully. Results are saved at: ${result.results_path}`);
+        showMessage(`Experiment completed successfully.`, 'success');
         router.push({ 
           name: 'ExperimentResults', 
           query: { path: result.results_path } 
@@ -894,7 +897,7 @@ export default {
         if (error.response && error.response.data && error.response.data.error) {
           errorMessage = error.response.data.error;
         }
-        alert(`Error starting experiment: ${errorMessage}`);
+        showMessage(`Error starting experiment: ${errorMessage}`, 'error');
       } finally {
         isExperimentRunning.value = false;
         if (logPollingInterval) {
@@ -983,8 +986,11 @@ export default {
       startLogPolling,
       stopLogPolling,
       autoScroll,
+      snackbarColor,
+      showSnackbar,
+      message,
       logContainer,
-      handleScroll,
+      handleScroll
     };
   },
 }
