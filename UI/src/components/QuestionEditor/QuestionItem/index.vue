@@ -228,6 +228,14 @@
         </v-card>
       </div>
     </v-expand-transition>
+
+    <v-snackbar
+      v-model="showSnackbar"
+      :color="snackbarColor"
+      :timeout="5000"
+    >
+      {{ message }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -258,7 +266,10 @@ export default {
       editingFactIndex: null,
       editedFactText: '',
       isAddingFact: false,
-      newFactText: ''
+      newFactText: '',
+      message: '',
+      showSnackbar: false,
+      snackbarColor: ''
     };
   },
   computed: {
@@ -337,7 +348,7 @@ export default {
         }
       } catch (error) {
         console.error('Error generating answer:', error);
-        alert('Error generating answer. Please try again.');
+        this.showMessage('Error generating answer. Please try again.', 'error');
       } finally {
         this.isGenerating = false;
       }
@@ -362,6 +373,11 @@ export default {
       this.editingFactIndex = index;
       this.editedFactText = this.question.facts.items[index].text;
       this.isEditingFact = true;
+    },
+    showMessage(msg, type){
+      this.message = msg;
+      this.snackbarColor = type === 'success' ? 'success' : 'error';
+      this.showSnackbar = true;
     },
 
     saveFact() {
@@ -432,7 +448,8 @@ export default {
     },
     async generateFacts() {
       if (!this.selectedFactModel) {
-        alert("Please select a fact generation model first.");
+        this.showMessage("Please select a fact generation model first.", 'error');
+
         return;
       }
       
@@ -440,7 +457,7 @@ export default {
       const validatedAnswers = this.question.answers.items.filter(answer => answer.eval.human === 1);
       
       if (validatedAnswers.length !== 1) {
-        alert("Please ensure that this question has exactly one answer before generating facts.");
+        this.showMessage("Please ensure that this question has exactly one answer before generating facts.", 'error');
         return;
       }
 
@@ -463,13 +480,14 @@ export default {
             facts: result.facts
           });
           this.$emit('save-to-local-storage');
-          alert('Facts generated successfully!');
+          this.showMessage('Facts generated successfully!', 'success');
+
         } else {
-          alert('No facts were generated. Please try again.');
+          this.showMessage('No facts were generated. Please try again.', 'error');
         }
       } catch (error) {
         console.error('Error generating facts:', error);
-        alert('Error generating facts. Please check the console for details.');
+        this.showMessage('Error generating facts. Please check the console for details.', 'error');
       } finally {
         this.isGeneratingFacts = false;
       }
