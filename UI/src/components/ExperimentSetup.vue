@@ -212,7 +212,7 @@
 
         <v-expand-transition>
           <div v-if="matchedQuestions.length > 0" class="matched-questions mt-4">
-            <v-card-title>Matched Questions and Answers</v-card-title>
+            <v-card-title>Questions and Answers</v-card-title>
             <v-card-text>
               <v-expansion-panels>
                 <v-expansion-panel
@@ -283,15 +283,34 @@
         </v-expand-transition>
 
         <v-card-text v-if="selectedModels.length > 0">
-          <v-card-title>Selected Models:</v-card-title>
-          <v-chip-group>
+          <v-card-title>Selected Model:</v-card-title>
+          <div class="d-flex align-center">
             <v-chip
-              v-for="model in selectedModels"
-              :key="model"
+              v-if="!isEditingModel"
+              class="ma-2"
+              @click="startEditingModel"
             >
-              {{ model }}
+              {{ selectedModels[0] }}
             </v-chip>
-          </v-chip-group>
+            <v-text-field
+              v-else
+              v-model="editingModelName"
+              dense
+              hide-details
+              class="model-edit-field ma-2"
+              @keyup.enter="saveModelEdit"
+              @blur="saveModelEdit"
+              ref="modelEditInput"
+            ></v-text-field>
+            <v-btn
+              v-if="isEditingModel"
+              icon
+              small
+              @click="saveModelEdit"
+            >
+              <v-icon>mdi-check</v-icon>
+            </v-btn>
+          </div>
         </v-card-text>
 
         <v-card v-if="isShowingLogs" class="mt-4">
@@ -378,7 +397,8 @@ export default {
     const message = ref('');
     const showSnackbar = ref(false);
     const snackbarColor = ref('');
-
+    const isEditingModel = ref(false);
+    const editingModelName = ref('');
     const liveLogs = ref([]);
     const isShowingLogs = ref(false);
     const autoScroll = ref(true);
@@ -391,6 +411,30 @@ export default {
       openai: true,
       mistral: true
     });
+
+    const startEditingModel = () => {
+      isEditingModel.value = true;
+      editingModelName.value = selectedModels.value[0];
+      nextTick(() => {
+        const input = document.querySelector('.model-edit-field input');
+        if (input) input.focus();
+      });
+    };
+
+    const saveModelEdit = () => {
+      const newName = editingModelName.value.trim();
+      if (newName && newName !== selectedModels.value[0]) {
+        const oldName = selectedModels.value[0];
+        selectedModels.value[0] = newName;
+        // Update model name in matchedQuestions
+        matchedQuestions.value.forEach(q => {
+          if (q.modelName === oldName) {
+            q.modelName = newName;
+          }
+        });
+      }
+      isEditingModel.value = false;
+    };
 
     const fetchApiKeyAvailability = async () => {
       try {
@@ -662,7 +706,6 @@ export default {
         return acc;
       }, []);
 
-
       let hasAnyChunks = false;
 
       for (let i = 1; i < fileData.value.length; i++) {
@@ -692,7 +735,8 @@ export default {
               }
               return fact;
             }),
-            originalIndex: validationSetData.value.items.indexOf(matchedItem)
+            originalIndex: validationSetData.value.items.indexOf(matchedItem),
+            modelName: modelName || '(personalized model)' // Add modelName to each question
           });
 
           if (fileChunks.length > 0) {
@@ -709,8 +753,14 @@ export default {
         selectedModels.value.push('(personalized model)');
       }
 
-      hasChunks.value = hasAnyChunks;
+      // Ensure all questions have a valid model name
+      matchedQuestions.value.forEach(q => {
+        if (!q.modelName || !selectedModels.value.includes(q.modelName)) {
+          q.modelName = selectedModels.value[0];
+        }
+      });
 
+      hasChunks.value = hasAnyChunks;
     };
 
     const toggleChunk = (questionIndex, chunkIndex) => {
@@ -990,6 +1040,10 @@ export default {
       showSnackbar,
       message,
       logContainer,
+      isEditingModel,
+      editingModelName,
+      startEditingModel,
+      saveModelEdit,
       handleScroll
     };
   },
@@ -1072,6 +1126,16 @@ export default {
   .v-btn-toggle {
     flex-wrap: wrap;
   }
+}
+
+
+.model-edit-field {
+  min-width: 300px;
+}
+
+.v-chip.editing {
+  height: auto;
+  padding: 0;
 }
 
 </style>
