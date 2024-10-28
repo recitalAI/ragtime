@@ -42,7 +42,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour une personne de nationalité belge, il n'est pas possible de faire un dispositif France Connect. France Connect est un dispositif spécifique mis en place par l'état français pour faciliter l'accés aux services publics pour les personnes de nationalité française. Il n'y a pas de dispositif similaire pour les personnes de nationalité belge. Cependant, il est possible de se connecter à un dispositif appelé 'Belgian Connect' pour accéder aux services publics belges.",
             "eval": {
@@ -136,7 +139,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Oui, il est possible de devoir rembourser des prestations familiales versées à tort. La Caisse d'allocations familiales (Caf) ou la Mutualité sociale agricole (MSA) peut vous demander de rembourser les prestations versées à tort pendant une période de 2 ans. Si l'attribution de ces prestations résulte d'une fraude ou de fausses déclarations de votre part, la Caf ou la MSA peut vous demander de rembourser pendant une période de 5 ans. Après ces délais, la Caf ou la MSA ne peut plus vous demander de remboursement.",
             "eval": {
@@ -218,7 +224,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour créer un compte SIA Chasseur, vous devez vous adresser à un armurier, un courtier agréé ou à un particulier en présence d'un armurier. Il est obligatoire d'avoir créé un compte SIA pour acheter une arme en tant que chasseur. L'arme achetée sera transférée automatiquement dans votre râtelier numérique. Vous devrez confirmer l'achat de l'arme en ligne via votre compte SIA. Si vous ne le faites pas, l'achat sera validé automatiquement au bout de 5 jours.",
             "eval": {
@@ -317,7 +326,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour obtenir une carte grise française en Allemagne, vous devez suivre les étapes suivantes :\n1. Vérifiez si le véhicule que vous souhaitez acheter en Allemagne est conforme aux normes françaises. Si ce n'est pas le cas, vous devrez peut-être effectuer des modifications pour qu'il puisse être homologué en France.\n\n2. Une fois que vous avez acheté le véhicule en Allemagne, vous devez obtenir une carte grise allemande. Pour cela, vous devrez fournir les documents suivants :\n   - Facture d'achat du véhicule\n   - Carte grise allemande\n   - Pièce d'identité\n   - Justificatif de domicile en Allemagne\n\n3. Une fois que vous avez obtenu la carte grise allemande, vous devrez la traduire en français. Vous pouvez demander une traduction certifiée à un service de traduction officiel.\n\n4. Une fois que vous avez la carte grise allemande traduite, vous pouvez la transmettre à la préfecture ou à la sous-préfecture de votre département en France. Vous devrez fournir les documents suivants :\n   - Carte grise allemande traduite\n   - Facture d'achat du véhicule\n   - Pièce d'identité\n   - Justificatif de domicile en France\n\n5. Une fois que vous avez transmis les documents à la préfecture ou à la sous-préfecture, vous devrez attendre la réponse de la direction des impôts. Si vous êtes concerné par le quitus fiscal, vous devrez également payer la TVA en fonction de votre situation.\n\nIl est important de noter que ces étapes peuvent varier en fonction de votre département de domicile et de la situation spécifique de votre achat de véhicule en Allemagne. Il est donc recommandé de contacter votre préfecture ou votre sous-préfecture pour obtenir des informations précises sur la procédure à suivre.",
             "eval": {
@@ -409,7 +421,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Non, une personne ne peut pas déduire les charges d'assurance et de diagnostic DPE sur une déclaration d'impôts si le logement n'est pas loué. Le DPE est obligatoire pour les logements loués, et les charges associées à sa réalisation ne peuvent pas être déduites sur une déclaration d'impôts si le logement n'est pas destiné à être occupé.",
             "eval": {
@@ -526,7 +541,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour activer le CESU avance immédiate, vous devez suivre les étapes suivantes :\n1. Vérifiez si vous remplissez les conditions nécessaires pour bénéficier de l'avance immédiate. Vous devez disposer d'un compte Cesu, avoir un numéro fiscal correspondant à votre état civil, avoir réalisé au moins une déclaration de revenus et avoir un accord écrit de votre salarié.\n2. Si vous ne remplissez pas ces conditions, vous devez contacter les services fiscaux pour obtenir des informations supplémentaires.\n3. Si vous remplissez les conditions, vous pouvez vous rendre dans la rubrique \"Avantage fiscal\" de votre espace personnel sur le site du Cesu.\n4. Dans la rubrique \"Avantage fiscal\", vous devez cliquer sur le lien \"Activer le service CESU +\" et suivre les instructions données.\n5. Si vous êtes un employeur qui utilise un organisme ou une entreprise de services à la personne, vous pouvez demander à votre organisme de vous proposer de bénéficier de l'avance immédiate. Si vous acceptez, votre organisme fournit les informations nécessaires à l'Urssaf.\n6. Une fois l'avance immédiate activée, vous recevrez les demandes de paiement de votre organisme sur votre compte Cesu. Le montant du crédit d'impôt est déduit du montant de la prestation. Vous disposez de 2 jours pour valider ou contester une demande de paiement.\n7. Si vous n'avez pas de compte Cesu, vous pouvez le créer grâce à un lien dans le mail de l'Urssaf que vous recevrez après avoir activé l'avance immédiate.\n\nIl est important de noter que les informations fournies sont basées sur les éléments de contexte fournis et peuvent être sujettes à des mises à jour ou des modifications. Il est donc recommandé de se référer aux sources officielles et de consulter les services fiscaux pour obtenir des informations précises et à jour sur la procédure d'activation du CESU avance immédiate.",
             "eval": {
@@ -627,7 +645,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour déclarer l'installation de panneaux photovoltaïques sur sa déclaration d'impôts, le contribuable doit indiquer le montant de ses dépenses dans la section concernant les revenus professionnels. Il doit également mentionner le montant de la prime à l'investissement qu'il a reçue en raison de la vente du surplus d'électricité. En cas de remboursement des dépenses dans les 5 ans suivant la mise en service des panneaux, le contribuable devra rendre le crédit d'impôt.",
             "eval": {
@@ -725,7 +746,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour déclarer vos biens immobiliers, vous devez suivre les étapes suivantes :\n\n1. Vérifiez si vous êtes soumis à l'impôt sur la fortune immobilière (IFI) en fonction de votre patrimoine immobilier. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de l'IFI.\n\n2. Si vous êtes soumis à l'IFI, vous devez déclarer vos biens immobiliers sur le formulaire de déclaration de l'IFI. Vous pouvez le remplir en ligne ou le déposer auprès de votre service des impôts des entreprises.\n\n3. Si vous avez vendu un bien immobilier et que vous êtes soumis à la TVA immobilière, vous devez déclarer la TVA immobilière en cas de vente d'un bien. Vous pouvez faire cette déclaration mensuellement ou trimestriellement en fonction de la valeur annuelle de la TVA immobilière exigible. Vous pouvez utiliser le service d'information des impôts pour obtenir plus de détails sur les délais et les procédures de déclaration.\n\n4. Si vous avez réalisé une plus-value immobilière lors de la vente d'un bien, vous devez déclarer cette plus-value immobilière sur votre déclaration d'impôt sur le revenu. Vous pouvez consulter les informations fournies sur le site service-public.fr pour connaître les critères de calcul de la plus-value immobilière et les délais de déclaration.\n\n5. Si vous avez des questions ou des incertitudes concernant la déclaration de vos biens immobiliers, vous pouvez contacter le service des impôts pour obtenir des renseignements supplémentaires.\n\nJ'espère que ces informations vous seront utiles pour procéder à la déclaration de vos biens immobiliers.",
             "eval": {
@@ -820,7 +844,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Pour retrouver sa demande de RSA dans son espace personnel de la CAF, la femme peut suivre les étapes suivantes :\n1. Se connecter à son compte personnel sur le site de la CAF.\n2. Sélectionner \"Demandes en cours\" dans le menu.\n3. Rechercher la demande de RSA en utilisant les informations de la demande initiale, telles que la date de demande et le motif de la demande.\n4. Si la demande n'apparaît pas dans la liste des demandes en cours, la femme peut contacter la CAF par téléphone ou par courrier pour obtenir des informations supplémentaires sur l'état de sa demande.\n\nIl est important de noter que la CAF peut prendre un certain temps pour traiter les demandes de RSA, et il est possible que la demande de la femme ait été transférée à un autre service de la CAF ou à un organisme de placement pour une évaluation supplémentaire. Si la demande n'a pas été traitée dans les délais normaux, la femme peut contacter la CAF pour obtenir des explications et demander une révision de son dossier.",
             "eval": {
@@ -906,7 +933,10 @@
       "answers": {
         "items": [
           {
-            "llm_answer": null,
+            "llm_answer": {
+              "name": "Human",
+              "timestamp": "Tue, 17 Sep 2024 08:43:27 GMT"
+            },
             "meta": {},
             "text": "Dans le privé, en poste en CDI depuis moins d'un an, le délai pour envoyer une lettre de démission est de 1 mois à compter du dépôt de la demande.",
             "eval": {
