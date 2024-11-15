@@ -10,7 +10,7 @@ services:
         if [ ! -f /app/.env ]; then
           echo '# Default environment variables' > /app/.env;
         fi &&
-        gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 240 wsgi:application
+        gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 3600 wsgi:application
       "    
     volumes:
       - ./UI/backend:/app

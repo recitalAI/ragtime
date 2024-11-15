@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Global constants
-ALBERT_BASE_URL = "..."
+ALBERT_BASE_URL = os.environ.get('ALBERT_BASE_URL')
 ALBERT_MODEL = "AgentPublic/llama3-instruct-guillaumetell"
 DEFAULT_MAX_TOKENS = 2000
 DEFAULT_TEMPERATURE = 0.7
@@ -126,9 +126,9 @@ class Search(Retriever):
 
 class AlbertLLM_GuillaumeTellLLM(LLM):
     """Albert API LLM implementation"""
-    name: str = "AgentPublic/llama3-instruct-guillaumetell"
+    name: str = ALBERT_MODEL
     prompter: Prompter = Field(..., description="Prompter instance")
-    albert_model: ClassVar[str] = "AgentPublic/llama3-instruct-guillaumetell"
+    albert_model: ClassVar[str] = ALBERT_MODEL
     built_in_retriever: ClassVar[bool] = True
     max_tokens: int = DEFAULT_MAX_TOKENS
     temperature: float = DEFAULT_TEMPERATURE

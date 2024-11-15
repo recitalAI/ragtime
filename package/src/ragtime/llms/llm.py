@@ -25,7 +25,6 @@ class LLM(RagtimeBase):
     name: Optional[str] = None
     prompter: Prompter
     max_tokens: int = DEFAULT_MAX_TOKENS
-    # _semaphore: asyncio.Semaphore = asyncio.Semaphore(1)
 
     async def generate(
         self,
@@ -42,20 +41,15 @@ class LLM(RagtimeBase):
         If None, LLMAnswer retrieval or generation went wrong and post-processing
         must be skipped
         """
-        # await self._semaphore.acquire()
-        # logger.prefix = f"[{self.name}]"
-
         assert not prev_obj or (cur_obj.__class__ == prev_obj.__class__)
         cur_class_name: str = cur_obj.__class__.__name__
         original_logger_prefix: str = logger.prefix
 
         # Get prompt
-
         logger.prefix += f"[{self.prompter.__class__.__name__}]"
 
         if not (prev_obj and prev_obj.llm_answer and prev_obj.llm_answer.prompt) \
                 or (start_from <= StartFrom.prompt and not b_missing_only):
-            # logger.debug(f"Either no {cur_class_name} / LLMAnswer / Prompt exists yet, or you asked to regenerate Prompt ==> generate prompt")
             logger.debug(f"Generate prompt")
             prompt = self.prompter.get_prompt(**kwargs)
         else:
@@ -67,7 +61,6 @@ class LLM(RagtimeBase):
         # Generates text
         result: WithLLMAnswer = cur_obj
         if not (prev_obj and prev_obj.llm_answer) or (start_from <= StartFrom.llm and not b_missing_only):
-            # logger.debug(f"Either no {cur_class_name} / LLMAnswer exists yet, or you asked to regenerate it ==> generate LLMAnswer")
             original_logger_prefix: str = logger.prefix
             logger.prefix += f'[{self.name}]'
             logger.debug(f'Generate LLMAnswer with "{self.name}"')
@@ -91,7 +84,7 @@ class LLM(RagtimeBase):
         logger.prefix = original_logger_prefix
         logger.prefix += f"[{self.prompter.__class__.__name__}]"
 
-        if result.llm_answer and (
+        if result and result.llm_answer and (
             not (prev_obj and prev_obj.llm_answer)
             or not b_missing_only
             and start_from <= StartFrom.post_process
