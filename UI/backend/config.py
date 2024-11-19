@@ -5,13 +5,28 @@ import logging
 
 load_dotenv()
 
-
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'fallback-key-for-development'
-    SQLALCHEMY_DATABASE_URI = os.environ.get(
-        'DATABASE_URL') or 'sqlite:///app.db'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///app.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY') or 'jwt-secret-key'
+    
+    UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+    ALLOWED_EXTENSIONS = {'csv', 'xlsx', 'xls', 'json'}
+    MAX_CONTENT_LENGTH = 16 * 1024 * 1024
+
+    API_SPEC_OPTIONS = {
+        'components': {
+            'schemas': {
+                'FileUpload': {
+                    'type': 'object',
+                    'properties': {
+                        'file': {'type': 'string', 'format': 'binary'}
+                    }
+                }
+            }
+        }
+    }
 
     @classmethod
     def get_env_variable(cls, name):
@@ -31,7 +46,10 @@ class Config:
         cls.app = app
         with app.app_context():
             cls.update_config_with_user_keys()
-
+            
+        if not os.path.exists(cls.UPLOAD_FOLDER):
+            os.makedirs(cls.UPLOAD_FOLDER)
+            
     @classmethod
     def update_config_with_user_keys(cls):
         from app.models import APIKey

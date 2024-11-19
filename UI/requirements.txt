@@ -17,6 +17,9 @@ setenv
 py_setenv
 lazy_import
 asyncio
+pandas
 llama_index
 flask_jwt_extended
 flask_sqlalchemy
+flask-smorest
+marshmallow
