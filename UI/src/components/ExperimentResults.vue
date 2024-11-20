@@ -342,8 +342,8 @@
           </template>
           <template #body>
             <v-row
-              v-for="(group, index) in filteredDetailedResults"
-              :key="`main-${index}`"
+              v-for="group in filteredDetailedResults" 
+              :key="`main-${group.originalIndex}`"
               class="table-row py-1"
               style="min-height: 55px;"
             >
@@ -352,7 +352,7 @@
                 cols="1"
                 @click="toggleExpandedDetails(group)"
               >
-                {{ index + 1 }}
+                {{ group.originalIndex }}
               </v-col>
               <v-col
                 class="primary--text align-center justify-start clickable"
@@ -515,6 +515,26 @@
                     </li>
                   </ul>
                 </div>
+                <!-- New Chunks Section -->
+                <div class="facts-section" v-if="group.chunks && group.chunks.length">
+                  <h3 class="h3-text">Chunks</h3>
+                  <div class="chunk-buttons-container">
+                    <button v-for="(chunk, chunkIndex) in group.chunks" 
+                            :key="chunkIndex" 
+                            class="chunk-button"
+                            @click="showChunkContent(group, chunkIndex)">
+                            Chunk {{ chunkIndex + 1 }}
+                    </button>
+                  </div>
+                  <transition-group name="chunk-fade" tag="div" class="chunk-content-container">
+                    <div v-for="(chunk, chunkIndex) in group.chunks" 
+                        :key="chunkIndex"
+                        v-show="chunk.isVisible" 
+                        class="fact-eval chunk-content">
+                      <strong>Chunk {{ chunkIndex + 1 }}:</strong> {{ chunk.text }}
+                    </div>
+                  </transition-group>
+                </div>
               </v-col>
             </v-row>
           </template>
@@ -573,18 +593,24 @@ export default {
     const groupedDetailedResults = ref([]);
 
     const filteredDetailedResults = computed(() => {
-      return groupedDetailedResults.value.filter(group => {
-        if (filters.value.ok || filters.value.hallu || filters.value.missing || filters.value.extra) {
-          return (
-            (filters.value.ok && group.mainResult.ok > 0) ||
-            (filters.value.hallu && group.mainResult.hallu > 0) ||
-            (filters.value.missing && group.mainResult.missing > 0) ||
-            (filters.value.extra && group.mainResult.extra > 0)
-          );
-        }
-        return true;
-      });
+      return groupedDetailedResults.value
+        .map((group, idx) => ({
+          ...group,
+          originalIndex: idx + 1,
+          show: (filters.value.ok && group.mainResult.ok > 0) ||
+                (filters.value.hallu && group.mainResult.hallu > 0) ||
+                (filters.value.missing && group.mainResult.missing > 0) ||
+                (filters.value.extra && group.mainResult.extra > 0)
+        }))
+        .filter(group => group.show);
     });
+
+    const toggleExpandedDetails = (group) => {
+      const originalGroup = groupedDetailedResults.value.find(g => g.question === group.question);
+      if (originalGroup) {
+        originalGroup.showExpanded = !originalGroup.showExpanded;
+      }
+    };
 
 
     const getChunkEvalClass = (model) => {
@@ -595,24 +621,25 @@ export default {
     
     const processDetailedResults = (results, fullEval) => {
       const groups = {};
-      results.forEach(result => {
+      results.forEach((result, idx) => {
         if (!groups[result.text]) {
           const fullEvalItem = fullEval.find(item => item.question === result.text);
           
           if (!fullEvalItem) {
             console.error(`No matching full evaluation item found for question: ${result.text}`);
-            return; // Skip this iteration
+            return;
           }
           
           const mainAnswer = fullEvalItem.answers && fullEvalItem.answers[0];
           
           if (!mainAnswer) {
             console.error(`No main answer found for question: ${result.text}`);
-            return; // Skip this iteration
+            return;
           }
           
           const evaluation = mainAnswer.evaluation;
           groups[result.text] = {
+            originalIndex: idx,
             question: result.text,
             mainResult: null,
             factsCount: result.factsCount,
@@ -621,10 +648,15 @@ export default {
             showChunkEvals: false,
             showDetails: false,
             showExpanded: false,
+            chunks: (fullEvalItem.chunks || []).map((chunk) => ({
+              ...chunk,
+              isVisible: false
+            })),
             facts: (fullEvalItem.facts || []).map((fact, index) => {
               const factNumber = index + 1;
               let status = 'unknown';
               let factEvaluation = ''; 
+              
               if (evaluation && evaluation.text) {
                 factEvaluation = extractFactEvaluation(evaluation.text, factNumber);
                 if (factEvaluation.result.includes('[OK]')) status = 'ok';
@@ -632,10 +664,11 @@ export default {
                 else if (factEvaluation.result.includes('[HALLU]')) status = 'hallu';
               }
 
-              const { status: chunkStatus, evaluation: chunkEvaluation, chunkButtons } = extractChunkEvaluation(fullEvalItem.chunkEvaluations, factNumber, fullEvalItem.chunks || []);
-              
+              const { status: chunkStatus, evaluation: chunkEvaluation, chunkButtons } = 
+                extractChunkEvaluation(fullEvalItem.chunkEvaluations, factNumber, fullEvalItem.chunks || []);
               
               const { problemType, explanation } = analyzeFactAndChunkStatus(status, chunkStatus);
+              
               return {
                 ...fact,
                 status,
@@ -657,6 +690,7 @@ export default {
             evalCost: evaluation?.cost || 0,
           };
         }
+
         if (result.model !== "Missings Eval" && result.model !== "Hallucinations Eval" && result.model !== "Hallucination Eval") {
           groups[result.text].mainResult = result;
           groups[result.text].mainModel = result.model;
@@ -665,7 +699,12 @@ export default {
           groups[result.text].hasChunkEvals = true;
         }
       });
+      
       groupedDetailedResults.value = Object.values(groups);
+    };
+
+    const showChunkContent = (group, chunkIndex) => {
+      group.chunks[chunkIndex].isVisible = !group.chunks[chunkIndex].isVisible;
     };
 
     const showChunk = (group, factIndex, chunkNumber) => {
@@ -846,10 +885,6 @@ export default {
       group.showChunkEvals = !group.showChunkEvals;
     };
 
-    const toggleExpandedDetails = (group) => {
-      group.showExpanded = !group.showExpanded;
-    };
-
     const fetchResults = async () => {
       if (props.path) {
         try {
@@ -938,22 +973,22 @@ export default {
         llm: {
           hallucinations: `${llmHallu} / ${totalHallu}`,
           hallucinationsPr: calculatePercentage(llmHallu, totalHallu),
-          missings: `${llmMissing}/ ${totalMissing}`,
+          missings: `${llmMissing} / ${totalMissing}`,
           missingsPr: calculatePercentage(llmMissing, totalMissing),
-          combined: `${llmCombined}/ ${totalErrors}`,
+          combined: `${llmCombined} / ${totalErrors}`,
           combinedPr: calculatePercentage(llmCombined, totalErrors),
-          wholeTest: `${llmCombined}/ ${totalFacts}`,
+          wholeTest: `${llmCombined} / ${totalFacts}`,
           wholeTestPr: calculatePercentage(llmCombined, totalFacts)
         },
         chunks: {
           hallucinationsPr: calculatePercentage(chunksHallu, totalHallu),
-          hallucinations: `${chunksHallu}/ ${totalHallu}`,
+          hallucinations: `${chunksHallu} / ${totalHallu}`,
           missingsPr: calculatePercentage(chunksMissing, totalMissing),
-          missings: `${chunksMissing}/ ${totalMissing}`,
+          missings: `${chunksMissing} / ${totalMissing}`,
           combinedPr: calculatePercentage(chunksCombined, totalErrors),
-          combined: `${chunksCombined}/ ${totalErrors}`,
+          combined: `${chunksCombined} / ${totalErrors}`,
           wholeTestPr: calculatePercentage(chunksCombined, totalFacts),
-          wholeTest: `${chunksCombined}/ ${totalFacts}`
+          wholeTest: `${chunksCombined} / ${totalFacts}`
         }
       };
     };
@@ -1027,6 +1062,7 @@ export default {
       getFactStatusClass,
       markdownToHtml,
       formatAnswer,
+      showChunkContent,
       showDetailedEvaluation,
       closeChunksSummary,
     };
@@ -1262,11 +1298,21 @@ th {
   flex-wrap: wrap;
 }
 
+.chunk-buttons-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+
 .chunk-button {
-  margin-left: 10px;
-  margin-bottom: 10px;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  border: 2px solid #17a2b8;
+  min-width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .chunk-button.active {
@@ -1275,11 +1321,28 @@ th {
 }
 
 .chunk-button:hover {
-  background-color: #138496;
-  border-color: #138496;
-  color: white;
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
 }
 
+.chunk-fade-enter-active,
+.chunk-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.chunk-fade-enter-from,
+.chunk-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.chunk-content-container {
+  margin-top: 16px;
+}
+
+.chunk-content {
+  margin-bottom: 16px;
+}
 .chunk-content {
   background-color: #f8f9fa;
   padding: 15px;
