@@ -1,15 +1,28 @@
 from datetime import datetime
 import re
+import os
+import shutil
 
 class LogCapture:
     def __init__(self, log_file_path='/usr/local/bin/logs/logs.txt'):
         self.log_file_path = log_file_path
         self.start_time = datetime.now()
         self.last_log_time = None
+        
+        # Setup backup path in app logs directory
+        current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.backup_path = os.path.join(current_dir, 'logs', 'experiment_logs.txt')
+        
+        # Create logs directory if it doesn't exist
+        os.makedirs(os.path.dirname(self.backup_path), exist_ok=True)
 
     def get_logs(self, last_timestamp=None):
         with open(self.log_file_path, 'r') as f:
             logs = f.readlines()
+            
+        # Create backup
+        with open(self.backup_path, 'w') as f:
+            f.writelines(logs)
 
         filtered_logs = []
         last_timestamp = last_timestamp or self.start_time
