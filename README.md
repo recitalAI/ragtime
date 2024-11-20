@@ -37,6 +37,11 @@ This README provides instructions for setting up and customizing the Ragtime pro
 
    Note: If you encounter an error about logs on the first run, simply relaunch the container and it should work.
 
+You can access the Swagger documentation at the following link:  
+
+```
+http://localhost:8887/docs
+```
 ## Customization
 
 You can customize the retriever and the LLMs you want to use in the `classes.py` file. The custom classes you create will appear in the UI for selection.
