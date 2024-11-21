@@ -84,7 +84,7 @@ class LLM(RagtimeBase):
         logger.prefix = original_logger_prefix
         logger.prefix += f"[{self.prompter.__class__.__name__}]"
 
-        if result and result.llm_answer and (
+        if result.llm_answer and (
             not (prev_obj and prev_obj.llm_answer)
             or not b_missing_only
             and start_from <= StartFrom.post_process
