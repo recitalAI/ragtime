@@ -54,7 +54,7 @@ class EvalPrompterFR(Prompter):
 class EvalPrompterFRV2(Prompter):
     """
     Prompt: FAITS and REPONSE - expect the REPONSE to be rewritten including the FACTS in the text
-    Post_process: analyse cited factsfacts not cited, and facts invented (?)
+    Post_process: analyse cited facts not cited, and facts invented (?)
     """
 
     system: str = """
