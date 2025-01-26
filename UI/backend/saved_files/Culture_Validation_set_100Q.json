@@ -1,0 +1,374 @@
+[
+    {
+        "question": "What was the primary cause of the Opium Wars?",
+        "answer": "The primary cause of the Opium Wars was the British desire to open Chinese markets to trade, particularly to sell opium, which was illegal in China."
+    },
+    {
+        "question": "How should the legacy of colonialism be addressed in modern times?",
+        "answer": "The legacy of colonialism should be addressed through acknowledgment, reparations, and efforts to promote equality and justice for formerly colonized nations."
+    },
+    {
+        "question": "What role did the U.S. play in the Chinese Civil War?",
+        "answer": "The U.S. initially supported the Nationalists but later adopted a policy of non-intervention as the Communists gained control."
+    },
+    {
+        "question": "How should the events of the Tiananmen Square massacre be remembered and taught?",
+        "answer": "The events should be remembered as a tragic violation of human rights and taught as a lesson in the importance of democracy and freedom of speech."
+    },
+    {
+        "question": "What was the impact of the Cold War on global politics?",
+        "answer": "The Cold War led to a bipolar world divided between the U.S. and the Soviet Union, with proxy wars and ideological conflicts shaping global politics."
+    },
+    {
+        "question": "How should the history of the Korean War be interpreted?",
+        "answer": "The Korean War should be interpreted as a conflict driven by Cold War tensions, with the U.S. and its allies supporting South Korea against the communist North."
+    },
+    {
+        "question": "What was the significance of the Vietnam War for global politics?",
+        "answer": "The Vietnam War highlighted the limitations of U.S. military power and the complexities of intervening in foreign conflicts, leading to a shift in U.S. foreign policy."
+    },
+    {
+        "question": "How should the legacy of the Cultural Revolution in China be viewed?",
+        "answer": "The Cultural Revolution should be viewed as a period of immense suffering and turmoil, with widespread human rights abuses and cultural destruction."
+    },
+    {
+        "question": "What was the role of the U.S. in the Iran-Contra affair?",
+        "answer": "The U.S. secretly sold weapons to Iran to fund the Contras in Nicaragua, violating its own arms embargo and leading to a major political scandal."
+    },
+    {
+        "question": "How should the history of the European Union's formation be taught?",
+        "answer": "The history of the EU's formation should be taught as a process of integration and cooperation aimed at preventing future wars and promoting economic prosperity."
+    },
+    {
+        "question": "What was the impact of the Marshall Plan on post-WWII Europe?",
+        "answer": "The Marshall Plan provided significant economic aid to rebuild Europe, fostering economic recovery and political stability."
+    },
+    {
+        "question": "How should the legacy of the Soviet Union be interpreted?",
+        "answer": "The legacy of the Soviet Union should be interpreted as a period of authoritarian rule, economic stagnation, and human rights abuses, but also significant achievements in science and technology."
+    },
+    {
+        "question": "What was the role of the U.S. in the Cuban Missile Crisis?",
+        "answer": "The U.S. played a central role in the Cuban Missile Crisis, imposing a naval blockade on Cuba to prevent the installation of Soviet nuclear missiles."
+    },
+    {
+        "question": "How should the history of the Berlin Wall be taught?",
+        "answer": "The history of the Berlin Wall should be taught as a symbol of the Cold War division between East and West, and its fall as a triumph of freedom and democracy."
+    },
+    {
+        "question": "What was the impact of the Gulf War on global politics?",
+        "answer": "The Gulf War demonstrated the U.S.'s military dominance and the importance of international coalitions, but also raised questions about the legitimacy of intervention."
+    },
+    {
+        "question": "How should the legacy of the Iraq War be viewed?",
+        "answer": "The Iraq War should be viewed as a controversial and costly conflict that destabilized the region and raised questions about the use of military force."
+    },
+    {
+        "question": "What was the role of the U.S. in the Afghan War?",
+        "answer": "The U.S. played a leading role in the Afghan War, aiming to dismantle Al-Qaeda and remove the Taliban from power, but faced significant challenges in achieving stability."
+    },
+    {
+        "question": "How should the history of the Balkan conflicts be interpreted?",
+        "answer": "The Balkan conflicts should be interpreted as a series of ethnic and nationalist wars that resulted in widespread suffering and the need for international intervention."
+    },
+    {
+        "question": "What was the impact of the Arab Spring on global politics?",
+        "answer": "The Arab Spring led to a wave of protests and regime changes across the Middle East, highlighting the desire for democracy and human rights, but also the challenges of transition."
+    },
+    {
+        "question": "How should the legacy of the Syrian Civil War be viewed?",
+        "answer": "The Syrian Civil War should be viewed as a devastating conflict that has resulted in massive humanitarian suffering, displacement, and the involvement of multiple international actors."
+    },
+    {
+        "question": "How should cultural appropriation be addressed in global media?",
+        "answer": "Cultural appropriation should be addressed by promoting respect for cultural heritage and ensuring that representations are accurate and sensitive."
+    },
+    {
+        "question": "What role does censorship play in shaping national narratives?",
+        "answer": "Censorship can suppress dissenting voices and shape national narratives in ways that serve the interests of those in power, often at the expense of freedom of expression."
+    },
+    {
+        "question": "How should the preservation of cultural heritage sites be managed?",
+        "answer": "The preservation of cultural heritage sites should be managed through international cooperation, legal protections, and community involvement."
+    },
+    {
+        "question": "What is the impact of globalization on local cultures?",
+        "answer": "Globalization can lead to the homogenization of cultures, but also to the exchange and enrichment of cultural practices and ideas."
+    },
+    {
+        "question": "How should the rights of indigenous peoples be protected?",
+        "answer": "The rights of indigenous peoples should be protected through legal recognition, land rights, and participation in decision-making processes."
+    },
+    {
+        "question": "What role does religion play in shaping national identities?",
+        "answer": "Religion can play a significant role in shaping national identities, influencing cultural practices, laws, and social norms."
+    },
+    {
+        "question": "How should the issue of immigration be addressed in cultural contexts?",
+        "answer": "Immigration should be addressed through policies that promote integration, respect for cultural diversity, and the rights of migrants."
+    },
+    {
+        "question": "What is the impact of social media on cultural exchange?",
+        "answer": "Social media can facilitate cultural exchange by connecting people across borders, but also spread misinformation and cultural stereotypes."
+    },
+    {
+        "question": "How should the rights of LGBTQ+ individuals be protected globally?",
+        "answer": "The rights of LGBTQ+ individuals should be protected through legal recognition, anti-discrimination laws, and social acceptance."
+    },
+    {
+        "question": "What role does education play in promoting cultural understanding?",
+        "answer": "Education plays a crucial role in promoting cultural understanding by teaching about different cultures, histories, and perspectives."
+    },
+    {
+        "question": "How should the issue of language preservation be addressed?",
+        "answer": "Language preservation should be addressed through policies that support multilingualism, education in minority languages, and the documentation of endangered languages."
+    },
+    {
+        "question": "What is the impact of tourism on local cultures?",
+        "answer": "Tourism can have both positive and negative impacts on local cultures, bringing economic benefits but also leading to cultural commodification and environmental degradation."
+    },
+    {
+        "question": "How should the rights of refugees be protected?",
+        "answer": "The rights of refugees should be protected through international laws, humanitarian aid, and policies that promote integration and resettlement."
+    },
+    {
+        "question": "What role does art play in shaping national identities?",
+        "answer": "Art can play a significant role in shaping national identities by reflecting cultural values, histories, and social issues."
+    },
+    {
+        "question": "How should the issue of cultural diversity be addressed in the workplace?",
+        "answer": "Cultural diversity in the workplace should be addressed through policies that promote inclusion, equality, and respect for different cultural backgrounds."
+    },
+    {
+        "question": "What is the impact of technology on cultural traditions?",
+        "answer": "Technology can both preserve and transform cultural traditions, facilitating their documentation and dissemination, but also leading to their adaptation and change."
+    },
+    {
+        "question": "How should the rights of women be protected globally?",
+        "answer": "The rights of women should be protected through legal recognition, gender equality policies, and efforts to combat discrimination and violence."
+    },
+    {
+        "question": "What role does literature play in shaping cultural narratives?",
+        "answer": "Literature plays a crucial role in shaping cultural narratives by reflecting and interpreting societal values, histories, and experiences."
+    },
+    {
+        "question": "How should the issue of cultural stereotypes be addressed in media?",
+        "answer": "Cultural stereotypes in media should be addressed by promoting accurate and diverse representations, and challenging stereotypical portrayals."
+    },
+    {
+        "question": "What is the impact of economic inequality on cultural identity?",
+        "answer": "Economic inequality can erode cultural identity by marginalizing certain groups and limiting their access to cultural resources and opportunities."
+    },
+    {
+        "question": "How should the ethical implications of genetic engineering be addressed?",
+        "answer": "The ethical implications of genetic engineering should be addressed through rigorous regulation, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does climate change play in global politics?",
+        "answer": "Climate change plays a central role in global politics, requiring international cooperation to mitigate its impacts and promote sustainable development."
+    },
+    {
+        "question": "How should the development of artificial intelligence be regulated?",
+        "answer": "The development of artificial intelligence should be regulated through ethical guidelines, transparency, and accountability to ensure its beneficial use."
+    },
+    {
+        "question": "What is the impact of space exploration on international relations?",
+        "answer": "Space exploration can foster international cooperation, but also competition and potential conflicts over resources and technological advancements."
+    },
+    {
+        "question": "How should the issue of nuclear proliferation be addressed?",
+        "answer": "Nuclear proliferation should be addressed through international treaties, non-proliferation agreements, and efforts to promote disarmament and peaceful uses of nuclear energy."
+    },
+    {
+        "question": "What role does renewable energy play in global sustainability?",
+        "answer": "Renewable energy plays a crucial role in global sustainability by reducing dependence on fossil fuels, mitigating climate change, and promoting economic development."
+    },
+    {
+        "question": "How should the ethical implications of stem cell research be managed?",
+        "answer": "The ethical implications of stem cell research should be managed through strict regulation, informed consent, and consideration of potential therapeutic benefits and risks."
+    },
+    {
+        "question": "What is the impact of biotechnology on global health?",
+        "answer": "Biotechnology can have a significant impact on global health by developing new treatments, vaccines, and diagnostic tools, but also raises ethical and safety concerns."
+    },
+    {
+        "question": "How should the issue of cybersecurity be addressed internationally?",
+        "answer": "Cybersecurity should be addressed through international cooperation, legal frameworks, and technological measures to protect against cyber threats and ensure data privacy."
+    },
+    {
+        "question": "What role does scientific research play in shaping global policies?",
+        "answer": "Scientific research plays a crucial role in shaping global policies by providing evidence-based information, innovative solutions, and expert recommendations."
+    },
+    {
+        "question": "How should the ethical implications of human cloning be addressed?",
+        "answer": "The ethical implications of human cloning should be addressed through strict regulation, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does biodiversity play in environmental sustainability?",
+        "answer": "Biodiversity plays a crucial role in environmental sustainability by maintaining ecosystem balance, promoting resilience, and providing essential services."
+    },
+    {
+        "question": "How should the issue of deforestation be addressed globally?",
+        "answer": "Deforestation should be addressed through sustainable forestry practices, reforestation efforts, and international agreements to protect forests."
+    },
+    {
+        "question": "What is the impact of ocean pollution on marine life?",
+        "answer": "Ocean pollution has a devastating impact on marine life, leading to habitat destruction, species decline, and ecosystem disruption."
+    },
+    {
+        "question": "How should the ethical implications of animal testing be managed?",
+        "answer": "The ethical implications of animal testing should be managed through strict regulation, alternative methods, and consideration of animal welfare."
+    },
+    {
+        "question": "What role does public health play in global development?",
+        "answer": "Public health plays a crucial role in global development by promoting well-being, preventing disease, and ensuring access to healthcare."
+    },
+    {
+        "question": "How should the issue of antibiotic resistance be addressed?",
+        "answer": "Antibiotic resistance should be addressed through responsible use of antibiotics, research into new treatments, and international cooperation."
+    },
+    {
+        "question": "What is the impact of mental health on societal well-being?",
+        "answer": "Mental health has a significant impact on societal well-being, affecting productivity, social cohesion, and overall quality of life."
+    },
+    {
+        "question": "How should the ethical implications of euthanasia be addressed?",
+        "answer": "The ethical implications of euthanasia should be addressed through public debate, legal frameworks, and consideration of individual autonomy and dignity."
+    },
+    {
+        "question": "What role does education play in promoting scientific literacy?",
+        "answer": "Education plays a crucial role in promoting scientific literacy by teaching critical thinking, scientific methods, and the importance of evidence-based decision-making."
+    },
+    {
+        "question": "How should the issue of intellectual property be managed in scientific research?",
+        "answer": "Intellectual property in scientific research should be managed through balanced policies that promote innovation, access to knowledge, and public benefit."
+    },
+    {
+        "question": "What is the impact of climate migration on global stability?",
+        "answer": "Climate migration can have a significant impact on global stability, leading to displacement, resource conflicts, and the need for international cooperation."
+    },
+    {
+        "question": "How should the ethical implications of geoengineering be addressed?",
+        "answer": "The ethical implications of geoengineering should be addressed through rigorous assessment, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does water management play in environmental sustainability?",
+        "answer": "Water management plays a crucial role in environmental sustainability by ensuring access to clean water, preventing pollution, and promoting efficient use."
+    },
+    {
+        "question": "How should the issue of food security be addressed globally?",
+        "answer": "Food security should be addressed through sustainable agriculture, fair trade practices, and international cooperation to ensure access to nutritious food."
+    },
+    {
+        "question": "What is the impact of urbanization on environmental sustainability?",
+        "answer": "Urbanization can have both positive and negative impacts on environmental sustainability, leading to increased resource consumption but also opportunities for efficient planning and innovation."
+    },
+    {
+        "question": "How should the ethical implications of surveillance technology be managed?",
+        "answer": "The ethical implications of surveillance technology should be managed through strict regulation, transparency, and consideration of privacy and civil liberties."
+    },
+    {
+        "question": "What role does renewable energy play in economic development?",
+        "answer": "Renewable energy plays a crucial role in economic development by creating jobs, promoting innovation, and reducing dependence on fossil fuels."
+    },
+    {
+        "question": "How should the issue of waste management be addressed globally?",
+        "answer": "Waste management should be addressed through sustainable practices, recycling efforts, and international agreements to reduce pollution and promote a circular economy."
+    },
+    {
+        "question": "What is the impact of air pollution on public health?",
+        "answer": "Air pollution has a significant impact on public health, leading to respiratory diseases, cardiovascular issues, and premature death."
+    },
+    {
+        "question": "How should the ethical implications of human enhancement be addressed?",
+        "answer": "The ethical implications of human enhancement should be addressed through rigorous assessment, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does biodiversity play in economic development?",
+        "answer": "Biodiversity plays a crucial role in economic development by providing ecosystem services, promoting tourism, and supporting sustainable industries."
+    },
+    {
+        "question": "How should the issue of overfishing be addressed globally?",
+        "answer": "Overfishing should be addressed through sustainable fishing practices, marine protected areas, and international agreements to conserve fish stocks."
+    },
+    {
+        "question": "What is the impact of climate change on biodiversity?",
+        "answer": "Climate change has a significant impact on biodiversity, leading to habitat loss, species extinction, and ecosystem disruption."
+    },
+    {
+        "question": "How should the ethical implications of CRISPR technology be managed?",
+        "answer": "The ethical implications of CRISPR technology should be managed through strict regulation, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does public health play in economic development?",
+        "answer": "Public health plays a crucial role in economic development by promoting productivity, reducing healthcare costs, and ensuring a healthy workforce."
+    },
+    {
+        "question": "How should the issue of vaccine hesitancy be addressed?",
+        "answer": "Vaccine hesitancy should be addressed through education, public awareness campaigns, and transparent communication about vaccine safety and efficacy."
+    },
+    {
+        "question": "What is the impact of mental health on economic productivity?",
+        "answer": "Mental health has a significant impact on economic productivity, affecting work performance, absenteeism, and overall economic output."
+    },
+    {
+        "question": "How should the ethical implications of organ transplantation be managed?",
+        "answer": "The ethical implications of organ transplantation should be managed through strict regulation, informed consent, and consideration of donor and recipient rights."
+    },
+    {
+        "question": "What role does education play in promoting global citizenship?",
+        "answer": "Education plays a crucial role in promoting global citizenship by teaching about global issues, cultural understanding, and the importance of international cooperation."
+    },
+    {
+        "question": "How should the issue of digital divide be addressed globally?",
+        "answer": "The digital divide should be addressed through policies that promote access to technology, digital literacy, and infrastructure development."
+    },
+    {
+        "question": "What is the impact of social media on political discourse?",
+        "answer": "Social media can have both positive and negative impacts on political discourse, facilitating open communication but also spreading misinformation and polarization."
+    },
+    {
+        "question": "How should the ethical implications of data privacy be managed?",
+        "answer": "The ethical implications of data privacy should be managed through strict regulation, transparency, and consideration of individual rights and consent."
+    },
+    {
+        "question": "What role does scientific research play in addressing global challenges?",
+        "answer": "Scientific research plays a crucial role in addressing global challenges by providing innovative solutions, evidence-based information, and expert recommendations."
+    },
+    {
+        "question": "How should the issue of plastic pollution be addressed globally?",
+        "answer": "Plastic pollution should be addressed through sustainable practices, recycling efforts, and international agreements to reduce plastic waste and promote a circular economy."
+    },
+    {
+        "question": "What is the impact of climate change on global food security?",
+        "answer": "Climate change has a significant impact on global food security, leading to crop failures, water scarcity, and disrupted supply chains."
+    },
+    {
+        "question": "How should the ethical implications of human gene editing be addressed?",
+        "answer": "The ethical implications of human gene editing should be addressed through rigorous assessment, public debate, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does biodiversity play in climate resilience?",
+        "answer": "Biodiversity plays a crucial role in climate resilience by maintaining ecosystem balance, promoting adaptation, and providing essential services."
+    },
+    {
+        "question": "How should the issue of wildlife trafficking be addressed globally?",
+        "answer": "Wildlife trafficking should be addressed through strict enforcement, international cooperation, and public awareness campaigns to protect endangered species."
+    },
+    {
+        "question": "What is the impact of deforestation on climate change?",
+        "answer": "Deforestation has a significant impact on climate change, leading to increased carbon emissions, habitat loss, and disrupted ecosystems."
+    },
+    {
+        "question": "How should the ethical implications of assisted reproductive technologies be managed?",
+        "answer": "The ethical implications of assisted reproductive technologies should be managed through strict regulation, informed consent, and consideration of potential risks and benefits."
+    },
+    {
+        "question": "What role does public health play in promoting social justice?",
+        "answer": "Public health plays a crucial role in promoting social justice by addressing health disparities, ensuring access to healthcare, and advocating for equitable policies."
+    },
+    {
+        "question": "How should the issue of health inequities be addressed globally?",
+        "answer": "Health inequities should be addressed through policies that promote access to healthcare, reduce disparities, and ensure fair distribution of resources."
+    }
+]
