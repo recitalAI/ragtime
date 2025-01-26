@@ -176,7 +176,10 @@ def init(root_folder: Path):
     # Logging - create the logs in the folder of the calling script (not ragtime)
     log_path: Path = root_folder / "logs"
     if not log_path.exists():
-        log_path.mkdir()
+        try:
+            log_path.mkdir()
+        except:
+            pass
     logging.config.dictConfig(log_conf)
     logger = RagtimeLogger(logging.getLogger("ragtime_logger"), extra=None)
     # below is simply a hack to turn off unexpected LiteLLM logging with Ragtime logging set to INFO or DEBUG

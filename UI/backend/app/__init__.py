@@ -35,7 +35,10 @@ def create_app(config_class=Config):
 
     # Set up logging
     if not os.path.exists('logs'):
-        os.mkdir('logs')
+        try: 
+            os.mkdir('logs')
+        except:
+            pass
     file_handler = RotatingFileHandler('logs/ragtime.log', maxBytes=10240, backupCount=10)
     file_handler.setFormatter(logging.Formatter(
         '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
