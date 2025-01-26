@@ -30,7 +30,19 @@ module.exports = defineConfig({
         });
     });
   },
+
+  configureWebpack: {
+    resolve: {
+      fallback: {
+        fs: false,
+        path: false,
+        crypto: false
+      }
+    }
+  },
+
   transpileDependencies: ['vuetify'],
+  
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -39,4 +51,4 @@ module.exports = defineConfig({
       enableInSFC: true,
     },
   },
-})
+});

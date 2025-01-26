@@ -13,6 +13,7 @@
     "core-js": "^3.8.3",
     "dompurify": "^3.1.6",
     "flask": "^0.2.10",
+    "jspdf": "^2.5.1",
     "marked": "^14.1.1",
     "turndown": "^7.2.0",
     "v-tooltip": "^2.1.3",
