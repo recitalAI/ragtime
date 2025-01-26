@@ -6,7 +6,11 @@
       v-else
       class="h2-text mb-7"
     >
-      {{ experimentName }}
+      <span>{{ experimentName }}</span>
+      <DownloadReport 
+        v-if="fullEvaluation && fullEvaluation.length > 0"
+        :experiment-data="{ items: fullEvaluation }" 
+      />
     </h2>
       <!-- Main Summary table -->
       <h3 class="h3-text black--text mb-4">
@@ -548,6 +552,7 @@ import { ref, onMounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { experimentService } from '@/services/generatorService';
 import { formatDate } from '@/utils/dateFormatter';
+import DownloadReport from './DownloadReport.vue';
 import CustomTooltip from './Tooltip.vue';
 import { marked } from 'marked';
 import TableWithFooter from '@/components/elements/Tables/TableWithFooter.vue';
@@ -562,6 +567,7 @@ export default {
   components: {
     CustomTooltip,
     TableWithFooter,
+    DownloadReport,
   },
 
   setup(props) {
@@ -863,16 +869,16 @@ export default {
           explanation = `Chunks provide inconsistent context, LLM detected that and didn't answer.`;
           break;
         case 'halluok':
-          problemType = 'LLM issue';
-          explanation = 'Retriever provided correct context, but the LLM hallucinated the answer.';
+          problemType = 'Contradiction';
+          explanation = 'The LLM generates information that contradicts the information contained in the provided chunks.';
           break;
         case 'hallumissing':
-          problemType = 'LLM and retriever or source issue'; 
-          explanation = 'Retriever provided incorrect context, LLM hallucinated the answer.';
+          problemType = 'Invention'; 
+          explanation = `The chunks provided do not contain the information, but the LLM adds it. It does not contradict what is stated in a chunk; it "invents" the information.`;
           break;
         case 'halluhallu':
-          problemType = 'LLM and retriever or source issue';
-          explanation = 'Retriever provided incorrect context, LLM then provided an hallucinated answer.';
+          problemType = 'Corpus';
+          explanation = 'A contradiction with one of the facts is present in the documentary corpus. The information is contained in the chunks, and the LLM reproduces it correctly, but this information contradicts one of the facts. This error could stem from a mistake in the validation dataset (incorrect fact), an issue with the retriever failing to retrieve the correct chunk, or an inconsistency in the documentation.';
           break;
         default:
           problemType = '';
