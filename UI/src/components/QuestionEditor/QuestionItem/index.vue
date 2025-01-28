@@ -2,24 +2,21 @@
   <div class="question-item">
     <div v-if="isEditing" class="question-edit">
       <div class="question-form mb-6">
-      <v-textarea
-        v-model="editedQuestionText"
-        label="Edit your question"
-        variant="outlined"
-        rows="3"
-      />
+        <v-textarea
+          v-model="editedQuestionText"
+          label="Edit your question"
+          variant="outlined"
+          rows="3"
+        />
         <v-btn
           color="primary"
           @click="saveQuestion"
           class="mr-2"
           rounded
         >
-        <v-icon
-          size="17"
-          start
-        >
-          fa-solid fa-floppy-disk
-        </v-icon>
+          <v-icon size="17" start>
+            fa-solid fa-floppy-disk
+          </v-icon>
           Save
         </v-btn>
         <v-btn
@@ -27,12 +24,9 @@
           @click="cancelEdit"
           rounded
         >
-        <v-icon
-          size="17"
-          start
-        >
-          fa-sharp-duotone fa-solid fa-xmark
-        </v-icon>
+          <v-icon size="17" start>
+            fa-sharp-duotone fa-solid fa-xmark
+          </v-icon>
           Cancel
         </v-btn>
       </div>
@@ -80,16 +74,18 @@
         </div>
       </div>
     </div>
+
     <AnswerList
       v-if="showAnswers"
       :answers="question.answers.items"
       @update="updateAnswers"
       @add="addAnswer"
     />
-      <v-expand-transition>
+
+    <v-expand-transition>
       <div v-if="showFacts" class="facts-list">
         <h4 class="text-h6 mb-4">Facts</h4>
-        <v-list v-if="question.facts && question.facts.items && question.facts.items.length > 0">
+        <v-list v-if="hasFacts">
           <v-list-item v-for="(fact, factIndex) in question.facts.items" :key="factIndex" class="mb-3 fact-item">
             <template v-slot:default>
               <v-list-item-title class="fact-text">{{ `${factIndex + 1}. ${fact.text}` }}</v-list-item-title>
@@ -106,6 +102,16 @@
             </template>
           </v-list-item>
         </v-list>
+
+        <v-alert
+          v-else
+          border="top"
+          color="primary"
+          type="info"
+          text="No facts available for this question."
+          class="mb-4"
+          variant="outlined"
+        ></v-alert>
         
         <v-dialog v-model="isEditingFact" min-width="800px">
           <v-card>
@@ -124,17 +130,14 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn 
-              color="primary" 
-              @click="saveFact"
-              class="mr-2"
-              rounded
+                color="primary" 
+                @click="saveFact"
+                class="mr-2"
+                rounded
               >        
-              <v-icon
-                size="17"
-                start
-              >
-                fa-solid fa-floppy-disk
-              </v-icon>
+                <v-icon size="17" start>
+                  fa-solid fa-floppy-disk
+                </v-icon>
                 Save
               </v-btn>
               <v-btn
@@ -142,12 +145,9 @@
                 @click="cancelEditFact"
                 rounded
               >
-              <v-icon
-                size="17"
-                start
-              >
-                fa-sharp-duotone fa-solid fa-xmark
-              </v-icon>
+                <v-icon size="17" start>
+                  fa-sharp-duotone fa-solid fa-xmark
+                </v-icon>
                 Cancel
               </v-btn>
             </v-card-actions>
@@ -163,18 +163,15 @@
             variant="outlined"
           ></v-textarea>
           <div class="d-flex justify-end mt-2">
-          <v-btn 
-            color="primary" 
-            @click="saveNewFact"
-            class="mr-2"
-            rounded
+            <v-btn 
+              color="primary" 
+              @click="saveNewFact"
+              class="mr-2"
+              rounded
             >        
-            <v-icon
-              size="17"
-              start
-            >
-              fa-solid fa-floppy-disk
-            </v-icon>
+              <v-icon size="17" start>
+                fa-solid fa-floppy-disk
+              </v-icon>
               Save
             </v-btn>
             <v-btn
@@ -182,47 +179,41 @@
               @click="cancelAddFact"
               rounded
             >
-            <v-icon
-              size="17"
-              start
-            >
-              fa-sharp-duotone fa-solid fa-xmark
-            </v-icon>
+              <v-icon size="17" start>
+                fa-sharp-duotone fa-solid fa-xmark
+              </v-icon>
               Cancel
             </v-btn>
           </div>
         </div>
         
         <div class="d-flex justify-space-between mt-4">
-          <v-btn color="primary-lighten1" @click="startAddingFact" rounded>
+          <v-btn v-if="!isAddingFact" color="primary-lighten1" @click="startAddingFact" rounded>
             <v-icon start>fa-sharp-duotone fa-solid fa-plus</v-icon>
             Add Fact
           </v-btn>
           <v-btn
-            v-if="!question.facts || !question.facts.items || question.facts.items.length === 0"
+            v-if="!hasFacts"
             color="primary-lighten2"
             @click="generateFacts"
             :disabled="isGeneratingFacts || !selectedFactModel"
             rounded
           >
-          <v-icon
-            size="17"
-            start
-          >
-          {{isGeneratingFacts ? 'fa-solid fa-spinner fa-spin' : 'fa-solid fa-lightbulb'}}
-          </v-icon>
+            <v-icon size="17" start>
+              {{isGeneratingFacts ? 'fa-solid fa-spinner fa-spin' : 'fa-solid fa-lightbulb'}}
+            </v-icon>
             {{ isGeneratingFacts ? 'Generating Facts...' : 'Generate Facts' }}
           </v-btn>
         </div>
         
-        <v-card v-if="question.facts && question.facts.llm_answer" flat class="mt-4 pa-2 bg-grey-lighten-4">
+        <v-card v-if="hasFactMetadata" flat class="mt-4 pa-2 bg-grey-lighten-4">
           <v-card-text class="text-caption">
-            <p>Generated by: {{ question.facts.llm_answer.name }} ({{ formatDate(question.facts.llm_answer.timestamp) }})</p>
-            <p v-if="question.facts.llm_answer.cost !== undefined" class="font-weight-medium">
-              Cost: ${{ question.facts.llm_answer.cost.toFixed(6) }}
+            <p>Generated by: {{ factGeneratorName }} ({{ formatDate(factGeneratorTimestamp) }})</p>
+            <p v-if="hasFactCost" class="font-weight-medium">
+              Cost: ${{ formatNumber(question.facts.llm_answer.cost) }}
             </p>
-            <p v-if="question.facts.llm_answer.duration !== undefined" class="font-weight-medium">
-              Duration: {{ question.facts.llm_answer.duration.toFixed(2) }}s
+            <p class="font-weight-medium">
+              Duration: {{ formatNumber(question.facts.llm_answer?.duration, true) }}{{ question.facts.llm_answer?.duration != null ? 's' : '' }}
             </p>
           </v-card-text>
         </v-card>
@@ -273,6 +264,24 @@ export default {
     };
   },
   computed: {
+    hasFacts() {
+      return this.question?.facts?.items && this.question.facts.items.length > 0;
+    },
+    hasFactMetadata() {
+      return this.question?.facts?.llm_answer != null;
+    },
+    hasFactCost() {
+      return this.question?.facts?.llm_answer?.cost != null;
+    },
+    hasFactDuration() {
+      return this.question?.facts?.llm_answer?.duration != null;
+    },
+    factGeneratorName() {
+      return this.question?.facts?.llm_answer?.name || 'Unknown';
+    },
+    factGeneratorTimestamp() {
+      return this.question?.facts?.llm_answer?.timestamp;
+    },
     topRowButtons() {
       return [
         {
@@ -315,6 +324,9 @@ export default {
   },
   methods: {
     formatDate,
+    formatNumber(value, isDuration = false) {
+      return value != null ? Number(value).toFixed(isDuration ? 2 : 6) : (isDuration ? '--' : '0.000000');
+    },
     startEditing() {
       this.isEditing = true;
       this.editedQuestionText = this.question.question.text;
@@ -342,7 +354,7 @@ export default {
           }
         };
         const result = await answerGeneratorService.generateAnswerForQuestion(questionData, this.selectedAnswerModel);
-        if (result && result.answers && result.answers.items) {
+        if (result?.answers?.items) {
           const newAnswers = result.answers.items;
           this.updateAnswers([...this.question.answers.items, ...newAnswers]);
         }
@@ -374,14 +386,13 @@ export default {
       this.editedFactText = this.question.facts.items[index].text;
       this.isEditingFact = true;
     },
-    showMessage(msg, type){
+    showMessage(msg, type) {
       this.message = msg;
       this.snackbarColor = type === 'success' ? 'success' : 'error';
       this.showSnackbar = true;
     },
-
     saveFact() {
-      if (this.editedFactText.trim()) {
+      if (this.editedFactText?.trim()) {
         const updatedFacts = [...this.question.facts.items];
         updatedFacts[this.editingFactIndex] = {
           ...updatedFacts[this.editingFactIndex],
@@ -393,7 +404,6 @@ export default {
         this.editedFactText = '';
       }
     },
-
     cancelEditFact() {
       this.isEditingFact = false;
       this.editingFactIndex = null;
@@ -408,7 +418,7 @@ export default {
       this.newFactText = '';
     },
     saveNewFact() {
-      if (this.newFactText.trim()) {
+      if (this.newFactText?.trim()) {
         const newFact = {
           meta: {},
           text: this.newFactText.trim()
@@ -442,25 +452,25 @@ export default {
     updateFacts(updatedFacts) {
       const updatedQuestion = {
         ...this.question,
-        facts: { items: updatedFacts }
+        facts: { 
+          ...(this.question.facts || {}),
+          items: updatedFacts 
+        }
       };
       this.$emit('update', this.index, updatedQuestion);
     },
     async generateFacts() {
       if (!this.selectedFactModel) {
         this.showMessage("Please select a fact generation model first.", 'error');
-
         return;
       }
       
-      // Check if this question has exactly one validated answer
-      const validatedAnswers = this.question.answers.items.filter(answer => answer.eval.human === 1);
+      const validatedAnswers = this.question.answers.items.filter(answer => answer.eval?.human === 1);
       
       if (validatedAnswers.length !== 1) {
         this.showMessage("Please ensure that this question has exactly one answer before generating facts.", 'error');
         return;
       }
-
 
       this.isGeneratingFacts = true;
       try {
@@ -474,14 +484,13 @@ export default {
         };
 
         const result = await factGeneratorService.generateFactsForQuestion(questionData, this.selectedFactModel);
-        if (result && result.facts) {
+        if (result?.facts) {
           this.$emit('update', this.index, {
             ...this.question,
             facts: result.facts
           });
           this.$emit('save-to-local-storage');
           this.showMessage('Facts generated successfully!', 'success');
-
         } else {
           this.showMessage('No facts were generated. Please try again.', 'error');
         }
@@ -497,8 +506,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .action-buttons {
   display: flex;
   flex-direction: column;
@@ -572,5 +579,4 @@ export default {
 .v-btn {
   text-transform: none;
 }
-
 </style>
