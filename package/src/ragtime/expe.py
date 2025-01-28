@@ -226,7 +226,7 @@ class Expe(RagtimeList[QA]):
             if self.json_path:
                 path = Path(self.json_path.parent) / self.json_path.stem
             else:
-                raise RagtimeException(f"Cannot save to JSON since no json_path is stored in expe and not path has been provided in argument.")
+                raise RagtimeException(f"Cannot save to JSON since no json_path is stored in expe and no path has been provided in argument.")
 
         # Make sure at least 1 QA is here
         if len(self) == 0:
