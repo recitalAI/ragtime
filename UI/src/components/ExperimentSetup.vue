@@ -519,6 +519,12 @@ export default {
       ],
       'HuggingFace': [
         'huggingface/BigScience/bloom', 'huggingface/google/flan-t5-xxl'
+      ],
+      'Deepseek': [
+        'deepseek/deepseek-chat', 'deepseek/deepseek-coder'
+      ],
+      'Openrouter': [
+        'openrouter/deepseek/deepseek-r1', 'openrouter/deepseek/deepseek-chat', 'openrouter/deepseek/deepseek-coder'
       ]
     };
 
