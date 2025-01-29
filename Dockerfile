@@ -1,5 +1,6 @@
-# pull official base image
+# FROM nikolaik/python-nodejs:latest
 FROM python:3.12
+# FROM node:16-alpine
 
 # set work directory
 WORKDIR /app
@@ -16,6 +17,8 @@ RUN pip install -r /tmp/requirements.txt
 
 COPY ./package /tmp/package/
 RUN pip install /tmp/package
+
+# RUN npm install
 
 COPY /UI/backend /app
 
