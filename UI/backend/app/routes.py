@@ -287,7 +287,7 @@ class DateTimeEncoder(json.JSONEncoder):
 @main.route('/api/start-experiment', methods=['POST'])
 def start_experiment():
     try:
-        log_capture.start_time = datetime.now() 
+        log_capture.start_time = datetime.now()
         config = request.json
         logging.info(f"Received experiment configuration: {json.dumps(config, indent=2)}")
 
@@ -328,7 +328,7 @@ def start_experiment():
                             prompt=Prompt(**llm_answer.get('prompt', {})),
                             name=llm_answer.get('name', ''),
                             full_name=llm_answer.get('full_name', ''),
-                            timestamp=llm_answer.get('timestamp', ''),
+                            timestamp=llm_answer.get('timestamp', None),
                             duration=llm_answer.get('duration', 0),
                             chunks=llm_answer.get('chunks', [])
                         )
