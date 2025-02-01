@@ -1,0 +1,10 @@
+[2025-01-27 21:08:16,306] deepseek STARTS
+[2025-01-27 21:09:58,306] deepseek STARTS
+[2025-01-27 21:11:21,339] deepseek STARTS
+[2025-01-27 21:17:38,872] deepseek STARTS
+[2025-01-27 21:17:38,912] Expe saved as JSON to C:\Users\gilles_recital\source\repos\rag-projects\deepseek\expe\02. Answers\cultural_qa--93Q_0C_0F_1M_93A_0HE_0AE_2025-01-27_21h17,38.json
+[2025-01-28 11:03:29,646] deepseek STARTS
+[2025-01-28 11:03:29,705] Expe saved as JSON to C:\Users\gilles_recital\source\repos\rag-projects\deepseek\expe\02. Answers\cultural_qa--93Q_0C_0F_1M_93A_93HE_0AE_2025-01-28_11h03,29.json
+[2025-01-28 11:09:01,766] deepseek STARTS
+[2025-02-01 16:12:59,110] deepseek STARTS
+[2025-02-01 16:12:59,126] Expe saved as JSON to C:\Users\gilles_recital\source\repos\ragtime\projects\deepseek\expe\05. Validation sets\Cultural_Generic_Facts_10Q--10Q_0C_20F_1M_10A_10HE_0AE_2025-02-01_16h12,59.json
