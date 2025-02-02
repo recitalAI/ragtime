@@ -1,0 +1,550 @@
+[2025-02-02 17:36:26,351] 10 tasks created
+[2025-02-02 17:36:26,353] [AnsGenerator][1/10] *** Question "What was the primary cause of the Opium Wars?"
+[2025-02-02 17:36:26,353] [AnsGenerator][1/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,354] [AnsGenerator][1/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,362] [AnsGenerator][2/10] *** Question "How should the legacy of colonialism be addressed in modern times?"
+[2025-02-02 17:36:26,370] [AnsGenerator][2/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,373] [AnsGenerator][2/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,374] [AnsGenerator][3/10] *** Question "What role did the U.S. play in the Chinese Civil War?"
+[2025-02-02 17:36:26,374] [AnsGenerator][3/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,376] [AnsGenerator][3/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,377] [AnsGenerator][4/10] *** Question "How should the events of the Tiananmen Square massacre be remembered and taught?"
+[2025-02-02 17:36:26,379] [AnsGenerator][4/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,379] [AnsGenerator][4/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,380] [AnsGenerator][5/10] *** Question "What was the impact of the Cold War on global politics?"
+[2025-02-02 17:36:26,382] [AnsGenerator][5/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,382] [AnsGenerator][5/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,383] [AnsGenerator][6/10] *** Question "How should the history of the Korean War be interpreted?"
+[2025-02-02 17:36:26,385] [AnsGenerator][6/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,386] [AnsGenerator][6/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,387] [AnsGenerator][7/10] *** Question "What was the significance of the Vietnam War for global politics?"
+[2025-02-02 17:36:26,390] [AnsGenerator][7/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,390] [AnsGenerator][7/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,391] [AnsGenerator][8/10] *** Question "How should the legacy of the Cultural Revolution in China be viewed?"
+[2025-02-02 17:36:26,393] [AnsGenerator][8/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,393] [AnsGenerator][8/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,394] [AnsGenerator][9/10] *** Question "What was the role of the U.S. in the Iran-Contra affair?"
+[2025-02-02 17:36:26,394] [AnsGenerator][9/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,395] [AnsGenerator][9/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:26,396] [AnsGenerator][10/10] *** Question "How should the history of the European Union's formation be taught?"
+[2025-02-02 17:36:26,396] [AnsGenerator][10/10][AnsPrompterBase] Generate prompt
+[2025-02-02 17:36:26,397] [AnsGenerator][10/10][deepseek/deepseek-chat] Generate LLMAnswer with "deepseek/deepseek-chat"
+[2025-02-02 17:36:27,618] [AnsGenerator][10/10][deepseek/deepseek-chat] The following exception occurred with prompt meta={} user='How should the events of the Tiananmen Square massacre be remembered and taught?' system='' prompter=''
+litellm.BadRequestError: DeepseekException - Error code: 400 - {'error': {'message': 'Content Exists Risk', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}} LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 400, in make_openai_chat_completion_request
+    await openai_aclient.chat.completions.with_raw_response.create(
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 381, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/resources/chat/completions.py", line 1702, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'Content Exists Risk', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'message': 'Content Exists Risk', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 325, in exception_type
+    raise BadRequestError(
+litellm.exceptions.BadRequestError: litellm.BadRequestError: DeepseekException - Error code: 400 - {'error': {'message': 'Content Exists Risk', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}} LiteLLM Retried: 3 times
+[2025-02-02 17:36:27,625] [AnsGenerator][10/10][deepseek/deepseek-chat] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:36:27,626] [AnsGenerator][10/10][deepseek/deepseek-chat] End question "How should the events of the Tiananmen Square massacre be remembered and taught?"
+[2025-02-02 17:36:35,333] [AnsGenerator][3/10][AnsPrompterBase] Post-process Answer
+[2025-02-02 17:36:35,340] [AnsGenerator][3/10] End question "What role did the U.S. play in the Chinese Civil War?"
+[2025-02-02 17:36:47,809] [AnsGenerator][5/10][AnsPrompterBase] Post-process Answer
+[2025-02-02 17:36:47,817] [AnsGenerator][5/10] End question "What was the impact of the Cold War on global politics?"
+[2025-02-02 17:36:55,780] [AnsGenerator][9/10][AnsPrompterBase] Post-process Answer
+[2025-02-02 17:36:55,782] [AnsGenerator][9/10] End question "What was the role of the U.S. in the Iran-Contra affair?"
+[2025-02-02 17:37:27,329] [AnsGenerator][10/10][AnsPrompterBase] Post-process Answer
+[2025-02-02 17:37:27,335] [AnsGenerator][10/10] End question "How should the history of the European Union's formation be taught?"
+[2025-02-02 17:38:27,708] [AnsGenerator][10/10] The following exception occurred with prompt meta={} user='How should the legacy of colonialism be addressed in modern times?' system='' prompter=''
+litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 410, in make_openai_chat_completion_request
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 137, in parse
+    parsed = self._parse(to=to)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 332, in _parse
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 450, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+[2025-02-02 17:38:27,715] [AnsGenerator][10/10] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:38:27,717] [AnsGenerator][10/10] End question "How should the legacy of colonialism be addressed in modern times?"
+[2025-02-02 17:38:27,718] [AnsGenerator][10/10] The following exception occurred with prompt meta={} user='How should the history of the Korean War be interpreted?' system='' prompter=''
+litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 410, in make_openai_chat_completion_request
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 137, in parse
+    parsed = self._parse(to=to)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 332, in _parse
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 450, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+[2025-02-02 17:38:27,724] [AnsGenerator][10/10] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:38:27,726] [AnsGenerator][10/10] End question "How should the history of the Korean War be interpreted?"
+[2025-02-02 17:38:27,730] [AnsGenerator][10/10] The following exception occurred with prompt meta={} user='What was the significance of the Vietnam War for global politics?' system='' prompter=''
+litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 410, in make_openai_chat_completion_request
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 137, in parse
+    parsed = self._parse(to=to)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 332, in _parse
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 450, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+[2025-02-02 17:38:27,738] [AnsGenerator][10/10] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:38:27,740] [AnsGenerator][10/10] End question "What was the significance of the Vietnam War for global politics?"
+[2025-02-02 17:38:27,743] [AnsGenerator][10/10] The following exception occurred with prompt meta={} user='How should the legacy of the Cultural Revolution in China be viewed?' system='' prompter=''
+litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 410, in make_openai_chat_completion_request
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 137, in parse
+    parsed = self._parse(to=to)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 332, in _parse
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 450, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+[2025-02-02 17:38:27,749] [AnsGenerator][10/10] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:38:27,751] [AnsGenerator][10/10] End question "How should the legacy of the Cultural Revolution in China be viewed?"
+[2025-02-02 17:38:28,650] [AnsGenerator][10/10] The following exception occurred with prompt meta={} user='What was the primary cause of the Opium Wars?' system='' prompter=''
+litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 770, in acompletion
+    headers, response = await self.make_openai_chat_completion_request(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 131, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 418, in make_openai_chat_completion_request
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 410, in make_openai_chat_completion_request
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 137, in parse
+    parsed = self._parse(to=to)
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/openai/_legacy_response.py", line 332, in _parse
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 766, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 458, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 816, in acompletion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 134, in complete
+    answer = await acompletion(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1304, in wrapper_async
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/utils.py", line 1163, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/main.py", line 477, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2190, in exception_type
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 450, in exception_type
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: DeepseekException - Expecting value: line 1 column 1 (char 0) LiteLLM Retried: 3 times
+[2025-02-02 17:38:28,659] [AnsGenerator][10/10] Exception while generating - skip it
+'NoneType' object has no attribute 'chunks'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/llms/llm.py", line 69, in generate
+    if result.llm_answer.chunks:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'chunks'
+[2025-02-02 17:38:28,665] [AnsGenerator][10/10] End question "What was the primary cause of the Opium Wars?"
+[2025-02-02 17:38:28,666] 10 tasks created
+[2025-02-02 17:38:28,666] [EvalGenerator][1/10] *** Question "What was the primary cause of the Opium Wars?"
+[2025-02-02 17:38:28,667] [EvalGenerator][1/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,672] [EvalGenerator][2/10] *** Question "How should the legacy of colonialism be addressed in modern times?"
+[2025-02-02 17:38:28,672] [EvalGenerator][2/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,673] [EvalGenerator][3/10] *** Question "What role did the U.S. play in the Chinese Civil War?"
+[2025-02-02 17:38:28,674] [EvalGenerator][3/10] Generate Eval for answer generated with "deepseek/deepseek-chat"
+[2025-02-02 17:38:28,674] [EvalGenerator][3/10][EvalPrompterFRV2] Generate prompt
+[2025-02-02 17:38:28,674] [EvalGenerator][3/10][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-02 17:38:28,675] [EvalGenerator][4/10] *** Question "How should the events of the Tiananmen Square massacre be remembered and taught?"
+[2025-02-02 17:38:28,677] [EvalGenerator][4/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,682] [EvalGenerator][5/10] *** Question "What was the impact of the Cold War on global politics?"
+[2025-02-02 17:38:28,683] [EvalGenerator][5/10] Generate Eval for answer generated with "deepseek/deepseek-chat"
+[2025-02-02 17:38:28,683] [EvalGenerator][5/10][EvalPrompterFRV2] Generate prompt
+[2025-02-02 17:38:28,684] [EvalGenerator][5/10][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-02 17:38:28,685] [EvalGenerator][6/10] *** Question "How should the history of the Korean War be interpreted?"
+[2025-02-02 17:38:28,686] [EvalGenerator][6/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,687] [EvalGenerator][7/10] *** Question "What was the significance of the Vietnam War for global politics?"
+[2025-02-02 17:38:28,687] [EvalGenerator][7/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,688] [EvalGenerator][8/10] *** Question "How should the legacy of the Cultural Revolution in China be viewed?"
+[2025-02-02 17:38:28,689] [EvalGenerator][8/10] Exception caught - saving what has been done so far:
+'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/text_generator.py", line 94, in _generate_for_qa
+    await self.gen_for_qa(
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in gen_for_qa
+    for ans in (a for a in qa.answers if a.text):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ragtime/generators/eval_generator.py", line 36, in <genexpr>
+    for ans in (a for a in qa.answers if a.text):
+                                         ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+[2025-02-02 17:38:28,690] [EvalGenerator][9/10] *** Question "What was the role of the U.S. in the Iran-Contra affair?"
+[2025-02-02 17:38:28,690] [EvalGenerator][9/10] Generate Eval for answer generated with "deepseek/deepseek-chat"
+[2025-02-02 17:38:28,690] [EvalGenerator][9/10][EvalPrompterFRV2] Generate prompt
+[2025-02-02 17:38:28,690] [EvalGenerator][9/10][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-02 17:38:28,691] [EvalGenerator][10/10] *** Question "How should the history of the European Union's formation be taught?"
+[2025-02-02 17:38:28,693] [EvalGenerator][10/10] Generate Eval for answer generated with "deepseek/deepseek-chat"
+[2025-02-02 17:38:28,693] [EvalGenerator][10/10][EvalPrompterFRV2] Generate prompt
+[2025-02-02 17:38:28,693] [EvalGenerator][10/10][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"

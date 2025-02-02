@@ -8,3 +8,7 @@
 [2025-01-28 11:09:01,766] deepseek STARTS
 [2025-02-01 16:12:59,110] deepseek STARTS
 [2025-02-01 16:12:59,126] Expe saved as JSON to C:\Users\gilles_recital\source\repos\ragtime\projects\deepseek\expe\05. Validation sets\Cultural_Generic_Facts_10Q--10Q_0C_20F_1M_10A_10HE_0AE_2025-02-01_16h12,59.json
+[2025-02-01 17:40:16,126] deepseek STARTS
+[2025-02-01 17:40:16,135] Expe saved as JSON to C:\Users\gilles_recital\source\repos\ragtime\projects\deepseek\expe\05. Validation sets\Cultural_Generic_Facts_10Q--10Q_0C_20F_1M_10A_10HE_0AE_2025-02-01_17h40,16.json
+[2025-02-01 17:41:41,246] deepseek STARTS
+[2025-02-01 17:41:41,252] Expe saved as JSON to C:\Users\gilles_recital\source\repos\ragtime\projects\deepseek\expe\05. Validation sets\Cultural_Generic_Facts_10Q--10Q_0C_20F_1M_10A_10HE_0AE_2025-02-01_17h41,41.json

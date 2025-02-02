@@ -6,7 +6,7 @@ from .models.validation_models import *
 import os
 import json
 import glob
-from app.routes import SAVE_FOLDER, calculate_stats
+from app.routes import SAVED_FOLDER, calculate_stats
 import logging
 from datetime import datetime
 
@@ -19,14 +19,14 @@ class ValidationSets(MethodView):
         """Get all validation sets with their statistics"""
         try:
             validation_sets = []
-            if not os.path.exists(SAVE_FOLDER):
+            if not os.path.exists(SAVED_FOLDER):
                 return []
 
-            for filename in os.listdir(SAVE_FOLDER):
+            for filename in os.listdir(SAVED_FOLDER):
                 if not filename.endswith('.json'):
                     continue
                     
-                file_path = os.path.join(SAVE_FOLDER, filename)
+                file_path = os.path.join(SAVED_FOLDER, filename)
                 with open(file_path, 'r') as f:
                     data = json.load(f)
 
@@ -81,10 +81,10 @@ class ValidationSets(MethodView):
             facts_count = sum(len(item.get('facts', {}).get('items', [])) for item in items)
             filename = f"{name}_Validation_set_Q{questions_count}_F{facts_count}.json"
 
-            if not os.path.exists(SAVE_FOLDER):
-                os.makedirs(SAVE_FOLDER)
+            if not os.path.exists(SAVED_FOLDER):
+                os.makedirs(SAVED_FOLDER)
 
-            file_path = os.path.join(SAVE_FOLDER, filename)
+            file_path = os.path.join(SAVED_FOLDER, filename)
             with open(file_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -100,7 +100,7 @@ class ValidationSet(MethodView):
     def delete(self, name):
         """Delete a validation set"""
         try:
-            search_pattern = os.path.join(SAVE_FOLDER, f"{name}_Validation_set_Q*_F*.json")
+            search_pattern = os.path.join(SAVED_FOLDER, f"{name}_Validation_set_Q*_F*.json")
             matching_files = glob.glob(search_pattern)
             
             if not matching_files:
@@ -133,7 +133,7 @@ class ValidationSetContent(MethodView):
             Full validation set JSON content
         """
         try:
-            pattern = os.path.join(SAVE_FOLDER, f"{name}_Validation_set_Q*_F*.json")
+            pattern = os.path.join(SAVED_FOLDER, f"{name}_Validation_set_Q*_F*.json")
             matching_files = glob.glob(pattern)
             
             if not matching_files:

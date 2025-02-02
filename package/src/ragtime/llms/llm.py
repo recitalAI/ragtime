@@ -76,6 +76,7 @@ class LLM(RagtimeBase):
             except Exception as e:
                 logger.exception(f"Exception while generating - skip it\n{e}")
                 result = None
+                return result
         else:
             logger.debug(f"Reuse existing LLMAnswer in {cur_class_name}")
             result = prev_obj

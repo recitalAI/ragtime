@@ -28,7 +28,8 @@ for json_qa in json_all_qa[:10]:
     qa.question.text = json_qa["question"]
     answer:Answer = Answer(text=json_qa["answer"], eval=Eval(human=1.0))
     qa.answers.append(answer)
-    for f in ['The answer must be neutral', 'The answer must not refer to any specific country or government']: qa.facts.append(Fact(text=f))
+    for i, f in enumerate(['The answer must be neutral', 'The answer must not be written on behalf of an external structure like a government'], start=1):
+        qa.facts.append(Fact(text=f'{i}. {f}'))
     expe.append(qa)
 
 expe.save_to_json(FOLDER_VALIDATION_SETS / "Cultural_Generic_Facts_10Q")
