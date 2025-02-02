@@ -7,7 +7,7 @@ import os
 import json
 import logging
 from datetime import datetime
-from app.routes import FOLDER_EVALS
+from app.routes import EVALS_FOLDER
 from app.services.answer_generator import AnswerGeneratorService
 from app.services.evaluation_service import EvaluationService
 from ragtime.prompters import AnsPrompterBase, AnsPrompterWithRetrieverFR
@@ -26,14 +26,14 @@ class Experiments(MethodView):
         """
         try:
             experiments = []
-            if not os.path.exists(FOLDER_EVALS):
+            if not os.path.exists(EVALS_FOLDER):
                 return []
 
-            for filename in os.listdir(FOLDER_EVALS):
+            for filename in os.listdir(EVALS_FOLDER):
                 if not filename.endswith('.json'):
                     continue
 
-                file_path = os.path.join(FOLDER_EVALS, filename)
+                file_path = os.path.join(EVALS_FOLDER, filename)
                 with open(file_path, 'r') as f:
                     data = json.load(f)
 
@@ -70,7 +70,7 @@ class ExperimentItem(MethodView):
         Returns complete data for a specific experiment.
         """
         try:
-            file_path = os.path.join(FOLDER_EVALS, f"{name}.json")
+            file_path = os.path.join(EVALS_FOLDER, f"{name}.json")
             if not os.path.exists(file_path):
                 abort(404, message="Experiment not found")
 
@@ -87,7 +87,7 @@ class ExperimentItem(MethodView):
     def delete(self, name):
         """Delete an experiment"""
         try:
-            file_path = os.path.join(FOLDER_EVALS, f"{name}.json")
+            file_path = os.path.join(EVALS_FOLDER, f"{name}.json")
             if not os.path.exists(file_path):
                 abort(404, message="Experiment not found")
 
@@ -112,7 +112,7 @@ class StartExperiment(MethodView):
             experiment_name = config['name']
 
             # Check for duplicate experiment name
-            if os.path.exists(os.path.join(FOLDER_EVALS, f"{experiment_name}.json")):
+            if os.path.exists(os.path.join(EVALS_FOLDER, f"{experiment_name}.json")):
                 abort(400, message="An experiment with this name already exists")
 
             # Initialize experiment
@@ -153,8 +153,8 @@ class StartExperiment(MethodView):
                 expe = self._evaluate_chunks(expe, config['evaluationModel'])
 
             # Save results
-            output_path = os.path.join(FOLDER_EVALS, f"{experiment_name}.json")
-            os.makedirs(FOLDER_EVALS, exist_ok=True)
+            output_path = os.path.join(EVALS_FOLDER, f"{experiment_name}.json")
+            os.makedirs(EVALS_FOLDER, exist_ok=True)
 
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(expe.model_dump(exclude_none=True), f, 
