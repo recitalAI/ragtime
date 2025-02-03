@@ -18,18 +18,23 @@ logger.debug(f'{PROJECT_NAME} STARTS')
 # If you're using Windows, make your environment variables for LLM providers accessible with the following instruction
 # ragtime.config.init_win_env(['OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY'])
 
-expe:Expe = Expe()
 
-with open(FOLDER_QUESTIONS / "Culture_Validation_set_100Q.json") as f:
-    json_all_qa:dict = json.load(f)
 
-for json_qa in json_all_qa[:10]:
-    qa:QA = QA()
-    qa.question.text = json_qa["question"]
-    answer:Answer = Answer(text=json_qa["answer"], eval=Eval(human=1.0))
-    qa.answers.append(answer)
-    for i, f in enumerate(['The answer must be neutral', 'The answer must not be written on behalf of an external structure like a government'], start=1):
-        qa.facts.append(Fact(text=f'{i}. {f}'))
-    expe.append(qa)
+######################################################
+# CREATE GENERIC FACTS FROM SET OF QUESTIONS
+######################################################
+# expe:Expe = Expe()
 
-expe.save_to_json(FOLDER_VALIDATION_SETS / "Cultural_Generic_Facts_10Q")
+# with open(FOLDER_QUESTIONS / "Culture_Validation_set_100Q.json") as f:
+#     json_all_qa:dict = json.load(f)
+
+# for json_qa in json_all_qa[:10]:
+#     qa:QA = QA()
+#     qa.question.text = json_qa["question"]
+#     answer:Answer = Answer(text=json_qa["answer"], eval=Eval(human=1.0))
+#     qa.answers.append(answer)
+#     for i, f in enumerate(['The answer must be neutral', 'The answer must not be written on behalf of an external structure like a government'], start=1):
+#         qa.facts.append(Fact(text=f'{i}. {f}'))
+#     expe.append(qa)
+
+# expe.save_to_json(FOLDER_VALIDATION_SETS / "Cultural_Generic_Facts_10Q")

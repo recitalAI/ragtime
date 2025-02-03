@@ -64,19 +64,27 @@ class LLM(RagtimeBase):
             original_logger_prefix: str = logger.prefix
             logger.prefix += f'[{self.name}]'
             logger.debug(f'Generate LLMAnswer with "{self.name}"')
+            b_exception:bool = False
+            exc:Exception = None
             try:
                 result.llm_answer = await self.complete(prompt)
-                if result.llm_answer.chunks:
-                    for chunk in result.llm_answer.chunks:
-                        meta = {k: v for k, v in chunk.items() if k != 'text'}
-                        chunk_ = Chunk(meta=meta, text=chunk['text'])
-                        qa.chunks.append(chunk_)
-                result.llm_answer.prompt = prompt  # updates the prompt
-                result.llm_answer.prompt.prompter = self.prompter.name  # and it name
+                if result.llm_answer:
+                    if result.llm_answer.chunks:
+                        for chunk in result.llm_answer.chunks:
+                            meta = {k: v for k, v in chunk.items() if k != 'text'}
+                            chunk_ = Chunk(meta=meta, text=chunk['text'])
+                            qa.chunks.append(chunk_)
+                    result.llm_answer.prompt = prompt  # updates the prompt
+                    result.llm_answer.prompt.prompter = self.prompter.name  # and it name
+                else:
+                    b_exception = True
             except Exception as e:
-                logger.exception(f"Exception while generating - skip it\n{e}")
-                result = None
-                return result
+                exc = e
+                b_exception = True
+
+            if b_exception:
+                logger.exception(f"Exception while generating - skip it\n{exc}")
+                return None
         else:
             logger.debug(f"Reuse existing LLMAnswer in {cur_class_name}")
             result = prev_obj
