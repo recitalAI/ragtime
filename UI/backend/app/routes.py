@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 import glob
 from app.log_capture import log_capture
 
-main = Blueprint('main', __name__)
+# main = Blueprint('main', __name__)
 
 # Get the absolute path of the current file (routes.py)
 current_file_path = os.path.abspath(__file__)
@@ -26,10 +26,14 @@ current_file_path = os.path.abspath(__file__)
 # Get the directory of the current file
 current_dir = os.path.dirname(current_file_path)
 
+logging.error(f'current_file_path: {current_file_path}')
+logging.error(f'current_dif: {current_dir}')
+
 # Construct the path to the saved_files folder
-SAVED_FOLDER = os.path.join(current_dir, '..', 'files', 'saved_files')
-EVALS_FOLDER = os.path.join(current_dir, '..', 'files', 'evaluation_results')
-TEMP_FOLDER = os.path.join(current_dir, '..', 'files', 'temp')
+FILES_FOLDER = Path(current_dir) / '..' / 'files'
+VALIDATION_SETS_FOLDER =  FILES_FOLDER / 'validation_sets'
+EVALS_FOLDER = FILES_FOLDER / 'evaluation_results'
+TEMP_FOLDER = FILES_FOLDER / 'temp'
 
 main = Blueprint('main', __name__)
 
@@ -156,17 +160,17 @@ def save_json():
         filename = request.json.get('filename')
 
         logging.info(f"Filename: {filename}")
-        logging.info(f"Save folder: {SAVED_FOLDER}")
+        logging.info(f"Save folder: {VALIDATION_SETS_FOLDER}")
 
         if not data or not filename:
             logging.error("Missing data or filename in request")
             return jsonify({'error': 'Missing data or filename'}), 400
 
-        if not os.path.exists(SAVED_FOLDER):
-            logging.info(f"Creating directory: {SAVED_FOLDER}")
-            os.makedirs(SAVED_FOLDER)
+        if not os.path.exists(VALIDATION_SETS_FOLDER):
+            logging.info(f"Creating directory: {VALIDATION_SETS_FOLDER}")
+            os.makedirs(VALIDATION_SETS_FOLDER)
 
-        file_path = os.path.join(SAVED_FOLDER, filename)
+        file_path = os.path.join(VALIDATION_SETS_FOLDER, filename)
         logging.info(f"Saving file to: {file_path}")
 
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -198,13 +202,13 @@ def get_validation_sets():
     logging.info("Fetching validation sets")
     try:
         validation_sets = []
-        if not os.path.exists(SAVED_FOLDER):
-            logging.warning(f"Save folder does not exist: {SAVED_FOLDER}")
+        if not os.path.exists(VALIDATION_SETS_FOLDER):
+            logging.warning(f"Save folder does not exist: {VALIDATION_SETS_FOLDER}")
             return jsonify([]), 200
 
-        for filename in os.listdir(SAVED_FOLDER):
+        for filename in os.listdir(VALIDATION_SETS_FOLDER):
             if filename.endswith('.json'):
-                file_path = os.path.join(SAVED_FOLDER, filename)
+                file_path = os.path.join(VALIDATION_SETS_FOLDER, filename)
                 logging.info(f"Processing file: {file_path}")
                 try:
                     with open(file_path, 'r') as f:
@@ -261,7 +265,7 @@ def get_validation_set(name):
         # with open(file_path, 'r') as f:
         #     data = json.load(f)
 
-        with open(os.path.join(SAVED_FOLDER, name), 'r') as f:
+        with open(os.path.join(VALIDATION_SETS_FOLDER, name), 'r') as f:
             data = json.load(f)
 
         return jsonify(data), 200
@@ -302,63 +306,64 @@ def start_experiment():
             return jsonify({'error': 'Missing required fields in configuration'}), 400
 
         # Check for duplicate experiment name
-        experiment_name = config['name']
-        existing_experiments = [f.replace('.json', '') for f in os.listdir(EVALS_FOLDER) if f.endswith('.json')]
-        if experiment_name in existing_experiments:
-            return jsonify({'error': 'An experiment with this name already exists'}), 400
+        # experiment_name = config['name']
+        # No need to test if expe name already exists since timestamp is automatically added to the name
+        # existing_experiments = [f.replace('.json', '') for f in os.listdir(EVALS_FOLDER) if f.endswith('.json')]
+        # if experiment_name in existing_experiments:
+        #     return jsonify({'error': 'An experiment with this name already exists'}), 400
 
         # Initialize experiment
-        expe = Expe()
-        expe.json_path = Path(TEMP_FOLDER)
+        expe = Expe(VALIDATION_SETS_FOLDER / config['validationSet'])
+        logging.error(f'config: {config}')
         expe.meta['validation_set'] = config['validationSet']
         expe.meta['retriever_name'] = config.get('retrieverType', 'Not used')
 
-        # Load validation set data
-        if 'validationSetData' in config:
-            validation_set_data = config['validationSetData']
-            for item in validation_set_data['items']:
-                qa = QA(
-                    question=Question(text=item['question']['text']),
-                    facts=Facts(items=[Fact(text=f.get('text', '')) for f in item.get('facts', {}).get('items', [])])
-                )
+        # # Load validation set data
+        # if 'validationSetData' in config:
+        #     validation_set_data = config['validationSetData']
+        #     for item in validation_set_data['items']:
+        #         qa = QA(
+        #             question=Question(text=item['question']['text']),
+        #             facts=Facts(items=[Fact(text=f.get('text', '')) for f in item.get('facts', {}).get('items', [])])
+        #         )
                 
-                # Handle answers
-                qa.answers = Answers()
-                for answer_item in item.get('answers', {}).get('items', []):
-                    llm_answer = answer_item.get('llm_answer', {})
-                    answer = Answer(
-                        text=answer_item.get('text', ''),
-                        llm_answer=LLMAnswer(
-                            meta=llm_answer.get('meta', {}) if llm_answer else {},
-                            text=llm_answer.get('text', '') if llm_answer else '',
-                            prompt=Prompt(**llm_answer.get('prompt', {}) if llm_answer else {}),
-                            name=llm_answer.get('name', '') if llm_answer else '',
-                            full_name=llm_answer.get('full_name', '') if llm_answer else '',
-                            timestamp=llm_answer.get('timestamp', datetime(1970, 1, 1)) if llm_answer else datetime(1970, 1, 1),
-                            duration=llm_answer.get('duration', 0) if llm_answer else 0,
-                            chunks=llm_answer.get('chunks',Chunks()) if llm_answer else Chunks()
-                        )
-                    )
-                    qa.answers.items.append(answer)
+        #         # Handle answers
+        #         qa.answers = Answers()
+        #         for answer_item in item.get('answers', {}).get('items', []):
+        #             llm_answer = answer_item.get('llm_answer', {})
+        #             answer = Answer(
+        #                 text=answer_item.get('text', ''),
+        #                 llm_answer=LLMAnswer(
+        #                     meta=llm_answer.get('meta', {}) if llm_answer else {},
+        #                     text=llm_answer.get('text', '') if llm_answer else '',
+        #                     prompt=Prompt(**llm_answer.get('prompt', {}) if llm_answer else {}),
+        #                     name=llm_answer.get('name', '') if llm_answer else '',
+        #                     full_name=llm_answer.get('full_name', '') if llm_answer else '',
+        #                     timestamp=llm_answer.get('timestamp', datetime(1970, 1, 1)) if llm_answer else datetime(1970, 1, 1),
+        #                     duration=llm_answer.get('duration', 0) if llm_answer else 0,
+        #                     chunks=llm_answer.get('chunks',Chunks()) if llm_answer else Chunks()
+        #                 )
+        #             )
+        #             qa.answers.items.append(answer)
                 
-                # Handle chunks
-                if 'chunks' in item and 'items' in item['chunks']:
-                    qa.chunks = Chunks()
-                    for chunk_item in item['chunks']['items']:
-                        qa.chunks.items.append(Chunk(text=chunk_item.get('text', '')))
+        #         # Handle chunks
+        #         if 'chunks' in item and 'items' in item['chunks']:
+        #             qa.chunks = Chunks()
+        #             for chunk_item in item['chunks']['items']:
+        #                 qa.chunks.items.append(Chunk(text=chunk_item.get('text', '')))
                 
-                expe.append(qa)
-        else:
-            # Old process: Load validation set from file
-            validation_set_path = load_validation_set(config['validationSet'])
-            with open(validation_set_path, 'r') as f:
-                validation_set_data = json.load(f)
-            for item in validation_set_data['items']:
-                qa = QA(
-                    question=Question(text=item['question']['text']),
-                    facts=Facts(items=[Fact(text=f.get('text', '')) for f in item.get('facts', {}).get('items', [])])
-                )
-                expe.append(qa)
+        #         expe.append(qa)
+        # else:
+        #     # Old process: Load validation set from file
+        #     validation_set_path = load_validation_set(config['validationSet'])
+        #     with open(validation_set_path, 'r') as f:
+        #         validation_set_data = json.load(f)
+        #     for item in validation_set_data['items']:
+        #         qa = QA(
+        #             question=Question(text=item['question']['text']),
+        #             facts=Facts(items=[Fact(text=f.get('text', '')) for f in item.get('facts', {}).get('items', [])])
+        #         )
+        #         expe.append(qa)
 
         # Generate answers if needed (old process)
         if not config['withCSV']:
@@ -404,14 +409,15 @@ def start_experiment():
                 return jsonify({'error': f"Error evaluating chunks: {str(e)}"}), 500
 
         # Save results
-        output_path = os.path.join(EVALS_FOLDER, f"{experiment_name}.json")
-        if not os.path.exists(EVALS_FOLDER):
-            os.makedirs(EVALS_FOLDER)
-        logging.info(f"Saving experiment results to: {output_path}")
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(expe.model_dump(exclude_none=True), f, ensure_ascii=False, indent=2, cls=DateTimeEncoder)
+        # output_path = os.path.join(EVALS_FOLDER, f"{experiment_name}.json")
+        # if not os.path.exists(EVALS_FOLDER):
+        #     os.makedirs(EVALS_FOLDER)
+        # logging.info(f"Saving experiment results to: {output_path}")
+        # with open(output_path, 'w', encoding='utf-8') as f:
+        #     json.dump(expe.model_dump(exclude_none=True), f, ensure_ascii=False, indent=2, cls=DateTimeEncoder)
+        output_path = expe.save_to_json(path=EVALS_FOLDER / config['name'])
 
-        logging.info(f"Experiment results saved successfully")
+        # logging.info(f"Experiment results saved successfully")
         return jsonify({'message': 'Experiment completed successfully', 'results_path': output_path})
 
     except Exception as e:
@@ -420,13 +426,13 @@ def start_experiment():
         return jsonify({'error': f'An unexpected error occurred during the experiment: {str(e)}'}), 500
 
 def load_validation_set(validation_set_prefix):
-    matching_files = [f for f in os.listdir(SAVED_FOLDER) 
+    matching_files = [f for f in os.listdir(VALIDATION_SETS_FOLDER) 
                       if f.startswith(validation_set_prefix) and f.endswith('.json')]
     if not matching_files:
         raise FileNotFoundError(f'No matching validation set file found for: {validation_set_prefix}')
     if len(matching_files) > 1:
         logging.warning(f"Multiple matching validation set files found for: {validation_set_prefix}. Using the first match.")
-    return os.path.join(SAVED_FOLDER, matching_files[0])
+    return os.path.join(VALIDATION_SETS_FOLDER, matching_files[0])
 
 class DateTimeEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -602,14 +608,14 @@ def update_json():
         if not data or not new_filename or not old_filename:
             return jsonify({'error': 'Missing data, new filename, or old filename'}), 400
 
-        old_file_path = os.path.join(SAVED_FOLDER, f"{old_filename}_Validation_set_Q*_F*.json")
+        old_file_path = os.path.join(VALIDATION_SETS_FOLDER, f"{old_filename}_Validation_set_Q*_F*.json")
         matching_files = glob.glob(old_file_path)
         
         if matching_files:
             old_file_path = matching_files[0]
             os.remove(old_file_path)
 
-        new_file_path = os.path.join(SAVED_FOLDER, new_filename)
+        new_file_path = os.path.join(VALIDATION_SETS_FOLDER, new_filename)
 
         with open(new_file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -625,7 +631,7 @@ def update_json():
 @main.route('/api/delete-validation-set/<path:name>', methods=['DELETE'])
 def delete_validation_set(name):
     try:
-        file_path = os.path.join(SAVED_FOLDER, name)
+        file_path = os.path.join(VALIDATION_SETS_FOLDER, name)
         if os.path.exists(file_path):
             os.remove(file_path)
             return jsonify({'message': 'Validation set deleted successfully'}), 200

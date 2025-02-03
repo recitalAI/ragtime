@@ -99,7 +99,7 @@ class TextGenerator(RagtimeBase, ABC):
                 )
             except Exception as e:
                 logger.exception(f"Exception caught - saving what has been done so far:\n{e}")
-                expe.save_to_json()
+                expe.save_to_json(b_overwrite=True)
                 expe.save_temp(name=f"Stopped_at_{num_q}_of_{nb_q}_")
                 return
             time.sleep(self.wait_between_calls)

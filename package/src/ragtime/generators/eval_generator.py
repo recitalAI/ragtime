@@ -33,7 +33,7 @@ class EvalGenerator(TextGenerator):
             return
 
         # Eval loop
-        for ans in (a for a in qa.answers if a.text):
+        for ans in (a for a in qa.answers if a and a.text):
             llm_name: str = ans.llm_answer.name if ans.llm_answer else UNKNOWN_LLM
             if only_llms and llm_name not in only_llms and llm_name != UNKNOWN_LLM:
                 continue

@@ -188,16 +188,16 @@ class Expe(RagtimeList[QA]):
     def stats(self) -> dict:
         """Returns stats about the expe : nb models, nb questions, nb facts, nb answers, nb human eval, nb auto eval"""
         res: dict = {}
-        res["questions"] = len([qa for qa in self if qa.question.text])
+        res["questions"] = len([qa for qa in self if qa and qa.question and qa.question.text])
         res["chunks"] = len([c for qa in self for c in qa.chunks if c])
         res["facts"] = len([f for qa in self for f in qa.facts if f])
         res["models"] = len(self[0].answers)
-        res["answers"] = len([a for qa in self for a in qa.answers if a.text])
+        res["answers"] = len([a for qa in self for a in qa.answers if a and a.text])
         res["human eval"] = len(
-            [a for qa in self for a in qa.answers if a.eval and a.eval.human]
+            [a for qa in self for a in qa.answers if a and a.eval and a.eval.human]
         )
         res["auto eval"] = len(
-            [a for qa in self for a in qa.answers if a.eval and a.eval.auto]
+            [a for qa in self for a in qa.answers if a and a.eval and a.eval.auto]
         )
         return res
 
@@ -262,7 +262,7 @@ class Expe(RagtimeList[QA]):
 
         # If path exists and overwrite not allowed, raise an Exception
         if result_path.is_file() and not b_overwrite:
-            raise FileExistsError(f'"{path}" already exists! Set b_overwrite=True to allow overwriting.')
+            raise FileExistsError(f'"{result_path}" already exists! Set b_overwrite=True to allow overwriting.')
 
         return result_path
 
