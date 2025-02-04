@@ -114,6 +114,7 @@ class LLM(RagtimeBase):
 
 class LiteLLM(LLM):
     """
+    A LiteLLM must be provided with a Prompter and a name at creation time
     Simple extension of LLM based on the litellm library.
     Allows to call LLMs by their name in a stantardized way.
     The default get_prompt method is not changed.

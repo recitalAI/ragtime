@@ -2,9 +2,13 @@ PROJECT_NAME:str = "deepseek"
 
 import ragtime
 from ragtime import expe, generators
+from ragtime.generators import AnsGenerator
+from ragtime.llms import LiteLLM
 from ragtime.expe import QA, Chunks, Prompt, Eval, Expe, Answer, Question, WithLLMAnswer, Fact
 import json
 from pathlib import Path
+
+from ragtime.prompters.answer_prompters import AnsPrompterWithRetrieverFR
 
 # always start with init_project before importing ragtime.config values since they are updated
 # with init_project and import works by value and not by reference, so values imported before
@@ -16,12 +20,17 @@ from ragtime.config import FOLDER_ANSWERS, FOLDER_QUESTIONS, logger, FOLDER_VALI
 logger.debug(f'{PROJECT_NAME} STARTS')
 
 # If you're using Windows, make your environment variables for LLM providers accessible with the following instruction
-# ragtime.config.init_win_env(['OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY'])
+ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY'])
 
 ######################################################
 # CREATE GENERIC FACTS FROM SET OF QUESTIONS
 ######################################################
-
+expe:Expe = Expe(FOLDER_VALIDATION_SETS / 'Cultural_Generic_Facts_10Q.json')
+ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='deepseek/deepseek-chat')],
+                                                  prompter=AnsPrompterWithRetrieverFR(),
+                                                  retriever=)
+ans_gen.generate(expe=expe)
+pass
 
 ######################################################
 # CREATE GENERIC FACTS FROM SET OF QUESTIONS
