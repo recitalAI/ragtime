@@ -135,7 +135,7 @@ def init(root_folder: Path):
     # # # LLMs
     DEFAULT_LITELLM_RETRIES = 3
     DEFAULT_LITELLM_TEMP = 0
-    DEFAULT_MAX_TOKENS = 1000  # empirically noticed the biggest answers are 4000 characters long - and 1 token is between 4 and 5 chars - keep the largest value, i.e. 4 chars per token
+    DEFAULT_MAX_TOKENS = 2000  # empirically noticed the biggest answers are 4000 characters long - and 1 token is between 4 and 5 chars - keep the largest value, i.e. 4 chars per token
 
     ####################
     # LOGGING

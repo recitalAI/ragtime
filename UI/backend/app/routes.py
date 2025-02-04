@@ -418,7 +418,7 @@ def start_experiment():
         output_path = expe.save_to_json(path=EVALS_FOLDER / config['name'])
 
         # logging.info(f"Experiment results saved successfully")
-        return jsonify({'message': 'Experiment completed successfully', 'results_path': output_path})
+        return jsonify({'message': 'Experiment completed successfully', 'results_path': str(output_path)})
 
     except Exception as e:
         logging.error(f"Unexpected error in start_experiment: {str(e)}")

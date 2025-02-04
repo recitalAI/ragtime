@@ -18,6 +18,9 @@ logger.debug(f'{PROJECT_NAME} STARTS')
 # If you're using Windows, make your environment variables for LLM providers accessible with the following instruction
 # ragtime.config.init_win_env(['OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY'])
 
+######################################################
+# CREATE GENERIC FACTS FROM SET OF QUESTIONS
+######################################################
 
 
 ######################################################
