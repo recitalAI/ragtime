@@ -8,7 +8,11 @@
     >
       <span>{{ experimentName }}</span>
       <DownloadReport 
-        v-if="fullEvaluation && fullEvaluation.length > 0"
+        v-if="hasChunkEvaluations && fullEvaluation && fullEvaluation.length > 0"
+        :experiment-data="{ items: fullEvaluation }" 
+      />
+      <DownloadSimpleReport
+        v-else-if="fullEvaluation && fullEvaluation.length > 0"
         :experiment-data="{ items: fullEvaluation }" 
       />
     </h2>
@@ -553,6 +557,7 @@ import { useRouter } from 'vue-router';
 import { experimentService } from '@/services/generatorService';
 import { formatDate } from '@/utils/dateFormatter';
 import DownloadReport from './DownloadReport.vue';
+import DownloadSimpleReport from './DownloadSimpleReport.vue';
 import CustomTooltip from './Tooltip.vue';
 import { marked } from 'marked';
 import TableWithFooter from '@/components/elements/Tables/TableWithFooter.vue';
@@ -568,6 +573,7 @@ export default {
     CustomTooltip,
     TableWithFooter,
     DownloadReport,
+    DownloadSimpleReport,
   },
 
   setup(props) {
