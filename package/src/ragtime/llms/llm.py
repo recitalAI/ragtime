@@ -83,7 +83,7 @@ class LLM(RagtimeBase):
                 b_exception = True
 
             if b_exception:
-                logger.exception(f"Exception while generating - skip it\n{exc}")
+                logger.exception(f"Exception while generating - skip it\n{exc if exc else ''}")
                 return None
         else:
             logger.debug(f"Reuse existing LLMAnswer in {cur_class_name}")
@@ -153,11 +153,7 @@ class LiteLLM(LLM):
                 await asyncio.sleep(time_to_wait)
                 retry += 1
             except Exception as e:
-                logger.exception(
-                    f"The following exception occurred with prompt {prompt}"
-                    + "\n"
-                    + str(e)
-                )
+                logger.exception(f'The following exception occurred with prompt\n"{str(prompt)[:300]}"\nException: {e}')
                 return None
 
         try:

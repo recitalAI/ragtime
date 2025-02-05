@@ -80,7 +80,7 @@ class AnsGenerator(TextGenerator):
 
             # Get existing Answer if any
             prev_ans: Optional[Answer] = [a for a in qa.answers
-                                          if a.llm_answer and (a.llm_answer.name == llm.name or a.llm_answer.full_name == llm.name)]
+                                          if a and a.llm_answer and (a.llm_answer.name == llm.name or a.llm_answer.full_name == llm.name)]
             if prev_ans:
                 prev_ans = prev_ans[0]  # prev_ans is None if no previous Answer has been generated for the current LLM
                 logger.debug(f'An Answer has already been generated with "{llm.name}"')

@@ -11,7 +11,7 @@ ragtime.config.init_project(name=PROJECT_NAME, init_type="globals_only")
 from ragtime.config import FOLDER_ANSWERS, FOLDER_QUESTIONS, logger
 
 # Note: the logger can be used only *after* ragtime.config.init_project
-logger.debug(f'{PROJECT_NAME} STARTS')
+logger.debug(f'*** PROJECT "{PROJECT_NAME}" STARTS')
 
 # If you're using Windows, make your environment variables for LLM providers accessible with the following instruction
 # ragtime.config.init_win_env(['OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY'])
