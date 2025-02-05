@@ -1,0 +1,1133 @@
+{
+  "meta": {
+    "validation_set": "Set_de_validation_LSA_Validation_set_Q33_F100.json",
+    "retriever_name": "Search"
+  },
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quels sont les justificatifs de domicile pour un SDF ?"
+      },
+      "facts": {
+        "llm_answer": null,
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Un SDF peut justifier son domicile par une attestation du centre d'action sociale de sa commune de rattachement."
+          },
+          {
+            "meta": {},
+            "text": "2. Cette attestation fait état de son élection de domicile dans la commune."
+          },
+          {
+            "meta": {},
+            "text": "3. En l'absence de domicile stable, un SDF peut fournir une attestation d'élection de domicile établissant un lien avec un organisme d'accueil répertorié en préfecture."
+          },
+          {
+            "meta": {},
+            "text": "4. Pour faire une demande de domiciliation, un SDF doit se rapprocher du centre communal d'action sociale ou de tout autre organisme agréé par le préfet du département."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8416386492300245,
+              "display_name": "search_files/38/LSA/3.1.2. SDF - Jusitificatif de domicile.pdf",
+              "page_number": 1,
+              "_split_id": 0,
+              "path": "search_files/38/LSA/3.1.2. SDF - Jusitificatif de domicile.pdf",
+              "metadata": {},
+              "file_id": 25666,
+              "page": 1,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Emetteur\nApprobateur\nLSA Courtage\nDATE DE DIFFUSION 01/09/2020\nDernière mise à jour\nService Audit et conformité\nDirecteur du service Audit et\nConformité\nDOMAINES / EQUIPES\nTOUTES\nDATE D'EFFET 14/09/2020\nDate d'effet de la dernière mise à\nObjet : SDF - Justificatif de domicile\njour\nEve REUTER\nLudovic SAINT LAURENS\nDiffusion : DIRECTION AUDIT ET CONFORMITE\nGénéralités\nBien que le Code des assurances n'en fasse pas formellement état , l'établissement d'un contrat d'assurance automobile requiert une domiciliation postale .\nComme dans son article R 322-1 qui stipule que : « Tout propriétaire d'un véhicule à moteur ( ... ) qui souhaite le mettre en circulation pour la première fois doit pouvoir justifier ( ... ) de son domicile » .\nIl en va de même pour l'acquisition d'un véhicule d'occasion , l'article R 322-5 précisant à cet effet que : * Le nouveau propriétaire d'un véhicule déjà immatriculé doit ( ... ) faire établir ( ... ) un certificat d'immatriculation à son nom dans les conditions prévues à l'article R 322-1 ( et ) pouvoir justifier ( ... ) de son domicile ( ... ) » .\nEn ce qui concerne le maintien du contrat en cours , il est nécessaire de pouvoir joindre l'assuré pour voie postale .\nOutre la question du certificat d'immatriculation , l'assureur doit par ailleurs disposer d'une adresse lui permettant d'évaluer le risque pris au titre des diverses garanties souhaitées par l'assuré et qui sont , pour beaucoup , fonction de son secteur géographique de résidence , comme rappelé à l'annexe de l'article A 121-1 du Code des assurances : « La prime de référence est établie par l'assureur pour le risque présentant les ( ... ) caractéristiques techniques ( concernant ) le véhicule ( comme ) la zone géographique de circulation ou de garage ( ... ) » .\nRègle LSA\nAfin de pouvoir joindre l'assuré par voie postale , des alternatives existent en cas de difficultés de domiciliation conventionnelle .\nUne personne sans domicile fixe pourra faire établir :\n. Une attestation du centre d'action sociale de sa commune de rattachement faisant état de son élection de domicile dans cette commune ou ;"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7957931354469171,
+              "display_name": "search_files/38/LSA/3.1.1. Les pièces bloquantes - non bloquantes.pdf",
+              "page_number": 5,
+              "_split_id": 5,
+              "path": "search_files/38/LSA/3.1.1. Les pièces bloquantes - non bloquantes.pdf",
+              "metadata": {},
+              "file_id": 25665,
+              "page": 5,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Pièces\nElément bloquant ?\nOUI\nRIB non identifiable Emission de police impossible\nOUI\nOUI\nNON\nGroupe 5 RIB ou Mandat SEPA\nNON\nNON\nDescription détaillée du Process - 3.1.1 Les pièces bloquantes - non bloquantes Malle 05/06/2024\nDocuments à fournir\nSi le titulaire du compte est le souscripteur du contrat : Il faut soit l'un soit l'autre , en absence des 2 documents le contrat ne sera jamais émis Si absencedu RIB ou du mandat SEPA , réclamer le document en pièce manquante\nSi le titulaire du compte est différent du souscripteur du contrat ( hors conjoint désigné ) : Réclamer Mandat SEPA complété et signé ou le RIB , ainsi que la CNI du titulaire du compte ( Ex : Si Mandat SEPA complété et signé + CNI = OK // SI RIB + CNI = OK // Si Mandat complété et signé + RIB = KO )\nSi absence du RIB ou du mandat SEPA , réclamer le document en pièce manquante\nLe RIB est au nom du conjoint et que celui - ci est bien désigné sur le contrat en tant que second conducteur\nOn rédame le mandat SEPA signé par le conjoint titulaire du compte = il n'est pas nécessaire de réclamer la CNI\nbe reçois uniquement le Mandat SEPA : Je vérifie si le titulaire du compte est le souscripteur du contrat\nOui : Je réclame le RIB\nNon : Je vérifie si la signature sur le Mandat est la même que sur le devis si possible\n-La signature est la même : Je réclame son RIB ainsi la copie de la CNI du titulaire du compte\n-La signature est différente : Je réclame le mandat SEPA signé par le titulaire du compte ainsi que le RIB et la copie de la CNI du titulaire du compte\nLe RIB de société ne doivent pas être acceptés pour la souscription d'un contrat au nom d'un particulier\nLe RIB au nom du gérant d'une société / association peut être accepté pour la souscription d'un contrat au nom de cet organisme\nContrat antivol\nNON\nun justificatif de gravage ( Document à ne plus réclamer ) - ligne inutilisée à compter de Septembre 2020\nNON\nCNI\nAutres\nCarte étudiante\nNON\nNON\nNON\nNON\nVéhicule HDG ( valeur à neuf > 46000 € ) = Emission de la police + CNI réclamé automatiquement dans le suivi des pièces manquantes\nSouscription au nom d'une société = réclamer la CNI du conducteur principal / gérant de l'entreprise\nJeune conducteur en l'absence de permis définitif\nEn l'absence d'un permis de conduire , la CNI est à réclamer dans le suivi des PMQ ( sauf si présence de passeport , ou titre de séjour ) CSP déclaré : étudiant\nUne attestation du centre d'action sociale de sa commune de rattachement faisant état de son élection de domicile dans cette commune ou ; En l'absence de domicile stable , une attestation d'élection de domicile établissant un lien avec un organisme d'accueil répertorié en préfecture .\nSDF - justificatif de domicile\nOUI\nFacture d'achat ou rapport d'expertise\nOUI\nValeur du véhicule\nCarte chauffeur VTC\nOUI\nNote UBER\nOUI\nValeur vérifiée et validée par le chauffeur\nAttestation de non sinistre générée par un\nUBER\nOUI\nSur les périodes réclamées sur l'attestation\nsouscripteur / vallideur\nVéhicule acheté < 12 mois\nQUI\nFacture d'achat ou un"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7071470696981419,
+              "display_name": "search_files/38/LSA/Support de formation  - Résiliation.pdf",
+              "page_number": 2,
+              "_split_id": 1,
+              "path": "search_files/38/LSA/Support de formation  - Résiliation.pdf",
+              "metadata": {},
+              "file_id": 25973,
+              "page": 2,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Procédure de résiliation\nPROCEDURE DE RESILIATION\nMotif\nFondement\nNature du contrat\nEmetteur\nMode d'envoi de la demande\nPièces à fournir\nPréavis ou délai d'information de l'assureur\nActe\nDate d'effet\nG5\nInfo\nEDF /\nBNP\n( Hors Autres tardive\nBNP )\nFrais de courtage\nPremière année\n( Sauf si autre contrat en cours\nsur le client o\nle foyer\n°\n0\nAuto\nMoto Assuré ou\nLettre simple\n2 mois avant\nAucune\nEchéance\nL113-12\nмян\n* Nouvel\nCydo\nAssureur\nde demander le mandat ou l'accord du client\nou tout autre Note : lorsque la demande émane du nouvel assureur : n'y a pas lieu échéance ( Date échéance annuelle ( 2 support durable\n0\n0\n0\nd'envalde la demandel\nmois de la demande )\nSame\nLettre simple\nAuto Moto\n* Assuré .\nou tout autre\nsupport durable\nJ - 30 de la date de reception\n22\n14,90\n0\nChangement de situation\nL113-16\nCydo\nLettre simple Assuré ou tout autre support durable\nмян Samé\n* Assuré .\nLettre simple ou tout autre support durable\nChangement de domicile - Maj . du contrat , nation sur justificatif du changement de domicile nouvelle assurance du\nVTM\nDépart à rétranger\n1 / client à l'tranger , lewihicule reste en France résiliation pour changement de situation +30 surjustificatif du départ client ( Cart traval etc . ) + nouvelerance du VTM\n2 / départ du véhicule à l'étrangers présentation du justificati de départ du VTM - résiliation pour alienation au lendemain -Changement de situation ou régime matrimonial n'est pas un motif de résiliation sauf si le conjoint est assuré au contrat , tout justificatif du changement de situation + nouvelle assurance du VTM\n-Changement de situation professionnelle - Mise à jour de Tusage , résiliation sur justificatif + nouvelle assurance du VTM Retraite ou cessation d'activité Mise à jour de l'usage . nisation sur justificatif + nouvel assurance du VTM\nSEUL POURRA ETRE RESILIE , UN CONTRAT D'ASSURANCE , AYANT POUR OBJET LA GARANTIE DE RISQUES EN RELATION DIRECTE AVEC LA SITUATION ANTERIEURE ET QUI NE SE RETROUVE PAS DANS LA SITUATION NOUVELLE RESIL EN DEHORS DE TOUTE CONSIDERATION DE TARIF .\nChangement de domicile : Attestation fin de bail , caple état des lieux de sortie , acte de vente\n-Changement de situation oungime matrimonial Tout justificatif du changement de situation\n-Changement de situation professionnelle n'est pas un motif de résiliation\nSEUL POURRA ETRE RESILIE , UN CONTRAT D'ASSURANCE , AYANT POUR OBJET LA GARANTIE DE RISQUES EN RELATION DIRECTE AVEC LA SITUATION ANTERIEURE ET QUI NE SE RETROUVE PAS DANS LA SITUATION NOUVELLE - RESIL EN DEHORS DE TOUTE CONSIDERATION DE TARIF .\nDans les 3 mois à compter de révenement\nJ - 30 de la date de réception\n22\n14,50\nJ - 30 de la date de réception\nNate en cas de changement de domicile en qualité de locataire , le delal court\nà compter du premier\ncontact client pour la résiliation et au plus tard le jour de la sortie des lieux n'éta des lieux de sortie\n22\n14,90\n°\n2\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7025278369611838,
+              "display_name": "search_files/38/LSA/Conditions générales AXA 650.pdf",
+              "page_number": 91,
+              "_split_id": 91,
+              "path": "search_files/38/LSA/Conditions générales AXA 650.pdf",
+              "metadata": {},
+              "file_id": 25808,
+              "page": 91,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Assurance Habitation - ASSISTANCE AU DOMICILE ET AUX PERSONNES\n⚫de la participation volontaire à des rixes sauf en cas de légitime défense , à la guerre civile ou étrangère , à des émeutes , à des grèves , à des actes de terrorisme , de pirateries , de sabotage , à des mouvements populaires ,\nNe donnent lieu ni à prise en charge , ni remboursement :\n• les frais liés aux excedents de poids des bagages lors d'un transport par avion et les frais d'acheminement des bagages lorsqu'ils ne peuvent être transportés avec le bénéficiaire ,\n• les frais non justifiés par des documents originaux ,\n⚫les frais engagés par le bénéficiaire pour la délivrance de tout document officiel ,\n⚫toute intervention initiée et / ou organisée à un niveau étatique ou inter - étatique par toute autorité ou organisme gouvernemental ou non gouvernemental .\n2. Exclusions spécifiques : sinistres au domicile\nSont exclus et ne pourront donner lieu à l'intervention d'AXA Assistance , ni faire l'objet d'une indemnisation à quelque titre que ce soit :\n⚫les sinistres au domicile consécutifs à une négligence grave ou à un défaut d'entretien certain ;\n⚫les sinistres répétitifs causés par la non remise en état du domicile suite à la première intervention du service assistance .\n• les dommages provoqués par une faute intentionnelle ou dolosive du bénéficiaire ;\n• les frais non justifiés par des documents originaux .\n3. Exclusions spécifiques : Assistance Santé à domicile\nSont exclus et ne pourront donner lieu à l'intervention d'AXA Assistance , ni faire l'objet d'une indemnisation à quelque titre que ce soit :\n⚫toutes interventions et / ou remboursements relatifs à des bilans médicaux , check - up , dépistages à titre préventif , traitements ou analyses réguliers et , d'une manière générale , toute intervention ou prise en charge ayant un caractère répétitif ou régulier ,\n⚫les états de grossesse à moins d'une complication imprévisible ,\n• les interruptions volontaires de grossesse ,\n⚫les maladies chroniques ,\n⚫les tentatives de suicide et leurs conséquences ,\n⚫les cures de rajeunissement , d'amaigrissement , les traitements à but esthétique ,\n•\nles frais médicaux ,\n• les cures , séjours en maison de repos et les frais de rééducation .\n89"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.6912727819758144,
+              "display_name": "search_files/38/LSA/580_DIPA_CG.pdf",
+              "page_number": 40,
+              "_split_id": 72,
+              "path": "search_files/38/LSA/580_DIPA_CG.pdf",
+              "metadata": {},
+              "file_id": 25750,
+              "page": 40,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "et les conduire chez un proche en France métropolitaine . Les billets des enfants sont également pris en charge .\n7.4.2.4 . Retour anticipé en cas de décès d'un membre de votre famille\nAlors que vous êtes en déplacement , vous apprenez le décès survenu en France métropolitaine d'un membre de votre famille . Afin que vous puissiez assister aux obsèques , nous organisons et prenons en charge soit votre voyage aller - retour , soit votre voyage retour simple et celui des bénéficiaires se déplaçant avec vous , par train 1 classe ou avion classe économique jusqu'en France métropolitaine , ainsi que le cas échéant les frais de taxi au départ pour se rendre du lieu de séjour à la gare ou l'aéroport , et à l'arrivée de la gare ou aéroport au domicile . A défaut de présentation de justificatifs ( certificat de décès , justificatif lien de parenté ) dans un délai de 30 jours , nous nous réservons le droit de vous facturer l'intégralité de la prestation . Cette prestation est accordée dès lors que la date des obsèques est antérieure à la date initialement prévue pour votre retour .\n7.4.2.5 . Chauffeur de remplacement ( pays de la carte verte non barrés )\nLes prestations sont identiques à celles définies au point 7.4.1.7 .\n7.4.3 . Retour anticipé suite à hospitalisation d'un membre de votre famille\nAlors que vous êtes en déplacement , vous apprenez l'hospitalisation grave et imprévue survenue en France métropolitaine d'un membre de votre famille . Afin de vous rendre à son chevet , nous organisons et prenons en charge soit votre voyage aller- retour , soit votre voyage aller simple et celui des bénéficiaires se déplaçant avec vous , par train 1 classe ou avion classe économique jusqu'en France métropolitaine , ainsi que le cas échéant les frais de taxi au départ pour se rendre du lieu de séjour à la gare ou l'aéroport , et à Tarrivée de la gare ou aéroport au domicile . À défaut de présentation de justificatifs ( bulletin d'hospitalisation , justificatif lien de parenté ) dans un délai de 30 jours , nous nous réservons le droit de vous facturer l'intégralité de la prestation .\n7.4.4 . Assistance en cas de perte / vol des papiers d'identité ou moyens de paiement\n7.4.4.1 . Avance de fonds\nÀ la suite d'une perte ou d'un vol de vos moyens de paiement ( carte de crédit , chéquier ) alors que vous êtes en déplacement à plus de 30 km autour de votre domicile , et sous réserve d'une attestation de perte ou vol délivrée par les autorités locales , nous vous faisons parvenir des fonds d'un montant maximum de 1 600 € TTC afin que vous puissiez faire face aux dépenses de première nécessité , aux conditions préalables suivantes :\n⚫soit du versement par un tiers par débit sur carte bancaire de la somme correspondante ,\n• soit du versement par votre établissement bancaire de la somme correspondante .\nVous signerez un reçu lors de la remise des fonds"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.688306990816234,
+              "display_name": "search_files/38/LSA/Pièces manquantes client et sinistre.pdf",
+              "page_number": 6,
+              "_split_id": 5,
+              "path": "search_files/38/LSA/Pièces manquantes client et sinistre.pdf",
+              "metadata": {},
+              "file_id": 25905,
+              "page": 6,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "PMQ Sinistre\nAttestation sur l'honneur\nPEC bloquante\nRèglement bloquant\nQUI\nOUI\nUsage véhicule\nOUI\nQUI\nJustif de stationnement\nQUI\nOUI\nCommentaires\nen application d'une garantie contractuelle et si le client est garanti privé ou trajet domicile traval\nen application d'une garantie contractuelle et selon CP\nQuestionnaire TVA\nNON\nNON\nAttestation uber\nNON\nNON\nFiche d'instruction corporelle\nNON\nNON\nTémoignage\nNON\nNON\nDéclaration / CA\nQUI\nQUI\nConfirmation date / heure\nQUI\nOUI\nConsulter RE si absence de réponse du tiers / cie adverse par écrit ou par téléphone\nPV de dépôt de plainte ( copie )\nOUI\nQUI\nPV de dépôt de plainte ( original )\nNC\nQUI\nFacture de réparation de la fuite\nNC\nOUI\nMRH : pour le différé\nAttestation météorologique\nNC\nNON\nLa copie de la dernière attestation d'assurance MRH couvrant la période précédant la souscription du contrat actuel\nLa copie de l'état des lieux d'entrée dans votre logement ( à supprimer si propriétaire )\nAuto : Facture d'achat des biens volés / endommagés ou justif recevables selon cg\nMRH : Facture d'achat des biens volés / endommagés ou justits recevables selon cg\nPermis conducteur non déclaré\nNC\nNON\nNC\nNON\nNC\nQUI\nrèglement bloqué pour le bien concerné sans facture / justif\nNC\nNON\nRôle de l'expert\nQUI\nQUI"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.6850308713125095,
+              "display_name": "search_files/38/LSA/615_DIPA_CG.pdf",
+              "page_number": 31,
+              "_split_id": 40,
+              "path": "search_files/38/LSA/615_DIPA_CG.pdf",
+              "metadata": {},
+              "file_id": 25751,
+              "page": 31,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "• Vous êtes malade ou blessé et votre état de santé nécessite un rapatriement en France Métropolitaine , Andorre ou Monaco\nNous l'organisons et le prenons en charge du lieu où vous vous trouvez immobilisé jusqu'à votre domicile en France Métropolitaine , Andorre ou Monaco ou jusqu'à l'établissement hospitalier adapté à votre état de santé , proche de votre domicile .\nA la fin de l'hospitalisation , nous organisons votre retour à votre domicile .\nNous prenons en charge les frais supplémentaires de transport des membres de votre famille assurés vous accompagnant dans la mesure où les moyens initialement prévus pour leur retour en France Métropolitaine , Andorre ou Monaco ne peuvent pas être utilisés du fait de votre rapatriement .\n• Vous êtes hospitalisé et votre état de santé ne justifie pas ou empêche un rapatriement Nous organisons et prenons en charge les frais d'hébergement à l'hôtel d'un proche vous accompagnant dans la limite de 50 € par nuit jusqu'au rapatriement et pendant 10 nuits maximum et ce , afin de lui permettre de rester à votre chevet .\n• Vous êtes hospitalisé plus de 7 jours suite à un accident ou une maladie\nSi vous voyagez seul , nous organisons et prenons en charge le voyage aller - retour d'un proche résidant en France Métropolitaine , Andorre ou Monaco pour lui permettre de se rendre à votre chevet .\nNous organisons et prenons en charge ses frais d'hébergement à l'hôtel dans la limite de 50 € par nuit jusqu'au rapatriement et pendant 10 nuits maximum .\n• Vous êtes malade ou blessé , votre état de santé ne justifie pas une hospitalisation ou un rapatriement médical , vous ne pouvez rentrer à la date initialement prévue et cela vous occasionne des frais d'hébergement supplémentaires ( sur ordonnance médicale ) Nous organisons et prenons en charge :\n-vos frais d'hébergement à l'hôtel et ceux d'une personne vous accompagnant , dans la limite de 50 € par nuit et par personne jusqu'au rapatriement pendant 10 nuits maximum . Cette garantie cesse le jour où notre service médical estime que votre retour est envisageable , votre voyage retour et celul de la personne vous accompagnant dans la mesure où les moyens initialement prévus pour le retour en France Métropolitaine , Andorre ou Monaco ne peuvent être utilisés .\n• Vous êtes hospitalisé et accompagné d'un enfant mineur ou handicapé\nSi aucun membre majeur de votre famille ne vous accompagne , nous organisons le rapatriement de l'enfant mineur ou handicapé jusqu'à votre domicile ou celui d'un proche en France Métropolitaine , Andorre ou Monaco , solt en prenant en charge le billet aller / retour d'un proche résidant en France Métropolitaine , Andorre ou Monaco , soit en le faisant accompagner par une personne spécialisée mandatée par nous .\n• Vous payez des frais médicaux sur prescription d'une autorité médicale compétente , des frais d'hospitalisation ou des frais d'ambulance hors du pays où vous êtes domicilié , hors de France Métropolitaine , Andorre ou Monaco\nNous vous remboursons , après intervention de la Sécurité Sociale"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.6798475949978029,
+              "display_name": "search_files/38/LSA/4.3.1 Résiliation à l’initiative de l’assuré.pdf",
+              "page_number": 1,
+              "_split_id": 0,
+              "path": "search_files/38/LSA/4.3.1 Résiliation à l’initiative de l’assuré.pdf",
+              "metadata": {},
+              "file_id": 25681,
+              "page": 1,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Nature du\nModif\nFondement\nEmetteur\nMode d'envoi de la demande\ncontrat\nPièces à fournir\nDescription détaillée du Process 4.3.1 Résiliation à l'initiative de l'assuré MAJ le 03/02/2022\nFrais de courtage\nActe\nPravis ou délai d'information de\nDate d'effet\nPremière année ( Sauftr\nInfo\nEDF / BNP GS ( BNP ) Autres tardive\nsur le dient ou le\nSayer )\nAuto\nMoto\n-Assuré ou\nLettre simple\nEchéance an\n1113-12\nмян\nNouve\nCyclo\nAssureur\noutout autre support durable\nSanbi\nAuto Moto\nLettre simple\n-Assuré .\noutout autre support durable\nChangement de\nL113-36\nCyclo\nAssuré\nLettre simple\nsituation\nou tout autre support durable\nMAH Sanbi\n-Assuré .\nLettre simple outout autre support durable\nAuto\nMoto\n< Auré\nLettre simple outout autre support durable\nAlination du véhicule\nL121-11\nLettre simple\nCycle\n< Auré\nou tout autre support durable\nAucune\nNote : lorsque la demande émane du nouvel assureur : il n'y a pas lieu de demander le mandat ou l'accord du client\nChangement de domicile - Majdu contrat , résil sur justificatif du changement de domicile + nouvelle assurance du VTM Départ à étranger :\n1 / client à rétranger , véhicule reste en France - résil changement de situation +30 ur jus départ clent ( Certif travail etc .. ) + nouvelle assurance du VTM 2 / départ véhicule étranger : Résil sur présentation du justif de départ du VTM- salination au lendemain\nChangement de situation ou régime matrimonial n'est pas un motif de nationale conjoint est contrat , tout justificatif du changement\nde situation + nouvelle assurance du VTM\nChangement de situation professionnelle Mise à jour de l'usage , résil sur justificat + nouvelle assurance du VTM\nRetraite ou cessation d'activité Mise à jour de usage , résil sur justificatif + nouvelle aurance du VTM\nSEUL POURRA ETRE RESILIE , UN CONTRAT D'ASSURANCE , AYANT POUR OBIET LA GARANTIE DE RISQUES EN RELATION DIRECTE AVEC LA SITUATION ANTERIEURE ET QUI NE SE RETROUVE PAS DANS LA SITUATION NOUVELLE RESIL EN DEHORS DE TOUTE CONSIDERATION DE TARIF .\nChangement de domicile : Attestation fin de bail , copie état des lieux de sortie , acte de verre\nChangement de situation ou régime matrimonial Tout justifica changement de situation\nChangement de situation professionnelle n'est pas un mot de résation\nSEUL POURRA ETRE RESILIE , UN CONTRAT D'ASSURANCE , AYANT POUR OBIET LA GARANTIE DE RISQUES EN RELATION DIRECTE AVEC LA SITUATION ANTERIEURE ET QUI NE SE RETROUVE PAS DANS LA SITUATION NOUVELLE- RESIL EN DEHORS DE TOUTE CONSIDERATION DE TARIF .\nDemande écrite du dient nous demandant la réson\nCertificat de cession signé par les deux parties ou certificat de reprise par un professionnel de auto ou contrat de mise en dépôt vente chez un professionnel\nLe certificat de cession du véhicule ou\nAréception de la fiche valeur vénal ou ; Présence de la date d'enlèvement du véhicule sur le rapport d'expertise Aréception du mal du service\n-Lettre simple de l'assur\nAléation du risque\nAuto\nO\nMoto\n< Aware\n( Cession du véhicule à\nCydo\nla compagnie\nJou :\nIndemnisation SURAVENIR nous informant de - Contacter l'expert pour collecter la date d'enlèvement du véhicule et lui\nla cession du véhicule à la CIE et de la date dudemander un écrit ( mai )\n2 mois avant échéance ( Date d'envoi de la demande\nEchéance annuelle > 2 mais de la demandel\nཐ\n0\n0\n°\n+30 de la date de réception\n0\n22\n14,9\n0\nDans les 3 mois à compter de\n+30 de la date de réception\n0\n22\n14,9\n0\n30\n1. Si cessions > 3mois demander Faccusé d'enregistrement à la préfecture"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.6777141157723238,
+              "display_name": "search_files/38/LSA/C.G. MRH 420.pdf",
+              "page_number": 28,
+              "_split_id": 43,
+              "path": "search_files/38/LSA/C.G. MRH 420.pdf",
+              "metadata": {},
+              "file_id": 25786,
+              "page": 28,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "28\nCHAPITRE XI - ASSISTANCE A DOMICILE\nLes garanties Assistance vous sont accordées , si mention en est faite aux Conditions Particulières . Elles sont organisées et mises en œuvre par EUROP ASSISTANCE ( qui , par rapport à l'assureur mentionné à vos Conditions Particulières ) , agit séparément ou par tout autre organisme qui lui serait substitué et qui vous aura alors été signalé par une mention sur votre avis d'échéance ou par tout autre moyen .\nI - OBLIGATIONS DES BENEFICIAIRES EN CAS D'ASSISTANCE\nPour permettre à EUROP ASSISTANCE d'intervenir dans les meilleures conditions , il est nécessaire : - soit d'appeler sans attendre EUROP ASSISTANCE au numéro de téléphone 01.41.85.94.94\n- soit d'adresser à EUROP ASSISTANCE un Fax au : 01.41.85.85.71\n- d'obtenir son accord préalable avant de prendre toute initiative ou d'engager toute dépense ,\n-de fournir tous les justificatifs originaux des dépenses dont le remboursement est demandé . En cas de fausse déclaration , EUROP ASSISTANCE se réserve le droit de prendre toutes dispositions relatives à ses obligations et , le cas échéant , d'en refuser le remboursement .\nEUROP ASSISTANCE demandera au bénéficiaire , copie de la déclaration de sinistre , de tout rapport d'expert ou de récépissé de dépôt de plainte pour vol .\nII - DEFINITIONS\na ) ON ENTEND PAR BENEFICIAIRE :\n-vous - même , souscripteur du contrat d'assurance multirisque habitation ;\n- votre conjoint ou concubin vivant au foyer ;\n-vos enfants célibataires , même majeurs et / ou ceux de votre conjoint ou concubin , vivant en permanence à votre domicile ou qui n'y vivent pas en permanence mais y résident au moment du sinistre et :\n- soit poursuivent leurs études mais n'exercent pas de profession ;\n- soit effectuent leur service national mais pour des périodes où ils ne sont pas sous la responsabilité de l'Etat\n- soit sont handicapés physiques ou mentaux , titulaires d'une carte d'invalidité .\nb ) DOMICILE GARANTI\nLe domicile garanti est le domicile faisant l'objet du contrat et désigné aux conditions particulières de la police d'assurance multirisque habitation . Il peut s'agir soit de la résidence principale ou secondaire du souscripteur . Dans tous les cas , le domicile doit être situé en France Métropolitaine ou en Principauté de Monaco .\nc ) SINISTRES\nLes événements suivants intervenant au domicile garanti :\n- incendie et risques annexes , notamment accidents ménagers et dommages électriques ;\n- tempête , grêle et poids de la neige sur la toiture ;\n- dégât des eaux ;\n- vol et actes de vandalisme ;\n- bris de glaces :\n- catastrophes naturelles .\nd ) IMMOBILISATION\nToute immobilisation prescrite par un médecin , consécutive à un accident ou à une maladie survenue inopinément .\ne ) HOSPITALISATION\nToute hospitalisation prescrite par un médecin , consécutive à un accident ou à une maladie survenue\ninopinément .\n1 ) ACCIDENT\nToute lésion corporelle provenant de l'action violente , soudaine et imprévisible d'une cause extérieure survenant au domicile en entraînant une hospitalisation ou une immobilisation au domicile du bénéficiaire ."
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.6725533393978435,
+              "display_name": "search_files/38/LSA/5.7.2 Conditions de délivrance d’une prise en charge au réparateur.pdf",
+              "page_number": 7,
+              "_split_id": 6,
+              "path": "search_files/38/LSA/5.7.2 Conditions de délivrance d’une prise en charge au réparateur.pdf",
+              "metadata": {},
+              "file_id": 25717,
+              "page": 7,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "La 1 ère analyse globale a - t - elle été effectuée ?\nOUT\nNON\nVérifier l'adresse de stationnement lors du sinistre : réclamer le justificatif de ( garage fermé / parking souterrain / jardin privé clos ) si le véhicule est stationné proche du domicile en l'absence de visibilité sur Google MAP vue STREET\nLe justificatif de stationnement doit-\nil être réclamé ?\nNON\nLe garage du client est- il un garage agréé ?\nQUI\nDélivrer la prise en charge à l'expert AVEC franchise totale sauf si bonus fidélité = franchise applicable\nNON\nSe référer au Process 5.7.2 Conditions de délivrance d'une prise en charge au réparateur 1ère Analyse globale\nProcess - 5.7.2 Conditions de délivrance d'une prise en charge au réparateur : Accident de parking - Sans tiers identifié\nMàJ le 09/02/24\nLes faits se sont - ils déroulés en stationnement parking ou voie publique ?\nNON\nOu\nQUI\nLa garantie dommages tous accident » est - elle acquise au contrat ?\nNON\nNON\nQUI\nATTENTION\nInformer systématiquement l'assuré de votre position sur la PEC\nSe référer au code dommage correspondant à la situation\nUn tiers identifié est - il impliqué ?\n( matérialité des faits établie : exemple constat , témoignage recevable , rapports des autorités )\nPrise en charge en attente\nVéhicule immobilisé ou remorqué lors de l'ouverture ?\nQUI\nNON\nQUI\nPas de prise en charge au réparateur\nPas de prise en charge au réparateur"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          null
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+      },
+      "facts": {
+        "llm_answer": null,
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Vous ne pouvez pas accepter une résiliation en Loi Hamon pour un chauffeur UBER."
+          },
+          {
+            "meta": {},
+            "text": "2. La résiliation Loi Hamon ne peut s’appliquer que pour des contrats souscrits par des particuliers."
+          },
+          {
+            "meta": {},
+            "text": "3. Certains chauffeurs Uber étaient assurés sur des contrats souscrits au nom d’une personne morale."
+          },
+          {
+            "meta": {},
+            "text": "4. La loi Hamon ne peut pas s’appliquer dans le cas d'un contrat souscrit au nom d'une personne morale."
+          },
+          {
+            "meta": {},
+            "text": "5. Seule la résiliation à échéance peut s’appliquer pour un chauffeur UBER."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9789021722212506,
+              "display_name": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "page_number": 2,
+              "_split_id": 1,
+              "path": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "metadata": {},
+              "file_id": 25695,
+              "page": 2,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nContexte :\nDepuis la mise en place du produit Uber , nous proposons à nos prospects , désireux de venir s'assurer chez nous , de nous occuper de la résiliation de leur contrat actuel par le biais de la Loi Hamon .\nOr , la résiliation Loi Hamon ne peut s'appliquer que pour des contrats souscrits par des particuliers .\nCertains des chauffeurs Uber voulant s'assurer chez nous , étaient assurés sur des contrats souscrits au nom d'une personne morale ( au nom d'une société , d'une entreprise ) .\nLa loi Hamon ne peut donc s'appliquer .\nSeule la résiliation à échéance peut donc s'appliquer .\nCertains chauffeurs étaient « découragés » d'effectuer les démarches et ne souscrivaient pas de nouveau contrat sur notre produit .\n2\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9668086084109633,
+              "display_name": "search_files/38/LSA/1.5 UBER – Mandat de résiliation pour compte à échéance.pdf",
+              "page_number": 11,
+              "_split_id": 10,
+              "path": "search_files/38/LSA/1.5 UBER – Mandat de résiliation pour compte à échéance.pdf",
+              "metadata": {},
+              "file_id": 25662,
+              "page": 11,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nPour pallier à tout problème de réception de la part du chauffeur , nous avons , à l'instar de la Loi Hamon , fait rajouter des formulaires à compléter depuis des boutons sur la fiche Client :\nGED\nPics Justificatives\nPrilivement & RIB (\nCarte verte Comple\nPOLICE ( S ) EXISTANTE ( S ) Paiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne\nNouvelle demande Externe\nCourrier assureur Souscription Lai Hamon\nMandat de résiliation Client Courier assureur Souscription Echéance\nMandat de résiliation Echéance\nPour faire partir un courrier recommandé de résiliation à échéance à l'assureur\nPour faire remplir le mandat de résiliation au chauffeur\n11\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9668086084109633,
+              "display_name": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "page_number": 11,
+              "_split_id": 10,
+              "path": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "metadata": {},
+              "file_id": 25695,
+              "page": 11,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nPour pallier à tout problème de réception de la part du chauffeur , nous avons , à l'instar de la Loi Hamon , fait rajouter des formulaires à compléter depuis des boutons sur la fiche Client :\nGED\nPieces Justificatives Nouvelle demande Externe\nPrilivement & RIB (\nCarte verte Comple\nPOLICE ( S ) EXISTANTE ( S ) Paiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne\nCourrier assureur Souscription Lai Hamon\nMandat de résiliation Client Courier assureur Souscription Echéance\nMandat de résiliation Echéance\nPour faire partir un courrier recommandé de résiliation à échéance à l'assureur\nPour faire remplir le mandat de résiliation au chauffeur\n11\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9507484416972598,
+              "display_name": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "page_number": 5,
+              "_split_id": 4,
+              "path": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "metadata": {},
+              "file_id": 25695,
+              "page": 5,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nEn sélectionnant « oui » , un pavé « Ancien numéro de contrat » va être disponible à la saisie :\nQUALIFICATION\nAvez - vous déja d'autres devis pour assurer ce véhicule ?\nQuand pensez - vous prendre votre décision ?\nSouscription Loi Hamon\nSouscription Résiliation Echéance\nAncien numero contrat\nNature appel\nNon\nDen 3 jours\nDen 5 jours\nPlus tard\nQui\nNon\nNon\nAppel Entrant\nAppel Sortant\nAutre\nIl est impératif d'avoir le bon numéro de contrat actuel du chauffeur car c'est ce numéro qui figurera sur le courrier que nous adresserons à l'assureur . Si nous enregistrons un numéro erroné , alors la résiliation ne pourra avoir lieu .\n5\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9322700388911386,
+              "display_name": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "page_number": 4,
+              "_split_id": 3,
+              "path": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "metadata": {},
+              "file_id": 25695,
+              "page": 4,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nPrésentation du Process :\nSur la page Cotation ( Weblsa ) , vous aller constater l'apparition d'une nouvelle ligne intitulée « Souscription Résiliation Échéance » > ( voir ci- dessous ) ( sous la ligne « Souscription Loi Hamon ) :\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.901763902726408,
+              "display_name": "search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf",
+              "page_number": 1,
+              "_split_id": 0,
+              "path": "search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf",
+              "metadata": {},
+              "file_id": 25692,
+              "page": 1,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Même assureur REFUS\nEnvoyer le webcourrier 746 ou le mail prédéfini << Résiliation - Loi Hamon refus résiliation suble- même Cle\nCourrier Nouvel Assureur « Courrier non Identifiable > Webcourrier 643\nNon\nCourrier nouvel Assureur * Refus\nrésil Loi Hamon_non éligible ( assuré + cie )\nWebcourrier 304\nProduit éligible\nPersonne physique\nUsage non professionnel\nDescription détaillée du Process Résiliation Loi Hamon Résiliation motivée Loi Hamon - Le 15/06/2021\nDemande de résiliation * Loi Hamon »\nContrat avec renouvellement post- direct\nNon\n- Contrat sans procédure contentieux\nNouvel assureur\nOui\nIdentification du\nsouscripteur / contrat Oui\nNon\nContrat toujours en cours\nOui\nLettre recommandée « papier » ou électronique >>\nNon\nOui\nen cours\nOui\nDemande directe Souscripteur / héritier\nAutre\nSI héritier\n* Branche > = MRH\n+\n« Qualité = Propriétaire / copropriétaire\nou locataire Alors Cf. process Décès du souscripteur\nCourrier Refus résil Loi Hamon non éligible ( assuré + cie ) » Webcourrier 304\nCourrier Avenant de résiliation\nRésiliation effective de la police\nOui\nNon\nSi non héritier = Envoi du courrier « Refus résiliation\ndirect Assuré Webcourrier 305"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8986793221067068,
+              "display_name": "search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf",
+              "page_number": 2,
+              "_split_id": 1,
+              "path": "search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf",
+              "metadata": {},
+              "file_id": 25692,
+              "page": 2,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Demande de résiliation Non motivée en Loi Hamon\nLa demande n'est pas valable ( Cf. Process résiliation ) :\n- La résiliation basée sur un motif prévu par le code des assurances n'est pas recevable\n- Le délai de dénonciation dans le cadre de la loi Chatel est expiré\n- L'assuré ne précise pas le fondement de la résiliation\nSe demander alors si le contrat est éligible à la loi Hamon ? ( soit contrat + d'1 an )\nNon\nOui\n* Branche » MRH\nOui\n* Qualité » < > locataire\nNon\nREFUS\nSi résiliation loi Chatel hors délai = Webcourrier 38\nSi résiliation chgt de situation personnelle pas éligible = Webcourrier 46\nSi résiliation demandée par ancien propriétaire suite à vente Webcourrier 45 au client + Webcourrier 44 info du nouveau propriétaire à l'adresse connue\nREFUS\nCourrier « < Refus résiliation direct Assuré Webcourrier 307\nDescription détaillée du Process Résiliation Loi Hamon Résiliation non motivée mais éligible en Loi Hamon - Le 15/06/2021\nOui ( RC propriétaire ou Copropriétaire )\nNon ( La demande est valable )\nRésiliation effective de la police\nRésiliation effective de la police\nCf. Process résiliation\nCourrier automatique Avenant de résiliation\nwebcourrier 306\nCourrier automatique Avenant de résiliation"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8947102053124609,
+              "display_name": "search_files/38/LSA/3.3.2 Souscription en Loi Hamon.pdf",
+              "page_number": 1,
+              "_split_id": 0,
+              "path": "search_files/38/LSA/3.3.2 Souscription en Loi Hamon.pdf",
+              "metadata": {},
+              "file_id": 25673,
+              "page": 1,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Dossier incomplet\nRI non présent\nRelance sur document ( s ) manquant ( s )\nCas 1 : Le mandat résiliation client et le recommandé sont envoyés à l'ancien assureur\nCas 2 : Le mandat résiliation client et le recommandé ne\nsont pas envoyés à l'ancien\nassureur\nDossier complet\nou\nprocess MAJ devis\nou\nDossier incomplet MAIS présence du RI concerné par la résiliation en Loi Hamon\nDescription détaillée du Process - 2.3.3 Souscription en Loi Hamon\nLe 07/06/2021\nLe contrat concerné par la\nsouscription en lol Hamon est bien en cours\nLes cotisations ne sont pas à jour\nDemander au client de régler sa situation comptable avec sa CIE\nLe client confirme\nque régularisation faite\nRI > 2 mois\nAppel CIE\nContrat résé\nRI < 2 mois\nLe contrat concerné par la souscription en loi Hamon est\nbien en cours\n+\nLes cotisations sont bien à jour\nCf. Process MAJ devis\nEst ce que le mandat de résiliation et accord de souscription client sont présents ET conformes ( informations correctes , complet , signé .... )\nNon\nQui\nCas particulier\nSuite à la réception du RI , la souscription détecte que le dossier en cours est éligible à la loi Hamon et que l'assuré ne l'a pas demandée\nRI < 2 mois = Réclamer le courrier de résiliation ou demander une confirmation écrite du motif et de la date d'effet de la résiliation du contrat en cours Retour client :\n1- Contrat en cours = Appliquer le process Loi Hamon\n2- Résiliation à échéance à l'initiative de l'assuré = Tuto Emission d'une police auto\n3- Résiliation à échéance à l'initiative de l'assureur prévue à + 31 jours = Appliquer le process Loi Hamon\n4- Résiliation à l'initiative de l'assureur prévue à - 31 jours = Process Etude RI\nCréer le mandat de résiliation et le remplir\n+ l'envoyer en signature si possible sinon par courrier\nCréer le LRAR à la compagnie pour demander la résiliation Hamon\nEmission de la police avec la date d'effet du courrier de résiliation\nenvoyé à l'ancienne CIE"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8899483621162596,
+              "display_name": "search_files/38/LSA/Process LSA BO N1.pdf",
+              "page_number": 9,
+              "_split_id": 8,
+              "path": "search_files/38/LSA/Process LSA BO N1.pdf",
+              "metadata": {},
+              "file_id": 25917,
+              "page": 9,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "CAS 1 : LE CLIENT EXISTE DÉJÀ ET POLICE ACTIVE\nRetour de Pièces / Demande de Résiliation / Demande de Rl ou Attestation / Demande de modification / Demande d'informations\nNIVEAU\nRESILIATION\n1\nRETOUR DE PIECES & DEMANDE INFOS SUR PIECES MANQUANTES\nCLIENT DIRECT\nCLIENT / CLIENT GESTION_EXT /\nPièces Manquantes\nCLIENT PARTENAIRES ( Gpt + 022/079 ) CLIENT / CLIENT GESTION_EXT / Pièces Manquantes\nCLIENT PARTENAIRES ( Mono hors 022/079 )\nCLIENT / CLIENT MONO Pièces Manquantes\nENTREPRISE\nCLIENT / CLIENT GESTION_EXT / Pièces Manquantes\nFIDANIMO SCRE_ANIM / SCRE ANIM / Pièces Justificatives\nCLIENT DIRECT CLIENT / CLIENT GESTION EXT / Résiliation\n➤ Résiliation à échéance ( uniquement rétude de la recevabilité de la demande ) .\nRésiliation Loi Châtel , Résiliation Lol Hamon , Résiliation pour vente .\n( Si client 1 contrat act / Pas de MED / Pas de sinistre avec date > date de résiliation )\nRelance sur demande de résiliation reçue\nCLIENT PARTENAIRES ( Groupement ) CLIENT / CLIENT_GESTION_EXT / Résiliation\nRésiliation à échéance ( uniquement rétude de la recevabilité de la demande ) .\n➤ Résiliation Loi Châtel ,\nRésiliation Loi Hamon ,\nRésiliation pour vente .\n( Si client 1 contrat actif / Pas de MED / Pas de sinistre avec date > date de résiliation )\nRelance sur demande de résiliation reçue\nFIDANIMO\nCLIENT / CLIENT GESTION_EXT /\nRésiliation\nRelance sur demande de résiliation\nrecue\nFIDANIMO\nSCRE_ANIM / SCRE ANIM\nRésiliation\nCLIENT DIRECT\nCLIENT / CLIENT_DIRECT / Résiliation\n> Résiliation à échéance ,\n> Résiliation Loi Châtel ,\n> Résiliation Loi Hamon ,\n> Résiliation pour vente .\n( Si client > 1 contrat actif / MED / Sinistre avec date > date de résiliation )\n> Tout autre motil de résiliation\nCLIENT PARTENAIRES ( Mono ) CLIENT / CLIENT MONO Résiliation\n> Résiliation à échéance ,\n> Résiliation Loi Châtel ,\n> Résiliation Loi Hamon ,\n> Résiliation pour vente .\n( Si client > 1 contrat actif / MED / Sinistre avec date > date de résiliation )\n> Tout autre motil de résiliation\nENTREPRISE ENTREPRISE / ENTREPRISE Résiliation\nENTREPRISE CLIENT / CLIENT_GESTION_EXT / Résiliation\nRelance sur demande de résiliation reçue\nFormalisation Process : Traitement des Bo\nMails\n9\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8893206303602316,
+              "display_name": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "page_number": 3,
+              "_split_id": 2,
+              "path": "search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf",
+              "metadata": {},
+              "file_id": 25695,
+              "page": 3,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Process Résiliation à échéance - Uber\nSolution :\nAfin de verrouiller la vente et de « rendre service » à ces chauffeurs , nous avons mis en place un nouveau process ( propre à Uber ) permettant de nous occuper de résilier leur contrat à échéance .\nCondition à respecter :\nAfin de pouvoir résilier un contrat à échéance de celui - ci , le courrier recommandé à envoyer à l'assureur doit respecter un préavis de 2 mois ( art L.113-12 du Code des assurances ) .\nCela implique que les chauffeurs éligibles à cette possibilité , doivent avoir un contrat dont la date d'échéance est supérieure à 2 mois par rapport à la date de leur appel et surtout la date de leur accord .\nIl est donc important de bien verrouiller cette information avant de lancer la procédure .\n3\nLSA Courtage"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "```json\n{\n  \"q_ok\": 1,\n  \"chunks_ok\": 1,\n  \"answer\": \"Non, vous ne pouvez pas accepter une résiliation en Loi Hamon pour un chauffeur Uber si le contrat a été souscrit au nom d'une personne morale (société ou entreprise). La Loi Hamon ne s'applique qu'aux contrats souscrits par des particuliers. Pour les chauffeurs Uber assurés au nom d'une personne morale, seule la résiliation à échéance peut s'appliquer. (Titre: Process Résiliation à échéance - Uber, Page 2)\"\n}\n```",
+              "prompt": {
+                "meta": {},
+                "user": "- search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf (p. 2)\n        Process Résiliation à échéance - Uber\nContexte :\nDepuis la mise en place du produit Uber , nous proposons à nos prospects , désireux de venir s'assurer chez nous , de nous occuper de la résiliation de leur contrat actuel par le biais de la Loi Hamon .\nOr , la résiliation Loi Hamon ne peut s'appliquer que pour des contrats souscrits par des particuliers .\nCertains des chauffeurs Uber voulant s'assurer chez nous , étaient assurés sur des contrats souscrits au nom d'une personne morale ( au nom d'une société , d'une entreprise ) .\nLa loi Hamon ne peut donc s'appliquer .\nSeule la résiliation à échéance peut donc s'appliquer .\nCertains chauffeurs étaient « découragés » d'effectuer les démarches et ne souscrivaient pas de nouveau contrat sur notre produit .\n2\nLSA Courtage\n\n- search_files/38/LSA/1.5 UBER – Mandat de résiliation pour compte à échéance.pdf (p. 11)\n        Process Résiliation à échéance - Uber\nPour pallier à tout problème de réception de la part du chauffeur , nous avons , à l'instar de la Loi Hamon , fait rajouter des formulaires à compléter depuis des boutons sur la fiche Client :\nGED\nPics Justificatives\nPrilivement & RIB (\nCarte verte Comple\nPOLICE ( S ) EXISTANTE ( S ) Paiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne\nNouvelle demande Externe\nCourrier assureur Souscription Lai Hamon\nMandat de résiliation Client Courier assureur Souscription Echéance\nMandat de résiliation Echéance\nPour faire partir un courrier recommandé de résiliation à échéance à l'assureur\nPour faire remplir le mandat de résiliation au chauffeur\n11\nLSA Courtage\n\n- search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf (p. 11)\n        Process Résiliation à échéance - Uber\nPour pallier à tout problème de réception de la part du chauffeur , nous avons , à l'instar de la Loi Hamon , fait rajouter des formulaires à compléter depuis des boutons sur la fiche Client :\nGED\nPieces Justificatives Nouvelle demande Externe\nPrilivement & RIB (\nCarte verte Comple\nPOLICE ( S ) EXISTANTE ( S ) Paiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne\nCourrier assureur Souscription Lai Hamon\nMandat de résiliation Client Courier assureur Souscription Echéance\nMandat de résiliation Echéance\nPour faire partir un courrier recommandé de résiliation à échéance à l'assureur\nPour faire remplir le mandat de résiliation au chauffeur\n11\nLSA Courtage\n\n- search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf (p. 5)\n        Process Résiliation à échéance - Uber\nEn sélectionnant « oui » , un pavé « Ancien numéro de contrat » va être disponible à la saisie :\nQUALIFICATION\nAvez - vous déja d'autres devis pour assurer ce véhicule ?\nQuand pensez - vous prendre votre décision ?\nSouscription Loi Hamon\nSouscription Résiliation Echéance\nAncien numero contrat\nNature appel\nNon\nDen 3 jours\nDen 5 jours\nPlus tard\nQui\nNon\nNon\nAppel Entrant\nAppel Sortant\nAutre\nIl est impératif d'avoir le bon numéro de contrat actuel du chauffeur car c'est ce numéro qui figurera sur le courrier que nous adresserons à l'assureur . Si nous enregistrons un numéro erroné , alors la résiliation ne pourra avoir lieu .\n5\nLSA Courtage\n\n- search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf (p. 4)\n        Process Résiliation à échéance - Uber\nPrésentation du Process :\nSur la page Cotation ( Weblsa ) , vous aller constater l'apparition d'une nouvelle ligne intitulée « Souscription Résiliation Échéance » > ( voir ci- dessous ) ( sous la ligne « Souscription Loi Hamon ) :\nLSA Courtage\n\n- search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf (p. 1)\n        Même assureur REFUS\nEnvoyer le webcourrier 746 ou le mail prédéfini << Résiliation - Loi Hamon refus résiliation suble- même Cle\nCourrier Nouvel Assureur « Courrier non Identifiable > Webcourrier 643\nNon\nCourrier nouvel Assureur * Refus\nrésil Loi Hamon_non éligible ( assuré + cie )\nWebcourrier 304\nProduit éligible\nPersonne physique\nUsage non professionnel\nDescription détaillée du Process Résiliation Loi Hamon Résiliation motivée Loi Hamon - Le 15/06/2021\nDemande de résiliation * Loi Hamon »\nContrat avec renouvellement post- direct\nNon\n- Contrat sans procédure contentieux\nNouvel assureur\nOui\nIdentification du\nsouscripteur / contrat Oui\nNon\nContrat toujours en cours\nOui\nLettre recommandée « papier » ou électronique >>\nNon\nOui\nen cours\nOui\nDemande directe Souscripteur / héritier\nAutre\nSI héritier\n* Branche > = MRH\n+\n« Qualité = Propriétaire / copropriétaire\nou locataire Alors Cf. process Décès du souscripteur\nCourrier Refus résil Loi Hamon non éligible ( assuré + cie ) » Webcourrier 304\nCourrier Avenant de résiliation\nRésiliation effective de la police\nOui\nNon\nSi non héritier = Envoi du courrier « Refus résiliation\ndirect Assuré Webcourrier 305\n\n- search_files/38/LSA/4.13 Gestion d'une résiliation Loi Hamon.pdf (p. 2)\n        Demande de résiliation Non motivée en Loi Hamon\nLa demande n'est pas valable ( Cf. Process résiliation ) :\n- La résiliation basée sur un motif prévu par le code des assurances n'est pas recevable\n- Le délai de dénonciation dans le cadre de la loi Chatel est expiré\n- L'assuré ne précise pas le fondement de la résiliation\nSe demander alors si le contrat est éligible à la loi Hamon ? ( soit contrat + d'1 an )\nNon\nOui\n* Branche » MRH\nOui\n* Qualité » < > locataire\nNon\nREFUS\nSi résiliation loi Chatel hors délai = Webcourrier 38\nSi résiliation chgt de situation personnelle pas éligible = Webcourrier 46\nSi résiliation demandée par ancien propriétaire suite à vente Webcourrier 45 au client + Webcourrier 44 info du nouveau propriétaire à l'adresse connue\nREFUS\nCourrier « < Refus résiliation direct Assuré Webcourrier 307\nDescription détaillée du Process Résiliation Loi Hamon Résiliation non motivée mais éligible en Loi Hamon - Le 15/06/2021\nOui ( RC propriétaire ou Copropriétaire )\nNon ( La demande est valable )\nRésiliation effective de la police\nRésiliation effective de la police\nCf. Process résiliation\nCourrier automatique Avenant de résiliation\nwebcourrier 306\nCourrier automatique Avenant de résiliation\n\n- search_files/38/LSA/3.3.2 Souscription en Loi Hamon.pdf (p. 1)\n        Dossier incomplet\nRI non présent\nRelance sur document ( s ) manquant ( s )\nCas 1 : Le mandat résiliation client et le recommandé sont envoyés à l'ancien assureur\nCas 2 : Le mandat résiliation client et le recommandé ne\nsont pas envoyés à l'ancien\nassureur\nDossier complet\nou\nprocess MAJ devis\nou\nDossier incomplet MAIS présence du RI concerné par la résiliation en Loi Hamon\nDescription détaillée du Process - 2.3.3 Souscription en Loi Hamon\nLe 07/06/2021\nLe contrat concerné par la\nsouscription en lol Hamon est bien en cours\nLes cotisations ne sont pas à jour\nDemander au client de régler sa situation comptable avec sa CIE\nLe client confirme\nque régularisation faite\nRI > 2 mois\nAppel CIE\nContrat résé\nRI < 2 mois\nLe contrat concerné par la souscription en loi Hamon est\nbien en cours\n+\nLes cotisations sont bien à jour\nCf. Process MAJ devis\nEst ce que le mandat de résiliation et accord de souscription client sont présents ET conformes ( informations correctes , complet , signé .... )\nNon\nQui\nCas particulier\nSuite à la réception du RI , la souscription détecte que le dossier en cours est éligible à la loi Hamon et que l'assuré ne l'a pas demandée\nRI < 2 mois = Réclamer le courrier de résiliation ou demander une confirmation écrite du motif et de la date d'effet de la résiliation du contrat en cours Retour client :\n1- Contrat en cours = Appliquer le process Loi Hamon\n2- Résiliation à échéance à l'initiative de l'assuré = Tuto Emission d'une police auto\n3- Résiliation à échéance à l'initiative de l'assureur prévue à + 31 jours = Appliquer le process Loi Hamon\n4- Résiliation à l'initiative de l'assureur prévue à - 31 jours = Process Etude RI\nCréer le mandat de résiliation et le remplir\n+ l'envoyer en signature si possible sinon par courrier\nCréer le LRAR à la compagnie pour demander la résiliation Hamon\nEmission de la police avec la date d'effet du courrier de résiliation\nenvoyé à l'ancienne CIE\n\n- search_files/38/LSA/Process LSA BO N1.pdf (p. 9)\n        CAS 1 : LE CLIENT EXISTE DÉJÀ ET POLICE ACTIVE\nRetour de Pièces / Demande de Résiliation / Demande de Rl ou Attestation / Demande de modification / Demande d'informations\nNIVEAU\nRESILIATION\n1\nRETOUR DE PIECES & DEMANDE INFOS SUR PIECES MANQUANTES\nCLIENT DIRECT\nCLIENT / CLIENT GESTION_EXT /\nPièces Manquantes\nCLIENT PARTENAIRES ( Gpt + 022/079 ) CLIENT / CLIENT GESTION_EXT / Pièces Manquantes\nCLIENT PARTENAIRES ( Mono hors 022/079 )\nCLIENT / CLIENT MONO Pièces Manquantes\nENTREPRISE\nCLIENT / CLIENT GESTION_EXT / Pièces Manquantes\nFIDANIMO SCRE_ANIM / SCRE ANIM / Pièces Justificatives\nCLIENT DIRECT CLIENT / CLIENT GESTION EXT / Résiliation\n➤ Résiliation à échéance ( uniquement rétude de la recevabilité de la demande ) .\nRésiliation Loi Châtel , Résiliation Lol Hamon , Résiliation pour vente .\n( Si client 1 contrat act / Pas de MED / Pas de sinistre avec date > date de résiliation )\nRelance sur demande de résiliation reçue\nCLIENT PARTENAIRES ( Groupement ) CLIENT / CLIENT_GESTION_EXT / Résiliation\nRésiliation à échéance ( uniquement rétude de la recevabilité de la demande ) .\n➤ Résiliation Loi Châtel ,\nRésiliation Loi Hamon ,\nRésiliation pour vente .\n( Si client 1 contrat actif / Pas de MED / Pas de sinistre avec date > date de résiliation )\nRelance sur demande de résiliation reçue\nFIDANIMO\nCLIENT / CLIENT GESTION_EXT /\nRésiliation\nRelance sur demande de résiliation\nrecue\nFIDANIMO\nSCRE_ANIM / SCRE ANIM\nRésiliation\nCLIENT DIRECT\nCLIENT / CLIENT_DIRECT / Résiliation\n> Résiliation à échéance ,\n> Résiliation Loi Châtel ,\n> Résiliation Loi Hamon ,\n> Résiliation pour vente .\n( Si client > 1 contrat actif / MED / Sinistre avec date > date de résiliation )\n> Tout autre motil de résiliation\nCLIENT PARTENAIRES ( Mono ) CLIENT / CLIENT MONO Résiliation\n> Résiliation à échéance ,\n> Résiliation Loi Châtel ,\n> Résiliation Loi Hamon ,\n> Résiliation pour vente .\n( Si client > 1 contrat actif / MED / Sinistre avec date > date de résiliation )\n> Tout autre motil de résiliation\nENTREPRISE ENTREPRISE / ENTREPRISE Résiliation\nENTREPRISE CLIENT / CLIENT_GESTION_EXT / Résiliation\nRelance sur demande de résiliation reçue\nFormalisation Process : Traitement des Bo\nMails\n9\nLSA Courtage\n\n- search_files/38/LSA/4.16 Processs UBER - Résiliation à échéance pour une nouvelle souscription.pdf (p. 3)\n        Process Résiliation à échéance - Uber\nSolution :\nAfin de verrouiller la vente et de « rendre service » à ces chauffeurs , nous avons mis en place un nouveau process ( propre à Uber ) permettant de nous occuper de résilier leur contrat à échéance .\nCondition à respecter :\nAfin de pouvoir résilier un contrat à échéance de celui - ci , le courrier recommandé à envoyer à l'assureur doit respecter un préavis de 2 mois ( art L.113-12 du Code des assurances ) .\nCela implique que les chauffeurs éligibles à cette possibilité , doivent avoir un contrat dont la date d'échéance est supérieure à 2 mois par rapport à la date de leur appel et surtout la date de leur accord .\nIl est donc important de bien verrouiller cette information avant de lancer la procédure .\n3\nLSA Courtage\n        \n        Question: Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?",
+                "system": "\nTu es un expert qui doit répondre à des questions à l'aide de paragraphes qui te sont fournis.\nTa réponse doit être au format JSON suivant :\n- \"q_ok\": 1 si la question a un sens, 0 sinon\n- \"chunks_ok\": 1 si les paragraphes fournis sont suffisants pour répondre, 0 sinon\n- \"answer\": la réponse sous forme de texte non structuré indiquant les titres et les pages des documents\n\nLes paragraphes sont présentés ainsi :\n- Titre (Page X)\nContenu\n    ",
+                "prompter": "AnsPrompterWithRetrieverFR"
+              },
+              "name": "deepseek/deepseek-chat",
+              "full_name": "deepseek/deepseek-chat",
+              "timestamp": "2025-02-05T22:22:04.054455",
+              "duration": 28.812909,
+              "cost": 0.0005348000000000001,
+              "chunks": []
+            },
+            "meta": {
+              "json_ok": true,
+              "question_ok": true,
+              "chunks_ok": true,
+              "lang": "fr",
+              "docs_in_ans": [],
+              "docs_and_page_in_ans": []
+            },
+            "text": "Non, vous ne pouvez pas accepter une résiliation en Loi Hamon pour un chauffeur Uber si le contrat a été souscrit au nom d'une personne morale (société ou entreprise). La Loi Hamon ne s'applique qu'aux contrats souscrits par des particuliers. Pour les chauffeurs Uber assurés au nom d'une personne morale, seule la résiliation à échéance peut s'appliquer. (Titre: Process Résiliation à échéance - Uber, Page 2)",
+            "eval": {
+              "llm_answer": null,
+              "meta": {},
+              "text": "",
+              "human": null,
+              "auto": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+      },
+      "facts": {
+        "llm_answer": null,
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Vous n'avez pas besoin de prendre des frais de transfert de garantie sur une provenance Uber."
+          },
+          {
+            "meta": {},
+            "text": "2. Les provenances GS, EDF, et UBER sont exonérées des frais de transfert de garantie."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8734323243868644,
+              "display_name": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "page_number": 26,
+              "_split_id": 25,
+              "path": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "metadata": {},
+              "file_id": 25915,
+              "page": 26,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Procédure type de traitement d'une demande externe\n-Toujours vérifier s'existe des demandes externes connexes : S'il en existe , en prendre connaissance AVANT de traiter toute demande pour répondre avec toutes les informations au dossier -Toujours transmettre les informations aux interlocuteurs intéressés par l'information qui nous a été communiquée ( expert , compagnie ou le dient notamment )\nTraitement demande .\n-Vérifier les éventuelles relances à faire sur le dossier à tous les intervenants ( y compris celui qui sollicite LSA ) : ces vérifications doivent être systématiques et les relances aux intervenants automatiques\nExemple :\nNous recevons une attestation TVA à traiter .\nSi une expertise a été organisée , s'assurer que le délai n'exige pas une demande de facture ( si PEC à Oui ) par exemple . Si l'expertise à eu lieu il y a plus de 4 jours , et que la facture n'est pas au dossier alors il convient de la réclamer\nLe traitement d'un DE externe suppose de se poser 4 questions + à chaque question je dois me poser d'autres questions\n1 - demande / relance au client : Al jeune demande du client ? oui je dois y répondre et dois je lui faire une relance dans le même temps // non dois - je faire une relance au client // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , la compagnie , un garage un partenaire , oul je transmets mais je me demande aussi si l'un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\n-PMQ client / sinistres ( ANA , FIC , Attestations diverses , constat amiable lisible )\ndemande d'informations diverses : circonstancielles , sur l'existence de témoins ou sur leurs coordonnées ( mail type à creer ) -demande de facture en respectant le process\n> le client nous transmet une attestation de course UBER . Au traitement de l'attestation , je dois m'assurer que l'ensemble des PMQ est à jour sinon je dois systématiquement relancer le client en lui précisant chacune des pièces attendues\n2 - demande / relance à la compagnie : Al - jeune demande de la compagnie ? oui je dois y répondre et dois - je lui faire une relance dans le même temps // non adois - je faire une relance à la compagnie // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , le client , un garage un partenaire , ou je transmets mais je me demande aussi si un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\nEx : DE or cie : la compagnie réclame la copie du constat . je lui transmets ce document MAIS je vénie également\n-si je dois relancer le client sur une ou plusieurs PMQ et je relance le client si nécessaire\n-si je dois réclamer une facture ou un rapport\nsi je dois relancer la compagnie"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8716105237690625,
+              "display_name": "search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf",
+              "page_number": 17,
+              "_split_id": 16,
+              "path": "search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf",
+              "metadata": {},
+              "file_id": 25978,
+              "page": 17,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Le véhicule de courtoisie : Process LSA\nCoût du transfert\nLSA COURTAGE\nNOTICE COUT DES SERVICES\nCene notice tait partie integrante du mandat de courtage conciu entre vous , le souscripteur du contrat of assurance , et nous , votre courtier , LCA Courtage .\nchaque acte administratif sur un contrat a un cool . Pour ne pas vous penaliser vous mutsez pas des services , nous les facturons uniquement ausation\nLes tants sont en vigueur au 01/11/2017 restent valables sur communication specifique unereure\nLes categories de services donnant lieu a facturation specinque sont les suivantes :\nConstitution et analyse du dossier à la souscription\nEn qualité de courtier , mandataire de notre client auprès de la compagnie , nous facturons des frais pour les actes que nous réalisons .\nCes frais sont mentionnés dans le Mandat de courtage et détaillés dans la Notice de frais remise au client avec ses conditions particulières à la validation de son contrat .\nGestion au règlement ces cotisations at caz incidents de palement . Frais relatif au règlement de la cotisation\nGestion du quittancement\nPraic relative à une réédition\n» première année sauf en cas e palement . Apr mière année\nminimum o\nEn signant le Mandat de courtage , le client accepte donc expressément l'application de ces frais .\nLa notice de frais est également disponible sur notre site internet .\nFrais relatifs à des incidents de paiement\nnaturée du mandat de courtage par la căciliation du contrat d'assurance avant la sia première année\ncou Moto\nAvenants ou modification du contrat d'assurance\nTransfert des garanties vers un véhicule de courtoisie\n19.38\nAutres actes pour le compte du mandent 24.9 €\nRecherche et mise en place d'une mesure proposition Recherche et mice en prace arun nouveau contrat apric\nxéexpédition de la carte verte | c\nIMPORTANT : Il s'agit de frais de courtage pour le transfert de garantie vers un véhicule de courtoisie .\nSeules les provenances : GS , EDF , et UBER sont exonérées des frais de transfert de garantie .\nLSA Courtage\n17"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8690966415549798,
+              "display_name": "search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf",
+              "page_number": 10,
+              "_split_id": 9,
+              "path": "search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf",
+              "metadata": {},
+              "file_id": 25958,
+              "page": 10,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Le véhicule de courtoisie : Process LSA\nCoût du transfert\nLSA COURTAGE\nNOTICE COUT DES SERVICES\nCette notice fait partie integrante du mandat de courtage conclu entre vous , le souscripteur du contrat d'assurance , et nous , votre counter , LSA Courtage\nchaque acte administrar sur un contrat a un cost . Pour ne pas vous penaser si vous utilisez pas des services , nous les facturons uniquement a utilisation\nLes tans sont en vigueur au 01/11/2017 . Ils restent valabies saur communication specque Les categones de services donnant lieu à facturation specifique sont les suivantes :\nMise en place\nConstitution et analyse du dossier à\nGestion du règlement des cotisations et des incidents de paiement . u règlement des cotization\nPri reati\n– minimum I\nEn qualité de courtier , mandataire de notre client auprès de la compagnie , nous facturons des frais pour les actes que nous réalisons .\nCes frais sont mentionnés dans le Mandat de courtage et détaillés dans la Notice de frais remise au client avec ses conditions particulières à la validation de son contrat . En signant le Mandat de courtage , le client accepte donc expressément l'application de ces frais .\nLa notice de frais est également disponible sur notre site internet .\nIMPORTANT : Il s'agit de frais de courtage pour le transfert de garantie vers un véhicule de courtoisie .\nCréer une demande interne d'ajustement sur le prochain prélèvement à la comptabilité :\nRupture prématurée du mandat de courtage per la résiliation du contrat d'assurance avant la\ninants ou modification du contrat d'assurance .\nRecherche et mise en place d'une mature proposition Recherche et mise en place un nouveau contrat après\nRécxpédition de la carte verte 4,9 €\nNouvelle demande\nCREATION DE LA DEMANDE\nSuite au transfect de pacantle our un véhicule de prêt , eco de majorer le prochain prélèvement d'un montant de\nSeules les provenances GS , EDF , et UBER sont exonérées des frais de transfert de garantie .\nLSA Courtage\n10"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.815970161157043,
+              "display_name": "search_files/38/LSA/6.2 Demandes internes à la comptabilité.pdf",
+              "page_number": 11,
+              "_split_id": 12,
+              "path": "search_files/38/LSA/6.2 Demandes internes à la comptabilité.pdf",
+              "metadata": {},
+              "file_id": 25726,
+              "page": 11,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Le coût des services\nRupture prématurée du mandat\nFrais liés au règlement des cotisations et aux incidents de de courtage par la résiliation du\npalement\ncontrat ( -1an ) ( peuvent être annulés si une autre police reste active )\nFrais de dossier\nProvenance\nGestion du quittancement\nChèque\nProcédure de mise en demeure ( annulés uniquement si la\nimpayé\nSANTE\nMRH / CYCLO / AUTO / MOTO\nMED n'est pas\njustifiée ou demande RE )\nAvenant ou modification du contrat\nFrais relatifs à la réédition Autres actes pour le compte\nd'un règlement\ndu\nmandant\nInformation tardive en cas d'avenant ou de\nrésiliation\nfrais\nAvenant ( hors ajout\nTransfert des garanties\nFrais de courtage annuels\nMise en\nMise en place\nRecherche et place mise en place des PA\n( annulés\nadditionnels ) d'options ) vers un\nuniquement si demande RE )\nvéhicule de courtoisie\nRéémission virement chèque après émission dun chèque\nRecherche et mise en place\nRéexpédit ion de la carte verte\nd'un contrat\nd'une MP\naprès\nrésiliation par\nl'assureur\nFrais annuels de 5,98 %\ndes primes hors - taxes\navec un minimum de\nFiche standard\n14,90 €\n23,90 €\n29,90 €\n30 €\n91 €\n43 €\n14,90 €\n19,90 €\n14,90 €\n14,90 €\n24,90 €\n34.90 €\n4,90 €\n1ère souscription :\nAUTO : entre 0 et 119 €\nMRH : 25,90 €\nOfferts la 1ère année sauf en cas de mise en demeure de palement .\nSANTE : 0 €\nIDASSUR\n1,20 € / mois\n23,90 €\n29,90 €\n30 €\n91 €\n43 €\n14,90 €\n19,90 €\nMOTO : 25 €\nGS Fiche standard\n21,90 €\n22 € par contrat\n29,90 €\n30 €\n91 €\nMulti - détention :\nAuto\nFD offerts pour la / les\n15 € par contrat\nGS 650\n23,90 €\n29,90 €\n30 €\n91 €\npolices additionnelles\nResouscription :\nGS 420\n23,90 €\n29,90 €\n30 €\n91 €\nFD offerts juqu'à 6 mois\nGS 573\n23,90 €\n29,90 €\n30 €\n91 €\naprès la résiliation et 12\nmais de la suspension\nGS 930-960\n23,90 €\n29,90 €\n30 €\n91 €\nDevis foyer : FD offerts pour le second\nsouscripteur\nMRH\n29 € par contrat\nMRH\n40 € par contrat\nAuto\n52 € par contrat Auto\nGS 310\n23,90 €\n29,90 €\n30 €\n91 €\nGS BERGER SIMON ( MRH UDAF )\n3 € / an par contrat MRH\n23,90 €\n29,90 €\n30 €\nReprise CX :\nFrais offerts sauf en cas\nAUTO : 79 €\nde mise en demeure de\npalement . Sur le\nSANTE ANIMALE\nmontant d'avis\n23,90 €\n29,90 €\n1 € par\n14,90 €\n14,90 €\nPA\nd'échéance , 5,98 % des primes hors - taxes avec\nun minimum de 14,90 €\nUBER 536\n23,90 €\n29,90 €\n14,90 €\n14,90 €"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7966917838714377,
+              "display_name": "search_files/38/LSA/Contrat UBER.pdf",
+              "page_number": 6,
+              "_split_id": 5,
+              "path": "search_files/38/LSA/Contrat UBER.pdf",
+              "metadata": {},
+              "file_id": 25814,
+              "page": 6,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les contrats Uber\nCourriers types\nDes accusés de réception spécifiques afin de recueillir les informations relatives aux franchises applicables\nsinistres@isa-courage.com\nRueil - Malmaison , le 06/07/2021\nVotre érence client : 442006\nVotre umbro de contrat : 365435002301\nVotre modenstre : 553484\nObjet : Votre sinistre du 05/07/2021 - TOYOTA DR - 056 - FJ\nMONSIEUR\nNous accusons réception de votre déclaration de sinistre et vous prions de prendre note de la référence sous laquelle nous instruisons votre dossier :\n553484\nCette référence est à rappeler OBLIGATOIREMENT sur toute comespondance ou lors de tout entretien phonique ( pour des raisons de confidentialité aucune information ne sera communiquée par téléphone sans rappel préalable de ce numbroj\nNous vous précisons , qu'au vu des circonstances reportées , nous avons retenu une responsabilité partielle à votre charge\nVotre franchise dommages applicable sève à 415 € . Elle sera réduite de 25 % silesinistre est survenu lors d'une course Uber\nConformément à farticle L. 2115-1 du Code des assurances , vous avez la faculté de choisir le réparer quel vous souhaitez recourt .\nNous vous proposons également de faire effectuer expertise dans un garage partenaire . Si cela vous convient conviendra de nous préciser la mention - BON POUR GARAGE PARTENAIRE - en nous précisant un m vous serez facilement joignable\nSi toutefois cette proposition ne vous convenait pas , nous vous invitons à nous communiquer les coordonnées completes du réparateur que vous avez chois\nNous attrons votre attention sur le fait qu'étant donné que votre sinistre est survenu moins de 2mois après la date de survenance de votre contrat , nous ne délivrerons aucune prise en charge : E vous reviendra de néger la facture et de nous la transmettre pour remboursement .\nNous vous informons également que votre contrat bénéficie d'une garantie \" Pertes Pécuniaires \" qui prévoit , en cas d'immobilisation du véhicule , un forfait de 50 euros / jour sur 20 jours avec une franchise de 48 heures ( passant à 100 euros / jour si le sinistre est survenu lors d'une course Uber ) dans la limite de 2.000 euros / an .\nSi votre dossier est complet , cette indemnité vous sera versée lors de la récupération de votre véhicule et après la réception de la facture des réparations qui mentionnera la restitution de celui - ci .\nNous vous rappelons qu'en cas d'urgence vous pouvez contacter votre assistance . Elle vous précisera les prestations qu'elle pourra organiser et prendre en charge . Nous vous invitons déjà à prendre toutes les dispositions utiles vis à vis de l'éventuel établissement détenteur de votre véhicule pour éviter les frais de gardiennage qui resteraient à votre charge\nEntre - temps ,\nNous vous prions de croire , MONSIEUR , en l'expression de nos meilleurs sentiments .\nLSA Courtage\n6"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7950544265731799,
+              "display_name": "search_files/38/LSA/SCRE N1 - Formation conduite accompagnée-supervisée-encadrée.pdf",
+              "page_number": 15,
+              "_split_id": 14,
+              "path": "search_files/38/LSA/SCRE N1 - Formation conduite accompagnée-supervisée-encadrée.pdf",
+              "metadata": {},
+              "file_id": 25950,
+              "page": 15,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "FAQ\nCONDUITE ACCOMPAGNÉE\n1-\nRefus d'assurance d'un véhicule puissant / HDG - l'assureur peut refuser de délivrer une extension de conduite accompagnée / supervisée / encadrée\nOui les produits Haut de gamme ne sont clairement pas adaptés , donc ne pas accepter d'extension de conduite sur 930/931 et 932 .\n2-\n☐\nSi le client est malussé ou à une fréquence de sinistres\nSi CRM > 1 = pas de délivrance d'attestation de conduite mais ça veut dire qu'il faut prendre en compte le CRM à la date de la demande , cela signifie qu'on peut délivrer l'attestation si CRM à la date de la demande = < 1 .\n3-\n☐\n4-\n☐\n5-\nClient non assuré depuis 3ans même s'il a un permis depuis plus de 5ans ?\nLe permis de l'accompagnateur doit avoir au moins 5 ans\nTuteur légal ( client LSA ) peut être accompagnateur de l'apprenti\nUn justificatif est - il nécessaire ? Oui il faut un justificatif prouvant la qualité de tuteur légal .\nProvenance UBER - Lorsque le client est assuré en tant que particulier avec CG à son nom , peut - on lui délivrer une attestation de conduite accompagnée ?\nNon , c'est un produit très particulier , donc pas de délivrance d'attestation de conduite accompagnée sur ce produit\nLSA Courtage 03/25"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7796983078225255,
+              "display_name": "search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf",
+              "page_number": 15,
+              "_split_id": 14,
+              "path": "search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf",
+              "metadata": {},
+              "file_id": 25978,
+              "page": 15,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Le véhicule de courtoisie : Process LSA\nCompagnie\nGaranties Transférées\nAssurance complémentaire à l'assurance garage qui a forcément une RC\nTransfert de garanties sur un véhicule de prêt pour 19,90 €\nDélais\n-Pas de limite sur le nombre de renouvellement . -Le transfert s'exerce pendant la période d'indisponibilité du véhicule avec un maximum de nombre de jours à compter de la date à laquelle le véhicule de remplacement a été mis à disposition .\n507\n515\n525\n535\nCelles du contrat\n571\n615\n825\n910/911/912\n580\nCelles du contrat hors assistance\n30 jours consécutifs\nProduit UBER\nCelle du contrat\n537\nProduits Gras Savoye\n534\n550\n573\n632\n930/931\nCelles du contrat\n960 Produit EDF\n727\n728\nConditions\nLorsque le véhicule de remplacement est couvert , le véhicule remplacé ne l'est plus .\nForme de la demande\nLa demande peut être faite par tout mayen\nLe véhicule prêté doit être de catégorie identique ( sur ce qui compte c'est l'envoi de l'attestation la carte grise en J / J1 = VP ou CTTE )\n20 jours consécutifs\nDe même mais attention Produit pour VTM électrique\nLa demande doit être faite par le client par écrit"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7741762748107449,
+              "display_name": "search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf",
+              "page_number": 8,
+              "_split_id": 7,
+              "path": "search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf",
+              "metadata": {},
+              "file_id": 25958,
+              "page": 8,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Le véhicule de courtoisie : Process LSA\nCompagnie\nGaranties Transférées\nAssurance complémentaire à assurance garage qui a forcément une RC\nTransfert de garanties sur un véhicule de prêt pour 19,90 € Délais\n-Pas de limite sur le nombre de renouvellement . Le transfert s'exerce pendant la période d'indisponibilité du véhicule avec un maximum de nombre de jours à compter de la date à laquelle le véhicule de remplacement a été mis à disposition .\n507\n515\n525\n535\nCelles du contrat\n571\n615\n825\nConditions\nLorsque le véhicule de remplacement est couvert , le véhicule remplacé ne l'est plus .\nForme de la demande\n910/911/912\n580\nCelles du contrat hors assistance\n30 jours consécutifs\nProduit UBER\nCelle du contrat\nLe véhicule prêté doit être de catégorie identique ( sur la carte grise en J / 11 = VP ou CTTE )\n537\nProduits Gras Savoye\n534\n550\n573\n632\n930/931\n960 Produit EDF 727\n728\nCelles du contrat\nLa demande peut être faite par tout mayen\nCe qui compte c'est l'envoi de l'attestation\n20 jours consécutifs\nDe même mais attention Produit pour VTM électrique\nPas d'attestation sur un véhicule de prêt si le véhicule de courtoisie est thermique .\nLa demande doit être faite par le client par écrit\nプ\nLSA Courtage\n8"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7711002488927698,
+              "display_name": "search_files/38/LSA/SCRE N1 - Traitement 2 roues.pdf",
+              "page_number": 5,
+              "_split_id": 4,
+              "path": "search_files/38/LSA/SCRE N1 - Traitement 2 roues.pdf",
+              "metadata": {},
+              "file_id": 25957,
+              "page": 5,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Appels 2 roues - Provenance B2J - AXA\nConsultation du client 323668 - Particulier ( Service : B2J )\nCONSULTATION\nMULTI EQUIPEMENT / VENTE CROISÉE\n⚫ Si la demande du client concerne une police AXA en provenance B2J , l'appel doit être transféré , avec un transfert non - accompagné vers le service B2J\nIl s'agit du 06 87 47 12 39\n⚫ Le numéro doit être communiqué au client avant le transfert .\n⚫ L'email peut également être communiqué : julien.dubreuil@motomoto.fr\nCan\nProspect CM\nPOLICE ( S ) EXISTANTE ( S )\nGEDIGI\nPièces Justificatives\nPrélèvement & RIB ( p )\nCarte verte\nCompte [ 6 ]\nPaiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne Nouvelle demande Externe\nPolice Nature Risque\nSituation\nCompagnie\n11007136204 Moto ET - 431 - XG active\n025 AXA - FRANCE IARD 0 €\n01/08/2022\n01/08/2023\n01/08\nMontant reg . Effet d'origine Dernier mit Proch . anniv . Echeance Fracti Actions Rsign Mandat Mensual\nMono Non confi 01/08/2023\nTerme\nDatech Nassistance\nCourtage\n5"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.4042348263194561,
+              "display_name": "search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf",
+              "page_number": 8,
+              "_split_id": 7,
+              "path": "search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf",
+              "metadata": {},
+              "file_id": 25968,
+              "page": 8,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les types de demandes internes à destination du service Souscription N2\nLes demandes internes\nLes différents types de demandes internes\nDossier étude conformité\nLors du traitement si je réceptionne un document qui a été falsifié par le client , je dois remonter le dossier au RE afin d'activité le bouton « étude conformité » , je laisse une note sur le dossier , et je relance le client sur le document conforme .\nConsultation du client 382008 - Particulier Service : DIRECT )\nETUDE CONFORMITE\nSur un dossier pour lequel le bouton << étude conformité est déjà activé » , je transfert le dossier au RE\nLSA Courtage\n8"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "```json\n{\n  \"q_ok\": 1,\n  \"chunks_ok\": 1,\n  \"answer\": \"Non, vous ne devez pas prendre de frais de transfert de garantie sur une provenance Uber. Selon les documents 'Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf' (p. 17) et 'SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf' (p. 10), les provenances GS, EDF et UBER sont exonérées des frais de transfert de garantie.\"\n}\n```",
+              "prompt": {
+                "meta": {},
+                "user": "- search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf (p. 26)\n        Procédure type de traitement d'une demande externe\n-Toujours vérifier s'existe des demandes externes connexes : S'il en existe , en prendre connaissance AVANT de traiter toute demande pour répondre avec toutes les informations au dossier -Toujours transmettre les informations aux interlocuteurs intéressés par l'information qui nous a été communiquée ( expert , compagnie ou le dient notamment )\nTraitement demande .\n-Vérifier les éventuelles relances à faire sur le dossier à tous les intervenants ( y compris celui qui sollicite LSA ) : ces vérifications doivent être systématiques et les relances aux intervenants automatiques\nExemple :\nNous recevons une attestation TVA à traiter .\nSi une expertise a été organisée , s'assurer que le délai n'exige pas une demande de facture ( si PEC à Oui ) par exemple . Si l'expertise à eu lieu il y a plus de 4 jours , et que la facture n'est pas au dossier alors il convient de la réclamer\nLe traitement d'un DE externe suppose de se poser 4 questions + à chaque question je dois me poser d'autres questions\n1 - demande / relance au client : Al jeune demande du client ? oui je dois y répondre et dois je lui faire une relance dans le même temps // non dois - je faire une relance au client // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , la compagnie , un garage un partenaire , oul je transmets mais je me demande aussi si l'un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\n-PMQ client / sinistres ( ANA , FIC , Attestations diverses , constat amiable lisible )\ndemande d'informations diverses : circonstancielles , sur l'existence de témoins ou sur leurs coordonnées ( mail type à creer ) -demande de facture en respectant le process\n> le client nous transmet une attestation de course UBER . Au traitement de l'attestation , je dois m'assurer que l'ensemble des PMQ est à jour sinon je dois systématiquement relancer le client en lui précisant chacune des pièces attendues\n2 - demande / relance à la compagnie : Al - jeune demande de la compagnie ? oui je dois y répondre et dois - je lui faire une relance dans le même temps // non adois - je faire une relance à la compagnie // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , le client , un garage un partenaire , ou je transmets mais je me demande aussi si un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\nEx : DE or cie : la compagnie réclame la copie du constat . je lui transmets ce document MAIS je vénie également\n-si je dois relancer le client sur une ou plusieurs PMQ et je relance le client si nécessaire\n-si je dois réclamer une facture ou un rapport\nsi je dois relancer la compagnie\n\n- search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf (p. 17)\n        Le véhicule de courtoisie : Process LSA\nCoût du transfert\nLSA COURTAGE\nNOTICE COUT DES SERVICES\nCene notice tait partie integrante du mandat de courtage conciu entre vous , le souscripteur du contrat of assurance , et nous , votre courtier , LCA Courtage .\nchaque acte administratif sur un contrat a un cool . Pour ne pas vous penaliser vous mutsez pas des services , nous les facturons uniquement ausation\nLes tants sont en vigueur au 01/11/2017 restent valables sur communication specifique unereure\nLes categories de services donnant lieu a facturation specinque sont les suivantes :\nConstitution et analyse du dossier à la souscription\nEn qualité de courtier , mandataire de notre client auprès de la compagnie , nous facturons des frais pour les actes que nous réalisons .\nCes frais sont mentionnés dans le Mandat de courtage et détaillés dans la Notice de frais remise au client avec ses conditions particulières à la validation de son contrat .\nGestion au règlement ces cotisations at caz incidents de palement . Frais relatif au règlement de la cotisation\nGestion du quittancement\nPraic relative à une réédition\n» première année sauf en cas e palement . Apr mière année\nminimum o\nEn signant le Mandat de courtage , le client accepte donc expressément l'application de ces frais .\nLa notice de frais est également disponible sur notre site internet .\nFrais relatifs à des incidents de paiement\nnaturée du mandat de courtage par la căciliation du contrat d'assurance avant la sia première année\ncou Moto\nAvenants ou modification du contrat d'assurance\nTransfert des garanties vers un véhicule de courtoisie\n19.38\nAutres actes pour le compte du mandent 24.9 €\nRecherche et mise en place d'une mesure proposition Recherche et mice en prace arun nouveau contrat apric\nxéexpédition de la carte verte | c\nIMPORTANT : Il s'agit de frais de courtage pour le transfert de garantie vers un véhicule de courtoisie .\nSeules les provenances : GS , EDF , et UBER sont exonérées des frais de transfert de garantie .\nLSA Courtage\n17\n\n- search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf (p. 10)\n        Le véhicule de courtoisie : Process LSA\nCoût du transfert\nLSA COURTAGE\nNOTICE COUT DES SERVICES\nCette notice fait partie integrante du mandat de courtage conclu entre vous , le souscripteur du contrat d'assurance , et nous , votre counter , LSA Courtage\nchaque acte administrar sur un contrat a un cost . Pour ne pas vous penaser si vous utilisez pas des services , nous les facturons uniquement a utilisation\nLes tans sont en vigueur au 01/11/2017 . Ils restent valabies saur communication specque Les categones de services donnant lieu à facturation specifique sont les suivantes :\nMise en place\nConstitution et analyse du dossier à\nGestion du règlement des cotisations et des incidents de paiement . u règlement des cotization\nPri reati\n– minimum I\nEn qualité de courtier , mandataire de notre client auprès de la compagnie , nous facturons des frais pour les actes que nous réalisons .\nCes frais sont mentionnés dans le Mandat de courtage et détaillés dans la Notice de frais remise au client avec ses conditions particulières à la validation de son contrat . En signant le Mandat de courtage , le client accepte donc expressément l'application de ces frais .\nLa notice de frais est également disponible sur notre site internet .\nIMPORTANT : Il s'agit de frais de courtage pour le transfert de garantie vers un véhicule de courtoisie .\nCréer une demande interne d'ajustement sur le prochain prélèvement à la comptabilité :\nRupture prématurée du mandat de courtage per la résiliation du contrat d'assurance avant la\ninants ou modification du contrat d'assurance .\nRecherche et mise en place d'une mature proposition Recherche et mise en place un nouveau contrat après\nRécxpédition de la carte verte 4,9 €\nNouvelle demande\nCREATION DE LA DEMANDE\nSuite au transfect de pacantle our un véhicule de prêt , eco de majorer le prochain prélèvement d'un montant de\nSeules les provenances GS , EDF , et UBER sont exonérées des frais de transfert de garantie .\nLSA Courtage\n10\n\n- search_files/38/LSA/6.2 Demandes internes à la comptabilité.pdf (p. 11)\n        Le coût des services\nRupture prématurée du mandat\nFrais liés au règlement des cotisations et aux incidents de de courtage par la résiliation du\npalement\ncontrat ( -1an ) ( peuvent être annulés si une autre police reste active )\nFrais de dossier\nProvenance\nGestion du quittancement\nChèque\nProcédure de mise en demeure ( annulés uniquement si la\nimpayé\nSANTE\nMRH / CYCLO / AUTO / MOTO\nMED n'est pas\njustifiée ou demande RE )\nAvenant ou modification du contrat\nFrais relatifs à la réédition Autres actes pour le compte\nd'un règlement\ndu\nmandant\nInformation tardive en cas d'avenant ou de\nrésiliation\nfrais\nAvenant ( hors ajout\nTransfert des garanties\nFrais de courtage annuels\nMise en\nMise en place\nRecherche et place mise en place des PA\n( annulés\nadditionnels ) d'options ) vers un\nuniquement si demande RE )\nvéhicule de courtoisie\nRéémission virement chèque après émission dun chèque\nRecherche et mise en place\nRéexpédit ion de la carte verte\nd'un contrat\nd'une MP\naprès\nrésiliation par\nl'assureur\nFrais annuels de 5,98 %\ndes primes hors - taxes\navec un minimum de\nFiche standard\n14,90 €\n23,90 €\n29,90 €\n30 €\n91 €\n43 €\n14,90 €\n19,90 €\n14,90 €\n14,90 €\n24,90 €\n34.90 €\n4,90 €\n1ère souscription :\nAUTO : entre 0 et 119 €\nMRH : 25,90 €\nOfferts la 1ère année sauf en cas de mise en demeure de palement .\nSANTE : 0 €\nIDASSUR\n1,20 € / mois\n23,90 €\n29,90 €\n30 €\n91 €\n43 €\n14,90 €\n19,90 €\nMOTO : 25 €\nGS Fiche standard\n21,90 €\n22 € par contrat\n29,90 €\n30 €\n91 €\nMulti - détention :\nAuto\nFD offerts pour la / les\n15 € par contrat\nGS 650\n23,90 €\n29,90 €\n30 €\n91 €\npolices additionnelles\nResouscription :\nGS 420\n23,90 €\n29,90 €\n30 €\n91 €\nFD offerts juqu'à 6 mois\nGS 573\n23,90 €\n29,90 €\n30 €\n91 €\naprès la résiliation et 12\nmais de la suspension\nGS 930-960\n23,90 €\n29,90 €\n30 €\n91 €\nDevis foyer : FD offerts pour le second\nsouscripteur\nMRH\n29 € par contrat\nMRH\n40 € par contrat\nAuto\n52 € par contrat Auto\nGS 310\n23,90 €\n29,90 €\n30 €\n91 €\nGS BERGER SIMON ( MRH UDAF )\n3 € / an par contrat MRH\n23,90 €\n29,90 €\n30 €\nReprise CX :\nFrais offerts sauf en cas\nAUTO : 79 €\nde mise en demeure de\npalement . Sur le\nSANTE ANIMALE\nmontant d'avis\n23,90 €\n29,90 €\n1 € par\n14,90 €\n14,90 €\nPA\nd'échéance , 5,98 % des primes hors - taxes avec\nun minimum de 14,90 €\nUBER 536\n23,90 €\n29,90 €\n14,90 €\n14,90 €\n\n- search_files/38/LSA/Contrat UBER.pdf (p. 6)\n        Les contrats Uber\nCourriers types\nDes accusés de réception spécifiques afin de recueillir les informations relatives aux franchises applicables\nsinistres@isa-courage.com\nRueil - Malmaison , le 06/07/2021\nVotre érence client : 442006\nVotre umbro de contrat : 365435002301\nVotre modenstre : 553484\nObjet : Votre sinistre du 05/07/2021 - TOYOTA DR - 056 - FJ\nMONSIEUR\nNous accusons réception de votre déclaration de sinistre et vous prions de prendre note de la référence sous laquelle nous instruisons votre dossier :\n553484\nCette référence est à rappeler OBLIGATOIREMENT sur toute comespondance ou lors de tout entretien phonique ( pour des raisons de confidentialité aucune information ne sera communiquée par téléphone sans rappel préalable de ce numbroj\nNous vous précisons , qu'au vu des circonstances reportées , nous avons retenu une responsabilité partielle à votre charge\nVotre franchise dommages applicable sève à 415 € . Elle sera réduite de 25 % silesinistre est survenu lors d'une course Uber\nConformément à farticle L. 2115-1 du Code des assurances , vous avez la faculté de choisir le réparer quel vous souhaitez recourt .\nNous vous proposons également de faire effectuer expertise dans un garage partenaire . Si cela vous convient conviendra de nous préciser la mention - BON POUR GARAGE PARTENAIRE - en nous précisant un m vous serez facilement joignable\nSi toutefois cette proposition ne vous convenait pas , nous vous invitons à nous communiquer les coordonnées completes du réparateur que vous avez chois\nNous attrons votre attention sur le fait qu'étant donné que votre sinistre est survenu moins de 2mois après la date de survenance de votre contrat , nous ne délivrerons aucune prise en charge : E vous reviendra de néger la facture et de nous la transmettre pour remboursement .\nNous vous informons également que votre contrat bénéficie d'une garantie \" Pertes Pécuniaires \" qui prévoit , en cas d'immobilisation du véhicule , un forfait de 50 euros / jour sur 20 jours avec une franchise de 48 heures ( passant à 100 euros / jour si le sinistre est survenu lors d'une course Uber ) dans la limite de 2.000 euros / an .\nSi votre dossier est complet , cette indemnité vous sera versée lors de la récupération de votre véhicule et après la réception de la facture des réparations qui mentionnera la restitution de celui - ci .\nNous vous rappelons qu'en cas d'urgence vous pouvez contacter votre assistance . Elle vous précisera les prestations qu'elle pourra organiser et prendre en charge . Nous vous invitons déjà à prendre toutes les dispositions utiles vis à vis de l'éventuel établissement détenteur de votre véhicule pour éviter les frais de gardiennage qui resteraient à votre charge\nEntre - temps ,\nNous vous prions de croire , MONSIEUR , en l'expression de nos meilleurs sentiments .\nLSA Courtage\n6\n\n- search_files/38/LSA/SCRE N1 - Formation conduite accompagnée-supervisée-encadrée.pdf (p. 15)\n        FAQ\nCONDUITE ACCOMPAGNÉE\n1-\nRefus d'assurance d'un véhicule puissant / HDG - l'assureur peut refuser de délivrer une extension de conduite accompagnée / supervisée / encadrée\nOui les produits Haut de gamme ne sont clairement pas adaptés , donc ne pas accepter d'extension de conduite sur 930/931 et 932 .\n2-\n☐\nSi le client est malussé ou à une fréquence de sinistres\nSi CRM > 1 = pas de délivrance d'attestation de conduite mais ça veut dire qu'il faut prendre en compte le CRM à la date de la demande , cela signifie qu'on peut délivrer l'attestation si CRM à la date de la demande = < 1 .\n3-\n☐\n4-\n☐\n5-\nClient non assuré depuis 3ans même s'il a un permis depuis plus de 5ans ?\nLe permis de l'accompagnateur doit avoir au moins 5 ans\nTuteur légal ( client LSA ) peut être accompagnateur de l'apprenti\nUn justificatif est - il nécessaire ? Oui il faut un justificatif prouvant la qualité de tuteur légal .\nProvenance UBER - Lorsque le client est assuré en tant que particulier avec CG à son nom , peut - on lui délivrer une attestation de conduite accompagnée ?\nNon , c'est un produit très particulier , donc pas de délivrance d'attestation de conduite accompagnée sur ce produit\nLSA Courtage 03/25\n\n- search_files/38/LSA/Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf (p. 15)\n        Le véhicule de courtoisie : Process LSA\nCompagnie\nGaranties Transférées\nAssurance complémentaire à l'assurance garage qui a forcément une RC\nTransfert de garanties sur un véhicule de prêt pour 19,90 €\nDélais\n-Pas de limite sur le nombre de renouvellement . -Le transfert s'exerce pendant la période d'indisponibilité du véhicule avec un maximum de nombre de jours à compter de la date à laquelle le véhicule de remplacement a été mis à disposition .\n507\n515\n525\n535\nCelles du contrat\n571\n615\n825\n910/911/912\n580\nCelles du contrat hors assistance\n30 jours consécutifs\nProduit UBER\nCelle du contrat\n537\nProduits Gras Savoye\n534\n550\n573\n632\n930/931\nCelles du contrat\n960 Produit EDF\n727\n728\nConditions\nLorsque le véhicule de remplacement est couvert , le véhicule remplacé ne l'est plus .\nForme de la demande\nLa demande peut être faite par tout mayen\nLe véhicule prêté doit être de catégorie identique ( sur ce qui compte c'est l'envoi de l'attestation la carte grise en J / J1 = VP ou CTTE )\n20 jours consécutifs\nDe même mais attention Produit pour VTM électrique\nLa demande doit être faite par le client par écrit\n\n- search_files/38/LSA/SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf (p. 8)\n        Le véhicule de courtoisie : Process LSA\nCompagnie\nGaranties Transférées\nAssurance complémentaire à assurance garage qui a forcément une RC\nTransfert de garanties sur un véhicule de prêt pour 19,90 € Délais\n-Pas de limite sur le nombre de renouvellement . Le transfert s'exerce pendant la période d'indisponibilité du véhicule avec un maximum de nombre de jours à compter de la date à laquelle le véhicule de remplacement a été mis à disposition .\n507\n515\n525\n535\nCelles du contrat\n571\n615\n825\nConditions\nLorsque le véhicule de remplacement est couvert , le véhicule remplacé ne l'est plus .\nForme de la demande\n910/911/912\n580\nCelles du contrat hors assistance\n30 jours consécutifs\nProduit UBER\nCelle du contrat\nLe véhicule prêté doit être de catégorie identique ( sur la carte grise en J / 11 = VP ou CTTE )\n537\nProduits Gras Savoye\n534\n550\n573\n632\n930/931\n960 Produit EDF 727\n728\nCelles du contrat\nLa demande peut être faite par tout mayen\nCe qui compte c'est l'envoi de l'attestation\n20 jours consécutifs\nDe même mais attention Produit pour VTM électrique\nPas d'attestation sur un véhicule de prêt si le véhicule de courtoisie est thermique .\nLa demande doit être faite par le client par écrit\nプ\nLSA Courtage\n8\n\n- search_files/38/LSA/SCRE N1 - Traitement 2 roues.pdf (p. 5)\n        Appels 2 roues - Provenance B2J - AXA\nConsultation du client 323668 - Particulier ( Service : B2J )\nCONSULTATION\nMULTI EQUIPEMENT / VENTE CROISÉE\n⚫ Si la demande du client concerne une police AXA en provenance B2J , l'appel doit être transféré , avec un transfert non - accompagné vers le service B2J\nIl s'agit du 06 87 47 12 39\n⚫ Le numéro doit être communiqué au client avant le transfert .\n⚫ L'email peut également être communiqué : julien.dubreuil@motomoto.fr\nCan\nProspect CM\nPOLICE ( S ) EXISTANTE ( S )\nGEDIGI\nPièces Justificatives\nPrélèvement & RIB ( p )\nCarte verte\nCompte [ 6 ]\nPaiement en ligne\nHistorique paiement en ligne\nNouvelle demande Interne Nouvelle demande Externe\nPolice Nature Risque\nSituation\nCompagnie\n11007136204 Moto ET - 431 - XG active\n025 AXA - FRANCE IARD 0 €\n01/08/2022\n01/08/2023\n01/08\nMontant reg . Effet d'origine Dernier mit Proch . anniv . Echeance Fracti Actions Rsign Mandat Mensual\nMono Non confi 01/08/2023\nTerme\nDatech Nassistance\nCourtage\n5\n\n- search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf (p. 8)\n        Les types de demandes internes à destination du service Souscription N2\nLes demandes internes\nLes différents types de demandes internes\nDossier étude conformité\nLors du traitement si je réceptionne un document qui a été falsifié par le client , je dois remonter le dossier au RE afin d'activité le bouton « étude conformité » , je laisse une note sur le dossier , et je relance le client sur le document conforme .\nConsultation du client 382008 - Particulier Service : DIRECT )\nETUDE CONFORMITE\nSur un dossier pour lequel le bouton << étude conformité est déjà activé » , je transfert le dossier au RE\nLSA Courtage\n8\n        \n        Question: Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?",
+                "system": "\nTu es un expert qui doit répondre à des questions à l'aide de paragraphes qui te sont fournis.\nTa réponse doit être au format JSON suivant :\n- \"q_ok\": 1 si la question a un sens, 0 sinon\n- \"chunks_ok\": 1 si les paragraphes fournis sont suffisants pour répondre, 0 sinon\n- \"answer\": la réponse sous forme de texte non structuré indiquant les titres et les pages des documents\n\nLes paragraphes sont présentés ainsi :\n- Titre (Page X)\nContenu\n    ",
+                "prompter": "AnsPrompterWithRetrieverFR"
+              },
+              "name": "deepseek/deepseek-chat",
+              "full_name": "deepseek/deepseek-chat",
+              "timestamp": "2025-02-05T22:22:04.658117",
+              "duration": 38.223854,
+              "cost": 0.0008008000000000001,
+              "chunks": []
+            },
+            "meta": {
+              "json_ok": true,
+              "question_ok": true,
+              "chunks_ok": true,
+              "lang": "fr",
+              "docs_in_ans": [],
+              "docs_and_page_in_ans": []
+            },
+            "text": "Non, vous ne devez pas prendre de frais de transfert de garantie sur une provenance Uber. Selon les documents 'Support de formation - Transfert de garantie sur un véhicule de prêt - courtoisie - 23-11-20.pdf' (p. 17) et 'SCRE N1 - Transfert de garantie sur un véhicule de prêt - courtoisie.pdf' (p. 10), les provenances GS, EDF et UBER sont exonérées des frais de transfert de garantie.",
+            "eval": {
+              "llm_answer": null,
+              "meta": {},
+              "text": "",
+              "human": null,
+              "auto": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Dois-je retourner des documents médicaux à l'assuré ?"
+      },
+      "facts": {
+        "llm_answer": null,
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Oui, vous devez retourner tous les documents médicaux à l'assuré."
+          },
+          {
+            "meta": {},
+            "text": "2. C'est une obligation de retourner les documents médicaux à l'assuré."
+          },
+          {
+            "meta": {},
+            "text": "3. Vous n'êtes pas habilité à traiter des données à caractère médical."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8925764872539081,
+              "display_name": "search_files/38/LSA/5.12.2 Demande de désarchivage.pdf",
+              "page_number": 3,
+              "_split_id": 2,
+              "path": "search_files/38/LSA/5.12.2 Demande de désarchivage.pdf",
+              "metadata": {},
+              "file_id": 25725,
+              "page": 3,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Demande de désarchivage\nQuelles obligations ?\nProcess 5.12.2- Demande de désarchivage\nMàJ le 22/04/2024\nIl est obligatoire de retourner systématiquement tous les documents médicaux ( originaux ) à l'assuré en suivant la procédure de demande de désarchivage .\nEn effet , nous ne sommes pas habilités à traiter des données à caractère médical et ne pouvons donc pas les recueillir .\nATTENTION\nSe référer au process 6.7 Procédure\nde non traitement des données médicales\nRetourner systématiquement les pièces médicales reçues par courrier\nà l'assuré\nLSA Courtage\n3"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8559893741241227,
+              "display_name": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "page_number": 26,
+              "_split_id": 25,
+              "path": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "metadata": {},
+              "file_id": 25915,
+              "page": 26,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Procédure type de traitement d'une demande externe\n-Toujours vérifier s'existe des demandes externes connexes : S'il en existe , en prendre connaissance AVANT de traiter toute demande pour répondre avec toutes les informations au dossier -Toujours transmettre les informations aux interlocuteurs intéressés par l'information qui nous a été communiquée ( expert , compagnie ou le dient notamment )\nTraitement demande .\n-Vérifier les éventuelles relances à faire sur le dossier à tous les intervenants ( y compris celui qui sollicite LSA ) : ces vérifications doivent être systématiques et les relances aux intervenants automatiques\nExemple :\nNous recevons une attestation TVA à traiter .\nSi une expertise a été organisée , s'assurer que le délai n'exige pas une demande de facture ( si PEC à Oui ) par exemple . Si l'expertise à eu lieu il y a plus de 4 jours , et que la facture n'est pas au dossier alors il convient de la réclamer\nLe traitement d'un DE externe suppose de se poser 4 questions + à chaque question je dois me poser d'autres questions\n1 - demande / relance au client : Al jeune demande du client ? oui je dois y répondre et dois je lui faire une relance dans le même temps // non dois - je faire une relance au client // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , la compagnie , un garage un partenaire , oul je transmets mais je me demande aussi si l'un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\n-PMQ client / sinistres ( ANA , FIC , Attestations diverses , constat amiable lisible )\ndemande d'informations diverses : circonstancielles , sur l'existence de témoins ou sur leurs coordonnées ( mail type à creer ) -demande de facture en respectant le process\n> le client nous transmet une attestation de course UBER . Au traitement de l'attestation , je dois m'assurer que l'ensemble des PMQ est à jour sinon je dois systématiquement relancer le client en lui précisant chacune des pièces attendues\n2 - demande / relance à la compagnie : Al - jeune demande de la compagnie ? oui je dois y répondre et dois - je lui faire une relance dans le même temps // non adois - je faire une relance à la compagnie // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , le client , un garage un partenaire , ou je transmets mais je me demande aussi si un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\nEx : DE or cie : la compagnie réclame la copie du constat . je lui transmets ce document MAIS je vénie également\n-si je dois relancer le client sur une ou plusieurs PMQ et je relance le client si nécessaire\n-si je dois réclamer une facture ou un rapport\nsi je dois relancer la compagnie"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8300223965129894,
+              "display_name": "search_files/38/LSA/6.7 Procédure de non traitement des données médicales.pdf",
+              "page_number": 3,
+              "_split_id": 2,
+              "path": "search_files/38/LSA/6.7 Procédure de non traitement des données médicales.pdf",
+              "metadata": {},
+              "file_id": 25731,
+              "page": 3,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "2. Procédure relative à la réception des données à caractères médicales\nLes collaborateurs susceptibles de recevoir des données relatives à l'état de santé doivent suivre les mesures simples décrites ci - après afin de permettent de respecter nos obligations de non traitement en la matière .\nIl convient de distinguer les informations réceptionnées par e - mail ou courrier .\nA ) réception des informations par e - mail\n1 ) Détruire le mail ainsi que les pièces jointes car LSA n'a pas mis en place de circuit particulier pour préserver la sécurité des données ; si d'autres documents ( déclarations , photos des dommages , ... ) doivent être conservées au dossier et donc remis en GED ( cf. au point 3 )\nEt\n2 ) Inviter l'assuré à les adresser sous pli cacheté à l'attention du médecin conseil de l'assureur :\n→ Pour ce faire , utiliser l'e - mail prédéfini « Cli - Gestion - Partie corporelle non déléguée »\nB ) Réception des informations par courrier\nEn cas de réception d'une pièce à caractère médicale par courrier ( scanné et mis en GED par scaneco ) , il convient de se référer au process 5.12.2 Demande de désarchivage pour demander à SCANNECO de nous adresser les documents à renvoyer au client .\nLes retourner à l'expéditeur en l'invitant à les adresser sous pli cacheté à l'attention du médecin conseil de l'assureur ;\n→ Pour ce faire , le Webcourrier « Sinistre - Gestion de la partie corporelle » ( 602 )\n3/4\nPROTECTION DES DONNÉES PERSONNELLES ( Secret médical )"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7948815715722244,
+              "display_name": "search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf",
+              "page_number": 7,
+              "_split_id": 6,
+              "path": "search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf",
+              "metadata": {},
+              "file_id": 25776,
+              "page": 7,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les pièces manquantes\nRetour CP et Mandat de courtage\nСпов\nClient 213073\nID DEMANDE 2798454\nINFORMATION DE DEMANDE\nType de demande Date de criation\nCriation\nMATI\n08/12/2021 10:00\n2112001107040021031\nTYPE\n06/12/2021 18:00 06/12/2021 10:00\nDocument\nMATI CP\nDocument\nMATI Mandala ( x )\nETAT\nAttribuer à\nChoisir\nModifier\nL'assuré nous a retourné les conditions particulières de son contrat ainsi que le mandat de courtage signé\nS'assurer que les documents se rapportent bien au contrat concerné et à la version attendue ( CP d'origine ou avenant 1,2,3 ... )\n▸ S'assurer que les documents comportent bien la signature du souscripteur\nSi l'assuré est relancé sur les Conditions particulières + Mandat de courtage = Arrêter les relances en cliquant sur << Fermer le suivi >>\nLSA Courtage\n7"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7941608117399649,
+              "display_name": "search_files/38/LSA/Santé animale - Les actes de gestions.pdf",
+              "page_number": 10,
+              "_split_id": 9,
+              "path": "search_files/38/LSA/Santé animale - Les actes de gestions.pdf",
+              "metadata": {},
+              "file_id": 25933,
+              "page": 10,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "→ Les pièces manquantes\nRetour pièces de souscriptions\nClient 213073\nID DEMANDE 2798454 Codol : FIDS10007324\nINFORMATION DE DEMANDE\nType de demande\n06/12/2021 10:00\nNombre de Relance\n211200110704002100тов\n06/12/2021 10:00 06/12/2021 16:00\nDocument Document\nMATI OP Pr\nMATI M\nETAT\nModifier\nVair\nL'assuré nous a retourné les conditions particulières de son contrat ainsi que le mandat de courtage signé\nS'assurer que les documents se rapportent bien au contrat concerné et à la version attendue ( CP d'origine ou avenant 1,2,3 ... )\nS'assurer que les documents comportent bien la signature du souscripteur\nSi l'assuré est relancé sur les Conditions particulières + Mandat de courtage = Arrêter les relances en cliquant sur << Fermer le suivi >>\nLSA Courtage\n10"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7822000209848983,
+              "display_name": "search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf",
+              "page_number": 8,
+              "_split_id": 7,
+              "path": "search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf",
+              "metadata": {},
+              "file_id": 25776,
+              "page": 8,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les pièces manquantes\nRetour CP et Mandat de courtage\n1s manquantes : consulter pour les polices ci - dessous\nSélectionner la police concernée par la modification en cliquant sur la loupe\nDernier mouvement\nFD10087324\n510 AXA OSCAR\n2\nAccue\nLes pièces à réclamer :\nSi le statut est en RECU : les documents nous ont déjà été adressés par l'assuré Si le statut est en NON RECU : nous restons dans l'attente des documents à nous retourner\nIl faut alerter l'assuré sur la nécessité de nous adresser les documents , afin de compléter son dossier en cas de contrôle par la compagnie et aussi faciliter les démarches en cas de survenance d'un sinistre .\nPièces manquantes : sauvegarde et envoi\nActuel\nBien distinguer :\n-Fermer le suivi : arrête totalement les relances même si des justificatifs sont en « non reçus >> ; -Enregistrer et envoyer : permet de poursuivre les relances sur les documents manquants\nLSA Courtage\n8"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7751513645684827,
+              "display_name": "search_files/38/LSA/BO N1 TERSEA - Extension de compétences - Allianz (022) V2.pdf",
+              "page_number": 45,
+              "_split_id": 44,
+              "path": "search_files/38/LSA/BO N1 TERSEA - Extension de compétences - Allianz (022) V2.pdf",
+              "metadata": {},
+              "file_id": 25777,
+              "page": 45,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "PROCESS DE TRAITEMENT\n2 - Le client nous renvoie son Mandat SEPA signé :\nUne fois que c'est fait , vous pouvez clôturer la demande externe correspondante .\nLa démarche est exactement la même si le client nous retourne le document signé << manuellement » . Il suffit de sélectionner le bon document .\nNe pas oublier d'enregistrer la réception du Mandat SEPA dans l'outil des pièces manquantes de Weblsa\nRetour Sommaire\n45\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.7740805861773129,
+              "display_name": "search_files/38/LSA/Santé animale - Les actes de gestions.pdf",
+              "page_number": 11,
+              "_split_id": 10,
+              "path": "search_files/38/LSA/Santé animale - Les actes de gestions.pdf",
+              "metadata": {},
+              "file_id": 25933,
+              "page": 11,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les pièces manquantes\nRelance pièces de souscriptions\n1s manquantes : consulter pour les polices ci - dessous\nSélectionner la police concernée par la modification en cliquant sur la loupe\nРо\ntution Compagnie qu\nFID510087324\nactive\n10\nOSCAR\n2\nAccuell\nMandat de golvement SEFU\nCAD\nDernier mouvement\nLACA\nCase Co\nM\nLACA\nLACA LACA\nLes pièces à réclamer :\nSi le statut est en RECU : les documents nous ont déjà été adressés par l'assuré Si le statut est en NON RECU : nous restons dans l'attente des documents à nous retourner\nIl faut alerter l'assuré sur la nécessité de nous adresser les documents , afin de compléter son dossier en cas de contrôle par la compagnie et aussi faciliter les démarches en cas de survenance d'un sinistre .\nжите\nнито\nC\nM\nConsell Consel\nMj\nLACA LACA\n4\nPièces manquantes : sauvegarde et envoi\nBien distinguer :\n-Fermer le suivi : arrête totalement les relances même si des justificatifs sont en << non reçus >> ; -Enregistrer et envoyer : permet de poursuivre les relances sur les documents manquants\nL'aval du dement fer dan 10 jours .\nLSA Courtage\n11\n="
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.772848966274019,
+              "display_name": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "page_number": 22,
+              "_split_id": 21,
+              "path": "search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf",
+              "metadata": {},
+              "file_id": 25915,
+              "page": 22,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Exemple réception PMQ client : Cas particuliers assurpeople\nA RETOURNER DUMENT COMPLETE\nET SIGNE A\nLSA COURTAGE\n153 ,\nne de Quise CS\n0200 Saint Quentin\nN ° de dossier sinistre : 630616-506170\nAttestation sur l'honneur de non alcoolémie et de non emprise de stupéfiants , drogues ou tranquillisants non prescrits médicalement\nJessSCEMAMA MARC\nDemeurant 1532 AVENUE DE VALESCURE 83700 SAINT RAPHAEL ccident survenu le 23002023 BOULOURS ST RAPHAEL Avec le vehicule de marque : TOYOTA Immatriculé : FS - 001 - DG que je condusas ,\nEn cas d'erreur sur une PMQ il convient de la rectifier sur le dossier sinistres et sur le dossier client\nPrise de sang Tessal\nfat fobjet d'une prise de sang , d'un to\nurinaire ou d'un t\nnégative\n1000\nMOTIF DU DEPLACEMENT LORS DU SINISTRE \" Dommages de la police d'assurance automo\nPriv\nTrajet Travail - Domicile Aftaire\nstupéfiants , drogues ou tranquilisants non presorts médicale\nFat\nST RAPHAEL\n28/03/2023 A 1716\nFaire pricier votre signature de la mention \" Le of apLU ET APPROUVE\nExtrait de 441.7 du Nouveau Code Pénal :\nMscemama .\npendamment des cas prévus au print chapitre , studen\ndiablir une attestation ou un certificat faisant atat de faits matériellement inexacts . \""
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.3997884034674959,
+              "display_name": "search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf",
+              "page_number": 8,
+              "_split_id": 7,
+              "path": "search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf",
+              "metadata": {},
+              "file_id": 25968,
+              "page": 8,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Les types de demandes internes à destination du service Souscription N2\nLes demandes internes\nLes différents types de demandes internes\nDossier étude conformité\nLors du traitement si je réceptionne un document qui a été falsifié par le client , je dois remonter le dossier au RE afin d'activité le bouton « étude conformité » , je laisse une note sur le dossier , et je relance le client sur le document conforme .\nConsultation du client 382008 - Particulier Service : DIRECT )\nETUDE CONFORMITE\nSur un dossier pour lequel le bouton << étude conformité est déjà activé » , je transfert le dossier au RE\nLSA Courtage\n8"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "```json\n{\n  \"q_ok\": 1,\n  \"chunks_ok\": 1,\n  \"answer\": \"Oui, il est obligatoire de retourner systématiquement tous les documents médicaux (originaux) à l'assuré en suivant la procédure de demande de désarchivage. Cela est nécessaire car LSA n'est pas habilité à traiter des données à caractère médical et ne peut donc pas les recueillir. Référence : '5.12.2 Demande de désarchivage' (Page 3).\"\n}\n```",
+              "prompt": {
+                "meta": {},
+                "user": "- search_files/38/LSA/5.12.2 Demande de désarchivage.pdf (p. 3)\n        Demande de désarchivage\nQuelles obligations ?\nProcess 5.12.2- Demande de désarchivage\nMàJ le 22/04/2024\nIl est obligatoire de retourner systématiquement tous les documents médicaux ( originaux ) à l'assuré en suivant la procédure de demande de désarchivage .\nEn effet , nous ne sommes pas habilités à traiter des données à caractère médical et ne pouvons donc pas les recueillir .\nATTENTION\nSe référer au process 6.7 Procédure\nde non traitement des données médicales\nRetourner systématiquement les pièces médicales reçues par courrier\nà l'assuré\nLSA Courtage\n3\n\n- search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf (p. 26)\n        Procédure type de traitement d'une demande externe\n-Toujours vérifier s'existe des demandes externes connexes : S'il en existe , en prendre connaissance AVANT de traiter toute demande pour répondre avec toutes les informations au dossier -Toujours transmettre les informations aux interlocuteurs intéressés par l'information qui nous a été communiquée ( expert , compagnie ou le dient notamment )\nTraitement demande .\n-Vérifier les éventuelles relances à faire sur le dossier à tous les intervenants ( y compris celui qui sollicite LSA ) : ces vérifications doivent être systématiques et les relances aux intervenants automatiques\nExemple :\nNous recevons une attestation TVA à traiter .\nSi une expertise a été organisée , s'assurer que le délai n'exige pas une demande de facture ( si PEC à Oui ) par exemple . Si l'expertise à eu lieu il y a plus de 4 jours , et que la facture n'est pas au dossier alors il convient de la réclamer\nLe traitement d'un DE externe suppose de se poser 4 questions + à chaque question je dois me poser d'autres questions\n1 - demande / relance au client : Al jeune demande du client ? oui je dois y répondre et dois je lui faire une relance dans le même temps // non dois - je faire une relance au client // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , la compagnie , un garage un partenaire , oul je transmets mais je me demande aussi si l'un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\n-PMQ client / sinistres ( ANA , FIC , Attestations diverses , constat amiable lisible )\ndemande d'informations diverses : circonstancielles , sur l'existence de témoins ou sur leurs coordonnées ( mail type à creer ) -demande de facture en respectant le process\n> le client nous transmet une attestation de course UBER . Au traitement de l'attestation , je dois m'assurer que l'ensemble des PMQ est à jour sinon je dois systématiquement relancer le client en lui précisant chacune des pièces attendues\n2 - demande / relance à la compagnie : Al - jeune demande de la compagnie ? oui je dois y répondre et dois - je lui faire une relance dans le même temps // non adois - je faire une relance à la compagnie // est - il important que je communique l'information ou le document reçu à d'autres intervenants tels que l'expert , le client , un garage un partenaire , ou je transmets mais je me demande aussi si un des intervenants doit être relancés // non je ne transmets pas mais je traite les relances éventuelles à effectuer\nEx : DE or cie : la compagnie réclame la copie du constat . je lui transmets ce document MAIS je vénie également\n-si je dois relancer le client sur une ou plusieurs PMQ et je relance le client si nécessaire\n-si je dois réclamer une facture ou un rapport\nsi je dois relancer la compagnie\n\n- search_files/38/LSA/6.7 Procédure de non traitement des données médicales.pdf (p. 3)\n        2. Procédure relative à la réception des données à caractères médicales\nLes collaborateurs susceptibles de recevoir des données relatives à l'état de santé doivent suivre les mesures simples décrites ci - après afin de permettent de respecter nos obligations de non traitement en la matière .\nIl convient de distinguer les informations réceptionnées par e - mail ou courrier .\nA ) réception des informations par e - mail\n1 ) Détruire le mail ainsi que les pièces jointes car LSA n'a pas mis en place de circuit particulier pour préserver la sécurité des données ; si d'autres documents ( déclarations , photos des dommages , ... ) doivent être conservées au dossier et donc remis en GED ( cf. au point 3 )\nEt\n2 ) Inviter l'assuré à les adresser sous pli cacheté à l'attention du médecin conseil de l'assureur :\n→ Pour ce faire , utiliser l'e - mail prédéfini « Cli - Gestion - Partie corporelle non déléguée »\nB ) Réception des informations par courrier\nEn cas de réception d'une pièce à caractère médicale par courrier ( scanné et mis en GED par scaneco ) , il convient de se référer au process 5.12.2 Demande de désarchivage pour demander à SCANNECO de nous adresser les documents à renvoyer au client .\nLes retourner à l'expéditeur en l'invitant à les adresser sous pli cacheté à l'attention du médecin conseil de l'assureur ;\n→ Pour ce faire , le Webcourrier « Sinistre - Gestion de la partie corporelle » ( 602 )\n3/4\nPROTECTION DES DONNÉES PERSONNELLES ( Secret médical )\n\n- search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf (p. 7)\n        Les pièces manquantes\nRetour CP et Mandat de courtage\nСпов\nClient 213073\nID DEMANDE 2798454\nINFORMATION DE DEMANDE\nType de demande Date de criation\nCriation\nMATI\n08/12/2021 10:00\n2112001107040021031\nTYPE\n06/12/2021 18:00 06/12/2021 10:00\nDocument\nMATI CP\nDocument\nMATI Mandala ( x )\nETAT\nAttribuer à\nChoisir\nModifier\nL'assuré nous a retourné les conditions particulières de son contrat ainsi que le mandat de courtage signé\nS'assurer que les documents se rapportent bien au contrat concerné et à la version attendue ( CP d'origine ou avenant 1,2,3 ... )\n▸ S'assurer que les documents comportent bien la signature du souscripteur\nSi l'assuré est relancé sur les Conditions particulières + Mandat de courtage = Arrêter les relances en cliquant sur << Fermer le suivi >>\nLSA Courtage\n7\n\n- search_files/38/LSA/Santé animale - Les actes de gestions.pdf (p. 10)\n        → Les pièces manquantes\nRetour pièces de souscriptions\nClient 213073\nID DEMANDE 2798454 Codol : FIDS10007324\nINFORMATION DE DEMANDE\nType de demande\n06/12/2021 10:00\nNombre de Relance\n211200110704002100тов\n06/12/2021 10:00 06/12/2021 16:00\nDocument Document\nMATI OP Pr\nMATI M\nETAT\nModifier\nVair\nL'assuré nous a retourné les conditions particulières de son contrat ainsi que le mandat de courtage signé\nS'assurer que les documents se rapportent bien au contrat concerné et à la version attendue ( CP d'origine ou avenant 1,2,3 ... )\nS'assurer que les documents comportent bien la signature du souscripteur\nSi l'assuré est relancé sur les Conditions particulières + Mandat de courtage = Arrêter les relances en cliquant sur << Fermer le suivi >>\nLSA Courtage\n10\n\n- search_files/38/LSA/BO N1 Santé animale - Les actes de gestions.pdf (p. 8)\n        Les pièces manquantes\nRetour CP et Mandat de courtage\n1s manquantes : consulter pour les polices ci - dessous\nSélectionner la police concernée par la modification en cliquant sur la loupe\nDernier mouvement\nFD10087324\n510 AXA OSCAR\n2\nAccue\nLes pièces à réclamer :\nSi le statut est en RECU : les documents nous ont déjà été adressés par l'assuré Si le statut est en NON RECU : nous restons dans l'attente des documents à nous retourner\nIl faut alerter l'assuré sur la nécessité de nous adresser les documents , afin de compléter son dossier en cas de contrôle par la compagnie et aussi faciliter les démarches en cas de survenance d'un sinistre .\nPièces manquantes : sauvegarde et envoi\nActuel\nBien distinguer :\n-Fermer le suivi : arrête totalement les relances même si des justificatifs sont en « non reçus >> ; -Enregistrer et envoyer : permet de poursuivre les relances sur les documents manquants\nLSA Courtage\n8\n\n- search_files/38/LSA/BO N1 TERSEA - Extension de compétences - Allianz (022) V2.pdf (p. 45)\n        PROCESS DE TRAITEMENT\n2 - Le client nous renvoie son Mandat SEPA signé :\nUne fois que c'est fait , vous pouvez clôturer la demande externe correspondante .\nLa démarche est exactement la même si le client nous retourne le document signé << manuellement » . Il suffit de sélectionner le bon document .\nNe pas oublier d'enregistrer la réception du Mandat SEPA dans l'outil des pièces manquantes de Weblsa\nRetour Sommaire\n45\nLSA Courtage\n\n- search_files/38/LSA/Santé animale - Les actes de gestions.pdf (p. 11)\n        Les pièces manquantes\nRelance pièces de souscriptions\n1s manquantes : consulter pour les polices ci - dessous\nSélectionner la police concernée par la modification en cliquant sur la loupe\nРо\ntution Compagnie qu\nFID510087324\nactive\n10\nOSCAR\n2\nAccuell\nMandat de golvement SEFU\nCAD\nDernier mouvement\nLACA\nCase Co\nM\nLACA\nLACA LACA\nLes pièces à réclamer :\nSi le statut est en RECU : les documents nous ont déjà été adressés par l'assuré Si le statut est en NON RECU : nous restons dans l'attente des documents à nous retourner\nIl faut alerter l'assuré sur la nécessité de nous adresser les documents , afin de compléter son dossier en cas de contrôle par la compagnie et aussi faciliter les démarches en cas de survenance d'un sinistre .\nжите\nнито\nC\nM\nConsell Consel\nMj\nLACA LACA\n4\nPièces manquantes : sauvegarde et envoi\nBien distinguer :\n-Fermer le suivi : arrête totalement les relances même si des justificatifs sont en << non reçus >> ; -Enregistrer et envoyer : permet de poursuivre les relances sur les documents manquants\nL'aval du dement fer dan 10 jours .\nLSA Courtage\n11\n=\n\n- search_files/38/LSA/Process Gestion N1 - Traitement demandes externes.pdf (p. 22)\n        Exemple réception PMQ client : Cas particuliers assurpeople\nA RETOURNER DUMENT COMPLETE\nET SIGNE A\nLSA COURTAGE\n153 ,\nne de Quise CS\n0200 Saint Quentin\nN ° de dossier sinistre : 630616-506170\nAttestation sur l'honneur de non alcoolémie et de non emprise de stupéfiants , drogues ou tranquillisants non prescrits médicalement\nJessSCEMAMA MARC\nDemeurant 1532 AVENUE DE VALESCURE 83700 SAINT RAPHAEL ccident survenu le 23002023 BOULOURS ST RAPHAEL Avec le vehicule de marque : TOYOTA Immatriculé : FS - 001 - DG que je condusas ,\nEn cas d'erreur sur une PMQ il convient de la rectifier sur le dossier sinistres et sur le dossier client\nPrise de sang Tessal\nfat fobjet d'une prise de sang , d'un to\nurinaire ou d'un t\nnégative\n1000\nMOTIF DU DEPLACEMENT LORS DU SINISTRE \" Dommages de la police d'assurance automo\nPriv\nTrajet Travail - Domicile Aftaire\nstupéfiants , drogues ou tranquilisants non presorts médicale\nFat\nST RAPHAEL\n28/03/2023 A 1716\nFaire pricier votre signature de la mention \" Le of apLU ET APPROUVE\nExtrait de 441.7 du Nouveau Code Pénal :\nMscemama .\npendamment des cas prévus au print chapitre , studen\ndiablir une attestation ou un certificat faisant atat de faits matériellement inexacts . \"\n\n- search_files/38/LSA/SOUS N1 - Les demandes internes au N2  - V2020.pdf (p. 8)\n        Les types de demandes internes à destination du service Souscription N2\nLes demandes internes\nLes différents types de demandes internes\nDossier étude conformité\nLors du traitement si je réceptionne un document qui a été falsifié par le client , je dois remonter le dossier au RE afin d'activité le bouton « étude conformité » , je laisse une note sur le dossier , et je relance le client sur le document conforme .\nConsultation du client 382008 - Particulier Service : DIRECT )\nETUDE CONFORMITE\nSur un dossier pour lequel le bouton << étude conformité est déjà activé » , je transfert le dossier au RE\nLSA Courtage\n8\n        \n        Question: Dois-je retourner des documents médicaux à l'assuré ?",
+                "system": "\nTu es un expert qui doit répondre à des questions à l'aide de paragraphes qui te sont fournis.\nTa réponse doit être au format JSON suivant :\n- \"q_ok\": 1 si la question a un sens, 0 sinon\n- \"chunks_ok\": 1 si les paragraphes fournis sont suffisants pour répondre, 0 sinon\n- \"answer\": la réponse sous forme de texte non structuré indiquant les titres et les pages des documents\n\nLes paragraphes sont présentés ainsi :\n- Titre (Page X)\nContenu\n    ",
+                "prompter": "AnsPrompterWithRetrieverFR"
+              },
+              "name": "deepseek/deepseek-chat",
+              "full_name": "deepseek/deepseek-chat",
+              "timestamp": "2025-02-05T22:22:05.237541",
+              "duration": 20.16754,
+              "cost": 0.0005285,
+              "chunks": []
+            },
+            "meta": {
+              "json_ok": true,
+              "question_ok": true,
+              "chunks_ok": true,
+              "lang": "fr",
+              "docs_in_ans": [],
+              "docs_and_page_in_ans": []
+            },
+            "text": "Oui, il est obligatoire de retourner systématiquement tous les documents médicaux (originaux) à l'assuré en suivant la procédure de demande de désarchivage. Cela est nécessaire car LSA n'est pas habilité à traiter des données à caractère médical et ne peut donc pas les recueillir. Référence : '5.12.2 Demande de désarchivage' (Page 3).",
+            "eval": {
+              "llm_answer": null,
+              "meta": {},
+              "text": "",
+              "human": null,
+              "auto": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+      },
+      "facts": {
+        "llm_answer": null,
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Il ne faut pas mettre la pièce en 'reçu' si la date de cession du véhicule n'apparaît pas sur l'accusé d'enregistrement."
+          },
+          {
+            "meta": {},
+            "text": "2. Dans ce cas, il faut mettre la pièce en 'Non Valide'."
+          },
+          {
+            "meta": {},
+            "text": "3. Il faut sélectionner 'Une copie du certificat de cession justifiant la date d'achat du véhicule $5'."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": [
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.987555036801398,
+              "display_name": "search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf",
+              "page_number": 21,
+              "_split_id": 20,
+              "path": "search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf",
+              "metadata": {},
+              "file_id": 25963,
+              "page": 21,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Point de contrôle et traitement\nAccusé enregistrement\nComment cela se matérialise dans nos procédures de traitement ?\nJe vérifie que le prioritaire du véhicule apparaissant sur l'accusé d'enregistrement est bien le titulaire déclaré dans le devis . Je vérifie également si la date de cession apparaît sur l'accusé d'enregistrement\nOUI\nNON\nRAS\nJe réclame la copie du certificat de cession justifiant la date d'achat du véhicule\n➤ Le titulaire déclaré dans le devis n'est pas celui indiqué en « < identité du nouveau titulaire ou identité de l'acheteur\nથર\nJe mets la pièce en « < Non Valide » et je sélectionne « La copie de la carte grise à jour du contrôle technique $ 5 » et j'ajoute dans la zone de texte libre « à votre nom , le document reçu n'est pas à votre nom >>\nCARTE\nGRISE\nNon Valide\nAfficher les choix\nla copie de la carte grise à jour du contrôle technique $ 5\nTxt libre [ 5 ]\nà votre nom , le document reçu n'est pas à votre nom\n➤ La date de cession du véhicule n'apparaît pas sur l'accusé d'enregistrement\nJe mets la pièce en « Non Valide » et je sélectionne Une copie du certificat de cession justifiant la date d'achat du véhicule $ 5 »\nCARTE GRISE\nNon Valide Afficher les choix\nUne copie du certificat de cession justifiant la date dachat de votre véhicule $ 5\nTxt libre [ 5 ]\nLSA Courtage\n21"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9407839209173994,
+              "display_name": "search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf",
+              "page_number": 20,
+              "_split_id": 19,
+              "path": "search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf",
+              "metadata": {},
+              "file_id": 25963,
+              "page": 20,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Point de contrôle et traitement\nAccusé enregistrement\nAccusé d'enregistrement\nDéclaration de cession d'un véhicule\ndimmatriculation des véhicules le 08/04/2011\nDate et heure de la cession du vecule\n08/04/2011\nDate\nZA - 435 - CR\naration de cession du véhicule\ntriculation du véhicule\nDUBOIS\nLAURENT\nHELENE\nCIMEN\nace pas fexemplaire du certficat de cession que vous devez conserver\nAccusé d'enregistrement Changement de titulaire\nEléments récapitulatifs du changement destulaire :\nVéhicule concerne\nNuméro d'immatriculation\nNuméro de se\nDate de 1ère Immatriculation\nIdentité du titulaire précédent\nBA - 536 - PF 06/12/2004\nCVF1FC07AF32414292\nNom\nPrénom\nKUTSCHE\nFRANCK\nIdentité du nouveau titulaire\nNom\nPrénom\n: MALET\nYANNICK\nDate et heure de l'enregistrement du changement du titulaire 05/08/2019 a 11:20\nTaxes à payer pour le nouveau titulaire\n12 :\nY3 :\n99,00 €\n34.00 €\n0,00 €\nN ° d'ordre : 10373876401\nYS\n4.00 € 2.76 €\nYS :\n139,76 €\nLSA Courtage\n20"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9184419563561532,
+              "display_name": "search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf",
+              "page_number": 23,
+              "_split_id": 22,
+              "path": "search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf",
+              "metadata": {},
+              "file_id": 25953,
+              "page": 23,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "LES PIECES MANQUANTES - Les documents réclamés\nDocument ( s ) réclame ( s )\nDevis signé par le souscripteur\nFiche de conseil signée par le souscripteur\nPermis définitif\nPermis définitif 2nd conducteur\nPermis verso conducteur 1\nPermis verso conducteur 2\nPermis de conduire français ( WTF )\nPermis de conduire français ( WTF ) du 2nd conducteur\nCertificat d'immatriculation définitif\nCertificat d'immatriculation à l'adresse actuelle Contre - visite technique + date limite\nFacture de réparation\nRIB\nMandat SEPA\nCarte étudiante\nTitre de séjour + date limite 9 mois à partir de la validité\ndu titre de séjour\ne9\nSi mise à jour du devis signé\nSi réception du certificat de réussite à l'examen ou ;\nQuand\nSi réception de l'accusé d'enregistrement de délivrance du permis de conduite ( perte / vol ) ou ;\nSi réception d'un permis avec une date de validité\nSi réception du recto du permis ( ne concerne pas le permis en format carte )\nSi réception d'un recépissé de demande d'échange du permis de conduire\nSi réception d'une CG barrée / certificat de cession / Bon de commande / facture / Accusé d'enregistrement de demande de certificat d'immatriculation / CPI\nSi le département de la CG reçue différent du département du lieu d'habitation\nSi réception d'un contrôle technique soumis à contre - visite\nSi défaut sur CT ou CTPV et émission de la police sur la base des garanties souhaitées\nSi non transmis à l'émission de la police\nSi non transmis à l'émission de la police\nSi le souscripteur est étudiant étranger hors UE ou Suisse\nTitre de séjour du conducteur secondaire + date limite 9 Si étudiant étranger avec permis étranger ( hors UE ) mois à partir de la validité du titre de séjour\nPhotocopie recto - verso pièce d'identité du souscripteur Si véhicule HDG\n( CNI ou passeport )\nPhotocopie recto - verso pièce d'identité du titulaire du\ncompte à débiter si différent du souscripteur\nExtrait de K - bis / JO\nAttestation de non sinistre\nSi RIB reçu n'est pas au nom du souscripteur ou du 2nd conducteur désigné\nSi souscription au nom d'une société / association\nSi changement de CIE\nPolices concernées\nPolice groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto Police groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto et Mono Police groupement Auto\nPolice groupement Auto\nPolice groupement Auto et MRH Police groupement Auto et MRH Police groupement Auto et Mono\nPolice groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto\nPolice groupement Auto et Mono Police groupement Auto\nLSA Courtage\n23"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9105087680005167,
+              "display_name": "search_files/38/LSA/SOUS N1 - Outil relance des pièces .pdf",
+              "page_number": 7,
+              "_split_id": 6,
+              "path": "search_files/38/LSA/SOUS N1 - Outil relance des pièces .pdf",
+              "metadata": {},
+              "file_id": 25969,
+              "page": 7,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "S\nSaff Temporar\nCarte\nL'OUTIL DE RELANCE DES PIÈCES\nCarte grise\nCope devis pff\nDocuments on re\nOnce\nCope Mand SEPA\nContre technique parte\nEnvonal Adresse matemat t\nEnvafx\nJe sélectionne le mode d'envoi email le mode d'envoi par courrier est à utiliser uniquement sur les dossiers sans adresse mail enregistré , puis je clique sur valider pour déclencher l'envoi de la lettre de demande de pièces au client .\nPERMIS\nGroupe 2\nNon Requ\nCARTE GRISE\nNon Recu\nContrôle volontaire\nNon Requ\nSi le contrôle volontaire apparaît en groupe 2 , et que la pièce est en « Non Reçu » je sélectionne également contrôle technique partiel et volontaire"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9053676525252994,
+              "display_name": "search_files/38/LSA/SOUS N1 - Permis de conduire - Point de contrôle et traitement.pdf",
+              "page_number": 16,
+              "_split_id": 15,
+              "path": "search_files/38/LSA/SOUS N1 - Permis de conduire - Point de contrôle et traitement.pdf",
+              "metadata": {},
+              "file_id": 25970,
+              "page": 16,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Permis de conduire\nPoint de contrôle et traitement N1\nÉtape 3 : Le permis fait mention de restriction ( autres que 105 ou 106 )\nComment cela se matérialise dans nos procédures de traitement ?\nLe permis fait apparaitre la mention 78 en bleu\nLe client n'est autorisé à conduire que des véhicules à changement de vitesses automatiques\nLe permis fait apparaitre une des mentions en jaune Le véhicule du client a probablement des\naménagements .\n➤ Le permis fait apparaitre la mention 78 ( bleu ) Je mets la pièce en « Non Valide » et je sélectionne\nJe dois vérifier que le véhicule assuré est bien un véhicule boite automatique\nJe dois vérifier si le véhicule a fait l'objet d'aménagements et réclamer la facture des aménagements .\nSi après vérification ( Site Oscaro , ou dans recherche immat sur notre formulaire ) ou suite à une confirmation client que le véhicule est équipé d'une boite automatique ou robotisée = Mettre la pièce en « < reçu » si pas d'autres vérifications nécessaires sur la pièce ( ex : date de validité , mention 105 , ... )\n→ Si après vérification il s'avère que le véhicule n'est pas équipé d'une boite automatique ou robotisée = Passage en TEMPO « Aucune proposition tarifaire )\nCette vérification est possible directement auprès du client par téléphone ( appel sortant ou entrant ) , il faudra dans ce cas laisser une note au dossier précisant que le client confirme que son véhicule est équipé d'une boite automatique ou robotisée\n16"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.9010969810053988,
+              "display_name": "search_files/38/LSA/POC BDG AXA FRANCE.pdf",
+              "page_number": 6,
+              "_split_id": 5,
+              "path": "search_files/38/LSA/POC BDG AXA FRANCE.pdf",
+              "metadata": {},
+              "file_id": 25906,
+              "page": 6,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "POC BDG AXA FRANCE\nPOC Bris de glaces : quels dossiers ?\nSi\nLes conditions particulières\nLa nature du dossier\nLa compagnie garantissant le risque\nLa facture\nEst\nsignées sont reçues\nEst un bris de glaces automobile\nEst Axa France\nEst accompagnée d'une cession de créance\nAlors je dois appliquer le POC\net\n+\n+\n+\nSi les conditions particulières sont signées sont reçues après l'ouverture du dossier et que les autres conditions d'application du POC sont remplies , alors il faut appliquer le POC à réception des CP signées\n61 Ascentiel Groupe | POC BDG AXA FRANCE V3 MARS 2024"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8961894870251785,
+              "display_name": "search_files/38/LSA/Process LSA BO N1.pdf",
+              "page_number": 41,
+              "_split_id": 40,
+              "path": "search_files/38/LSA/Process LSA BO N1.pdf",
+              "metadata": {},
+              "file_id": 25917,
+              "page": 41,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Traitement N1 Pièce Manquantes 1\nPièces manquantes : consulter pour les polices ci - dessous\nPolice\nSituation\nCompagnie\n60587250\nactive\n022 ALLIANZ IARD\nNIVEAU\n1\n.1 . cliquer sur le bouton pièces manquantes\n.2 . cliquer sur la loupe\nRisque\nEffet d'origine\nDemier mouvement\nEchéance\nVoir\n17/09/2019\n17/09\nPièces menquantes à fémission\nDate lite\nde réception Création\n03/06/2016\n03/06/2016\n03/08/2016\n3 , Mettre l'état de chaque pièce en reçues puis cliquer sur enregistrer et envoyer\n03/06/2016\nAUTRE\nLe devis 4702145 signé ( avec la date exacte de fin d'assurance )\nAccueil\nSélectionner les pièces à réclamées\nS le statut est en RECU : les documents nous ont déjà été adressés par l'assuré\nS le statut est en NON RECU neus restons dans l'attente des documents à nous retourner\nfaut alerter l'assuré sur la nécessité de nous adresser les documents , afin de faciliter les démarches en cas de survenance d'un sinistre\nINFO\nSi rassuré est relancé sur un devis + Fiche Conseil et que les\nConditions\nparticulières + Mandat de Courtage sont en POSSIBILITE\nla Fiche Conseil en\n41\nLSA Courtage"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8950675964451201,
+              "display_name": "search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf",
+              "page_number": 49,
+              "_split_id": 48,
+              "path": "search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf",
+              "metadata": {},
+              "file_id": 25953,
+              "page": 49,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "LES PIECES MANQUANTES - Conformité de la pièce reçue\nLe certificat de cession / destruction\nVérification du certificat de cession avant clôture de la pièce :\n1- Vérifier que la déclaration de cession a bien été établie par le souscripteur du contrat ( Titulaire de la CG )\n2- Vérifier la présence de la date de cession du véhicule\n3- L'immatriculation doit être la même que l'ancienne police\n4- Vérifier la présence des coordonnées de l'acquéreur ( qui\nne doit pas être le même que le titulaire de la CG )\n5- Le certificat de cession doit être signé par les deux parties ( le vendeur = notre assuré / titulaire de la CG et l'acquéreur )\nHELSEAL 60300684 813\nCLIC\n44\nInexactitude sur l'immatriculation = ne pas clôturer la pièce en << reçue >> → la demande doit passer en N2 via une demande externe Contact - Gestion\nrtage\n49"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8925184998085708,
+              "display_name": "search_files/38/LSA/Guide Pratique Websinistre Automobile.pdf",
+              "page_number": 11,
+              "_split_id": 10,
+              "path": "search_files/38/LSA/Guide Pratique Websinistre Automobile.pdf",
+              "metadata": {},
+              "file_id": 25878,
+              "page": 11,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Guide Pratique Websinistre Automobile\n3. Renseigner Websinistre\nOnglet Commentaire Risque\nCommentaire\nCOMMENTAIRE\nRISQUE\nTOUS RISQUES\nUsage Franchise haute\nPROMENADE\nFranchise en %\nMarque\nAUDI\nFG - 433-\nGarantie\nFranchise police\n0\nSinistre\n2000\nFranchise basse\nDommage\nAVANT CAPOT\nVihicule\nGarage propose\nGarage dessure Code postal réparation\nPièce\nSyndic\n019 - ELEXIA\nСатаре ассеров Main d'ore Rapport rece Date de reception\nNon\nPeinture Facture reque\nDate de caption\nReglement regu\nAutres\nEtat du véhicule\nCircle - non repas\nCommentaire : Saisir les éventuels commentaires utiles à la compréhension du dossier Sinistre : Saisir le montant total des franchises applicables sur le sinistre Dommage véhicule : Renseigner les dommages du véhicule de notre assuré\nGarage proposé : Indiquer le garage proposé au client\nGarage accepté : Indiquer le garage accepté par le client ( à compléter uniquement à réception de l'information ) Rapport reçu : << Oui >> si réceptionné , indiquer la date et mettre à jour l'évaluation / « < Non >> si non réceptionné Facture reçue : << Oui >> si réceptionnée , indiquer la date mettre à jour l'évaluation / « Non >> si non réceptionnée Véhicule irréparable : << Non >> sauf si VEI en cession ( après expertise )\nÉtat du véhicule : Renseigner l'état du véhicule de notre assuré\nLSA Courtage\n11"
+          },
+          {
+            "meta": {
+              "content_type": "text",
+              "score": 0.8868858453864151,
+              "display_name": "search_files/38/LSA/Cheminement V5 (4)(1).pdf",
+              "page_number": 17,
+              "_split_id": 16,
+              "path": "search_files/38/LSA/Cheminement V5 (4)(1).pdf",
+              "metadata": {},
+              "file_id": 25801,
+              "page": 17,
+              "folder_id": 1315,
+              "Titles": ""
+            },
+            "text": "Signature électronique\n( vue prospect )\nLe prospect reçoit le mail de la signature sous la forme ci - dessous et il devra apposer sa signature qui apparait comme sur la 2ème image\nHoraires : 9th - 17h en semaine / 9h - 12h45 le samed\nON dappel D3100\nBonjour Monsieur CASSANDRRRRAAAAA SED42 ,\nNous vous remercions de nous avoir choisi pour votre assurance AUTO .\nNous sommes heureux de vous informer que votre contrat n ° 475703055498 vient d'être enregistré\nPour gagner du temps , nous vous invitons\nà signer en ligne votre contrat\nJe signe électroniquement mon contrat\nNous vous remercions pour votre confiance et nous restons à votre disposition\nVotre équipe dédiée , Assurpeople\nJanine Forens"
+          }
+        ]
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "```json\n{\n  \"q_ok\": 1,\n  \"chunks_ok\": 1,\n  \"answer\": \"Non, vous ne devez pas mettre la pièce en 'reçu' si la date de cession n'apparaît pas sur l'accusé d'enregistrement. Selon le document 'SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf (p. 21)', vous devez mettre la pièce en 'Non Valide' et sélectionner 'Une copie du certificat de cession justifiant la date d'achat du véhicule $5'. Cela signifie que vous devez réclamer une copie du certificat de cession pour justifier la date d'achat du véhicule.\"\n}\n```",
+              "prompt": {
+                "meta": {},
+                "user": "- search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf (p. 21)\n        Point de contrôle et traitement\nAccusé enregistrement\nComment cela se matérialise dans nos procédures de traitement ?\nJe vérifie que le prioritaire du véhicule apparaissant sur l'accusé d'enregistrement est bien le titulaire déclaré dans le devis . Je vérifie également si la date de cession apparaît sur l'accusé d'enregistrement\nOUI\nNON\nRAS\nJe réclame la copie du certificat de cession justifiant la date d'achat du véhicule\n➤ Le titulaire déclaré dans le devis n'est pas celui indiqué en « < identité du nouveau titulaire ou identité de l'acheteur\nથર\nJe mets la pièce en « < Non Valide » et je sélectionne « La copie de la carte grise à jour du contrôle technique $ 5 » et j'ajoute dans la zone de texte libre « à votre nom , le document reçu n'est pas à votre nom >>\nCARTE\nGRISE\nNon Valide\nAfficher les choix\nla copie de la carte grise à jour du contrôle technique $ 5\nTxt libre [ 5 ]\nà votre nom , le document reçu n'est pas à votre nom\n➤ La date de cession du véhicule n'apparaît pas sur l'accusé d'enregistrement\nJe mets la pièce en « Non Valide » et je sélectionne Une copie du certificat de cession justifiant la date d'achat du véhicule $ 5 »\nCARTE GRISE\nNon Valide Afficher les choix\nUne copie du certificat de cession justifiant la date dachat de votre véhicule $ 5\nTxt libre [ 5 ]\nLSA Courtage\n21\n\n- search_files/38/LSA/SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf (p. 20)\n        Point de contrôle et traitement\nAccusé enregistrement\nAccusé d'enregistrement\nDéclaration de cession d'un véhicule\ndimmatriculation des véhicules le 08/04/2011\nDate et heure de la cession du vecule\n08/04/2011\nDate\nZA - 435 - CR\naration de cession du véhicule\ntriculation du véhicule\nDUBOIS\nLAURENT\nHELENE\nCIMEN\nace pas fexemplaire du certficat de cession que vous devez conserver\nAccusé d'enregistrement Changement de titulaire\nEléments récapitulatifs du changement destulaire :\nVéhicule concerne\nNuméro d'immatriculation\nNuméro de se\nDate de 1ère Immatriculation\nIdentité du titulaire précédent\nBA - 536 - PF 06/12/2004\nCVF1FC07AF32414292\nNom\nPrénom\nKUTSCHE\nFRANCK\nIdentité du nouveau titulaire\nNom\nPrénom\n: MALET\nYANNICK\nDate et heure de l'enregistrement du changement du titulaire 05/08/2019 a 11:20\nTaxes à payer pour le nouveau titulaire\n12 :\nY3 :\n99,00 €\n34.00 €\n0,00 €\nN ° d'ordre : 10373876401\nYS\n4.00 € 2.76 €\nYS :\n139,76 €\nLSA Courtage\n20\n\n- search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf (p. 23)\n        LES PIECES MANQUANTES - Les documents réclamés\nDocument ( s ) réclame ( s )\nDevis signé par le souscripteur\nFiche de conseil signée par le souscripteur\nPermis définitif\nPermis définitif 2nd conducteur\nPermis verso conducteur 1\nPermis verso conducteur 2\nPermis de conduire français ( WTF )\nPermis de conduire français ( WTF ) du 2nd conducteur\nCertificat d'immatriculation définitif\nCertificat d'immatriculation à l'adresse actuelle Contre - visite technique + date limite\nFacture de réparation\nRIB\nMandat SEPA\nCarte étudiante\nTitre de séjour + date limite 9 mois à partir de la validité\ndu titre de séjour\ne9\nSi mise à jour du devis signé\nSi réception du certificat de réussite à l'examen ou ;\nQuand\nSi réception de l'accusé d'enregistrement de délivrance du permis de conduite ( perte / vol ) ou ;\nSi réception d'un permis avec une date de validité\nSi réception du recto du permis ( ne concerne pas le permis en format carte )\nSi réception d'un recépissé de demande d'échange du permis de conduire\nSi réception d'une CG barrée / certificat de cession / Bon de commande / facture / Accusé d'enregistrement de demande de certificat d'immatriculation / CPI\nSi le département de la CG reçue différent du département du lieu d'habitation\nSi réception d'un contrôle technique soumis à contre - visite\nSi défaut sur CT ou CTPV et émission de la police sur la base des garanties souhaitées\nSi non transmis à l'émission de la police\nSi non transmis à l'émission de la police\nSi le souscripteur est étudiant étranger hors UE ou Suisse\nTitre de séjour du conducteur secondaire + date limite 9 Si étudiant étranger avec permis étranger ( hors UE ) mois à partir de la validité du titre de séjour\nPhotocopie recto - verso pièce d'identité du souscripteur Si véhicule HDG\n( CNI ou passeport )\nPhotocopie recto - verso pièce d'identité du titulaire du\ncompte à débiter si différent du souscripteur\nExtrait de K - bis / JO\nAttestation de non sinistre\nSi RIB reçu n'est pas au nom du souscripteur ou du 2nd conducteur désigné\nSi souscription au nom d'une société / association\nSi changement de CIE\nPolices concernées\nPolice groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto Police groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto et Mono Police groupement Auto\nPolice groupement Auto\nPolice groupement Auto et MRH Police groupement Auto et MRH Police groupement Auto et Mono\nPolice groupement Auto\nPolice groupement Auto et Mono\nPolice groupement Auto\nPolice groupement Auto et Mono Police groupement Auto\nLSA Courtage\n23\n\n- search_files/38/LSA/SOUS N1 - Outil relance des pièces .pdf (p. 7)\n        S\nSaff Temporar\nCarte\nL'OUTIL DE RELANCE DES PIÈCES\nCarte grise\nCope devis pff\nDocuments on re\nOnce\nCope Mand SEPA\nContre technique parte\nEnvonal Adresse matemat t\nEnvafx\nJe sélectionne le mode d'envoi email le mode d'envoi par courrier est à utiliser uniquement sur les dossiers sans adresse mail enregistré , puis je clique sur valider pour déclencher l'envoi de la lettre de demande de pièces au client .\nPERMIS\nGroupe 2\nNon Requ\nCARTE GRISE\nNon Recu\nContrôle volontaire\nNon Requ\nSi le contrôle volontaire apparaît en groupe 2 , et que la pièce est en « Non Reçu » je sélectionne également contrôle technique partiel et volontaire\n\n- search_files/38/LSA/SOUS N1 - Permis de conduire - Point de contrôle et traitement.pdf (p. 16)\n        Permis de conduire\nPoint de contrôle et traitement N1\nÉtape 3 : Le permis fait mention de restriction ( autres que 105 ou 106 )\nComment cela se matérialise dans nos procédures de traitement ?\nLe permis fait apparaitre la mention 78 en bleu\nLe client n'est autorisé à conduire que des véhicules à changement de vitesses automatiques\nLe permis fait apparaitre une des mentions en jaune Le véhicule du client a probablement des\naménagements .\n➤ Le permis fait apparaitre la mention 78 ( bleu ) Je mets la pièce en « Non Valide » et je sélectionne\nJe dois vérifier que le véhicule assuré est bien un véhicule boite automatique\nJe dois vérifier si le véhicule a fait l'objet d'aménagements et réclamer la facture des aménagements .\nSi après vérification ( Site Oscaro , ou dans recherche immat sur notre formulaire ) ou suite à une confirmation client que le véhicule est équipé d'une boite automatique ou robotisée = Mettre la pièce en « < reçu » si pas d'autres vérifications nécessaires sur la pièce ( ex : date de validité , mention 105 , ... )\n→ Si après vérification il s'avère que le véhicule n'est pas équipé d'une boite automatique ou robotisée = Passage en TEMPO « Aucune proposition tarifaire )\nCette vérification est possible directement auprès du client par téléphone ( appel sortant ou entrant ) , il faudra dans ce cas laisser une note au dossier précisant que le client confirme que son véhicule est équipé d'une boite automatique ou robotisée\n16\n\n- search_files/38/LSA/POC BDG AXA FRANCE.pdf (p. 6)\n        POC BDG AXA FRANCE\nPOC Bris de glaces : quels dossiers ?\nSi\nLes conditions particulières\nLa nature du dossier\nLa compagnie garantissant le risque\nLa facture\nEst\nsignées sont reçues\nEst un bris de glaces automobile\nEst Axa France\nEst accompagnée d'une cession de créance\nAlors je dois appliquer le POC\net\n+\n+\n+\nSi les conditions particulières sont signées sont reçues après l'ouverture du dossier et que les autres conditions d'application du POC sont remplies , alors il faut appliquer le POC à réception des CP signées\n61 Ascentiel Groupe | POC BDG AXA FRANCE V3 MARS 2024\n\n- search_files/38/LSA/Process LSA BO N1.pdf (p. 41)\n        Traitement N1 Pièce Manquantes 1\nPièces manquantes : consulter pour les polices ci - dessous\nPolice\nSituation\nCompagnie\n60587250\nactive\n022 ALLIANZ IARD\nNIVEAU\n1\n.1 . cliquer sur le bouton pièces manquantes\n.2 . cliquer sur la loupe\nRisque\nEffet d'origine\nDemier mouvement\nEchéance\nVoir\n17/09/2019\n17/09\nPièces menquantes à fémission\nDate lite\nde réception Création\n03/06/2016\n03/06/2016\n03/08/2016\n3 , Mettre l'état de chaque pièce en reçues puis cliquer sur enregistrer et envoyer\n03/06/2016\nAUTRE\nLe devis 4702145 signé ( avec la date exacte de fin d'assurance )\nAccueil\nSélectionner les pièces à réclamées\nS le statut est en RECU : les documents nous ont déjà été adressés par l'assuré\nS le statut est en NON RECU neus restons dans l'attente des documents à nous retourner\nfaut alerter l'assuré sur la nécessité de nous adresser les documents , afin de faciliter les démarches en cas de survenance d'un sinistre\nINFO\nSi rassuré est relancé sur un devis + Fiche Conseil et que les\nConditions\nparticulières + Mandat de Courtage sont en POSSIBILITE\nla Fiche Conseil en\n41\nLSA Courtage\n\n- search_files/38/LSA/SCRE N1 - Les pièces manquantes - MàJ 020821.pdf (p. 49)\n        LES PIECES MANQUANTES - Conformité de la pièce reçue\nLe certificat de cession / destruction\nVérification du certificat de cession avant clôture de la pièce :\n1- Vérifier que la déclaration de cession a bien été établie par le souscripteur du contrat ( Titulaire de la CG )\n2- Vérifier la présence de la date de cession du véhicule\n3- L'immatriculation doit être la même que l'ancienne police\n4- Vérifier la présence des coordonnées de l'acquéreur ( qui\nne doit pas être le même que le titulaire de la CG )\n5- Le certificat de cession doit être signé par les deux parties ( le vendeur = notre assuré / titulaire de la CG et l'acquéreur )\nHELSEAL 60300684 813\nCLIC\n44\nInexactitude sur l'immatriculation = ne pas clôturer la pièce en << reçue >> → la demande doit passer en N2 via une demande externe Contact - Gestion\nrtage\n49\n\n- search_files/38/LSA/Guide Pratique Websinistre Automobile.pdf (p. 11)\n        Guide Pratique Websinistre Automobile\n3. Renseigner Websinistre\nOnglet Commentaire Risque\nCommentaire\nCOMMENTAIRE\nRISQUE\nTOUS RISQUES\nUsage Franchise haute\nPROMENADE\nFranchise en %\nMarque\nAUDI\nFG - 433-\nGarantie\nFranchise police\n0\nSinistre\n2000\nFranchise basse\nDommage\nAVANT CAPOT\nVihicule\nGarage propose\nGarage dessure Code postal réparation\nPièce\nSyndic\n019 - ELEXIA\nСатаре ассеров Main d'ore Rapport rece Date de reception\nNon\nPeinture Facture reque\nDate de caption\nReglement regu\nAutres\nEtat du véhicule\nCircle - non repas\nCommentaire : Saisir les éventuels commentaires utiles à la compréhension du dossier Sinistre : Saisir le montant total des franchises applicables sur le sinistre Dommage véhicule : Renseigner les dommages du véhicule de notre assuré\nGarage proposé : Indiquer le garage proposé au client\nGarage accepté : Indiquer le garage accepté par le client ( à compléter uniquement à réception de l'information ) Rapport reçu : << Oui >> si réceptionné , indiquer la date et mettre à jour l'évaluation / « < Non >> si non réceptionné Facture reçue : << Oui >> si réceptionnée , indiquer la date mettre à jour l'évaluation / « Non >> si non réceptionnée Véhicule irréparable : << Non >> sauf si VEI en cession ( après expertise )\nÉtat du véhicule : Renseigner l'état du véhicule de notre assuré\nLSA Courtage\n11\n\n- search_files/38/LSA/Cheminement V5 (4)(1).pdf (p. 17)\n        Signature électronique\n( vue prospect )\nLe prospect reçoit le mail de la signature sous la forme ci - dessous et il devra apposer sa signature qui apparait comme sur la 2ème image\nHoraires : 9th - 17h en semaine / 9h - 12h45 le samed\nON dappel D3100\nBonjour Monsieur CASSANDRRRRAAAAA SED42 ,\nNous vous remercions de nous avoir choisi pour votre assurance AUTO .\nNous sommes heureux de vous informer que votre contrat n ° 475703055498 vient d'être enregistré\nPour gagner du temps , nous vous invitons\nà signer en ligne votre contrat\nJe signe électroniquement mon contrat\nNous vous remercions pour votre confiance et nous restons à votre disposition\nVotre équipe dédiée , Assurpeople\nJanine Forens\n        \n        Question: Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?",
+                "system": "\nTu es un expert qui doit répondre à des questions à l'aide de paragraphes qui te sont fournis.\nTa réponse doit être au format JSON suivant :\n- \"q_ok\": 1 si la question a un sens, 0 sinon\n- \"chunks_ok\": 1 si les paragraphes fournis sont suffisants pour répondre, 0 sinon\n- \"answer\": la réponse sous forme de texte non structuré indiquant les titres et les pages des documents\n\nLes paragraphes sont présentés ainsi :\n- Titre (Page X)\nContenu\n    ",
+                "prompter": "AnsPrompterWithRetrieverFR"
+              },
+              "name": "deepseek/deepseek-chat",
+              "full_name": "deepseek/deepseek-chat",
+              "timestamp": "2025-02-05T22:22:05.859903",
+              "duration": 11.902842,
+              "cost": 0.0005957,
+              "chunks": []
+            },
+            "meta": {
+              "json_ok": true,
+              "question_ok": true,
+              "chunks_ok": true,
+              "lang": "fr",
+              "docs_in_ans": [],
+              "docs_and_page_in_ans": []
+            },
+            "text": "Non, vous ne devez pas mettre la pièce en 'reçu' si la date de cession n'apparaît pas sur l'accusé d'enregistrement. Selon le document 'SOUS N1 - Le certificat d'immatriculation - Point de controle et traitement N1.pdf (p. 21)', vous devez mettre la pièce en 'Non Valide' et sélectionner 'Une copie du certificat de cession justifiant la date d'achat du véhicule $5'. Cela signifie que vous devez réclamer une copie du certificat de cession pour justifier la date d'achat du véhicule.",
+            "eval": {
+              "llm_answer": null,
+              "meta": {},
+              "text": "",
+              "human": null,
+              "auto": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

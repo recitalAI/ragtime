@@ -21,7 +21,7 @@ class TextGenerator(RagtimeBase, ABC):
     """
 
     llms: Optional[list[LLM]] = []
-    b_use_chunks: bool = False
+    # b_use_chunks: bool = False
     wait_between_calls:int = 0
 
     def __init__(self, llms: list = None, prompter:Prompter = None, wait_between_calls:int = 0):
@@ -59,6 +59,7 @@ class TextGenerator(RagtimeBase, ABC):
         self,
         expe: Expe,
         save_every: int = 0,
+        save_on_error:bool = False,
         b_missing_only: bool = False,
         only_llms: list[str] = None,
         start_from: StartFrom = StartFrom.beginning,
@@ -98,9 +99,10 @@ class TextGenerator(RagtimeBase, ABC):
                     only_llms=only_llms,
                 )
             except Exception as e:
-                logger.exception(f"Exception caught - saving what has been done so far:\n{e}")
-                expe.save_to_json(b_overwrite=True)
-                expe.save_temp(name=f"Stopped_at_{num_q}_of_{nb_q}_")
+                if save_on_error:
+                    logger.exception(f"Exception caught - saving what has been done so far:\n{e}")
+                    expe.save_to_json(b_overwrite=True)
+                    expe.save_temp(name=f"Stopped_at_{num_q}_of_{nb_q}_")
                 return
             time.sleep(self.wait_between_calls)
             logger.info(f'End question "{qa.question.text}"')

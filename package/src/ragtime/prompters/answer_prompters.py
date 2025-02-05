@@ -44,7 +44,7 @@ Tu es un expert qui doit répondre à des questions à l'aide de paragraphes qui
 Ta réponse doit être au format JSON suivant :
 - "{FLD_QUEST_OK}": 1 si la question a un sens, 0 sinon
 - "{FLD_CHUNKS_OK}": 1 si les paragraphes fournis sont suffisants pour répondre, 0 sinon
-- "{FLD_ANSWER}": la réponse, avec les titres et les pages des documents
+- "{FLD_ANSWER}": la réponse sous forme de texte non structuré indiquant les titres et les pages des documents
 
 Les paragraphes sont présentés ainsi :
 - Titre (Page X)
@@ -129,11 +129,10 @@ Contenu
         # test JSON and tries to extract fields if needed
         json_ans: dict = {}
         if not cur_obj.llm_answer:
-            logger.error(
-                f"Nothing to post-process! LLMAnswer is None for current Answer!"
-            )
+            logger.error(f"Nothing to post-process! LLMAnswer is None for current Answer!")
             return
         cur_obj.text = cur_obj.llm_answer.text
+        cur_obj.text = cur_obj.text.replace("```json", "").replace('```', '').strip() # useful for deepseek generated JSON files as of 5th Feb 2025
         try:
             json_ans: dict = json.loads(cur_obj.text)
             json_ok = True
@@ -161,7 +160,15 @@ Contenu
         cur_obj.meta["chunks_ok"] = (
             bool(json_ans[self.FLD_CHUNKS_OK]) if json_ok else None
         )
-        cur_obj.text = json_ans[self.FLD_ANSWER] if json_ok else cur_obj.llm_answer.text
+        
+        if json_ok:
+            # As of 5th Feb 2025, Deepseek returns answer in a list -> extract it first
+            if isinstance(json_ans[self.FLD_ANSWER], list):
+                cur_obj.text = json_ans[self.FLD_ANSWER][0]
+            else:
+                cur_obj.text = json_ans[self.FLD_ANSWER]
+        else:
+            cur_obj.text = cur_obj.llm_answer.text
 
         # Get Answers's lang
         try:
@@ -170,7 +177,7 @@ Contenu
         except:
             cur_obj.meta["lang"] = None
 
-        # Calc nb sources in answer even if the JSON is not formatted well
+        # Calc nb sources in answer even if the JSON is not well formatted
         ans_formatted: str = fmt_name(cur_obj.llm_answer.text)
         docs_in_chunks: dict[str, str] = {
             c.meta["display_name"]: fmt_name(c.meta["display_name"]) for c in qa.chunks

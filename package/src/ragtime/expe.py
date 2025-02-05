@@ -179,7 +179,7 @@ class Expe(RagtimeList[QA]):
     def __init__(self, json_path: Path = None, n_first:int=0):
         """Expe can be init with only the n_first items from the JSON file
         Useful to test something on a small subset of questions at first
-        n_first = 0 to load eveything"""
+        DEfault is n_first = 0 to load eveything"""
         super().__init__()
         if json_path:
             self.json_path = json_path

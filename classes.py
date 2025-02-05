@@ -20,7 +20,7 @@ load_dotenv()
 
 # Global constants
 ALBERT_BASE_URL = os.environ.get('ALBERT_BASE_URL')
-ALBERT_MODEL = "AgentPublic/llama3-instruct-guillaumetell"
+ALBERT_MODEL = os.environ.get('ALBERT_MODEL')
 DEFAULT_MAX_TOKENS = 2000
 DEFAULT_TEMPERATURE = 0.7
 
