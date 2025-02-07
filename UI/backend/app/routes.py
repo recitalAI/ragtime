@@ -571,32 +571,34 @@ def get_all_experiments():
         for filename in os.listdir(EVALS_FOLDER):
             if filename.endswith('.json'):
                 file_path = os.path.join(EVALS_FOLDER, filename)
-                with open(file_path, 'r') as f:
-                    data = json.load(f)
-                
+                # with open(file_path, 'r') as f:
+                #     data = json.load(f)
+                expe:Expe = Expe(file_path)
+                stats = expe.stats()
+
                 # Calculate total chunks
-                total_chunks = sum(len(qa.get('chunks', {}).get('items', [])) for qa in data['items'])
+                # total_chunks = sum(len(qa.get('chunks', {}).get('items', [])) for qa in data['items'])
                 
                 # Get retriever name (assuming it's stored in the metadata)
-                retriever_name = data.get('meta', {}).get('retriever_name', 'Not specified')
+                # retriever_name = data.get('meta', {}).get('retriever_name', 'Not specified')
                 
                 experiment_info = {
                     'name': filename.replace('.json', ''),
                     'date': datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S'),
-                    'models': list(set(answer['llm_answer']['name'] for qa in data['items'] for answer in qa['answers']['items'])),
-                    'questions': len(data['items']),
-                    'facts': sum(len(qa['facts']['items']) for qa in data['items'] if 'facts' in qa),
-                    'chunks': total_chunks,
-                    'retriever': retriever_name,
+                    'models': list(set(answer.llm_answer.name for qa in expe for answer in qa.answers)),
+                    'questions': stats['questions'],#len(data['items']),
+                    'facts': stats['facts'],#sum(len(qa['facts']['items']) for qa in data['items'] if 'facts' in qa),
+                    'chunks': stats['chunks'],#total_chunks,
+                    'retriever': expe.meta.get('retriever_name', 'Not specified'),#retriever_name,
                     'resultsPath': file_path,
-                    'validationSet': data.get('meta', {}).get('validation_set', 'Unknown')
+                    'validationSet': expe.meta.get('validation_set', 'Unknown'),#data.get('meta', {}).get('validation_set', 'Unknown')
                 }
                 experiments.append(experiment_info)
-        
+        logging.error(f'{experiments}')
         return jsonify(experiments), 200
     except Exception as e:
-        logging.error(f"Error in get_all_experiments: {str(e)}")
-        return jsonify({'error': str(e)}), 500
+        logging.error(f"Error in get_all_experiments for file '{filename}'\n{str(e)}")
+        return jsonify({'error': str(e)}), 500		
 
 @main.route('/api/update-json', methods=['PUT'])
 def update_json():
