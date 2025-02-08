@@ -102,7 +102,8 @@ class AnsGenerator(TextGenerator):
             if prev_ans and prev_ans.eval:
                 ans.eval.human = prev_ans.eval.human
 
-            new_answers.append(ans)
+            # Prevent addition of None object
+            if ans: new_answers.append(ans)
 
         # end of the per LLM loop, answers have been generated or retrieved, write them in qa
         qa.answers = new_answers

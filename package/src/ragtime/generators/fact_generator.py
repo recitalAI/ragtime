@@ -28,13 +28,11 @@ class FactGenerator(TextGenerator):
             if ans.llm_answer
             else ""
         )
-        logger.info(
-            f"Generate Facts since it has a human validated answer (eval.human == 1.0){model_str}"
-        )
+        logger.info(f"Generate Facts since it has a human validated answer (eval.human == 1.0){model_str}")
         prev_facts: Facts = qa.facts
 
         # 2.a. and 2.b : prompt generation + Text generation with LLM
-        qa.facts = await self.llm.generate(
+        f = await self.llm.generate(
             cur_obj=Facts(),
             prev_obj=prev_facts,
             qa=qa,
@@ -43,3 +41,5 @@ class FactGenerator(TextGenerator):
             question=qa.question,
             answer=ans,
         )
+        # Prevent addition of None
+        if f: qa.facts = f

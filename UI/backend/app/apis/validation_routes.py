@@ -6,7 +6,8 @@ from .models.validation_models import *
 import os
 import json
 import glob
-from app.routes import VALIDATION_SETS_FOLDER, calculate_stats
+from ragtime.expe import Expe
+from app.routes import VALIDATION_SETS_FOLDER
 import logging
 from datetime import datetime
 
@@ -27,24 +28,26 @@ class ValidationSets(MethodView):
                     continue
                     
                 file_path = os.path.join(VALIDATION_SETS_FOLDER, filename)
-                with open(file_path, 'r') as f:
-                    data = json.load(f)
+                # with open(file_path, 'r') as f:
+                #     data = json.load(f)
+                expe:Expe = Expe(file_path)
 
-                name_parts = filename.split('_Validation_set_')
-                if len(name_parts) != 2:
-                    continue
+                # name_parts = filename.split('_Validation_set_')
+                # if len(name_parts) != 2:
+                #     continue
                     
-                name = name_parts[0]
-                counts = name_parts[1].replace('.json', '').split('_')
-                questions_count = int(counts[0][1:])
-                facts_count = int(counts[1][1:])
+                # name = name_parts[0]
+                # counts = name_parts[1].replace('.json', '').split('_')
+                # questions_count = int(counts[0][1:])
+                # facts_count = int(counts[1][1:])
 
-                stats = calculate_stats(data.get('items', []))
+                # stats = calculate_stats(data.get('items', []))
+                stats = expe.stats()
                 validation_sets.append({
-                    'name': name,
+                    'name': filename,
                     'date': datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S'),
-                    'questions': questions_count,
-                    'facts': facts_count,
+                    'questions': stats['questions'],
+                    'facts': stats['facts'],
                     'chunks': stats['chunks'],
                     'answers': stats['answers'],
                     'human_eval': stats['human eval'],

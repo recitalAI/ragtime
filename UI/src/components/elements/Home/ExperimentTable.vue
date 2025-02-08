@@ -45,17 +45,17 @@
       :show-footer="false"
     >
       <template #header>
-        <v-col cols="auto">
+        <v-col cols="1">
           <v-checkbox
             v-model="selectAll"
             @change="selectAllItems"
             hideDetails
           />
         </v-col>
-        <v-col cols="2">
+        <v-col cols="3">
           Name
         </v-col>
-        <v-col cols="2">
+        <v-col cols="1">
           Date
         </v-col>
         <v-col cols="2">
@@ -93,14 +93,14 @@
           class="table-row table-row-height"
           :key="experiment.id"
         >
-          <v-col cols="auto">
+          <v-col cols="1">
             <v-checkbox
               v-model="experiment.selected"
               color="primary"
               hideDetails
             />
           </v-col>
-          <v-col cols="2">
+          <v-col cols="3">
             <div
               class="ellipsis clickable primary--text"
               style="max-width: fit-content"
@@ -109,9 +109,9 @@
               {{ experiment.name }}
             </div>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="1">
             <small>
-              {{ formatDate(experiment.date) }}
+              {{ experiment.date }}
             </small>
           </v-col>
           <v-col cols="2">

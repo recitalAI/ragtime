@@ -47,7 +47,7 @@
       :show-footer="false"
     >
       <template #header>
-        <v-col cols="auto">
+        <v-col cols="1">
           <v-checkbox
             v-model="selectAll"
             @change="selectAllItems"
@@ -57,7 +57,7 @@
         <v-col cols="5">
           {{ $t('name') }}
         </v-col>
-        <v-col cols="2">
+        <v-col cols="1">
           {{ $t('date') }}
         </v-col>
         <v-col
@@ -91,7 +91,7 @@
           class="table-row table-row-height"
           :key="set.id"
         >
-          <v-col cols="auto">
+          <v-col cols="1">
             <v-checkbox
               v-model="set.selected"
               color="primary"
@@ -107,9 +107,9 @@
               {{ set.name }}
             </div>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="1">
             <small>
-              {{ formatDate(set.date) }}
+              {{ set.date }}
             </small>
           </v-col>
           <v-col
