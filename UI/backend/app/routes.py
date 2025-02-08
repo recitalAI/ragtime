@@ -211,21 +211,13 @@ def get_validation_sets():
                 file_path = os.path.join(VALIDATION_SETS_FOLDER, filename)
                 logging.info(f"Processing file: {file_path}")
                 try:
-                    with open(file_path, 'r') as f:
-                        data = json.load(f)
-
-                    # Extract name and counts from filename
-                    # name_parts = filename.split('_Validation_set_')
-                    # if len(name_parts) != 2:
-                    #     logging.warning(f"Unexpected filename format: {filename}")
-                    #     continue
-                    # name = name_parts[0]
-                    # counts = name_parts[1].replace('.json', '').split('_')
-                    # questions_count = int(counts[0][1:])
-                    # facts_count = int(counts[1][1:])
+                    expe:Expe = Expe(file_path)
+                    # with open(file_path, 'r') as f:
+                    #     data = json.load(f)
 
                     # Calculate stats
-                    stats = calculate_stats(data.get('items', []))
+                    # stats = calculate_stats(data.get('items', []))
+                    stats = expe.stats()
 
                     file_info = {
                         'name': filename,
@@ -240,9 +232,10 @@ def get_validation_sets():
                     }
                     validation_sets.append(file_info)
                 except Exception as e:
-                    logging.error(f"Error processing file {filename}: {str(e)}")
+                    logging.error(f'Error processing file "{filename}": {str(e)}')
 
         logging.info(f"Returning {len(validation_sets)} validation sets")
+        validation_sets = sorted(validation_sets, key=lambda x: x['date'], reverse=True)
         return jsonify(validation_sets), 200
     except Exception as e:
         logging.error(f"Error in get_validation_sets: {str(e)}")
@@ -273,19 +266,19 @@ def get_validation_set(name):
         logging.error(f"Error loading validation set: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
-def calculate_stats(items):
-    logging.info(f"Calculating stats for {len(items)} items")
-    stats = {
-        "questions": len(items),
-        "chunks": sum(len(qa.get('chunks', {}).get('items', [])) for qa in items),
-        "facts": sum(len(qa.get('facts', {}).get('items', [])) for qa in items),
-        "answers": sum(len(qa.get('answers', {}).get('items', [])) for qa in items),
-        "human eval": sum(sum(1 for a in qa.get('answers', {}).get('items', []) if a.get('eval', {}).get('human')) for qa in items),
-        "auto eval": sum(sum(1 for a in qa.get('answers', {}).get('items', []) if a.get('eval', {}).get('auto')) for qa in items),
-        "models": len(items[0].get('answers', {}).get('items', [])) if items else 0
-    }
-    logging.info(f"Calculated stats: {stats}")
-    return stats
+# def calculate_stats(items):
+#     logging.info(f"Calculating stats for {len(items)} items")
+#     stats = {
+#         "questions": len(items),
+#         "chunks": sum(len(qa.get('chunks', {}).get('items', [])) for qa in items),
+#         "facts": sum(len(qa.get('facts', {}).get('items', [])) for qa in items),
+#         "answers": sum(len(qa.get('answers', {}).get('items', [])) for qa in items),
+#         "human eval": sum(sum(1 for a in qa.get('answers', {}).get('items', []) if a.get('eval', {}).get('human')) for qa in items),
+#         "auto eval": sum(sum(1 for a in qa.get('answers', {}).get('items', []) if a.get('eval', {}).get('auto')) for qa in items),
+#         "models": len(items[0].get('answers', {}).get('items', [])) if items else 0
+#     }
+#     logging.info(f"Calculated stats: {stats}")
+#     return stats
 
 class DateTimeEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -566,22 +559,13 @@ def api_generate_facts():
 
 @main.route('/api/experiments', methods=['GET'])
 def get_all_experiments():
-    try:
-        experiments = []
-        for filename in os.listdir(EVALS_FOLDER):
-            if filename.endswith('.json'):
-                file_path = os.path.join(EVALS_FOLDER, filename)
-                # with open(file_path, 'r') as f:
-                #     data = json.load(f)
+    experiments = []
+    for filename in os.listdir(EVALS_FOLDER):
+        if filename.endswith('.json'):
+            file_path = os.path.join(EVALS_FOLDER, filename)
+            try:
                 expe:Expe = Expe(file_path)
                 stats = expe.stats()
-
-                # Calculate total chunks
-                # total_chunks = sum(len(qa.get('chunks', {}).get('items', [])) for qa in data['items'])
-                
-                # Get retriever name (assuming it's stored in the metadata)
-                # retriever_name = data.get('meta', {}).get('retriever_name', 'Not specified')
-                
                 experiment_info = {
                     'name': filename.replace('.json', ''),
                     'date': datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S'),
@@ -594,11 +578,11 @@ def get_all_experiments():
                     'validationSet': expe.meta.get('validation_set', 'Unknown'),#data.get('meta', {}).get('validation_set', 'Unknown')
                 }
                 experiments.append(experiment_info)
-        logging.error(f'{experiments}')
-        return jsonify(experiments), 200
-    except Exception as e:
-        logging.error(f"Error in get_all_experiments for file '{filename}'\n{str(e)}")
-        return jsonify({'error': str(e)}), 500		
+            except Exception as e:
+                logging.error(f'Cannot load "{filename}" - skip it\n{e}') 
+    # Sort experiments by date, newest first
+    experiments = sorted(experiments, key=lambda x: x['date'], reverse=True)
+    return jsonify(experiments), 200
 
 @main.route('/api/update-json', methods=['PUT'])
 def update_json():
