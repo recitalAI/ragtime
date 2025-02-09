@@ -25,6 +25,18 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
                              'SEARCH_USERNAME', 'SEARCH_PASSWORD', 'SEARCH_URL_LOGIN', 'SEARCH_URL_SEARCH',
                              'LSA_TOKEN'])
 
+
+######################################################
+# REMOVE HUMAN ANSWERS FROM EXPE
+######################################################
+expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json")
+for qa in expe:
+    qa.answers[0].eval.human = None
+    qa.answers[0].text = ""
+
+expe.save_to_json()
+
+
 ######################################################
 # RESTART EVALUATION ONLY FOR AN EXISTING EXPE
 ######################################################
