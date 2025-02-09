@@ -97,9 +97,13 @@ class EvalPrompterFRV2(Prompter):
             [int(match) for match in re.findall(r'(\d+)\.\s*\[?OK\]?', answer)])
         hallus_in_answer: set[int] = set(
             [int(match) for match in re.findall(r'(\d+)\.\s*\[?HALLU\]?', answer)])
-        # get the numbers in the true facts
-        true_facts: set[int] = set(
-            [int(s.text[0] if s.text[1] == "." else s.text[:2]) for s in qa.facts if s])
+        # get the numbers in the true facts - add them if not present
+        true_facts: set[int] = set()
+        for i, f in enumerate(qa.facts, start=1):
+            m = re.search("\d+\.", f.text)
+            true_facts.add(m.group() if m else i)
+        # true_facts: set[int] = set(
+        #     [int(s.text[0] if s.text[1] == "." else s.text[:2]) for s in qa.facts if s])
         true_facts_in_answer: set[int] = facts_in_answer & true_facts
         hallus_in_answer: set[int] = hallus_in_answer & true_facts
         true_facts_not_in_answer: set[int] = true_facts - \
