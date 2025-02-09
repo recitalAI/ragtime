@@ -22,7 +22,7 @@ class TextGenerator(RagtimeBase, ABC):
 
     llms: Optional[list[LLM]] = []
     # b_use_chunks: bool = False
-    wait_between_calls:int = 0
+    wait_between_calls:int = 0.4
 
     def __init__(self, llms: list = None, prompter:Prompter = None, wait_between_calls:int = 0):
         """
