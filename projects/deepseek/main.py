@@ -6,7 +6,7 @@ from ragtime.generators import AnsGenerator, EvalGenerator
 from ragtime.llms import LiteLLM
 from ragtime.expe import Expe, QA, Answer, Fact, Eval
 from classes import Search
-from ragtime.prompters.answer_prompters import AnsPrompterWithRetrieverFR
+from ragtime.prompters.answer_prompters import AnsPrompterWithRetrieverFR, AnsPrompterBase
 from ragtime.prompters.eval_prompters import EvalPrompterFRV2
 from pathlib import Path
 import json
@@ -23,18 +23,18 @@ logger.debug(f'*** PROJECT "{PROJECT_NAME}" STARTS')
 # If you're using Windows, make your environment variables accessible with the following instruction
 ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY',
                              'SEARCH_USERNAME', 'SEARCH_PASSWORD', 'SEARCH_URL_LOGIN', 'SEARCH_URL_SEARCH',
-                             'LSA_TOKEN'])
+                             'LSA_TOKEN', 'OPENROUTER_API_KEY'])
 
 
 ######################################################
 # REMOVE HUMAN ANSWERS FROM EXPE
 ######################################################
-expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json")
-for qa in expe:
-    qa.answers[0].eval.human = None
-    qa.answers[0].text = ""
+# expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json")
+# for qa in expe:
+#     qa.answers[0].eval.human = None
+#     qa.answers[0].text = ""
 
-expe.save_to_json()
+# expe.save_to_json()
 
 
 ######################################################
@@ -47,39 +47,38 @@ expe.save_to_json()
 # expe.save_to_json(path=FOLDER_EVALS)
 
 ######################################################
-# EVAL WITH DEEPSEEK
+# EVAL WITH DEEPSEEK AND A RETRIEVER
 ######################################################
-# # file_path:str = 'Cultural_Generic_Facts_10Q'
-# # file_path:str = 'LSA_Validation_set_full'
-# file_path:Path = FOLDER_VALIDATION_SETS / 'LSA_Validation_quest_facts_only--33Q_0C_111F_0M_0A_0HE_0AE_2025-02-05_23h15,43.json'
-
 # # First create an Expe object in which to load the Validation set
-# expe:Expe = Expe(file_path)
+expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_0M_0A_0HE_0AE_2025-02-09_22h36,23.json")
 
-# # Then create an Answer Generator to generate answers for every question in the Validation set
-# # The Answer generator is associated with an LLM made of 2 parts and with a Retriever
-# # The LLM contains the LLM itself, returning text from text, and a prompter, used to build the prompt sent to the LLM and to post-process its answer
-# # The Retriever gets the chunks used to build the prompt
-# ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='deepseek/deepseek-chat',
+# Then create an Answer Generator to generate answers for every question in the Validation set
+# The Answer generator is associated with an LLM made of 2 parts and with a Retriever
+# The LLM contains the LLM itself, returning text from text, and a prompter, used to build the prompt sent to the LLM and to post-process its answer
+# The Retriever gets the chunks used to build the prompt
+# ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='deepseek/deepseek-r1',
 #                                                   prompter=AnsPrompterWithRetrieverFR())],
 #                                                   retriever=Search())
+ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-r1',
+                                                  prompter=AnsPrompterBase())])
 
-# # In some cases, the LLMs does not answer correctly - in this case, use this loop to retry until all the questions have
-# # at least one answer
-# stats = expe.stats()
-# while stats['questions'] != stats['answers']:
-#     ans_gen.generate(expe=expe, b_missing_only=True)
-#     stats = expe.stats()
-#     expe.save_to_json()
 
-# expe.save_to_json(path=FOLDER_ANSWERS)
+# In some cases, the LLMs does not answer correctly - in this case, use this loop to retry until all the questions have
+# at least one answer
+stats = expe.stats()
+while stats['questions'] != stats['answers']:
+    ans_gen.generate(expe=expe, b_missing_only=True)
+    stats = expe.stats()
+    expe.save_to_json()
 
-# # Finally, evaluate the answers with respect to the Facts already present in the Validation set
-# # Similarly, a LLM is given to the EvalGenerator, with a model and a prompter, here specialized in evaluation
-# eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
-#                                                      prompter=EvalPrompterFRV2())])
-# eval_gen.generate(expe=expe)
-# expe.save_to_json(path=FOLDER_EVALS)
+expe.save_to_json(path=FOLDER_ANSWERS)
+
+# Finally, evaluate the answers with respect to the Facts already present in the Validation set
+# Similarly, a LLM is given to the EvalGenerator, with a model and a prompter, here specialized in evaluation
+eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
+                                                     prompter=EvalPrompterFRV2())])
+eval_gen.generate(expe=expe)
+expe.save_to_json(path=FOLDER_EVALS)
 
 ######################################################
 # CREATE NEW EXPE WITH ONLY QUESTIONS AND FACTS FROM AN EXISTING EXPE

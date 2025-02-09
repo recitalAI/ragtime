@@ -52,7 +52,7 @@ class LLMAnswer(RagtimeText):
     prompt: Optional[Prompt] = None
     name: Optional[str] = None
     full_name: Optional[str] = None
-    timestamp: datetime = Optional[datetime] 
+    timestamp: Optional[datetime] = None
     duration: Optional[float] = None  
     cost: Optional[float] = None
     chunks : Optional[list] = []
@@ -191,7 +191,7 @@ class Expe(RagtimeList[QA]):
         res["questions"] = len([qa for qa in self if qa and qa.question and qa.question.text])
         res["chunks"] = len([c for qa in self for c in qa.chunks if c])
         res["facts"] = len([f for qa in self for f in qa.facts if f])
-        res["models"] = len(set(a.llm_answer.name for qa in self for a in qa.answers if qa and qa.answers and a and a.llm_answer))
+        res["models"] = len(set(a.llm_answer.name for qa in self for a in qa.answers if qa and qa.answers and a and a.llm_answer and a.llm_answer.name))
         res["answers"] = len([a for qa in self for a in qa.answers if a and a.text])
         res["human eval"] = len(
             [a for qa in self for a in qa.answers if a and a.eval and a.eval.human is not None]
