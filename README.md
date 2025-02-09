@@ -1,4 +1,5 @@
-[[https://github.com/recitalAI/ragtime/blob/main/package/doc/img/Ragtime_logo.png|alt=ragtime]]
+![ragtime](https://github.com/recitalAI/ragtime/blob/main/package/doc/img/Ragtime_logo.png)
+
 # Presentation
 **Ragtime** 🎹 is an LLMOps framework which allows you to automatically:
 1. evaluate a Retrieval Augmented Generation (RAG) system
