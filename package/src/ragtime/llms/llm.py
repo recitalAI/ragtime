@@ -99,7 +99,10 @@ class LLM(RagtimeBase):
             and start_from <= StartFrom.post_process
         ):
             logger.debug(f"Post-process {cur_class_name}")
-            self.prompter.post_process(qa=qa, cur_obj=result)
+            try:
+                self.prompter.post_process(qa=qa, cur_obj=result)
+            except Exception as e:
+                logger.exception(f'Error while post-processing\n{e}')
         else:
             logger.debug("Reuse post-processing")
 
@@ -170,5 +173,5 @@ class LiteLLM(LLM):
                 cost=cost,
             )
         except Exception as e:
-            logger.debug(f"Faile to process the Answer. {e}")
+            logger.debug(f"Failed to process the Answer.\n{e}")
         return LLMAnswer()

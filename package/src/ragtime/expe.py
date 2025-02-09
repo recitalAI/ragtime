@@ -194,10 +194,10 @@ class Expe(RagtimeList[QA]):
         res["models"] = len(self[0].answers)
         res["answers"] = len([a for qa in self for a in qa.answers if a and a.text])
         res["human eval"] = len(
-            [a for qa in self for a in qa.answers if a and a.eval and a.eval.human]
+            [a for qa in self for a in qa.answers if a and a.eval and a.eval.human is not None]
         )
         res["auto eval"] = len(
-            [a for qa in self for a in qa.answers if a and a.eval and a.eval.auto]
+            [a for qa in self for a in qa.answers if a and a.eval and a.eval.auto is not None]
         )
         return res
 
