@@ -191,7 +191,7 @@ class Expe(RagtimeList[QA]):
         res["questions"] = len([qa for qa in self if qa and qa.question and qa.question.text])
         res["chunks"] = len([c for qa in self for c in qa.chunks if c])
         res["facts"] = len([f for qa in self for f in qa.facts if f])
-        res["models"] = len(self[0].answers)
+        res["models"] = len(set(a.llm_answer.name for qa in self for a in qa.answers if qa and qa.answers and a and a.llm_answer))
         res["answers"] = len([a for qa in self for a in qa.answers if a and a.text])
         res["human eval"] = len(
             [a for qa in self for a in qa.answers if a and a.eval and a.eval.human is not None]
