@@ -1027,3 +1027,1267 @@ This model isn't mapped yet. model=, custom_llm_provider=openrouter. Add it here
 [2025-02-09 21:52:04,610] [EvalGenerator][19/93] End question "What was the impact of the Arab Spring on global politics?"
 [2025-02-09 21:52:06,857] [EvalGenerator][66/93][EvalPrompterFRV2] Post-process Eval
 [2025-02-09 21:52:06,868] [EvalGenerator][66/93] End question "What is the impact of urbanization on environmental sustainability?"
+[2025-02-10 08:38:18,403] 33 tasks created
+[2025-02-10 08:38:18,407] [AnsGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:18,409] [AnsGenerator][1/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,409] [AnsGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,433] [AnsGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:18,433] [AnsGenerator][2/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,435] [AnsGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,468] [AnsGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:18,490] [AnsGenerator][3/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,522] [AnsGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,540] [AnsGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:18,541] [AnsGenerator][4/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,542] [AnsGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,542] [AnsGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:18,543] [AnsGenerator][5/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,544] [AnsGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,544] [AnsGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:18,545] [AnsGenerator][6/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,547] [AnsGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,548] [AnsGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:18,549] [AnsGenerator][7/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,550] [AnsGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,550] [AnsGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:18,551] [AnsGenerator][8/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,552] [AnsGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,552] [AnsGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:18,553] [AnsGenerator][9/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,554] [AnsGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,554] [AnsGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:18,555] [AnsGenerator][10/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,555] [AnsGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,556] [AnsGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:18,558] [AnsGenerator][11/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,558] [AnsGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,558] [AnsGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:18,559] [AnsGenerator][12/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,560] [AnsGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,560] [AnsGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:18,562] [AnsGenerator][13/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,562] [AnsGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,563] [AnsGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:18,564] [AnsGenerator][14/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,565] [AnsGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,565] [AnsGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:18,566] [AnsGenerator][15/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,567] [AnsGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,567] [AnsGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:18,568] [AnsGenerator][16/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,568] [AnsGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,569] [AnsGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:18,570] [AnsGenerator][17/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,570] [AnsGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,571] [AnsGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:18,572] [AnsGenerator][18/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,572] [AnsGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,573] [AnsGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:18,573] [AnsGenerator][19/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,574] [AnsGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,575] [AnsGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:18,577] [AnsGenerator][20/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,577] [AnsGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,578] [AnsGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:18,579] [AnsGenerator][21/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,579] [AnsGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,580] [AnsGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:18,582] [AnsGenerator][22/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,582] [AnsGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,582] [AnsGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:18,584] [AnsGenerator][23/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,584] [AnsGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,584] [AnsGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:18,586] [AnsGenerator][24/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,586] [AnsGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,587] [AnsGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:18,588] [AnsGenerator][25/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,588] [AnsGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,588] [AnsGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:18,589] [AnsGenerator][26/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,589] [AnsGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,590] [AnsGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:18,592] [AnsGenerator][27/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,592] [AnsGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,593] [AnsGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:18,595] [AnsGenerator][28/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,595] [AnsGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,596] [AnsGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:18,598] [AnsGenerator][29/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,598] [AnsGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,598] [AnsGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:18,600] [AnsGenerator][30/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,600] [AnsGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,601] [AnsGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:18,602] [AnsGenerator][31/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,602] [AnsGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,603] [AnsGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:18,605] [AnsGenerator][32/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,605] [AnsGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:18,605] [AnsGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:18,607] [AnsGenerator][33/33][AnsPrompterBase] Generate prompt
+[2025-02-10 08:38:18,607] [AnsGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:23,690] [AnsGenerator][30/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:23,701] [AnsGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:23,844] [AnsGenerator][14/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:23,849] [AnsGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:24,875] [AnsGenerator][23/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:24,879] [AnsGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:24,941] [AnsGenerator][6/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:24,943] [AnsGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:26,715] [AnsGenerator][10/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:26,722] [AnsGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:28,039] [AnsGenerator][28/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,042] [AnsGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:28,063] [AnsGenerator][4/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,067] [AnsGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:28,092] [AnsGenerator][9/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,094] [AnsGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:28,167] [AnsGenerator][31/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,171] [AnsGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:28,175] [AnsGenerator][24/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,180] [AnsGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:28,657] [AnsGenerator][8/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,661] [AnsGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:28,672] [AnsGenerator][5/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,675] [AnsGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:28,774] [AnsGenerator][33/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,775] [AnsGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:28,923] [AnsGenerator][2/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,925] [AnsGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:28,932] [AnsGenerator][25/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:28,936] [AnsGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:29,064] [AnsGenerator][27/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:29,069] [AnsGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:29,371] [AnsGenerator][18/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:29,373] [AnsGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:29,375] [AnsGenerator][22/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:29,380] [AnsGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:29,986] [AnsGenerator][26/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:29,988] [AnsGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:30,302] [AnsGenerator][3/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:30,308] [AnsGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:30,318] [AnsGenerator][17/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:30,324] [AnsGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:31,001] [AnsGenerator][15/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:31,007] [AnsGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:31,092] [AnsGenerator][21/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:31,096] [AnsGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:31,419] [AnsGenerator][32/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:31,422] [AnsGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:32,142] [AnsGenerator][16/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:32,144] [AnsGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:32,147] [AnsGenerator][20/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:32,149] [AnsGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:32,404] [AnsGenerator][12/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:32,411] [AnsGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:32,442] [AnsGenerator][19/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:32,445] [AnsGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:32,789] [AnsGenerator][11/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:32,793] [AnsGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:33,262] [AnsGenerator][29/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:33,265] [AnsGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:33,777] [AnsGenerator][13/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:33,783] [AnsGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:35,929] [AnsGenerator][7/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:35,935] [AnsGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:40,542] [AnsGenerator][1/33][AnsPrompterBase] Post-process Answer
+[2025-02-10 08:38:40,544] [AnsGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:40,546] 33 tasks created
+[2025-02-10 08:38:40,547] [EvalGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:40,548] [EvalGenerator][1/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,548] [EvalGenerator][1/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,548] [EvalGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,549] [EvalGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:40,550] [EvalGenerator][2/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,550] [EvalGenerator][2/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,550] [EvalGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,551] [EvalGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:40,552] [EvalGenerator][3/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,552] [EvalGenerator][3/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,553] [EvalGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,555] [EvalGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:40,556] [EvalGenerator][4/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,556] [EvalGenerator][4/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,557] [EvalGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,557] [EvalGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:40,558] [EvalGenerator][5/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,559] [EvalGenerator][5/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,559] [EvalGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,559] [EvalGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:40,565] [EvalGenerator][6/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,565] [EvalGenerator][6/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,565] [EvalGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,566] [EvalGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:40,567] [EvalGenerator][7/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,567] [EvalGenerator][7/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,567] [EvalGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,568] [EvalGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:40,569] [EvalGenerator][8/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,570] [EvalGenerator][8/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,570] [EvalGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,570] [EvalGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:40,572] [EvalGenerator][9/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,572] [EvalGenerator][9/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,572] [EvalGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,573] [EvalGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:40,574] [EvalGenerator][10/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,574] [EvalGenerator][10/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,574] [EvalGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,574] [EvalGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:40,576] [EvalGenerator][11/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,576] [EvalGenerator][11/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,576] [EvalGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,576] [EvalGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:40,578] [EvalGenerator][12/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,578] [EvalGenerator][12/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,578] [EvalGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,578] [EvalGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:40,579] [EvalGenerator][13/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,580] [EvalGenerator][13/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,580] [EvalGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,580] [EvalGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:40,581] [EvalGenerator][14/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,582] [EvalGenerator][14/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,582] [EvalGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,583] [EvalGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:40,584] [EvalGenerator][15/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,585] [EvalGenerator][15/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,585] [EvalGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,586] [EvalGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:40,588] [EvalGenerator][16/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,588] [EvalGenerator][16/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,588] [EvalGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,589] [EvalGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:40,590] [EvalGenerator][17/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,591] [EvalGenerator][17/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,591] [EvalGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,592] [EvalGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:40,593] [EvalGenerator][18/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,594] [EvalGenerator][18/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,594] [EvalGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,595] [EvalGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:40,596] [EvalGenerator][19/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,596] [EvalGenerator][19/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,596] [EvalGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,597] [EvalGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:40,599] [EvalGenerator][20/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,599] [EvalGenerator][20/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,599] [EvalGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,600] [EvalGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:40,601] [EvalGenerator][21/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,601] [EvalGenerator][21/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,602] [EvalGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,602] [EvalGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:40,604] [EvalGenerator][22/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,605] [EvalGenerator][22/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,606] [EvalGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,607] [EvalGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:40,608] [EvalGenerator][23/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,608] [EvalGenerator][23/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,609] [EvalGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,609] [EvalGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:40,610] [EvalGenerator][24/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,611] [EvalGenerator][24/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,611] [EvalGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,612] [EvalGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:40,613] [EvalGenerator][25/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,613] [EvalGenerator][25/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,613] [EvalGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,614] [EvalGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:40,615] [EvalGenerator][26/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,616] [EvalGenerator][26/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,616] [EvalGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,616] [EvalGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:40,618] [EvalGenerator][27/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,618] [EvalGenerator][27/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,618] [EvalGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,619] [EvalGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:40,621] [EvalGenerator][28/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,621] [EvalGenerator][28/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,621] [EvalGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,622] [EvalGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:40,623] [EvalGenerator][29/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,624] [EvalGenerator][29/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,624] [EvalGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,625] [EvalGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:40,626] [EvalGenerator][30/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,627] [EvalGenerator][30/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,628] [EvalGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,630] [EvalGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:40,631] [EvalGenerator][31/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,631] [EvalGenerator][31/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,631] [EvalGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,632] [EvalGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:40,633] [EvalGenerator][32/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,634] [EvalGenerator][32/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,634] [EvalGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,634] [EvalGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:40,636] [EvalGenerator][33/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:40,636] [EvalGenerator][33/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:40,636] [EvalGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:45,867] [EvalGenerator][28/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:45,873] [EvalGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:46,991] [EvalGenerator][11/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:46,994] [EvalGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:47,193] [EvalGenerator][30/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:47,198] [EvalGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:47,520] [EvalGenerator][3/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:47,522] [EvalGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:47,914] [EvalGenerator][10/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:47,919] [EvalGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:48,172] [EvalGenerator][33/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,173] [EvalGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:48,210] [EvalGenerator][7/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,211] [EvalGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:48,735] [EvalGenerator][25/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,738] [EvalGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:48,742] [EvalGenerator][29/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,745] [EvalGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:48,748] [EvalGenerator][8/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,750] [EvalGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:48,963] [EvalGenerator][13/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:48,967] [EvalGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:49,542] [EvalGenerator][14/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:49,543] [EvalGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:49,749] [EvalGenerator][18/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:49,752] [EvalGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:49,808] [EvalGenerator][4/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:49,810] [EvalGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:49,951] [EvalGenerator][32/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:49,953] [EvalGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:50,051] [EvalGenerator][23/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:50,054] [EvalGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:50,363] [EvalGenerator][31/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:50,365] [EvalGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:50,771] [EvalGenerator][26/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:50,773] [EvalGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:50,817] [EvalGenerator][21/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:50,820] [EvalGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:51,180] [EvalGenerator][5/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:51,182] [EvalGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:51,520] [EvalGenerator][16/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:51,523] [EvalGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:51,898] [EvalGenerator][12/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:51,900] [EvalGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:52,211] [EvalGenerator][27/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:52,213] [EvalGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:52,462] 33 tasks created
+[2025-02-10 08:38:52,464] [AnsGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:52,464] [AnsGenerator][1/33] Compute chunks
+[2025-02-10 08:38:52,476] [AnsGenerator][1/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,477] [AnsGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,480] [AnsGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:52,486] [AnsGenerator][2/33] Compute chunks
+[2025-02-10 08:38:52,488] [AnsGenerator][2/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,488] [AnsGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,489] [AnsGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:52,492] [AnsGenerator][3/33] Compute chunks
+[2025-02-10 08:38:52,493] [AnsGenerator][3/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,493] [AnsGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,494] [AnsGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:52,496] [AnsGenerator][4/33] Compute chunks
+[2025-02-10 08:38:52,497] [AnsGenerator][4/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,497] [AnsGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,498] [AnsGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:52,501] [AnsGenerator][5/33] Compute chunks
+[2025-02-10 08:38:52,502] [AnsGenerator][5/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,503] [AnsGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,503] [AnsGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:52,506] [AnsGenerator][6/33] Compute chunks
+[2025-02-10 08:38:52,508] [AnsGenerator][6/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,508] [AnsGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,508] [AnsGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:52,511] [AnsGenerator][7/33] Compute chunks
+[2025-02-10 08:38:52,512] [AnsGenerator][7/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,512] [AnsGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,513] [EvalGenerator][24/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:52,513] [AnsGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:52,513] [AnsGenerator][8/33] Compute chunks
+[2025-02-10 08:38:52,514] [EvalGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:52,516] [AnsGenerator][8/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,517] [AnsGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,518] [AnsGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:52,519] [AnsGenerator][9/33] Compute chunks
+[2025-02-10 08:38:52,521] [AnsGenerator][9/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,521] [AnsGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,522] [AnsGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:52,523] [AnsGenerator][10/33] Compute chunks
+[2025-02-10 08:38:52,525] [AnsGenerator][10/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,525] [AnsGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,526] [AnsGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:52,528] [AnsGenerator][11/33] Compute chunks
+[2025-02-10 08:38:52,530] [AnsGenerator][11/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,530] [AnsGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,531] [AnsGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:52,534] [AnsGenerator][12/33] Compute chunks
+[2025-02-10 08:38:52,536] [AnsGenerator][12/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,537] [AnsGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,539] [AnsGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:52,540] [AnsGenerator][13/33] Compute chunks
+[2025-02-10 08:38:52,542] [AnsGenerator][13/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,542] [AnsGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,542] [AnsGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:52,544] [AnsGenerator][14/33] Compute chunks
+[2025-02-10 08:38:52,546] [AnsGenerator][14/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,546] [AnsGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,547] [AnsGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:52,549] [AnsGenerator][15/33] Compute chunks
+[2025-02-10 08:38:52,550] [AnsGenerator][15/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,550] [AnsGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,551] [AnsGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:52,553] [AnsGenerator][16/33] Compute chunks
+[2025-02-10 08:38:52,555] [AnsGenerator][16/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,555] [AnsGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,555] [AnsGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:52,557] [AnsGenerator][17/33] Compute chunks
+[2025-02-10 08:38:52,559] [AnsGenerator][17/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,559] [AnsGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,560] [AnsGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:52,562] [AnsGenerator][18/33] Compute chunks
+[2025-02-10 08:38:52,563] [AnsGenerator][18/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,564] [AnsGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,564] [AnsGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:52,565] [AnsGenerator][19/33] Compute chunks
+[2025-02-10 08:38:52,567] [AnsGenerator][19/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,567] [AnsGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,568] [AnsGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:52,570] [AnsGenerator][20/33] Compute chunks
+[2025-02-10 08:38:52,571] [AnsGenerator][20/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,571] [AnsGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,572] [AnsGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:52,573] [AnsGenerator][21/33] Compute chunks
+[2025-02-10 08:38:52,574] [AnsGenerator][21/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,575] [AnsGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,576] [AnsGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:52,577] [AnsGenerator][22/33] Compute chunks
+[2025-02-10 08:38:52,578] [AnsGenerator][22/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,578] [AnsGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,579] [AnsGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:52,580] [AnsGenerator][23/33] Compute chunks
+[2025-02-10 08:38:52,582] [AnsGenerator][23/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,583] [AnsGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,584] [AnsGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:52,585] [AnsGenerator][24/33] Compute chunks
+[2025-02-10 08:38:52,587] [AnsGenerator][24/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,587] [AnsGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,588] [AnsGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:52,589] [AnsGenerator][25/33] Compute chunks
+[2025-02-10 08:38:52,590] [AnsGenerator][25/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,590] [AnsGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,591] [AnsGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:52,593] [AnsGenerator][26/33] Compute chunks
+[2025-02-10 08:38:52,594] [AnsGenerator][26/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,594] [AnsGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,595] [AnsGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:52,597] [AnsGenerator][27/33] Compute chunks
+[2025-02-10 08:38:52,598] [AnsGenerator][27/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,598] [AnsGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,599] [AnsGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:52,601] [AnsGenerator][28/33] Compute chunks
+[2025-02-10 08:38:52,603] [AnsGenerator][28/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,603] [AnsGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,603] [AnsGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:52,605] [AnsGenerator][29/33] Compute chunks
+[2025-02-10 08:38:52,618] [AnsGenerator][29/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,619] [AnsGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,619] [AnsGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:52,621] [AnsGenerator][30/33] Compute chunks
+[2025-02-10 08:38:52,622] [AnsGenerator][30/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,623] [AnsGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,624] [AnsGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:52,625] [AnsGenerator][31/33] Compute chunks
+[2025-02-10 08:38:52,627] [AnsGenerator][31/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,627] [AnsGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,628] [AnsGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:52,629] [AnsGenerator][32/33] Compute chunks
+[2025-02-10 08:38:52,631] [AnsGenerator][32/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,631] [AnsGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,633] [AnsGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:52,635] [AnsGenerator][33/33] Compute chunks
+[2025-02-10 08:38:52,636] [AnsGenerator][33/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:38:52,637] [AnsGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:52,988] [EvalGenerator][2/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:52,991] [EvalGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:53,044] [EvalGenerator][19/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:53,047] [EvalGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:53,243] [EvalGenerator][6/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:53,245] [EvalGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:54,259] [EvalGenerator][1/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:54,262] [EvalGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:54,266] [EvalGenerator][17/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:54,270] [EvalGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:54,476] [AnsGenerator][17/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,060] [EvalGenerator][15/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:55,062] [EvalGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:55,157] [AnsGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:55,186] [AnsGenerator][1/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,192] [AnsGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:55,194] [AnsGenerator][18/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,199] [AnsGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:55,201] [AnsGenerator][7/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,205] [AnsGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:55,207] [AnsGenerator][22/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,212] [AnsGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:55,214] [AnsGenerator][3/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,221] [AnsGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:55,224] [AnsGenerator][19/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,228] [AnsGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:55,231] [AnsGenerator][4/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,236] [AnsGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:55,238] [AnsGenerator][10/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,243] [AnsGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:55,246] [AnsGenerator][8/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,250] [AnsGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:55,253] [AnsGenerator][2/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,258] [AnsGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:55,260] [AnsGenerator][9/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,265] [AnsGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:55,269] [AnsGenerator][5/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,273] [AnsGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:55,276] [AnsGenerator][32/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,282] [AnsGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:55,285] [AnsGenerator][6/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,290] [AnsGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:55,293] [AnsGenerator][28/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,298] [AnsGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:55,302] [AnsGenerator][33/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,306] [AnsGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:55,309] [AnsGenerator][29/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,314] [AnsGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:55,317] [AnsGenerator][14/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,322] [AnsGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:55,342] [AnsGenerator][12/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,346] [AnsGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:55,348] [AnsGenerator][11/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,353] [AnsGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:55,397] [AnsGenerator][13/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,401] [AnsGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:55,691] [AnsGenerator][16/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:55,705] [AnsGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:56,509] [EvalGenerator][9/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:56,513] [EvalGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:57,202] [AnsGenerator][20/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,209] [AnsGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:57,230] [AnsGenerator][24/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,237] [AnsGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:57,288] [AnsGenerator][26/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,294] [AnsGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:57,310] [AnsGenerator][23/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,316] [AnsGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:57,353] [AnsGenerator][30/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,358] [AnsGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:57,406] [AnsGenerator][15/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,411] [AnsGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:57,458] [AnsGenerator][21/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,462] [AnsGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:57,479] [AnsGenerator][31/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,487] [AnsGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:57,517] [AnsGenerator][27/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,521] [AnsGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:57,660] [AnsGenerator][25/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:38:57,669] [AnsGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:57,671] 33 tasks created
+[2025-02-10 08:38:57,671] [EvalGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:38:57,672] [EvalGenerator][1/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,672] [EvalGenerator][1/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,673] [EvalGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,674] [EvalGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:38:57,676] [EvalGenerator][2/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,677] [EvalGenerator][2/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,677] [EvalGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,678] [EvalGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:38:57,680] [EvalGenerator][3/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,680] [EvalGenerator][3/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,680] [EvalGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,681] [EvalGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:38:57,684] [EvalGenerator][4/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,684] [EvalGenerator][4/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,685] [EvalGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,685] [EvalGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:38:57,687] [EvalGenerator][5/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,688] [EvalGenerator][5/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,688] [EvalGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,689] [EvalGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:38:57,691] [EvalGenerator][6/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,691] [EvalGenerator][6/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,691] [EvalGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,692] [EvalGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:38:57,692] [EvalGenerator][7/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,694] [EvalGenerator][7/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,694] [EvalGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,699] [EvalGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:38:57,702] [EvalGenerator][8/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,702] [EvalGenerator][8/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,702] [EvalGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,703] [EvalGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:38:57,705] [EvalGenerator][9/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,705] [EvalGenerator][9/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,707] [EvalGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,708] [EvalGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:38:57,709] [EvalGenerator][10/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,710] [EvalGenerator][10/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,710] [EvalGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,711] [EvalGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:38:57,713] [EvalGenerator][11/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,713] [EvalGenerator][11/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,713] [EvalGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,714] [EvalGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:38:57,716] [EvalGenerator][12/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,716] [EvalGenerator][12/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,717] [EvalGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,717] [EvalGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:38:57,720] [EvalGenerator][13/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,720] [EvalGenerator][13/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,720] [EvalGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,721] [EvalGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:38:57,723] [EvalGenerator][14/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,723] [EvalGenerator][14/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,723] [EvalGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,724] [EvalGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:38:57,726] [EvalGenerator][15/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,726] [EvalGenerator][15/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,727] [EvalGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,727] [EvalGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:38:57,730] [EvalGenerator][16/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,730] [EvalGenerator][16/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,730] [EvalGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,731] [EvalGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:38:57,733] [EvalGenerator][17/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,733] [EvalGenerator][17/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,734] [EvalGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,735] [EvalGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:38:57,737] [EvalGenerator][18/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,737] [EvalGenerator][18/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,737] [EvalGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,738] [EvalGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:38:57,740] [EvalGenerator][19/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,740] [EvalGenerator][19/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,740] [EvalGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,741] [EvalGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:57,743] [EvalGenerator][20/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,743] [EvalGenerator][20/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,743] [EvalGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,744] [EvalGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:38:57,744] [EvalGenerator][21/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,746] [EvalGenerator][21/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,747] [EvalGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,747] [EvalGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:57,750] [EvalGenerator][22/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,750] [EvalGenerator][22/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,750] [EvalGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,751] [EvalGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:38:57,753] [EvalGenerator][23/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,754] [EvalGenerator][23/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,754] [EvalGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,755] [EvalGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:38:57,756] [EvalGenerator][24/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,757] [EvalGenerator][24/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,757] [EvalGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,758] [EvalGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:57,759] [EvalGenerator][25/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,760] [EvalGenerator][25/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,760] [EvalGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,761] [EvalGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:57,762] [EvalGenerator][26/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,763] [EvalGenerator][26/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,763] [EvalGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,764] [EvalGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:38:57,765] [EvalGenerator][27/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,766] [EvalGenerator][27/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,766] [EvalGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,767] [EvalGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:38:57,769] [EvalGenerator][28/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,769] [EvalGenerator][28/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,769] [EvalGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,770] [EvalGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:38:57,772] [EvalGenerator][29/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,774] [EvalGenerator][29/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,774] [EvalGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,777] [EvalGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:38:57,780] [EvalGenerator][30/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,780] [EvalGenerator][30/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,780] [EvalGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,781] [EvalGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:38:57,784] [EvalGenerator][31/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,784] [EvalGenerator][31/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,785] [EvalGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,785] [EvalGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:38:57,787] [EvalGenerator][32/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,788] [EvalGenerator][32/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,788] [EvalGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,789] [EvalGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:38:57,791] [EvalGenerator][33/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,791] [EvalGenerator][33/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:38:57,792] [EvalGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:38:57,948] [EvalGenerator][20/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:57,963] [EvalGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:38:58,251] [EvalGenerator][22/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:38:58,255] [EvalGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:38:58,340] Expe saved as JSON to /app/app/../files/evaluation_results/LSA Mistral--33Q_0C_111F_1M_33A_0HE_33AE_2025-02-10_08h38,58.json
+[2025-02-10 08:39:01,731] [EvalGenerator][11/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:01,733] [EvalGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:39:02,352] [EvalGenerator][14/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:02,355] [EvalGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:39:02,656] [EvalGenerator][3/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:02,660] [EvalGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:39:02,957] [EvalGenerator][8/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:02,959] [EvalGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:39:03,008] [EvalGenerator][24/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,009] [EvalGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:39:03,077] [EvalGenerator][7/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,078] [EvalGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:39:03,273] [EvalGenerator][32/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,275] [EvalGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:39:03,332] [EvalGenerator][21/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,334] [EvalGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:39:03,393] [EvalGenerator][29/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,395] [EvalGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:39:03,675] [EvalGenerator][33/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,677] [EvalGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:39:03,881] [EvalGenerator][30/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,884] [EvalGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:39:03,888] [EvalGenerator][25/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:03,890] [EvalGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:39:04,187] [EvalGenerator][5/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:04,189] [EvalGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:39:04,315] [EvalGenerator][12/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:04,319] [EvalGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:39:04,372] [EvalGenerator][4/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:04,373] [EvalGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:39:04,812] [EvalGenerator][28/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:04,816] [EvalGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:39:04,824] [EvalGenerator][13/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:04,827] [EvalGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:39:06,542] [EvalGenerator][23/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:06,544] [EvalGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:39:07,056] [EvalGenerator][9/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:07,058] [EvalGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:39:07,061] [EvalGenerator][31/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:07,063] [EvalGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:39:07,258] [EvalGenerator][27/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:07,260] [EvalGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:39:07,872] [EvalGenerator][1/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:07,874] [EvalGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:39:08,075] [EvalGenerator][10/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:08,077] [EvalGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:39:08,143] [EvalGenerator][18/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:08,150] [EvalGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:39:08,210] [EvalGenerator][16/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:08,213] [EvalGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:39:08,363] [EvalGenerator][6/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:08,365] [EvalGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:39:09,102] [EvalGenerator][15/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:09,104] [EvalGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:39:09,406] [EvalGenerator][2/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:09,409] [EvalGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:39:09,817] [EvalGenerator][22/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:09,820] [EvalGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:39:10,225] [EvalGenerator][20/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:10,230] [EvalGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:39:10,293] [EvalGenerator][19/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:10,297] [EvalGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:39:11,060] [EvalGenerator][26/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:11,069] [EvalGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:39:12,583] [EvalGenerator][17/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:39:12,586] [EvalGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:39:12,601] Expe saved as JSON to /app/app/../files/evaluation_results/LSA Mistral--33Q_0C_111F_1M_33A_0HE_33AE_2025-02-10_08h39,12.json
+[2025-02-10 08:40:23,864] 33 tasks created
+[2025-02-10 08:40:23,867] [AnsGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:23,867] [AnsGenerator][1/33] Compute chunks
+[2025-02-10 08:40:23,872] [AnsGenerator][1/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,873] [AnsGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,882] [AnsGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:23,888] [AnsGenerator][2/33] Compute chunks
+[2025-02-10 08:40:23,898] [AnsGenerator][2/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,898] [AnsGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,899] [AnsGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:23,900] [AnsGenerator][3/33] Compute chunks
+[2025-02-10 08:40:23,901] [AnsGenerator][3/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,902] [AnsGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,902] [AnsGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:23,903] [AnsGenerator][4/33] Compute chunks
+[2025-02-10 08:40:23,905] [AnsGenerator][4/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,906] [AnsGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,906] [AnsGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:23,907] [AnsGenerator][5/33] Compute chunks
+[2025-02-10 08:40:23,909] [AnsGenerator][5/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,909] [AnsGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,909] [AnsGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:23,911] [AnsGenerator][6/33] Compute chunks
+[2025-02-10 08:40:23,912] [AnsGenerator][6/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,912] [AnsGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,913] [AnsGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:23,914] [AnsGenerator][7/33] Compute chunks
+[2025-02-10 08:40:23,915] [AnsGenerator][7/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,915] [AnsGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,916] [AnsGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:23,917] [AnsGenerator][8/33] Compute chunks
+[2025-02-10 08:40:23,919] [AnsGenerator][8/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,919] [AnsGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,920] [AnsGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:23,921] [AnsGenerator][9/33] Compute chunks
+[2025-02-10 08:40:23,922] [AnsGenerator][9/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,922] [AnsGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,923] [AnsGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:23,924] [AnsGenerator][10/33] Compute chunks
+[2025-02-10 08:40:23,926] [AnsGenerator][10/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,926] [AnsGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,926] [AnsGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:23,928] [AnsGenerator][11/33] Compute chunks
+[2025-02-10 08:40:23,929] [AnsGenerator][11/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,929] [AnsGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,930] [AnsGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:23,931] [AnsGenerator][12/33] Compute chunks
+[2025-02-10 08:40:23,932] [AnsGenerator][12/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,932] [AnsGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,933] [AnsGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:23,934] [AnsGenerator][13/33] Compute chunks
+[2025-02-10 08:40:23,937] [AnsGenerator][13/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,937] [AnsGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,938] [AnsGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:23,940] [AnsGenerator][14/33] Compute chunks
+[2025-02-10 08:40:23,941] [AnsGenerator][14/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,941] [AnsGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,942] [AnsGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:23,943] [AnsGenerator][15/33] Compute chunks
+[2025-02-10 08:40:23,944] [AnsGenerator][15/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,945] [AnsGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,945] [AnsGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:23,947] [AnsGenerator][16/33] Compute chunks
+[2025-02-10 08:40:23,948] [AnsGenerator][16/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,948] [AnsGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,949] [AnsGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:23,950] [AnsGenerator][17/33] Compute chunks
+[2025-02-10 08:40:23,951] [AnsGenerator][17/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,951] [AnsGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,952] [AnsGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:23,954] [AnsGenerator][18/33] Compute chunks
+[2025-02-10 08:40:23,956] [AnsGenerator][18/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,956] [AnsGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,957] [AnsGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:23,957] [AnsGenerator][19/33] Compute chunks
+[2025-02-10 08:40:23,959] [AnsGenerator][19/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,960] [AnsGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,960] [AnsGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:23,961] [AnsGenerator][20/33] Compute chunks
+[2025-02-10 08:40:23,962] [AnsGenerator][20/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,963] [AnsGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,963] [AnsGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:23,965] [AnsGenerator][21/33] Compute chunks
+[2025-02-10 08:40:23,966] [AnsGenerator][21/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,966] [AnsGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,967] [AnsGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:23,968] [AnsGenerator][22/33] Compute chunks
+[2025-02-10 08:40:23,969] [AnsGenerator][22/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,969] [AnsGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,970] [AnsGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:23,971] [AnsGenerator][23/33] Compute chunks
+[2025-02-10 08:40:23,973] [AnsGenerator][23/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,973] [AnsGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,973] [AnsGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:23,975] [AnsGenerator][24/33] Compute chunks
+[2025-02-10 08:40:23,976] [AnsGenerator][24/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,976] [AnsGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,977] [AnsGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:23,978] [AnsGenerator][25/33] Compute chunks
+[2025-02-10 08:40:23,979] [AnsGenerator][25/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,979] [AnsGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,980] [AnsGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:23,981] [AnsGenerator][26/33] Compute chunks
+[2025-02-10 08:40:23,982] [AnsGenerator][26/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,982] [AnsGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,983] [AnsGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:23,984] [AnsGenerator][27/33] Compute chunks
+[2025-02-10 08:40:23,985] [AnsGenerator][27/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,986] [AnsGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,987] [AnsGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:23,987] [AnsGenerator][28/33] Compute chunks
+[2025-02-10 08:40:23,989] [AnsGenerator][28/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,989] [AnsGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,990] [AnsGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:23,991] [AnsGenerator][29/33] Compute chunks
+[2025-02-10 08:40:23,992] [AnsGenerator][29/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,992] [AnsGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,993] [AnsGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:23,994] [AnsGenerator][30/33] Compute chunks
+[2025-02-10 08:40:23,995] [AnsGenerator][30/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,995] [AnsGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,996] [AnsGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:23,997] [AnsGenerator][31/33] Compute chunks
+[2025-02-10 08:40:23,998] [AnsGenerator][31/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:23,999] [AnsGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:23,999] [AnsGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:24,000] [AnsGenerator][32/33] Compute chunks
+[2025-02-10 08:40:24,001] [AnsGenerator][32/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:24,001] [AnsGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:24,002] [AnsGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:24,004] [AnsGenerator][33/33] Compute chunks
+[2025-02-10 08:40:24,005] [AnsGenerator][33/33][AnsPrompterWithRetrieverFR] Generate prompt
+[2025-02-10 08:40:24,005] [AnsGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:25,898] [AnsGenerator][1/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,520] [AnsGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:26,591] [AnsGenerator][10/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,597] [AnsGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:26,599] [AnsGenerator][17/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,608] [AnsGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:26,618] [AnsGenerator][4/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,626] [AnsGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:26,629] [AnsGenerator][7/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,634] [AnsGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:26,638] [AnsGenerator][22/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,643] [AnsGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:26,645] [AnsGenerator][3/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,655] [AnsGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:26,658] [AnsGenerator][18/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,664] [AnsGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:26,667] [AnsGenerator][19/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,674] [AnsGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:26,676] [AnsGenerator][23/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,682] [AnsGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:26,684] [AnsGenerator][9/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,691] [AnsGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:26,694] [AnsGenerator][2/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,699] [AnsGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:26,703] [AnsGenerator][8/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,709] [AnsGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:26,711] [AnsGenerator][24/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,715] [AnsGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:26,718] [AnsGenerator][11/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,726] [AnsGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:26,729] [AnsGenerator][5/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,733] [AnsGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:26,741] [AnsGenerator][6/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,745] [AnsGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:26,748] [AnsGenerator][28/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,756] [AnsGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:26,791] [AnsGenerator][12/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,799] [AnsGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:26,804] [AnsGenerator][31/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,810] [AnsGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:26,841] [AnsGenerator][26/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:26,847] [AnsGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:27,129] [AnsGenerator][16/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:27,134] [AnsGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:27,141] [AnsGenerator][15/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:27,146] [AnsGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:27,643] [AnsGenerator][29/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:27,650] [AnsGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:28,126] [AnsGenerator][14/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:28,140] [AnsGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:28,312] [AnsGenerator][30/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:28,331] [AnsGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:28,577] [AnsGenerator][13/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:28,593] [AnsGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:28,768] [AnsGenerator][27/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:28,775] [AnsGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:29,085] [AnsGenerator][21/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:29,102] [AnsGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:29,112] [AnsGenerator][33/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:29,121] [AnsGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:29,283] [AnsGenerator][25/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:29,292] [AnsGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:29,719] [AnsGenerator][32/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:29,734] [AnsGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:30,222] [AnsGenerator][20/33][AnsPrompterWithRetrieverFR] Post-process Answer
+[2025-02-10 08:40:30,230] [AnsGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:30,231] 33 tasks created
+[2025-02-10 08:40:30,232] [EvalGenerator][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:30,232] [EvalGenerator][1/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,232] [EvalGenerator][1/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,233] [EvalGenerator][1/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,233] [EvalGenerator][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:30,236] [EvalGenerator][2/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,237] [EvalGenerator][2/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,237] [EvalGenerator][2/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,238] [EvalGenerator][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:30,240] [EvalGenerator][3/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,241] [EvalGenerator][3/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,241] [EvalGenerator][3/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,241] [EvalGenerator][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:30,243] [EvalGenerator][4/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,243] [EvalGenerator][4/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,243] [EvalGenerator][4/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,244] [EvalGenerator][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:30,244] [EvalGenerator][5/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,246] [EvalGenerator][5/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,246] [EvalGenerator][5/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,247] [EvalGenerator][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:30,248] [EvalGenerator][6/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,248] [EvalGenerator][6/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,249] [EvalGenerator][6/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,249] [EvalGenerator][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:30,249] [EvalGenerator][7/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,258] [EvalGenerator][7/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,258] [EvalGenerator][7/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,258] [EvalGenerator][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:30,260] [EvalGenerator][8/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,260] [EvalGenerator][8/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,260] [EvalGenerator][8/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,260] [EvalGenerator][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:30,262] [EvalGenerator][9/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,262] [EvalGenerator][9/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,262] [EvalGenerator][9/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,263] [EvalGenerator][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:30,264] [EvalGenerator][10/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,264] [EvalGenerator][10/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,264] [EvalGenerator][10/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,265] [EvalGenerator][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:30,267] [EvalGenerator][11/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,267] [EvalGenerator][11/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,267] [EvalGenerator][11/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,269] [EvalGenerator][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:30,272] [EvalGenerator][12/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,273] [EvalGenerator][12/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,273] [EvalGenerator][12/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,274] [EvalGenerator][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:30,274] [EvalGenerator][13/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,275] [EvalGenerator][13/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,276] [EvalGenerator][13/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,276] [EvalGenerator][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:30,277] [EvalGenerator][14/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,278] [EvalGenerator][14/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,278] [EvalGenerator][14/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,279] [EvalGenerator][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:30,280] [EvalGenerator][15/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,280] [EvalGenerator][15/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,280] [EvalGenerator][15/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,281] [EvalGenerator][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:30,282] [EvalGenerator][16/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,282] [EvalGenerator][16/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,282] [EvalGenerator][16/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,283] [EvalGenerator][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:30,285] [EvalGenerator][17/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,285] [EvalGenerator][17/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,286] [EvalGenerator][17/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,287] [EvalGenerator][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:30,289] [EvalGenerator][18/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,290] [EvalGenerator][18/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,290] [EvalGenerator][18/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,291] [EvalGenerator][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:30,292] [EvalGenerator][19/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,293] [EvalGenerator][19/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,294] [EvalGenerator][19/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,295] [EvalGenerator][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:30,296] [EvalGenerator][20/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,296] [EvalGenerator][20/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,296] [EvalGenerator][20/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,297] [EvalGenerator][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:30,299] [EvalGenerator][21/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,299] [EvalGenerator][21/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,299] [EvalGenerator][21/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,300] [EvalGenerator][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:30,303] [EvalGenerator][22/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,304] [EvalGenerator][22/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,304] [EvalGenerator][22/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,305] [EvalGenerator][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:30,308] [EvalGenerator][23/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,308] [EvalGenerator][23/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,309] [EvalGenerator][23/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,310] [EvalGenerator][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:30,312] [EvalGenerator][24/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,312] [EvalGenerator][24/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,314] [EvalGenerator][24/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,315] [EvalGenerator][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:30,317] [EvalGenerator][25/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,318] [EvalGenerator][25/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,318] [EvalGenerator][25/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,320] [EvalGenerator][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:30,322] [EvalGenerator][26/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,323] [EvalGenerator][26/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,323] [EvalGenerator][26/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,324] [EvalGenerator][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:30,326] [EvalGenerator][27/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,327] [EvalGenerator][27/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,327] [EvalGenerator][27/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,327] [EvalGenerator][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:30,329] [EvalGenerator][28/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,329] [EvalGenerator][28/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,329] [EvalGenerator][28/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,330] [EvalGenerator][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:30,332] [EvalGenerator][29/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,332] [EvalGenerator][29/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,332] [EvalGenerator][29/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,333] [EvalGenerator][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:30,337] [EvalGenerator][30/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,337] [EvalGenerator][30/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,338] [EvalGenerator][30/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,339] [EvalGenerator][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:30,341] [EvalGenerator][31/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,341] [EvalGenerator][31/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,341] [EvalGenerator][31/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,342] [EvalGenerator][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:30,344] [EvalGenerator][32/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,344] [EvalGenerator][32/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,345] [EvalGenerator][32/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,345] [EvalGenerator][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:30,347] [EvalGenerator][33/33] Generate Eval for answer generated with "mistral/mistral-large-latest"
+[2025-02-10 08:40:30,348] [EvalGenerator][33/33][EvalPrompterFRV2] Generate prompt
+[2025-02-10 08:40:30,348] [EvalGenerator][33/33][mistral/mistral-large-latest] Generate LLMAnswer with "mistral/mistral-large-latest"
+[2025-02-10 08:40:32,428] [EvalGenerator][24/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:32,434] [EvalGenerator][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:33,581] [EvalGenerator][11/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:33,582] [EvalGenerator][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:34,214] [EvalGenerator][14/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:34,225] [EvalGenerator][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:34,877] [EvalGenerator][21/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:34,880] [EvalGenerator][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:34,891] [EvalGenerator][3/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:34,893] [EvalGenerator][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:34,899] [EvalGenerator][8/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:34,905] [EvalGenerator][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:35,337] [EvalGenerator][25/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:35,345] [EvalGenerator][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:35,358] [EvalGenerator][28/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:35,360] [EvalGenerator][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:35,366] [EvalGenerator][32/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:35,370] [EvalGenerator][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:35,840] [EvalGenerator][30/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:35,842] [EvalGenerator][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:35,875] [EvalGenerator][33/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:35,877] [EvalGenerator][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:36,595] [EvalGenerator][4/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:36,597] [EvalGenerator][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:36,601] [EvalGenerator][12/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:36,603] [EvalGenerator][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:37,275] [EvalGenerator][5/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:37,278] [EvalGenerator][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:37,781] [EvalGenerator][9/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:37,783] [EvalGenerator][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:37,790] [EvalGenerator][7/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:37,793] [EvalGenerator][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:38,157] [EvalGenerator][10/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:38,159] [EvalGenerator][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:39,009] [EvalGenerator][27/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,012] [EvalGenerator][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:39,194] [EvalGenerator][2/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,196] [EvalGenerator][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:39,204] [EvalGenerator][31/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,206] [EvalGenerator][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:39,339] [EvalGenerator][29/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,342] [EvalGenerator][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:39,471] [EvalGenerator][13/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,474] [EvalGenerator][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:39,692] [EvalGenerator][6/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,695] [EvalGenerator][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:39,893] [EvalGenerator][18/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:39,897] [EvalGenerator][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:40,094] [EvalGenerator][23/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:40,097] [EvalGenerator][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:40,223] [EvalGenerator][16/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:40,226] [EvalGenerator][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:41,880] [EvalGenerator][15/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:41,884] [EvalGenerator][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:42,410] [EvalGenerator][22/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:42,416] [EvalGenerator][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:43,466] [EvalGenerator][20/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:43,471] [EvalGenerator][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:43,702] [EvalGenerator][19/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:43,705] [EvalGenerator][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:44,610] [EvalGenerator][17/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:44,616] [EvalGenerator][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:45,874] [EvalGenerator][1/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:45,876] [EvalGenerator][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:46,217] [EvalGenerator][26/33][EvalPrompterFRV2] Post-process Eval
+[2025-02-10 08:40:46,219] [EvalGenerator][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:46,221] 33 tasks created
+[2025-02-10 08:40:46,222] [EvalGeneratorChunks][1/33] *** Question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:46,222] [EvalGeneratorChunks][1/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,222] [EvalGeneratorChunks][1/33] End question "Quels sont les justificatifs de domicile pour un SDF ?"
+[2025-02-10 08:40:46,223] [EvalGeneratorChunks][2/33] *** Question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:46,223] [EvalGeneratorChunks][2/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,223] [EvalGeneratorChunks][2/33] End question "Est-ce que je peux accepter une résiliation en Loi Hamon pour un chauffeur UBER ?"
+[2025-02-10 08:40:46,224] [EvalGeneratorChunks][3/33] *** Question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:46,224] [EvalGeneratorChunks][3/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,225] [EvalGeneratorChunks][3/33] End question "Dois-je prendre des frais de transfert de garantie sur une provenance Uber ?"
+[2025-02-10 08:40:46,226] [EvalGeneratorChunks][4/33] *** Question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:46,227] [EvalGeneratorChunks][4/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,229] [EvalGeneratorChunks][4/33] End question "Dois-je retourner des documents médicaux à l'assuré ?"
+[2025-02-10 08:40:46,231] [EvalGeneratorChunks][5/33] *** Question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:46,232] [EvalGeneratorChunks][5/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,232] [EvalGeneratorChunks][5/33] End question "Je reçoit l'accusé d'enregistrement mais la date de cession n'apparait pas, dois-je mettre la pièce en 'reçu' ?"
+[2025-02-10 08:40:46,232] [EvalGeneratorChunks][6/33] *** Question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:46,232] [EvalGeneratorChunks][6/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,233] [EvalGeneratorChunks][6/33] End question "En santé animale que veux dire 'phytothérapie' ?"
+[2025-02-10 08:40:46,233] [EvalGeneratorChunks][7/33] *** Question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:46,233] [EvalGeneratorChunks][7/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,233] [EvalGeneratorChunks][7/33] End question "Quelles sont les règles de reprise contentieux en santé animale ?"
+[2025-02-10 08:40:46,234] [EvalGeneratorChunks][8/33] *** Question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:46,234] [EvalGeneratorChunks][8/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,234] [EvalGeneratorChunks][8/33] End question "Pendant combien de temps je peux utiliser le montant au crédit du compte lors d'une reprise tempo ?"
+[2025-02-10 08:40:46,234] [EvalGeneratorChunks][9/33] *** Question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:46,235] [EvalGeneratorChunks][9/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,235] [EvalGeneratorChunks][9/33] End question "Lors d'une reprise CX, si le client revient au delà des 36 mois, dois-je reprendre le montant des impayés ?"
+[2025-02-10 08:40:46,235] [EvalGeneratorChunks][10/33] *** Question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:46,235] [EvalGeneratorChunks][10/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,235] [EvalGeneratorChunks][10/33] End question "Dans le devis MRH, quelle est la définition d'objet de valeur ?"
+[2025-02-10 08:40:46,236] [EvalGeneratorChunks][11/33] *** Question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:46,236] [EvalGeneratorChunks][11/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,236] [EvalGeneratorChunks][11/33] End question "Je reçois un permis étranger dont le pays ne pratique pas le principe de réciprocité dois-je mettre la pièce en Non valide ?"
+[2025-02-10 08:40:46,237] [EvalGeneratorChunks][12/33] *** Question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:46,237] [EvalGeneratorChunks][12/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,237] [EvalGeneratorChunks][12/33] End question "Est-ce que je peux accepter un RIB au nom d'une société pour un contrat au nom d'un particulier ?"
+[2025-02-10 08:40:46,237] [EvalGeneratorChunks][13/33] *** Question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:46,238] [EvalGeneratorChunks][13/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,238] [EvalGeneratorChunks][13/33] End question "mon client m’adresse un constat non signé par le tiers (véhicule assuré à la maaf), mon assuré n’est pas totalement responsable. j’ouvre le dossier et quelle(s) action(s) j’effectue en plus de mon ar client, de l’add edi et de la fiche elexia ?"
+[2025-02-10 08:40:46,238] [EvalGeneratorChunks][14/33] *** Question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:46,238] [EvalGeneratorChunks][14/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,239] [EvalGeneratorChunks][14/33] End question "lorsque dans un intervalle de cinq ans suivant une première invalidation, un permis de conduire est invalidé une deuxième fois pour perte totale de points, son titulaire ne peut solliciter un nouveau permis avant l’expiration d’un délai de : ?"
+[2025-02-10 08:40:46,239] [EvalGeneratorChunks][15/33] *** Question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:46,239] [EvalGeneratorChunks][15/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,239] [EvalGeneratorChunks][15/33] End question "lors de l’établissement du devis, le prospect (artisan) souhaite assurer son véhicule pour des tournées régulières.   sur le j.3 de la carte grise nous avons la mention véhicule de démonstration, pourras-t-on l’assurer ?"
+[2025-02-10 08:40:46,239] [EvalGeneratorChunks][16/33] *** Question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:46,240] [EvalGeneratorChunks][16/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,241] [EvalGeneratorChunks][16/33] End question "sur la période de 30 jours de garantie provisoire, un client qui souscrit une formule en tous risques. bénéficie-t-il de l’ensemble des garanties souscrites pendant sa période temporaire ?"
+[2025-02-10 08:40:46,241] [EvalGeneratorChunks][17/33] *** Question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:46,241] [EvalGeneratorChunks][17/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,242] [EvalGeneratorChunks][17/33] End question "Que faire en cas d'invalidation du permis ?"
+[2025-02-10 08:40:46,243] [EvalGeneratorChunks][18/33] *** Question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:46,243] [EvalGeneratorChunks][18/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,246] [EvalGeneratorChunks][18/33] End question "Le permis anglais est-il accepté ?"
+[2025-02-10 08:40:46,247] [EvalGeneratorChunks][19/33] *** Question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:46,248] [EvalGeneratorChunks][19/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,248] [EvalGeneratorChunks][19/33] End question "Qui sont les tiers autorisés à réaliser un devis par téléphone ?"
+[2025-02-10 08:40:46,248] [EvalGeneratorChunks][20/33] *** Question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:46,249] [EvalGeneratorChunks][20/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,249] [EvalGeneratorChunks][20/33] End question "Je peux reconstituer les antécédents si le souscripteur conduit un véhicule de fonction ?"
+[2025-02-10 08:40:46,250] [EvalGeneratorChunks][21/33] *** Question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:46,250] [EvalGeneratorChunks][21/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,250] [EvalGeneratorChunks][21/33] End question "Quel mode de financement retenir si le client a payé à crédit et que celui-ci est remboursé ?"
+[2025-02-10 08:40:46,250] [EvalGeneratorChunks][22/33] *** Question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:46,251] [EvalGeneratorChunks][22/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,251] [EvalGeneratorChunks][22/33] End question "Définition de ce qu'est une franchise ?"
+[2025-02-10 08:40:46,251] [EvalGeneratorChunks][23/33] *** Question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:46,251] [EvalGeneratorChunks][23/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,252] [EvalGeneratorChunks][23/33] End question "Qu'est-ce qu'une durée d'inhabitation en MRH ?"
+[2025-02-10 08:40:46,252] [EvalGeneratorChunks][24/33] *** Question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:46,252] [EvalGeneratorChunks][24/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,253] [EvalGeneratorChunks][24/33] End question "Le lien du site Annuaire des entreprises"
+[2025-02-10 08:40:46,253] [EvalGeneratorChunks][25/33] *** Question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:46,253] [EvalGeneratorChunks][25/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,253] [EvalGeneratorChunks][25/33] End question "je possède l’information « intervention des autorités : oui » mais je n’ai pas les coordonnées postales ainsi que le nom de la brigade d’intervention. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:46,254] [EvalGeneratorChunks][26/33] *** Question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:46,254] [EvalGeneratorChunks][26/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,254] [EvalGeneratorChunks][26/33] End question "dans nos process lsa, si le prospect déclare une suspension judiciaire du permis pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:46,254] [EvalGeneratorChunks][27/33] *** Question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:46,255] [EvalGeneratorChunks][27/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,255] [EvalGeneratorChunks][27/33] End question "la carte grise est au nom de la société, est-ce que je peux assurer le véhicule si le souscripteur est la société et que le conducteur principal est un employé de la société ?"
+[2025-02-10 08:40:46,255] [EvalGeneratorChunks][28/33] *** Question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:46,256] [EvalGeneratorChunks][28/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,256] [EvalGeneratorChunks][28/33] End question "après l’invalidation d’un permis de conduire suite à plusieurs infractions au code de la route, le nouveau permis de conduire obtenu est un permis probatoire de 6 points ?"
+[2025-02-10 08:40:46,256] [EvalGeneratorChunks][29/33] *** Question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:46,256] [EvalGeneratorChunks][29/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,257] [EvalGeneratorChunks][29/33] End question "mon assuré a été blessé dans l’accident. il s’agit d’une perte de contrôle sans tiers impliqué. il ne possède pas de garantie dta. quelle action dois-je effectuer ?"
+[2025-02-10 08:40:46,257] [EvalGeneratorChunks][30/33] *** Question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:46,257] [EvalGeneratorChunks][30/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,258] [EvalGeneratorChunks][30/33] End question "un conducteur qui, après une invalidation pour solde de points nul, sollicite un nouveau permis de conduire , est dispensé d’épreuve pratique à condition : ?"
+[2025-02-10 08:40:46,258] [EvalGeneratorChunks][31/33] *** Question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:46,258] [EvalGeneratorChunks][31/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,258] [EvalGeneratorChunks][31/33] End question "si le prospect déclare une suspension judiciaire du permis  pour stupéfiant au cours des 5 dernières années, quels justificatifs peut-il nous transmettre ?"
+[2025-02-10 08:40:46,259] [EvalGeneratorChunks][32/33] *** Question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:46,259] [EvalGeneratorChunks][32/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,259] [EvalGeneratorChunks][32/33] End question "suite à un délit de fuite, notre assuré explique qu’il a eu une suspension de son permis de conduire, quels sont les documents que nous devons réclamer ?"
+[2025-02-10 08:40:46,260] [EvalGeneratorChunks][33/33] *** Question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:46,260] [EvalGeneratorChunks][33/33] No chunks, cannot generate Evals
+[2025-02-10 08:40:46,260] [EvalGeneratorChunks][33/33] End question "dans le cas où l’assuré omet de déclarer son annulation de permis, l’assureur peut-il décider d’appliquer une nullité du contrat d’assurance ?"
+[2025-02-10 08:40:46,284] Expe saved as JSON to /app/app/../files/evaluation_results/LSA DS V3 And+Facts--33Q_0C_111F_1M_33A_0HE_33AE_2025-02-10_08h40,46.json
