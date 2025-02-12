@@ -56,10 +56,10 @@ expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F
 # The Answer generator is associated with an LLM made of 2 parts and with a Retriever
 # The LLM contains the LLM itself, returning text from text, and a prompter, used to build the prompt sent to the LLM and to post-process its answer
 # The Retriever gets the chunks used to build the prompt
-# ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='deepseek/deepseek-r1',
+# ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-chat',
 #                                                   prompter=AnsPrompterWithRetrieverFR())],
 #                                                   retriever=Search())
-ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-r1',
+ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-chat',
                                                   prompter=AnsPrompterBase())])
 
 
