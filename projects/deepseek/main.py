@@ -4,7 +4,7 @@ import ragtime
 from ragtime import expe
 from ragtime.generators import AnsGenerator, EvalGenerator
 from ragtime.llms import LiteLLM
-from ragtime.expe import Expe, QA, Answer, Fact, Eval
+from ragtime.expe import Expe, QA, Answer, Fact, Eval, StartFrom
 from classes import Search
 from ragtime.prompters.answer_prompters import AnsPrompterWithRetrieverFR, AnsPrompterBase
 from ragtime.prompters.eval_prompters import EvalPrompterFRV2
@@ -38,7 +38,16 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
 
 
 ######################################################
-# RESTART EVALUATION ONLY FOR AN EXISTING EXPE
+# RE EXECUTE EVALUATION POST PROCESSING FOR AN EXISTING EXPE
+######################################################
+expe:Expe = Expe(FOLDER_EVALS / "LSA_GPT4o--33Q_330C_111F_1M_33A_0HE_33AE_2025-02-11_22h34,06.json")
+eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
+                                                     prompter=EvalPrompterFRV2())])
+eval_gen.generate(expe=expe, start_from=StartFrom.post_process)
+expe.save_to_json(path=FOLDER_EVALS)
+
+######################################################
+# RESTART EVALUATION FOR MISSING VALUES ONLY FOR AN EXISTING EXPE
 ######################################################
 # expe:Expe = Expe(FOLDER_EVALS / "Culture_GenericFacts_Propaganda--93Q_0C_93F_1M_93A_0HE_0AE_2025-02-09_16h38,29.json")
 # eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
@@ -49,9 +58,9 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
 ######################################################
 # EVAL WITH DEEPSEEK AND A RETRIEVER
 ######################################################
-# # First create an Expe object in which to load the Validation set
-expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_0M_0A_0HE_0AE_2025-02-09_22h36,23.json")
-
+# First create an Expe object in which to load the Validation set
+# expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_0M_0A_0HE_0AE_2025-02-09_22h36,23.json")
+# 
 # Then create an Answer Generator to generate answers for every question in the Validation set
 # The Answer generator is associated with an LLM made of 2 parts and with a Retriever
 # The LLM contains the LLM itself, returning text from text, and a prompter, used to build the prompt sent to the LLM and to post-process its answer
@@ -59,26 +68,26 @@ expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F
 # ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-chat',
 #                                                   prompter=AnsPrompterWithRetrieverFR())],
 #                                                   retriever=Search())
-ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-chat',
-                                                  prompter=AnsPrompterBase())])
+# ans_gen:AnsGenerator = AnsGenerator(llms=[LiteLLM(name='openrouter/deepseek/deepseek-chat',
+                                                #   prompter=AnsPrompterBase())])
 
 
 # In some cases, the LLMs does not answer correctly - in this case, use this loop to retry until all the questions have
 # at least one answer
-stats = expe.stats()
-while stats['questions'] != stats['answers']:
-    ans_gen.generate(expe=expe, b_missing_only=True)
-    stats = expe.stats()
-    expe.save_to_json()
+# stats = expe.stats()
+# while stats['questions'] != stats['answers']:
+#     ans_gen.generate(expe=expe, b_missing_only=True)
+#     stats = expe.stats()
+#     expe.save_to_json()
 
-expe.save_to_json(path=FOLDER_ANSWERS)
+# expe.save_to_json(path=FOLDER_ANSWERS)
 
 # Finally, evaluate the answers with respect to the Facts already present in the Validation set
 # Similarly, a LLM is given to the EvalGenerator, with a model and a prompter, here specialized in evaluation
-eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
-                                                     prompter=EvalPrompterFRV2())])
-eval_gen.generate(expe=expe)
-expe.save_to_json(path=FOLDER_EVALS)
+# eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
+#                                                      prompter=EvalPrompterFRV2())])
+# eval_gen.generate(expe=expe)
+# expe.save_to_json(path=FOLDER_EVALS)
 
 ######################################################
 # CREATE NEW EXPE WITH ONLY QUESTIONS AND FACTS FROM AN EXISTING EXPE
