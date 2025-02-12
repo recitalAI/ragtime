@@ -101,7 +101,7 @@ class EvalPrompterFRV2(Prompter):
         true_facts: set[int] = set()
         for i, f in enumerate(qa.facts, start=1):
             m = re.search("\d+\.", f.text)
-            true_facts.add(m.group() if m else i)
+            true_facts.add(int(m.group()[:-1]) if m else i)
         # true_facts: set[int] = set(
         #     [int(s.text[0] if s.text[1] == "." else s.text[:2]) for s in qa.facts if s])
         true_facts_in_answer: set[int] = facts_in_answer & true_facts
