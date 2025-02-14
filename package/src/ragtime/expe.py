@@ -182,6 +182,8 @@ class Expe(RagtimeList[QA]):
         DEfault is n_first = 0 to load eveything"""
         super().__init__()
         if json_path:
+            if isinstance(json_path, str):
+                json_path = Path(json_path)
             self.json_path = json_path
             self.load_from_json(path=json_path, n_first=n_first)
 
@@ -417,6 +419,8 @@ class Expe(RagtimeList[QA]):
         Saves Expe to an HTML file from a Jinja template - can generate a suffix for the filename
         Returns the Path of the file actually saved
         """
+        if isinstance(path, str): path = Path(path)
+        if isinstance(template_path, str): template_path = Path(template_path)
         path: Path = self._file_check_before_writing(path, b_overwrite=b_overwrite, b_add_suffix=b_add_suffix, force_ext=".html")
         environment = Environment(loader=FileSystemLoader(searchpath=template_path.parent, encoding="utf-8")        )
         render_params:dict[str, bool] = {
