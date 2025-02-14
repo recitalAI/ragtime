@@ -99,8 +99,9 @@ class TextGenerator(RagtimeBase, ABC):
                     only_llms=only_llms,
                 )
             except Exception as e:
+                msg:str = "Exception caught" + (" - saving what has been done so far" if save_on_error else "") + str(e)
+                logger.exception(msg)
                 if save_on_error:
-                    logger.exception(f"Exception caught - saving what has been done so far:\n{e}")
                     expe.save_to_json(b_overwrite=True)
                     expe.save_temp(name=f"Stopped_at_{num_q}_of_{nb_q}_")
                 return
