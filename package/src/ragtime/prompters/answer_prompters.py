@@ -38,6 +38,8 @@ class AnsPrompterWithRetrieverFR(Prompter):
     FLD_QUEST_OK: str = "q_ok"
     FLD_CHUNKS_OK: str = "chunks_ok"
     FLD_ANSWER: str = "answer"
+    FLD_CHUNK_TITLE:str = "display_name"
+    FLD_CHUNK_PAGE:str = "page_number"
 
     system:str = f"""
 Tu es un expert qui doit répondre à des questions à l'aide de paragraphes qui te sont fournis.
@@ -77,8 +79,8 @@ Contenu
         # Compute the user prompt
         chunks_as_list: list[str] = [
             fmt_chunk_to_str.format(
-                title=chunk.meta["display_name"],
-                page=chunk.meta["page_number"],
+                title=chunk.meta.get(self.FLD_CHUNK_TITLE, "?"),
+                page=chunk.meta.get(self.FLD_CHUNK_PAGE, "?"),
                 text=chunk.text,
             )
             for chunk in chunks
@@ -180,11 +182,11 @@ Contenu
         # Calc nb sources in answer even if the JSON is not well formatted
         ans_formatted: str = fmt_name(cur_obj.llm_answer.text)
         docs_in_chunks: dict[str, str] = {
-            c.meta["display_name"]: fmt_name(c.meta["display_name"]) for c in qa.chunks
+            c.meta.get(self.FLD_CHUNK_TITLE, "?"): fmt_name(c.meta.get(self.FLD_CHUNK_TITLE, "?")) for c in qa.chunks
         }
         docs_page_in_chunks: dict[str] = {
-            f'{c.meta["display_name"]} p.{c.meta["page_number"]}': fmt_name(
-                f'{c.meta["display_name"]}p.{c.meta["page_number"]}'
+            f'{c.meta.get(self.FLD_CHUNK_TITLE, "?")} p.{c.meta.get(self.FLD_CHUNK_PAGE, "?")}': fmt_name(
+                f'{c.meta.get(self.FLD_CHUNK_TITLE, "?")}p.{c.meta.get(self.FLD_CHUNK_PAGE, "?")}'
             )
             for c in qa.chunks
         }

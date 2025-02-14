@@ -72,12 +72,7 @@ class AnsGenerator(TextGenerator):
         new_answers: Answer = Answers()
         actual_llms: list[LLM] = ([l for l in self.llms if l in only_llms] if only_llms else self.llms)
 
-        original_prefix: str = logger.prefix
-
         for llm in actual_llms:
-            # logger.prefix = f"{original_prefix}[{llm.name}]"
-            # logger.info(f"* Start with LLM")
-
             # Get existing Answer if any
             prev_ans: Optional[Answer] = [a for a in qa.answers
                                           if a and a.llm_answer and (a.llm_answer.name == llm.name or a.llm_answer.full_name == llm.name)]
