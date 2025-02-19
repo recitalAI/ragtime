@@ -2,3 +2,8 @@ UI/backend/.env
 **/__pycache__/*
 **/launch.json
 **/logs/*
+.cursor
+.vscode
+**/~*
+**/Albert*
+**/LSA*
