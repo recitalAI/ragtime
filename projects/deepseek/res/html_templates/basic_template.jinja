@@ -1,178 +1,769 @@
-<!--
-This Jinja templates needs the "expe" variable to generate the HTML.
-Moreover, it uses several boolean variables to control the rendering:
-- "show_answers": True to show the answers for each model
-- "show_chunks": True to show the Chunks in a table (images on the left column, text on the right)
-- "show_facts": True to show the Facts
-- "show_evals": True to show the Evaluations
--->
+<!DOCTYPE html>
 <html>
 <head>
-  <style>
-    h3 {
-      background-color: LightGray;
-      padding: 0px;
-    }
-
-    table {
-      border-collapse: collapse;
-      background-color: #FFFFFF;
-    }
-
-    tr {
-      border-bottom: 1px solid #ccc;
-    }
-
-    img {
-      width: 100%;
-      width: 800;
-      display: block;
-    }
-
-    .my_img {
-      width: 100px;
-      vertical-align: middle;
-    }
-
-    * {
-      font-family: Arial
-    }
-
-    .collapsible {
-      background-color: #777;
-      border-bottom: 1px solid #ccc;
-      color: white;
-      cursor: pointer;
-      padding: 3px;
-      width: 100%;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-    }
-
-    .active,
-    .collapsible:hover {
-      background-color: #555;
-    }
-
-    .content {
-      padding: 0px;
-      display: none;
-      overflow: hidden;
-      /*background-color: #f1f1f1;*/
-    }
-    .facts {
-      text-decoration: underline;
-      color: #0000EE;
-      font-weight: bold;
-    }
-    .facts2 {
-      text-decoration: underline;
-      color: #4c00b0;
-      font-weight: bold;
-    }
-    .ok {
-      text-decoration: underline;
-      color: #019477;
-      font-weight: bold;
-    }
-    .notfound {
-      text-decoration: underline;
-      color: #082f6d;
-      font-weight: bold;
-    }
-    .hallu {
-      text-decoration: underline;
-      color: #FF1111;
-      font-weight: bold;
-    }
-    .chunk {
-      text-decoration: underline;
-      color: #FFA500;
-      font-weight: bold;
-    } 
-    .extra {
-      text-decoration: underline;
-      color: #e47a0a;
-      font-weight: bold;
-    } 
-    .model_name {
-      background-color: #ffffa0;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-  <span style="font-size: 20px;">{{ report_name }}</span>
-  <!-- For each QA -->
-  {% for qa in expe %}
-    <!-- Question -->
-    <button type="button" class="collapsible">
-      <h2>{{ loop.index }}. {{ qa.question.text }}</h2>
-    </button>
-    <div class="content">
-      <!-- Facts -->
-      {% if show_facts is defined and show_facts %}
-        <h3>Facts{% if (qa.facts.llm_answer) %} <i>({{qa.facts.llm_answer.name}})</i>{% endif %}</h3>
-        {% for fact in qa.facts %}
-          {{ sub('^\d+\.', '<span class="facts">\g<0></span>', fact.text) }}<br/>
-        {% endfor %}
-      {% endif %}
-      <!-- Answers -->
-      {% if (show_answers is defined and show_answers) or (show_evals is defined and show_evals) %}
-        {% if (show_answers is defined and show_answers) %}<h3>Answers</h3>{% else %}<br/>{% endif %}
-        {% for answer in qa.answers %}
-          <span class="model_name">{{ answer.llm_answer.full_name }}</span> &nbsp;
-          {% if (show_answers is defined and show_answers) %}{{ answer.text }}<br /><br />{% endif %}
-          <!-- Evals -->
-          {% if show_evals is defined and show_evals and answer.eval.text %}
-            <i>Auto : {% if answer.eval and answer.eval.auto %}{{ '%0.2f' % answer.eval.auto if answer.eval.auto }}{% else %}N/A{% endif %} -
-            Ok: {{ answer.eval.meta['nb_ok'] }} {{ answer.eval.meta['ok'] }} -
-            Missing: {{ answer.eval.meta['nb_missing'] }} {{ answer.eval.meta['missing'] }} - 
-            Hallus : {{ answer.eval.meta['nb_hallu'] }} {{ answer.eval.meta['hallu'] }} - 
-            Nb extra: {{ answer.eval.meta['nb_extra'] }} - 
-            Human : {% if answer.eval and answer.eval.human %}{{ '%0.2f' % answer.eval.human if answer.eval.human }}{% else %}N/A{% endif %} -
-            Eval made with {% if answer.eval and answer.eval.llm_answer %}"{{ answer.eval.llm_answer.name }}"{% else %}(?){% endif %}</i>&nbsp;&gt;&nbsp;
-            {{ sub('\[?OK\]?', '<span class="ok">\g<0></span>', sub('\[?NOT FOUND\]?', '<span class="notfound">\g<0></span>', sub('\[?HALLU\]?', '<span class="hallu">\g<0></span>', sub('\[EXTRA\]\s*=\s*(\d+)', '<span class="extra"> \g<0></span>', sub('\[?MISSING\]?', '<span class="notfound"> \g<0></span>',sub('(?i)chunk_\d+', '<span class="chunk"> \g<0></span>',sub('\[Fait \d+\]', '<span class="facts2"> \g<0></span>', answer.eval.text)))))))}}<br><br>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-      <!-- Chunks -->
-      {% if show_chunks is defined and show_chunks %}
-        <h3>Chunks</h3>
-        <table>
-          {% for chunk in qa.chunks %}
-            <tr>
-              <td><a href={{ chunk.meta['url'] }} target="_blank"><img src={{ chunk.meta['image'] }}></a></td>
-              <td><i>{{ chunk.meta['display_name'] }} (p. {{ chunk.meta['page_number'] }})</i><br /><br />{{ chunk.text }}</td>
-            </tr>
-          {% endfor %}
-        </table>
-      {% endif %}
-    </div>
-  {% endfor %}
-
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
+    <title>{{ report_name }}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 6px;
         }
-      });
-    }
+        .status-ok { background-color: #28a745; }
+        .status-warning { background-color: #ffc107; }
+        .status-error { background-color: #dc3545; }
+        .status-hallu { background-color: #dc3545; }
+        .status-missing { background-color: #ffc107; }
+        .status-extra { background-color: #787878; }
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].nextElementSibling.style.display = "block"
-    }
-  </script>
+        .expanded-details {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .metric {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .percentage {
+            font-weight: 600;
+        }
+
+        .count {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .facts-section {
+        margin-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 20px;
+        }
+
+        .fact-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .fact-header {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .fact-text {
+            margin-left: 0.5rem;
+            flex: 1;
+        }
+
+        .fact-evaluations {
+            padding: 1rem;
+        }
+
+        .fact-eval {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.375rem;
+        }
+
+        .chunk-eval {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .evaluation-part {
+            font-style: italic;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .explanation-part {
+            color: #1f2937;
+        }
+
+        .problem-analysis {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .chunk-content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .chunk-navigation {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .chunk-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .chunk-button {
+            padding: 6px 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chunk-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .chunk-text {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .chunk-button.active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <h1 class="text-3xl font-bold mb-2">Evaluation report</h1>
+        <p class="text-gray-600 mb-8">
+            Validation set: {{ expe.meta['validation_set'] if expe.meta and expe.meta['validation_set'] else 'Not specified' }}<br/>
+            Retriever: {{ expe.meta['retriever_name'] if expe.meta and expe.meta['retriever_name'] else 'Not specified' }}<br/>
+            (made with ❤️ with <u><a href="https://github.com/recitalAI/ragtime">Ragtime</a></u>)
+        </p>
+
+        <!-- Summary Table -->
+        <div class="bg-white rounded-lg shadow mb-8">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold mb-4">Summary</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Facts</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Ok
+                                    <span class="text-gray-400 ml-1" title="Number of facts that exist in the answer">[?]</span>
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Hallu
+                                    <span class="text-gray-400 ml-1" title="Number of facts for which the answer presented contradictory or misaligned information">[?]</span>
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Missing
+                                    <span class="text-gray-400 ml-1" title="Number of facts that do not exist in the answer">[?]</span>
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Extra
+                                    <span class="text-gray-400 ml-1" title="Additional information in the answer">[?]</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            {% if expe|length > 0 %}
+                                {% set first_qa = expe[0] %}
+                                {% for answer in first_qa.answers.items %}
+                                    {% if not answer.llm_answer or answer.llm_answer.name not in ['Missings Eval', 'Hallucinations Eval', 'Hallucination Eval'] %}
+                                        {% set total_facts = namespace(value=0) %}
+                                        {% set total_ok = namespace(value=0) %}
+                                        {% set total_hallu = namespace(value=0) %}
+                                        {% set total_missing = namespace(value=0) %}
+                                        {% set total_extra = namespace(value=0) %}
+                                        
+                                        {# Calculate totals across all QAs #}
+                                        {% for qa in expe %}
+                                            {% set total_facts.value = total_facts.value + (qa.facts.items|length if qa.facts and qa.facts.items else 0) %}
+                                            {% set answer_match = qa.answers.items|selectattr("llm_answer.name", "equalto", answer.llm_answer.name)|first %}
+                                            {% if answer_match and answer_match.eval and answer_match.eval.meta %}
+                                                {% set total_ok.value = total_ok.value + answer_match.eval.meta.nb_ok %}
+                                                {% set total_hallu.value = total_hallu.value + answer_match.eval.meta.nb_hallu %}
+                                                {% set total_missing.value = total_missing.value + answer_match.eval.meta.nb_missing %}
+                                                {% set total_extra.value = total_extra.value + answer_match.eval.meta.nb_extra %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-indigo-600">
+                                                {{ answer.llm_answer.name if answer.llm_answer else 'Unknown' }}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                {{ answer.llm_answer.timestamp.strftime('%Y-%m-%d %H:%M:%S') if answer.llm_answer else '' }}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                {{ total_facts.value }}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-ok"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((total_ok.value / total_facts.value * 100) if total_facts.value > 0 else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ total_ok.value }}/{{ total_facts.value }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-error"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((total_hallu.value / total_facts.value * 100) if total_facts.value > 0 else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ total_hallu.value }}/{{ total_facts.value }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-warning"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((total_missing.value / total_facts.value * 100) if total_facts.value > 0 else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ total_missing.value }}/{{ total_facts.value }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-extra"></span>
+                                                    <span>{{ total_extra.value }}</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Results -->
+        <div class="bg-white rounded-lg shadow">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold mb-4">Question Results</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Question</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Facts</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ok</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hallu</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Missing</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Extra</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            {% for qa_index in range(expe|length) %}
+                                {% set qa = expe[qa_index] %}
+                                {% for answer in qa.answers.items %}
+                                    {% if not answer.llm_answer or answer.llm_answer.name not in ['Missings Eval', 'Hallucinations Eval', 'Hallucination Eval'] %}
+                                        {% set facts_count = qa.facts.items|length if qa.facts and qa.facts.items else 0 %}
+                                        {% set row_id = 'row-' ~ qa_index ~ '-' ~ loop.index %}
+                                        <tr class="hover:bg-gray-50 cursor-pointer" onclick="toggleDetails('{{ row_id }}')">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ qa_index + 1 }}</td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">{{ qa.question.text }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                {{ answer.llm_answer.name if answer.llm_answer else 'Unknown' }}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ facts_count }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-ok"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((answer.eval.meta.nb_ok / facts_count * 100) if facts_count > 0 and answer.eval and answer.eval.meta else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ answer.eval.meta.nb_ok if answer.eval and answer.eval.meta else 0 }}/{{ facts_count }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-error"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((answer.eval.meta.nb_hallu / facts_count * 100) if facts_count > 0 and answer.eval and answer.eval.meta else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ answer.eval.meta.nb_hallu if answer.eval and answer.eval.meta else 0 }}/{{ facts_count }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-warning"></span>
+                                                    <span class="percentage">
+                                                        {{ "%.1f"|format((answer.eval.meta.nb_missing / facts_count * 100) if facts_count > 0 and answer.eval and answer.eval.meta else 0) }}%
+                                                    </span>
+                                                    <span class="count">({{ answer.eval.meta.nb_missing if answer.eval and answer.eval.meta else 0 }}/{{ facts_count }})</span>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                <div class="metric">
+                                                    <span class="status-indicator status-extra"></span>
+                                                    <span>{{ answer.eval.meta.nb_extra if answer.eval and answer.eval.meta else 0 }}</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Expanded Details Row -->
+                                        <tr id="{{ row_id }}-details" class="expanded-details">
+                                            <td colspan="8">
+                                                <div class="grid grid-cols-1 gap-6">
+                                                    <!-- Answer Section -->
+                                                    <div class="bg-white rounded-lg shadow p-6">
+                                                        <h3 class="text-lg font-semibold mb-4">Answer</h3>
+                                                        <div class="grid grid-cols-4 gap-4 mb-4">
+                                                            <div class="p-4 bg-gray-50 rounded">
+                                                                <div class="text-sm text-gray-500">Date</div>
+                                                                <div class="font-medium">{{ answer.llm_answer.timestamp.strftime('%Y-%m-%d %H:%M:%S') if answer.llm_answer else '' }}</div>
+                                                            </div>
+                                                            <div class="p-4 bg-gray-50 rounded">
+                                                                <div class="text-sm text-gray-500">Duration</div>
+                                                                <div class="font-medium">{{ "%.2f"|format(answer.llm_answer.duration) if answer.llm_answer and answer.llm_answer.duration else 0 }}s</div>
+                                                            </div>
+                                                            <div class="p-4 bg-gray-50 rounded">
+                                                                <div class="text-sm text-gray-500">Cost</div>
+                                                                <div class="font-medium">{{ "%.2f"|format(answer.llm_answer.cost * 100) if answer.llm_answer and answer.llm_answer.cost else 0 }}c$</div>
+                                                            </div>
+                                                            <div class="p-4 bg-gray-50 rounded">
+                                                                <div class="text-sm text-gray-500">Model</div>
+                                                                <div class="font-medium">{{ answer.llm_answer.name if answer.llm_answer else 'Unknown' }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bg-gray-50 rounded-lg p-4">
+                                                            {{ answer.text|safe if answer.text else '' }}
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Facts Section -->
+                                                    <div class="bg-white rounded-lg shadow p-6">
+                                                        <h3 class="text-lg font-semibold mb-4">Facts</h3>
+                                                        <ul class="space-y-4">
+                                                            {% for fact_index in range(qa.facts.items|length) %}
+                                                                {% set fact = qa.facts.items[fact_index] %}
+                                                                {% set fact_num = fact_index + 1 %}
+                                                                <li class="fact-item">
+                                                                    <div class="fact-header">
+                                                                        {% set fact_status = 'ok' if fact_num in (answer.eval.meta.ok or []) else 
+                                                                                        'hallu' if fact_num in (answer.eval.meta.hallu or []) else 
+                                                                                        'missing' if fact_num in (answer.eval.meta.missing or []) else '' %}
+                                                                        <span class="status-indicator status-{{ fact_status }}"></span>
+                                                                        <span class="fact-text">{{ fact.text }}</span>
+                                                                    </div>
+                                                                    <div class="fact-evaluations">
+                                                                        <!-- Answer Evaluation -->
+                                                                        {% if qa.answers.items[0].eval and qa.answers.items[0].eval.text %}
+                                                                            {% set eval_text = qa.answers.items[0].eval.text %}
+                                                                            
+                                                                            {# Clean and normalize the text #}
+                                                                            {% set clean_text = eval_text|replace('<p>', '\n')|replace('</p>', '\n')|replace('<ol>', '\n')|replace('</ol>', '\n')|replace('<li>', '\n')|replace('</li>', '\n') %}
+                                                                            {% set clean_lines = [] %}
+                                                                            
+                                                                            {# First pass: Clean lines #}
+                                                                            {% for line in clean_text.split('\n') %}
+                                                                                {% set stripped_line = line|trim %}
+                                                                                {% if stripped_line %}
+                                                                                    {% set _ = clean_lines.append(stripped_line) %}
+                                                                                {% endif %}
+                                                                            {% endfor %}
+
+                                                                            {# Initialize variables #}
+                                                                            {% set found_evaluation = namespace(text='', part='', current_fact=0, continue_search=true) %}
+                                                                            {% set block_found = namespace(value=false) %}
+                                                                            
+                                                                            {# First try to find numbered format #}
+                                                                            {% for line in clean_lines %}
+                                                                                {% if found_evaluation.continue_search and (
+                                                                                    fact_num|string ~ '.[OK]' in line or 
+                                                                                    fact_num|string ~ '.[NOT FOUND]' in line or 
+                                                                                    fact_num|string ~ '.[HALLU]' in line) %}
+                                                                                    {% set block_found.value = true %}
+                                                                                    {% set found_evaluation.text = line %}
+                                                                                    {% set found_evaluation.continue_search = false %}
+                                                                                    
+                                                                                    {# Look ahead for the part if it exists #}
+                                                                                    {% if loop.index < clean_lines|length %}
+                                                                                        {% set next_line = clean_lines[loop.index]|trim %}
+                                                                                        {% if 'Part' in next_line and 'paragraph' in next_line or
+                                                                                            'Partie' in next_line and 'paragraphe' in next_line or
+                                                                                            'Citation' in next_line %}
+                                                                                            {% set parts = next_line.split(':') %}
+                                                                                            {% if parts|length > 1 %}
+                                                                                                {% set found_evaluation.part = parts[1]|trim %}
+                                                                                            {% endif %}
+                                                                                        {% endif %}
+                                                                                    {% endif %}
+                                                                                {% elif not found_evaluation.continue_search and not (
+                                                                                        (fact_num + 1)|string ~ '.[' in line or 
+                                                                                        line.startswith('[EXTRA]') or 
+                                                                                        line.startswith('EXTRA')) %}
+                                                                                    {% if 'Part' in line and 'paragraph' in line or
+                                                                                        'Partie' in line and 'paragraphe' in line or
+                                                                                        'Citation' in line %}
+                                                                                        {% set parts = line.split(':') %}
+                                                                                        {% if parts|length > 1 %}
+                                                                                            {% set found_evaluation.part = parts[1]|trim %}
+                                                                                        {% endif %}
+                                                                                    {% else %}
+                                                                                        {% set found_evaluation.text = found_evaluation.text ~ ' ' ~ line %}
+                                                                                    {% endif %}
+                                                                                {% elif not found_evaluation.continue_search %}
+                                                                                    {% set found_evaluation.continue_search = true %}
+                                                                                {% endif %}
+                                                                            {% endfor %}
+
+                                                                            {# If no numbered format found, try unnumbered format #}
+                                                                            {% if not block_found.value %}
+                                                                                {% set found_evaluation = namespace(text='', part='', current_fact=0, continue_search=true) %}
+                                                                                {% for line in clean_lines %}
+                                                                                    {% if found_evaluation.continue_search and (
+                                                                                        line.startswith('[OK]') or 
+                                                                                        line.startswith('[NOT FOUND]') or 
+                                                                                        line.startswith('[HALLU]')) %}
+                                                                                        {% set found_evaluation.current_fact = found_evaluation.current_fact + 1 %}
+                                                                                        {% if found_evaluation.current_fact == fact_num %}
+                                                                                            {% set block_found.value = true %}
+                                                                                            {% set found_evaluation.text = line %}
+                                                                                            {% set found_evaluation.continue_search = false %}
+                                                                                            
+                                                                                            {# Look ahead for the part if it exists #}
+                                                                                            {% if loop.index < clean_lines|length %}
+                                                                                                {% set next_line = clean_lines[loop.index]|trim %}
+                                                                                                {% if 'Part' in next_line and 'paragraph' in next_line or
+                                                                                                    'Partie' in next_line and 'paragraphe' in next_line or
+                                                                                                    'Citation' in next_line %}
+                                                                                                    {% set parts = next_line.split(':') %}
+                                                                                                    {% if parts|length > 1 %}
+                                                                                                        {% set found_evaluation.part = parts[1]|trim %}
+                                                                                                    {% endif %}
+                                                                                                {% endif %}
+                                                                                            {% endif %}
+                                                                                        {% endif %}
+                                                                                    {% elif not found_evaluation.continue_search and not (
+                                                                                            line.startswith('[OK]') or 
+                                                                                            line.startswith('[NOT FOUND]') or 
+                                                                                            line.startswith('[HALLU]') or 
+                                                                                            line.startswith('[EXTRA]')) %}
+                                                                                        {% if 'Part' in line and 'paragraph' in line or
+                                                                                            'Partie' in line and 'paragraphe' in line or
+                                                                                            'Citation' in line %}
+                                                                                            {% set parts = line.split(':') %}
+                                                                                            {% if parts|length > 1 %}
+                                                                                                {% set found_evaluation.part = parts[1]|trim %}
+                                                                                            {% endif %}
+                                                                                        {% else %}
+                                                                                            {% set found_evaluation.text = found_evaluation.text ~ ' ' ~ line %}
+                                                                                        {% endif %}
+                                                                                    {% elif not found_evaluation.continue_search %}
+                                                                                        {% set found_evaluation.continue_search = true %}
+                                                                                    {% endif %}
+                                                                                {% endfor %}
+                                                                            {% endif %}
+
+                                                                            {# Render the evaluation #}
+                                                                            {% if block_found.value %}
+                                                                                <div class="fact-eval">
+                                                                                    {% if found_evaluation.part %}
+                                                                                        <div class="evaluation-part">{{ found_evaluation.part|trim|replace('"', '') }}</div>
+                                                                                    {% endif %}
+                                                                                    <div class="explanation-part">
+                                                                                        {% if found_evaluation.text %}
+                                                                                            {% set text = found_evaluation.text %}
+                                                                                            {# Clean up text #}
+                                                                                            {% if '[OK]' in text %}
+                                                                                                {% set text = text|replace('[OK]', '')|replace('[OK] -', '')|trim %}
+                                                                                            {% elif '[NOT FOUND]' in text %}
+                                                                                                {% set text = text|replace('[NOT FOUND]', '')|replace('[NOT FOUND] -', '')|trim %}
+                                                                                            {% elif '[HALLU]' in text %}
+                                                                                                {% set text = text|replace('[HALLU]', '')|replace('[HALLU] -', '')|trim %}
+                                                                                            {% endif %}
+                                                                                            
+                                                                                            {# Remove fact number if present #}
+                                                                                            {% if fact_num|string ~ '.' in text %}
+                                                                                                {% set text = text|replace(fact_num|string ~ '.', '', 1)|trim %}
+                                                                                            {% endif %}
+                                                                                            {{ text }}
+                                                                                        {% else %}
+                                                                                            No evaluation text found
+                                                                                        {% endif %}
+                                                                                    </div>
+                                                                                </div>
+                                                                            {% else %}
+                                                                                <div class="fact-eval">
+                                                                                    <div class="explanation-part">No evaluation found for fact {{ fact_num }}</div>
+                                                                                </div>
+                                                                            {% endif %}
+                                                                        {% endif %}
+
+                                                                        <!-- Chunks Evaluation -->
+                                                                        {% for chunk_eval in qa.answers.items %}
+                                                                            {% if chunk_eval.llm_answer and chunk_eval.llm_answer.name in ['Missings Eval', 'Hallucinations Eval', 'Hallucination Eval'] %}
+                                                                                {% if chunk_eval.eval and chunk_eval.eval.text %}
+                                                                                    {% set chunk_pattern = '[Fait ' ~ fact_num ~ ']' %}
+                                                                                    {% set chunk_text = '' %}
+                                                                                    {% set chunk_lines = chunk_eval.eval.text.split('\n') %}
+                                                                                    {% set found = namespace(value=false) %}
+                                                                                    {% set start_index = namespace(value=-1) %}
+                                                                                    {% set end_index = namespace(value=chunk_lines|length) %}
+                                                                                    
+                                                                                    {# Find the start and end indices #}
+                                                                                    {% for line in chunk_lines %}
+                                                                                        {% if not found.value and chunk_pattern in line %}
+                                                                                            {% set start_index.value = loop.index0 %}
+                                                                                            {% set found.value = true %}
+                                                                                        {% endif %}
+                                                                                        {% if found.value and loop.index0 > start_index.value and '[Fait ' in line %}
+                                                                                            {% set end_index.value = loop.index0 %}
+                                                                                            {% set found.value = false %}
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+
+                                                                                    {% if start_index.value >= 0 %}
+                                                                                        {% set chunk_text = chunk_lines[start_index.value:end_index.value]|join('\n') %}
+                                                                                        
+                                                                                        <div class="chunk-eval">
+                                                                                            <div class="font-medium mb-4">{{ chunk_eval.llm_answer.name }}</div>
+                                                                                            
+                                                                                            <!-- Extract status -->
+                                                                                            {% set status = namespace(value='') %}
+                                                                                            {% for line in chunk_lines %}
+                                                                                                {% if 'Statut :' in line or 'Status :' in line %}
+                                                                                                    {% if '[OK]' in line or ' OK' in line or line.endswith('OK') %}
+                                                                                                        {% set status.value = 'OK' %}
+                                                                                                    {% elif '[HALLU]' in line or ' HALLU' in line or line.endswith('HALLU') %}
+                                                                                                        {% set status.value = 'HALLU' %}
+                                                                                                    {% elif '[MISSING]' in line or ' MISSING' in line or line.endswith('MISSING') %}
+                                                                                                        {% set status.value = 'MISSING' %}
+                                                                                                    {% endif %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}
+
+                                                                                            <!-- Show status -->
+                                                                                            {% if status.value %}
+                                                                                                <div class="mb-2">
+                                                                                                    <span class="status-indicator status-{{ status.value|lower }}"></span>
+                                                                                                    {{ status.value }}
+                                                                                                </div>
+                                                                                            {% endif %}
+
+                                                                                            <!-- Extract and show explanation -->
+                                                                                            {% set explanation = namespace(value='') %}
+                                                                                            {% for line in chunk_lines %}
+                                                                                                {% if 'Explication :' in line %}
+                                                                                                    {% set explanation.value = line.split('Explication :')[1]|trim %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}
+                                                                                            {% if explanation.value %}
+                                                                                                <div class="explanation-part mb-4">{{ explanation.value }}</div>
+                                                                                            {% endif %}
+
+                                                                                            <!-- Problem analysis based on statuses -->
+                                                                                            {% if status.value %}
+                                                                                                {% set problem_type = '' %}
+                                                                                                {% set problem_explanation = '' %}
+                                                                                                {% if fact_status == 'missing' and status.value == 'OK' %}
+                                                                                                    {% set problem_type = 'LLM issue' %}
+                                                                                                    {% set problem_explanation = 'Correct chunks retrieved but the LLM failed to generate the correct answer.' %}
+                                                                                                {% elif fact_status == 'missing' and status.value == 'MISSING' %}
+                                                                                                    {% set problem_type = 'Retriever or source issue' %}
+                                                                                                    {% set problem_explanation = 'Chunks do not provide the correct context.' %}
+                                                                                                {% elif fact_status == 'missing' and status.value == 'HALLU' %}
+                                                                                                    {% set problem_type = 'Retriever or source issue' %}
+                                                                                                    {% set problem_explanation = 'Chunks provide inconsistent context, LLM detected that and didn\'t answer.' %}
+                                                                                                {% elif fact_status == 'hallu' and status.value == 'OK' %}
+                                                                                                    {% set problem_type = 'Contradiction' %}
+                                                                                                    {% set problem_explanation = 'The LLM generates information that contradicts the information contained in the provided chunks.' %}
+                                                                                                {% elif fact_status == 'hallu' and status.value == 'MISSING' %}
+                                                                                                    {% set problem_type = 'Invention' %}
+                                                                                                    {% set problem_explanation = 'The chunks provided do not contain the information, but the LLM adds it. It does not contradict what is stated in a chunk; it "invents" the information.' %}
+                                                                                                {% elif fact_status == 'hallu' and status.value == 'HALLU' %}
+                                                                                                    {% set problem_type = 'Corpus' %}
+                                                                                                    {% set problem_explanation = 'A contradiction with one of the facts is present in the documentary corpus. The information is contained in the chunks, and the LLM reproduces it correctly, but this information contradicts one of the facts. This error could stem from a mistake in the validation dataset (incorrect fact), an issue with the retriever failing to retrieve the correct chunk, or an inconsistency in the documentation.' %}
+                                                                                                {% endif %}
+
+                                                                                                {% if problem_type %}
+                                                                                                    <div class="problem-analysis">
+                                                                                                        <strong>{{ problem_type }}</strong>
+                                                                                                        <p>{{ problem_explanation }}</p>
+                                                                                                    </div>
+                                                                                                {% endif %}
+                                                                                            {% endif %}
+
+                                                                                            <!-- Extract chunks -->
+                                                                                            {% set chunks_text = namespace(value='') %}
+                                                                                            {% set chunks_list = [] %}
+                                                                                            {% for line in chunk_lines %}
+                                                                                                {% if 'Les chunks' in line %}
+                                                                                                    {% set chunks_parts = line.split('"') %}
+                                                                                                    {% if chunks_parts|length > 1 %}
+                                                                                                        {% set chunks_text.value = chunks_parts[1] %}
+                                                                                                        {% set chunk_refs = chunks_text.value.split(',') %}
+                                                                                                        {% for ref in chunk_refs %}
+                                                                                                            {% set num = ref.replace('Chunk_', '')|trim %}
+                                                                                                            {% if num %}
+                                                                                                                {% set _ = chunks_list.append(num) %}
+                                                                                                            {% endif %}
+                                                                                                        {% endfor %}
+                                                                                                    {% endif %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}
+
+                                                                                            {% if chunks_list %}
+                                                                                                <div class="chunk-buttons">
+                                                                                                    {% for num in chunks_list %}
+                                                                                                        <button class="chunk-button" onclick="toggleChunk('chunk-{{ num }}-{{ fact_num }}-{{ loop.index }}')">
+                                                                                                            Chunk {{ num }}
+                                                                                                        </button>
+                                                                                                    {% endfor %}
+                                                                                                </div>
+                                                                                                
+                                                                                                {% for num in chunks_list %}
+                                                                                                    <div id="chunk-{{ num }}-{{ fact_num }}-{{ loop.index }}" class="chunk-text" style="display: none;">
+                                                                                                        <p><strong>Chunk {{ num }}:</strong> 
+                                                                                                        {{ qa.chunks.items[num|int - 1].text if qa.chunks and qa.chunks.items|length >= num|int else 'Chunk not found' }}</p>
+                                                                                                    </div>
+                                                                                                {% endfor %}
+                                                                                            {% endif %}
+                                                                                        </div>
+                                                                                    {% endif %}
+                                                                                {% endif %}
+                                                                            {% endif %}
+                                                                        {% endfor %}
+                                                                    </div>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+
+                                                    <!-- Chunks Section -->
+                                                    {% if qa.chunks and qa.chunks.items %}
+                                                    <div class="bg-white rounded-lg shadow p-6">
+                                                        <h3 class="text-lg font-semibold mb-4">Chunks</h3>
+                                                        <div class="chunk-navigation">
+                                                            {% for chunk_index in range(qa.chunks.items|length) %}
+                                                                <button 
+                                                                    class="chunk-button"
+                                                                    onclick="toggleChunk('{{ row_id }}-chunk-{{ chunk_index + 1 }}')"
+                                                                >
+                                                                    Chunk {{ chunk_index + 1 }}
+                                                                </button>
+                                                            {% endfor %}
+                                                        </div>
+                                                        {% for chunk_index in range(qa.chunks.items|length) %}
+                                                            {% set chunk = qa.chunks.items[chunk_index] %}
+                                                            <div id="{{ row_id }}-chunk-{{ chunk_index + 1 }}" class="chunk-content">
+                                                                <div class="font-medium mb-2">Chunk {{ chunk_index + 1 }}</div>
+                                                                <div class="text-sm">{{ chunk.text }}</div>
+                                                                {% if chunk.meta %}
+                                                                    <div class="mt-2 text-xs text-gray-500">
+                                                                        <div>Score: {{ "%.3f"|format(chunk.meta.score) if chunk.meta.score else 0 }}</div>
+                                                                        {% if chunk.meta.collection_id %}
+                                                                            <div>Collection: {{ chunk.meta.collection_id }}</div>
+                                                                        {% endif %}
+                                                                        {% if chunk.meta.document_name %}
+                                                                            <div>Document: {{ chunk.meta.document_name }}</div>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                        {% endfor %}
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle details section
+        function toggleDetails(rowId) {
+            const detailsRow = document.getElementById(rowId + '-details');
+            if (detailsRow) {
+                // Hide all other details first
+                document.querySelectorAll('.expanded-details').forEach(row => {
+                    if (row.id !== rowId + '-details') {
+                        row.style.display = 'none';
+                    }
+                });
+                
+                // Toggle current details
+                if (detailsRow.style.display === 'none' || !detailsRow.style.display) {
+                    detailsRow.style.display = 'table-row';
+                } else {
+                    detailsRow.style.display = 'none';
+                }
+            }
+        }
+
+        // Toggle chunk visibility
+        function toggleChunk(chunkId) {
+            const chunk = document.getElementById(chunkId);
+            const button = document.querySelector(`button[onclick*="${chunkId}"]`);
+            
+            if (chunk) {
+                if (chunk.style.display === 'none' || !chunk.style.display) {
+                    chunk.style.display = 'block';
+                    button.classList.add('active');
+                } else {
+                    chunk.style.display = 'none';
+                    button.classList.remove('active');
+                }
+            }
+        }
+
+        // Format dates on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('td, div').forEach(element => {
+                const text = element.textContent.trim();
+                if (text.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/)) {
+                    try {
+                        const date = new Date(text);
+                        if (!isNaN(date)) {
+                            element.textContent = date.toLocaleString();
+                        }
+                    } catch (e) {
+                        console.error('Error formatting date:', e);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>

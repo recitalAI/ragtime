@@ -25,17 +25,16 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
                              'SEARCH_USERNAME', 'SEARCH_PASSWORD', 'SEARCH_URL_LOGIN', 'SEARCH_URL_SEARCH',
                              'LSA_TOKEN', 'OPENROUTER_API_KEY'])
 
-
-
 ######################################################
 # GENERATE REPORT
 ######################################################
-expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json")
-for qa in expe:
-    qa.answers[0].eval.human = None
-    qa.answers[0].text = ""
-
-expe.save_to_json()
+for f in ["CulturalQA_TestPropaganda_DSR1--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-10_00h13,25.json",
+          "CulturalQA_TestPropaganda_GPT4o--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-11_22h04,43.json",
+          "CulturalQA_TestPropaganda_MistralLarge--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-11_21h48,55.json",
+          "CulturalQA_TestPropaganda_DSV3--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-09_18h11,50.json"
+          ]:
+    expe:Expe = Expe(FOLDER_EVALS / f)
+    expe.save_to_html(FOLDER_EVALS/ 'html')
 
 ######################################################
 # REMOVE HUMAN ANSWERS FROM EXPE
