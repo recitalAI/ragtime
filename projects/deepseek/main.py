@@ -26,6 +26,17 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
                              'LSA_TOKEN', 'OPENROUTER_API_KEY'])
 
 
+
+######################################################
+# GENERATE REPORT
+######################################################
+expe:Expe = Expe(FOLDER_VALIDATION_SETS / "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json")
+for qa in expe:
+    qa.answers[0].eval.human = None
+    qa.answers[0].text = ""
+
+expe.save_to_json()
+
 ######################################################
 # REMOVE HUMAN ANSWERS FROM EXPE
 ######################################################
@@ -40,11 +51,11 @@ ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_A
 ######################################################
 # RE EXECUTE EVALUATION POST PROCESSING FOR AN EXISTING EXPE
 ######################################################
-expe:Expe = Expe(FOLDER_EVALS / "LSA_GPT4o--33Q_330C_111F_1M_33A_0HE_33AE_2025-02-11_22h34,06.json")
-eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
-                                                     prompter=EvalPrompterFRV2())])
-eval_gen.generate(expe=expe, start_from=StartFrom.post_process)
-expe.save_to_json(path=FOLDER_EVALS)
+# expe:Expe = Expe(FOLDER_EVALS / "LSA_GPT4o--33Q_330C_111F_1M_33A_0HE_33AE_2025-02-11_22h34,06.json")
+# eval_gen:EvalGenerator = EvalGenerator(llms=[LiteLLM(name='mistral/mistral-large-latest',
+#                                                      prompter=EvalPrompterFRV2())])
+# eval_gen.generate(expe=expe, start_from=StartFrom.post_process)
+# expe.save_to_json(path=FOLDER_EVALS)
 
 ######################################################
 # RESTART EVALUATION FOR MISSING VALUES ONLY FOR AN EXISTING EXPE
