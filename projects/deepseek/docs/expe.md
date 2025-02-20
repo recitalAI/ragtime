@@ -1,12 +1,12 @@
 # Comparing US/Chinese/EU LLMs [20 Feb 2025]
 # Main finding
-While Deepseek should not be used as an assistant since it is deeply biased, it can be used safely for strictly linguistic operations as those used in RAG contexts.
-This is interesting since Deepseek V3 is 10 times cheaper than GPT4-o (0,27$ / 1M input non cached tokens for [Deepseek V3](https://api-docs.deepseek.com/quick_start/pricing) vs. 2,50$ for [OpenAI GPT-4o](https://openai.com/api/pricing/)).
+While Deepseek should not be used as an assistant since it is deeply biased, it can be used safely for simple linguistic operations as those used for RAG.
+On two different real life datasets, we measure than Deepseek is efficient for RAG while being 17 times cheaper than GPT-4o and Mistral Large.
 
 # Summary
-We study Deepseek V3 and R1 vs GPT4-o vs. Mistral Large in 2 contexts:
+We study Deepseek V3 and R1 vs GPT4-o vs. Mistral Large in two contexts:
 1. Assistant to answer culturally sensitive questions
-2. RAG, i.e. answer generation from paragraphs
+2. Answer generation from paragraphs (RAG)
 
 Result:
 1. Deepseek replies with a clear pro chinese bias when used to answer touchy historical or cultural questions for which US, EU and China usually disagree - 5% of answers with Deepseek V3 and 35% with Deepseek R1 can be seen as very biased. Mistral Large and GPT4-o return more balanced results (examples below).
