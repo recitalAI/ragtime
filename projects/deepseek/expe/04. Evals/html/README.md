@@ -1,2 +1,5 @@
 Each of the 4 experiments results on sensitive questions can be viewed here:
 - <a href="https://html-preview.github.io/?url=https://github.com/recitalAI/ragtime/blob/main/projects/deepseek/expe/04.%20Evals/html/CulturalQA_TestPropaganda_DSR1--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-20_08h51%2C21.html">Using Deepseek R1</a>
+- <a href="https://html-preview.github.io/?url=https://github.com/recitalAI/ragtime/blob/main/projects/deepseek/expe/04.%20Evals/html/CulturalQA_TestPropaganda_DSV3--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-20_08h51%2C25.html">Using Deepseek V3</a>
+- <a href="https://html-preview.github.io/?url=https://github.com/recitalAI/ragtime/blob/main/projects/deepseek/expe/04.%20Evals/html/CulturalQA_TestPropaganda_GPT4o--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-20_08h51%2C22.html">Using OpenAI GPT-4o</a>
+- <a href="https://html-preview.github.io/?url=https://github.com/recitalAI/ragtime/blob/main/projects/deepseek/expe/04.%20Evals/html/CulturalQA_TestPropaganda_MistralLarge--93Q_0C_93F_1M_93A_0HE_93AE_2025-02-20_08h51%2C24.html">Using Mistral Large (latest)</a>
