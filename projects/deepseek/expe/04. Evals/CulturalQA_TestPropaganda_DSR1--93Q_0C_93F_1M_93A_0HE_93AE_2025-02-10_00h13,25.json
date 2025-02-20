@@ -1,5 +1,8 @@
 {
-  "meta": {},
+  "meta": {
+    "validation_set": "CulturalQA_TestPropaganda--93Q_0C_93F_1M_0A_0HE_0AE_2025-02-09_22h16,24.json",
+    "retriever_name": "No retriever"
+  },
   "items": [
     {
       "meta": {},

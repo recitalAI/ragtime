@@ -420,7 +420,7 @@ class Expe(RagtimeList[QA]):
         if isinstance(path, str): path = Path(path)
         if isinstance(template_path, str): template_path = Path(template_path)
         path: Path = self._file_check_before_writing(path, b_overwrite=b_overwrite, b_add_suffix=b_add_suffix, force_ext=".html")
-        environment = Environment(loader=FileSystemLoader(searchpath=template_path.parent, encoding="utf-8")        )
+        environment = Environment(loader=FileSystemLoader(searchpath=template_path.parent, encoding="utf-8"))
         render_params:dict[str, bool] = {
             "show_answers": b_show_answers,
             "show_chunks": b_show_chunks,
