@@ -15,7 +15,6 @@ from ragtime.config import (
     DEFAULT_SPREADSHEET_TEMPLATE,
     DEFAULT_WORKSHEET,
     logger,
-    DEFAULT_HTML_RENDERING,
     DEFAULT_HTML_TEMPLATE,
 )
 
@@ -408,7 +407,6 @@ class Expe(RagtimeList[QA]):
         path: Path = None,
         b_overwrite: bool = False,
         b_add_suffix: bool = True,
-        # render_params: dict[str, bool] = DEFAULT_HTML_RENDERING,
         b_show_answers:bool = True,
         b_show_chunks:bool = True,
         b_show_facts:bool = True,
@@ -555,15 +553,3 @@ def analyse_expe_folder(path: Path):
             res[k].append(v)
 
     print(tabulate(res, headers="keys"))
-
-
-# DEPRECATED
-# def export_to_html(json_path:Path, render_params:dict[str,bool]=DEFAULT_HTML_RENDERING,
-#                     template_path:Path=DEFAULT_HTML_TEMPLATE):
-#  expe:Expe = Expe(json_path=json_path)
-#  expe.save_to_html(path=json_path, render_params=render_params, template_path=template_path, b_add_suffix=True)
-#
-# def export_to_spreadsheet(json_path:Path, template_path:Path=DEFAULT_SPREADSHEET_TEMPLATE,
-#                            header_size:int=DEFAULT_HEADER_SIZE, sheet_name:str = DEFAULT_WORKSHEET,):
-#  expe:Expe = Expe(json_path=json_path)
-#  expe.save_to_spreadsheet(path=json_path, template_path=template_path, header_size=header_size, sheet_name=sheet_name, b_add_suffix=True)

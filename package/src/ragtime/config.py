@@ -40,9 +40,6 @@ FOLDER_HTML_TEMPLATES: Path = (
     FOLDER_HTML_TEMPLATES if "FOLDER_HTML_TEMPLATES" in globals() else None
 )
 # # # HTML
-DEFAULT_HTML_RENDERING: dict[str, bool] = (
-    DEFAULT_HTML_RENDERING if "DEFAULT_HTML_RENDERING" in globals() else None
-)
 DEFAULT_HTML_TEMPLATE: Path = (
     DEFAULT_HTML_TEMPLATE if "DEFAULT_HTML_TEMPLATE" in globals() else None
 )
@@ -96,7 +93,7 @@ def init(root_folder: Path):
     # FOLDERS
     global ROOT_FOLDER, FOLDER_EXPE, FOLDER_QUESTIONS, FOLDER_ANSWERS, FOLDER_FACTS, FOLDER_EVALS, FOLDER_VALIDATION_SETS, FOLDER_TEMPLATES, FOLDER_SST_TEMPLATES, FOLDER_HTML_TEMPLATES
     # # # HTML
-    global DEFAULT_HTML_RENDERING, DEFAULT_HTML_TEMPLATE
+    global DEFAULT_HTML_TEMPLATE
     # # # Spreadheet
     global DEFAULT_SPREADSHEET_TEMPLATE, DEFAULT_WORKSHEET, DEFAULT_HEADER_SIZE, DEFAULT_QUESTION_COL, DEFAULT_FACTS_COL
     global DEFAULT_ANSWERS_COL, DEFAULT_HUMAN_EVAL_COL
@@ -116,13 +113,6 @@ def init(root_folder: Path):
     FOLDER_TEMPLATES = root_folder / "res"
     FOLDER_SST_TEMPLATES = FOLDER_TEMPLATES / "spreadsheet_templates"
     FOLDER_HTML_TEMPLATES = FOLDER_TEMPLATES / "html_templates"
-    # # # HTML
-    DEFAULT_HTML_RENDERING = {
-        "show_answers": True,
-        "show_chunks": True,
-        "show_facts": True,
-        "show_evals": True,
-    }
     DEFAULT_HTML_TEMPLATE = FOLDER_HTML_TEMPLATES / "basic_template.jinja"
     # # # Spreadheet
     DEFAULT_SPREADSHEET_TEMPLATE = FOLDER_SST_TEMPLATES / "with_chunks.xlsx"
