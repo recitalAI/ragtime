@@ -269,6 +269,7 @@ export default {
     };
     const answerModelOptions = computed(() => [
       { title: 'Select a model', value: '', disabled: true },
+      { title: 'GPT-5', value: 'gpt-5', disabled: !apiKeyAvailability.value.openai },
       { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
       { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
       { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
@@ -276,6 +277,7 @@ export default {
 
     const factModelOptions = computed(() => [
       { title: 'Select a model', value: '', disabled: true },
+      { title: 'GPT-5', value: 'gpt-5', disabled: !apiKeyAvailability.value.openai },
       { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
       { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
       { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },

@@ -143,13 +143,22 @@ class LiteLLM(LLM):
         while retry < self.num_retries:
             try:
                 time_to_wait: float = wait_step
-                answer = await acompletion(
-                    messages=messages,
-                    model=self.name,
-                    temperature=self.temperature,
-                    num_retries=self.num_retries,
-                    max_tokens=self.max_tokens,
-                )
+                
+                # Special handling for reasoning models (gpt-5, o1, etc.)
+                if "gpt-5" in self.name.lower() or "o1" in self.name.lower():
+                    answer = await acompletion(
+                        messages=messages,
+                        model=self.name,
+                        num_retries=self.num_retries,
+                    )
+                else:
+                    answer = await acompletion(
+                        messages=messages,
+                        model=self.name,
+                        temperature=self.temperature,
+                        num_retries=self.num_retries,
+                        max_tokens=self.max_tokens,
+                    )
                 break
             except RateLimitError as e:
                 logger.debug(f"Rate limit reached - will retry in {time_to_wait:.2f}s\n\t{str(e)}")

@@ -26,8 +26,10 @@ current_file_path = os.path.abspath(__file__)
 # Get the directory of the current file
 current_dir = os.path.dirname(current_file_path)
 
-logging.error(f'current_file_path: {current_file_path}')
-logging.error(f'current_dif: {current_dir}')
+import warnings
+warnings.filterwarnings('ignore', message='Multiple schemas resolved to the name')
+# logging.error(f'current_file_path: {current_file_path}')
+# logging.error(f'current_dif: {current_dir}')
 
 # Construct the path to the saved_files folder
 FILES_FOLDER = Path(current_dir) / '..' / 'files'
@@ -307,7 +309,7 @@ def start_experiment():
 
         # Initialize experiment
         expe = Expe(VALIDATION_SETS_FOLDER / config['validationSet'])
-        logging.error(f'config: {config}')
+        #logging.error(f'config: {config}')
         expe.meta['validation_set'] = config['validationSet']
         expe.meta['retriever_name'] = config.get('retrieverType', 'Not used')
 
