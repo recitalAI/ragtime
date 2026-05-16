@@ -1,4 +1,4 @@
-PROJECT_NAME:str = "Albert"
+PROJECT_NAME:str = "PARTAGES"
 
 import ragtime
 import shutil

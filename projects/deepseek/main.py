@@ -23,7 +23,7 @@ logger.debug(f'*** PROJECT "{PROJECT_NAME}" STARTS')
 # If you're using Windows, make your environment variables accessible with the following instruction
 ragtime.config.init_win_env(['DEEPSEEK_API_KEY', 'OPENAI_API_KEY', 'ALEPHALPHA_API_KEY', 'MISTRAL_API_KEY',
                              'SEARCH_USERNAME', 'SEARCH_PASSWORD', 'SEARCH_URL_LOGIN', 'SEARCH_URL_SEARCH',
-                             'LSA_TOKEN', 'OPENROUTER_API_KEY'])
+                             'OPENROUTER_API_KEY'])
 
 ######################################################
 # GENERATE REPORT
