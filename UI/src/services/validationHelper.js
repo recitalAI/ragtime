@@ -23,6 +23,10 @@ function validateItems(items) {
   if (!Array.isArray(items)) return [];
   
   return items.map(item => {
+    // Answer defined but not Answers -> format it
+    if (item.answer && !item.answers) {
+      item.answers = {items: [{text: item.answer}]}
+    }
     // Validate answers
     if (item.answers?.items) {
       item.answers.items = item.answers.items.map(answer => ({
@@ -42,6 +46,8 @@ function validateItems(items) {
 
 export function validateData(data) {
   if (!data) return { meta: {}, items: [] };
+
+  if (Array.isArray(data)) data = {items: data}
 
   const validatedData = {
     meta: data.meta || {},

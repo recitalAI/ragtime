@@ -363,7 +363,7 @@ import { experimentService, modelService } from '@/services/generatorService';
 import { formatDateForBackend } from '@/utils/dateFormatter';
 import * as XLSX from 'xlsx';
 import { http } from '@/plugins/axios';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs, groupedLLMs } from '@/services/apiKeyService';
 import { logService } from '@/services/logService';
 
 export default {
@@ -460,8 +460,8 @@ export default {
       showSnackbar.value = true;
     };
 
-    const openAIModels = ['gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'];
-    const mistralAIModels = ['mistral/mistral-tiny', 'mistral/mistral-small', 'mistral/mistral-medium', 'mistral/mistral-large-latest'];
+    const openAIModels = ['gpt-5', 'gpt-5-mini', 'gpt-5-nano'];
+    const mistralAIModels = ['mistral/mistral-small-latest', 'mistral/mistral-medium-latest', 'mistral/mistral-large-latest'];
 
     const isModelDisabled = (providerName, modelName) => {
       if (providerName === 'OpenAI' && openAIModels.includes(modelName) && !apiKeyAvailability.value.openai) {
@@ -495,39 +495,6 @@ export default {
       }
     });
 
-    const groupedLLMs = {
-      'OpenAI': [
-        'gpt-3.5-turbo', 'gpt-4', 'gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo'
-      ],
-      'Anthropic': [
-        'claude-3-haiku-20240307', 'claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-5-sonnet-20240620'
-      ],
-      'Google': [
-        'gemini/gemini-pro', 'gemini/gemini-1.5-pro'
-      ],
-      'Mistral AI': [
-        'mistral/mistral-tiny', 'mistral/mistral-small', 'mistral/mistral-medium', 'mistral/mistral-large-latest'
-      ],
-      'Cohere': [
-        'command', 'command-light', 'command-nightly', 'command-r', 'command-r-plus'
-      ],
-      'Together AI': [
-        'together_ai/mistralai/Mixtral-8x7B-Instruct-v0.1', 'together_ai/togethercomputer/CodeLlama-34b-Instruct'
-      ],
-      'Ollama': [
-        'ollama/llama2', 'ollama/mistral', 'ollama/codellama', 'ollama/vicuna'
-      ],
-      'HuggingFace': [
-        'huggingface/BigScience/bloom', 'huggingface/google/flan-t5-xxl'
-      ],
-      'Deepseek': [
-        'deepseek/deepseek-chat', 'deepseek/deepseek-coder'
-      ],
-      'Openrouter': [
-        'openrouter/deepseek/deepseek-r1', 'openrouter/deepseek/deepseek-chat', 'openrouter/deepseek/deepseek-coder'
-      ]
-    };
-
     const canEvaluateChunks = computed(() => {
       return useRetriever.value || 
             selectedCustomLLMs.value.includes('Albert_LLM') ||
@@ -535,12 +502,13 @@ export default {
             hasChunks.value && !moreThanOneLLMSelected.value;
     });
 
-    const evaluationModelOptions = computed(() => [
-      { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-      { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    ]);
+    const evaluationModelOptions = availableLLMs
+    // const evaluationModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
 
     const moreThanOneLLMSelected = computed(() => {
       return (selectedLLMs.value.length + selectedCustomLLMs.value.length) > 1;
