@@ -332,6 +332,7 @@ export default {
       if (!files.length) return;
 
       isLoading.value = true;
+      let totalImportedCount = 0;
       
       try {
         for (let file of files) {
@@ -368,11 +369,18 @@ export default {
 
           qa.value = [...qa.value, ...newQuestions];
           importedFiles.value.push(file.name);
+          totalImportedCount += newQuestions.length;
         }
         
         hasUnsavedChanges.value = true;
         await nextTick();
         saveToLocalStorage();
+        
+        const msg = totalImportedCount === 0 
+          ? 'No valid questions found in the imported file(s)'
+          : `${totalImportedCount} ${totalImportedCount === 1 ? 'question' : 'questions'} imported`;
+        showMessage(msg, totalImportedCount === 0 ? 'error' : 'success');
+
       } catch (error) {
         console.error('Error loading file:', error);
         showMessage(`Error loading file: ${error.message}`, 'error');
