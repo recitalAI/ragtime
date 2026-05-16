@@ -8,6 +8,7 @@ lazy_import.lazy_module("enum")
 lazy_import.lazy_module("jinja2")
 lazy_import.lazy_module("json")
 lazy_import.lazy_module("langdetect")
+LITELLM_LOCAL_MODEL_COST_MAP=True
 lazy_import.lazy_module("litellm")
 lazy_import.lazy_module("openpyxl")
 lazy_import.lazy_module("openpyxl.worksheet.worksheet")

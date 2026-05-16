@@ -223,13 +223,13 @@
 
 
 <script>
-import { ref, onMounted, computed, onBeforeUnmount, watch, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import QuestionEditor from './QuestionEditor/index.vue';
 import { loadJsonFile, updateJsonFile } from '@/services/fileService';
 import { answerGeneratorService, factGeneratorService } from '@/services/generatorService';
 import { http } from '@/plugins/axios';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs } from '@/services/apiKeyService';
 
 export default {
   name: 'ModifyValidationSet',
@@ -283,19 +283,22 @@ export default {
       }
     };
 
-    const answerModelOptions = computed(() => [
-      { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-      { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    ]);
+    const answerModelOptions = availableLLMs
+    const factModelOptions = availableLLMs
 
-    const factModelOptions = computed(() => [
-      { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-      { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    ]);
+    // const answerModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
+
+    // const factModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
 
     const loadExistingValidationSet = async () => {
       try {

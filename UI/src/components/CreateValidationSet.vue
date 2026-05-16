@@ -158,7 +158,14 @@
       />
 
       <p v-if="!qa.length && !showQuestionForm" class="text-caption text-center my-4">
-        No questions available. Import a JSON file or add a new question to get started.
+        No questions available. Import a JSON file or add a new question to get started.<br/>
+        <code>
+          <br/>Simple JSON file can be :<br/>
+          [<br/>
+            {"question": "a question", "answer": "an answer"},<br/>
+            {"question": "another question", "answer": "another answer"},<br/>
+          ]<br/>
+        </code>
       </p>
 
       <div class="save-section mt-6" v-if="qa.length">
@@ -229,12 +236,12 @@
 </template>
 
 <script>
-import { ref, onMounted, computed, onBeforeUnmount, watch, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import QuestionEditor from './QuestionEditor/index.vue';
 import { loadJsonFile, saveJsonFile } from '@/services/fileService';
 import { answerGeneratorService, factGeneratorService } from '@/services/generatorService';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs } from '@/services/apiKeyService';
 
 export default {
   name: 'CreateValidationSet',
@@ -267,19 +274,22 @@ export default {
     const triggerFileInput = () => {
       fileInputRef.value.click();
     };
-    const answerModelOptions = computed(() => [
-      { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-      { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    ]);
+    const answerModelOptions = availableLLMs
+    const factModelOptions = availableLLMs
 
-    const factModelOptions = computed(() => [
-      { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-      { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    ]);
+    // const answerModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
+
+    // const factModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
 
     const apiKeyAvailability = ref({
       openai: true,
@@ -348,7 +358,7 @@ export default {
           const newQuestions = normalizedData.map(item => ({
             question: item.question && typeof item.question === 'object' ? item.question : { text: item.question || '' },
             answers: {
-              items: Array.isArray(item.answers?.items) 
+              items: Array.isArray(item.answers?.items)
                 ? item.answers.items.map(answer => ({
                     ...answer,
                     text: answer.text || (answer.llm_answer ? answer.llm_answer.text : ''),
