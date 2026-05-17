@@ -96,7 +96,7 @@
             />
 
             <v-card class="mt-4 pa-4">
-              <v-card-title>LLM configuration</v-card-title>
+              <v-card-title>Models used for Answer generation</v-card-title>
               <v-card-text>
                 <div class="providers-container d-flex flex-wrap">
                   <v-btn
@@ -502,13 +502,8 @@ export default {
             hasChunks.value && !moreThanOneLLMSelected.value;
     });
 
+    apiKeyService.refreshLLMAvailability(availableLLMs)
     const evaluationModelOptions = availableLLMs
-    // const evaluationModelOptions = computed(() => [
-    //   { title: 'Select a model', value: '', disabled: true },
-    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
-    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
-    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
-    // ]);
 
     const moreThanOneLLMSelected = computed(() => {
       return (selectedLLMs.value.length + selectedCustomLLMs.value.length) > 1;

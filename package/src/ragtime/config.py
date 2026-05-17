@@ -74,6 +74,9 @@ DEFAULT_MAX_TOKENS: int = (
     DEFAULT_MAX_TOKENS if "DEFAULT_MAX_TOKENS" in globals() else None
 )
 
+DEFAULT_TEMPERATURE: int = (
+    DEFAULT_TEMPERATURE if "DEFAULT_TEMPERATURE" in globals() else None
+)
 
 # Logging - class to add msg
 class RagtimeLogger(logging.LoggerAdapter):
@@ -98,7 +101,7 @@ def init(root_folder: Path):
     global DEFAULT_SPREADSHEET_TEMPLATE, DEFAULT_WORKSHEET, DEFAULT_HEADER_SIZE, DEFAULT_QUESTION_COL, DEFAULT_FACTS_COL
     global DEFAULT_ANSWERS_COL, DEFAULT_HUMAN_EVAL_COL
     # # # LLMs
-    global DEFAULT_LITELLM_RETRIES, DEFAULT_LITELLM_TEMP, DEFAULT_MAX_TOKENS
+    global DEFAULT_LITELLM_RETRIES, DEFAULT_LITELLM_TEMP, DEFAULT_MAX_TOKENS, DEFAULT_TEMPERATURE
     # Logger
     global logger
 
@@ -124,8 +127,9 @@ def init(root_folder: Path):
     DEFAULT_HUMAN_EVAL_COL = 24
     # # # LLMs
     DEFAULT_LITELLM_RETRIES = 3
-    DEFAULT_LITELLM_TEMP = 0
+    DEFAULT_LITELLM_TEMP = 1.0
     DEFAULT_MAX_TOKENS = 2000  # empirically noticed the biggest answers are 4000 characters long - and 1 token is between 4 and 5 chars - keep the largest value, i.e. 4 chars per token
+    DEFAULT_TEMPERATURE = 1.0
 
     ####################
     # LOGGING
@@ -233,3 +237,4 @@ import litellm
 
 litellm.telemetry = False
 litellm.set_verbose = False  # used for debuging purpose
+litellm.drop_params = True
