@@ -25,7 +25,7 @@ function validateItems(items) {
   return items.map(item => {
     // Answer defined but not Answers -> format it
     if (item.answer && !item.answers) {
-      item.answers = {items: [{text: item.answer}]}
+      item.answers = {items: [{text: item.answer, eval: {human: 1.0}}]}
     }
     // Validate answers
     if (item.answers?.items) {
