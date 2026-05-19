@@ -2,7 +2,7 @@
 
 from abc import abstractmethod, ABC
 
-from ragtime.base import RagtimeBase
+from ragtime.base import RagtimeBase, shorten_text
 from ragtime.expe import StartFrom, QA
 from ragtime.llms import LLM, LiteLLM
 from ragtime.prompters.prompter import Prompter
@@ -90,7 +90,7 @@ class TextGenerator(RagtimeBase, ABC):
 
         async def _generate_for_qa(num_q: int, qa: QA):
             logger.prefix = f"[{self.__class__.__name__}][{num_q}/{nb_q}]"
-            logger.info(f'*** Question "{qa.question.text}"')
+            logger.info(f'*** Question "{shorten_text(qa.question.text)}"')
             try:
                 await self.gen_for_qa(
                     qa=qa,
@@ -106,7 +106,7 @@ class TextGenerator(RagtimeBase, ABC):
                     expe.save_temp(name=f"Stopped_at_{num_q}_of_{nb_q}_")
                 return
             time.sleep(self.wait_between_calls)
-            logger.info(f'End question "{qa.question.text}"')
+            logger.info(f'End question "{shorten_text(qa.question.text)}"')
 
             if save_every and (num_q % save_every == 0):
                 expe.save_to_json()
