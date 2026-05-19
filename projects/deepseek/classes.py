@@ -26,7 +26,7 @@ ragtime.config.init_win_env(['SEARCH_USERNAME', 'SEARCH_PASSWORD', 'SEARCH_URL_L
 ALBERT_BASE_URL = os.environ.get('ALBERT_BASE_URL')
 ALBERT_MODEL = "AgentPublic/llama3-instruct-guillaumetell"
 DEFAULT_MAX_TOKENS = 2000
-DEFAULT_TEMPERATURE = 1.0
+DEFAULT_TEMPERATURE = 0.7
 
 logger = logging.getLogger(__name__)
 

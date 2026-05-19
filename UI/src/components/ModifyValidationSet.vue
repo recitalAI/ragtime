@@ -283,9 +283,22 @@ export default {
       }
     };
 
-    apiKeyService.refreshLLMAvailability(availableLLMs)
     const answerModelOptions = availableLLMs
     const factModelOptions = availableLLMs
+
+    // const answerModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
+
+    // const factModelOptions = computed(() => [
+    //   { title: 'Select a model', value: '', disabled: true },
+    //   { title: 'GPT-4', value: 'gpt-4', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'GPT-4o', value: 'gpt-4o', disabled: !apiKeyAvailability.value.openai },
+    //   { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: !apiKeyAvailability.value.mistral },
+    // ]);
 
     const loadExistingValidationSet = async () => {
       try {
