@@ -8,3 +8,5 @@ UI/backend/.env
 **/Albert*
 **/LSA*
 **/logs.txt
+logs/experiment_logs.txt
+UI/backend/instance/app.db
