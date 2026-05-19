@@ -96,7 +96,7 @@
             />
 
             <v-card class="mt-4 pa-4">
-              <v-card-title>LLM configuration</v-card-title>
+              <v-card-title>Models used for Answer generation</v-card-title>
               <v-card-text>
                 <div class="providers-container d-flex flex-wrap">
                   <v-btn

@@ -4,7 +4,7 @@ from ragtime.prompters.prompter import Prompter
 
 from ragtime.base import RagtimeBase
 from ragtime.expe import QA, Prompt, LLMAnswer, WithLLMAnswer, StartFrom, Chunk
-from ragtime.config import logger, DEFAULT_MAX_TOKENS
+from ragtime.config import logger, DEFAULT_MAX_TOKENS, DEFAULT_TEMPERATURE
 
 from litellm import completion_cost, acompletion
 from litellm.exceptions import RateLimitError
@@ -63,7 +63,7 @@ class LLM(RagtimeBase):
         if not (prev_obj and prev_obj.llm_answer) or (start_from <= StartFrom.llm and not b_missing_only):
             original_logger_prefix: str = logger.prefix
             logger.prefix += f'[{self.name}]'
-            logger.debug(f'Generate LLMAnswer with "{self.name}"')
+            logger.debug(f'Generate LLMAnswer with "{self.name}"')            
             b_exception:bool = False
             exc:Exception = None
             try:
@@ -128,7 +128,7 @@ class LiteLLM(LLM):
     """
 
     name: str
-    temperature: float = 0.0
+    temperature: float = DEFAULT_TEMPERATURE
     num_retries: int = 3
 
     async def complete(self, prompt: Prompt) -> LLMAnswer:
@@ -143,13 +143,22 @@ class LiteLLM(LLM):
         while retry < self.num_retries:
             try:
                 time_to_wait: float = wait_step
-                answer = await acompletion(
-                    messages=messages,
-                    model=self.name,
-                    temperature=self.temperature,
-                    num_retries=self.num_retries,
-                    max_tokens=self.max_tokens,
-                )
+                
+                # Special handling for reasoning models (gpt-5, o1, etc.)
+                if "gpt-5" in self.name.lower() or "o1" in self.name.lower():
+                    answer = await acompletion(
+                        messages=messages,
+                        model=self.name,
+                        num_retries=self.num_retries,
+                    )
+                else:
+                    answer = await acompletion(
+                        messages=messages,
+                        model=self.name,
+                        temperature=self.temperature,
+                        num_retries=self.num_retries,
+                        max_tokens=self.max_tokens,
+                    )
                 break
             except RateLimitError as e:
                 logger.debug(f"Rate limit reached - will retry in {time_to_wait:.2f}s\n\t{str(e)}")
