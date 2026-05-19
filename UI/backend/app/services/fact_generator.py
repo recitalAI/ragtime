@@ -5,6 +5,8 @@ from ragtime.llms import LiteLLM
 import os
 import logging
 
+from ragtime.prompters.fact_prompters import FactPrompterFR_2024_06_04
+
 class FactGeneratorService:
     _instance = None
 
@@ -15,7 +17,8 @@ class FactGeneratorService:
         return cls._instance
 
     def __init__(self):
-        self.prompter = FactPrompterJazz()
+        # self.prompter = FactPrompterJazz()
+        self.prompter= FactPrompterFR_2024_06_04()
         self.fact_generator = None
 
     def set_model(self, model: str):

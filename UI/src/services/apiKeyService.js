@@ -19,21 +19,44 @@ export const apiKeyService = {
       console.error('Error refreshing API key availability:', error);
       throw error;
     }
+  },
+
+  async refreshLLMAvailability(aLLMdict) {
+    try {
+      await apiKeyService.refreshApiKeyAvailability();
+      const LLMavailability = await apiKeyService.checkApiKeyAvailability();
+
+      aLLMdict.forEach(model => {
+        if (['GPT-5', 'GPT-5-mini', 'GPT-5-nano'].includes(model.title)) {
+          model.disabled = !LLMavailability.openai;
+        }
+
+        if (['Mistral Large', 'Mistral Medium', 'Mistral Small'].includes(model.title)) {
+          model.disabled = !LLMavailability.mistral;
+        }
+      });
+
+
+    } catch (error) {
+        console.error('Error refreshing LLM availability:', error);
+        throw error;
+    }
   }
+
 };
 
-export const openAIModels = ['gpt-5', 'gpt-5-mini', 'gpt-5-nano'];
+export const openAIModels = ['gpt-5']; //, 'gpt-5-mini', 'gpt-5-nano'];
 export const mistralAIModels = ['mistral/mistral-small-latest', 'mistral/mistral-medium-latest', 'mistral/mistral-large-latest'];
 
 
 export const availableLLMs = [
       { title: 'Select a model', value: '', disabled: true },
-      { title: 'GPT-5', value: 'gpt-5', disabled: false},
-      { title: 'GPT-5-mini', value: 'gpt-5-mini', disabled: false},
-      { title: 'GPT-5-nano', value: 'gpt-5-nano', disabled: false},
-      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: false},
-      { title: 'Mistral Medium', value: 'mistral/mistral-medium-latest', disabled: false},
-      { title: 'Mistral Small', value: 'mistral/mistral-small-latest', disabled: false},
+      { title: 'GPT-5', value: 'gpt-5', disabled: true},
+      // { title: 'GPT-5-mini', value: 'gpt-5-mini', disabled: true},
+      // { title: 'GPT-5-nano', value: 'gpt-5-nano', disabled: true},
+      { title: 'Mistral Large', value: 'mistral/mistral-large-latest', disabled: true},
+      { title: 'Mistral Medium', value: 'mistral/mistral-medium-latest', disabled: true},
+      { title: 'Mistral Small', value: 'mistral/mistral-small-latest', disabled: true},
 ];
 
 export const groupedLLMs = {

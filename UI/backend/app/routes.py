@@ -8,6 +8,7 @@ from ragtime.prompters import AnsPrompterBase, AnsPrompterWithRetrieverFR
 from .services.classes import *
 import logging
 from ragtime.expe import Expe, QA, Question, Answer, Answers, Facts, Fact, Chunks, Chunk, LLMAnswer, Prompt
+from ragtime.config import logger
 import json
 import os 
 from pathlib import Path
@@ -493,47 +494,48 @@ def api_generate_answers():
 @main.route('/api/generate-facts', methods=['POST'])
 def api_generate_facts():
     try:
-        logging.info("Received request for fact generation")
+        logger.info("Received request for fact generation")
         data = request.json
-        logging.info(f"Received data: {data}")
+        # logger.info(f"Received data: {data}")
 
-        expe = Expe()
+
         if 'items' in data:
-            for item in data['items']:
-                logging.info(f"Processing item: {item}")
-                qa = QA(question=Question(text=item['question']['text']))
-                if 'answers' in item and 'items' in item['answers']:
-                    qa.answers.items = []
-                    for a in item['answers']['items']:
-                        try:
-                            if isinstance(a['llm_answer']['timestamp'], str):
-                                # Try different timestamp formats
-                                timestamp = None
-                                for fmt in ['%Y-%m-%dT%H:%M:%S.%f', '%a, %d %b %Y %H:%M:%S GMT']:
-                                    try:
-                                        timestamp = datetime.strptime(a['llm_answer']['timestamp'], fmt)
-                                        if fmt == '%Y-%m-%dT%H:%M:%S.%f':
-                                            timestamp = timestamp.replace(tzinfo=timezone.utc)
-                                        break
-                                    except ValueError:
-                                        continue
+            expe = Expe(json_dict=data['items'])
+        #     for item in data['items']:
+        #         logging.info(f"Processing item: {item}")
+        #         qa = QA(question=Question(text=item['question']['text']))
+        #         if 'answers' in item and 'items' in item['answers']:
+        #             qa.answers.items = []
+        #             for a in item['answers']['items']:
+        #                 try:
+        #                     if isinstance(a['llm_answer']['timestamp'], str):
+        #                         # Try different timestamp formats
+        #                         timestamp = None
+        #                         for fmt in ['%Y-%m-%dT%H:%M:%S.%f', '%a, %d %b %Y %H:%M:%S GMT']:
+        #                             try:
+        #                                 timestamp = datetime.strptime(a['llm_answer']['timestamp'], fmt)
+        #                                 if fmt == '%Y-%m-%dT%H:%M:%S.%f':
+        #                                     timestamp = timestamp.replace(tzinfo=timezone.utc)
+        #                                 break
+        #                             except ValueError:
+        #                                 continue
                                 
-                                if timestamp is None:
-                                    raise ValueError(f"Unable to parse timestamp: {a['llm_answer']['timestamp']}")
+        #                         if timestamp is None:
+        #                             raise ValueError(f"Unable to parse timestamp: {a['llm_answer']['timestamp']}")
                                 
-                                a['llm_answer']['timestamp'] = timestamp
+        #                         a['llm_answer']['timestamp'] = timestamp
                             
-                            qa.answers.items.append(Answer(**a))
-                        except ValueError as e:
-                            logging.error(f"Error parsing answer: {e}")
-                expe.append(qa)
+        #                     qa.answers.items.append(Answer(**a))
+        #                 except ValueError as e:
+        #                     logging.error(f"Error parsing answer: {e}")
+        #         expe.append(qa)
         else:
             return jsonify({'error': 'Invalid request format'}), 400
 
         fact_generator_service = FactGeneratorService.get_instance()
         
         # Use the model specified in the request
-        model = data.get('model', 'gpt-4')  # Default to gpt-4 if not specified
+        model = data['model']
         logging.info(f"Using model: {model}")
         fact_generator_service.set_model(model)
         
@@ -548,7 +550,6 @@ def api_generate_facts():
             ]
         }
         logging.info("Fact generation completed successfully")
-        logging.info(f"Response: {response}")
         return jsonify(response)
     except Exception as e:
         logging.error(f"Error in api_generate_facts: {str(e)}")
