@@ -52,9 +52,6 @@ def format_exc(msg: str) -> str:
     return f"[{class_name}.{inspect.stack()[1][3]}()] {msg}"
 
 
-def shorten_text(msg : str, max_len=100) -> str:
-    return msg if len(msg) <= max_len-3 else msg[:max_len-3]+"..."
-
 def div0(num: float, denom: float) -> float:
     return float(num / denom) if denom else 0.0
 

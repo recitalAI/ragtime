@@ -18,7 +18,7 @@ class FactGenerator(TextGenerator):
         Create Facts based on the first Answer in the QA having human Eval equals 1
         """
 
-        ans: Answer = next((a for a in qa.answers if a.eval and a.eval.human == 1.0), None)
+        ans: Answer = next((a for a in qa.answers if a.eval and a.eval.human == 1.0))
         if not ans:
             logger.debug(f"No fact has been generated since no answer has been validated (human=1.0) for this question")
             return
@@ -41,6 +41,5 @@ class FactGenerator(TextGenerator):
             question=qa.question,
             answer=ans,
         )
-        
         # Prevent addition of None
         if f: qa.facts = f

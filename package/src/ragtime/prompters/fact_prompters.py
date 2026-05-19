@@ -1,6 +1,5 @@
 from ragtime.prompters import Prompter
 from ragtime.expe import QA, Prompt, Facts, Fact, Answer, Question
-from ragtime.config import logger
 
 
 class FactPrompterJazz(Prompter):
@@ -36,7 +35,6 @@ Ne génère aucune phrase redondante."""
             for i, t in enumerate(temp_list, start=1)
             if len(t) > 2
         ]
-        logger.debug(f'List returned: {temp_list}')
         cur_obj.items = temp_list
 
 class FactPrompterFR_2024_06_04(Prompter):

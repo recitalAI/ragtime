@@ -27,7 +27,7 @@ from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 from copy import copy
 from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, validator
 from jinja2 import Environment, FileSystemLoader
 from tabulate import tabulate
 from pathlib import Path
@@ -56,7 +56,7 @@ class LLMAnswer(RagtimeText):
     cost: Optional[float] = None
     chunks : Optional[list] = []
 
-    @field_validator('timestamp', mode='before')
+    @validator('timestamp', pre=True)
     def parse_timestamp(cls, value):
         if isinstance(value, str):
             try:
@@ -172,22 +172,19 @@ class StartFrom(IntEnum):
 
 
 class Expe(RagtimeList[QA]):
-    """An Expe is a list of QA"""
     meta: Optional[dict] = {}
     json_path: Path = Field(None, exclude=True)
 
-    def __init__(self, json_path: Path = None, json_dict: dict = None, n_first:int=0):
+    def __init__(self, json_path: Path = None, n_first:int=0):
         """Expe can be init with only the n_first items from the JSON file
         Useful to test something on a small subset of questions at first
-        Default is n_first = 0 to load eveything"""
+        DEfault is n_first = 0 to load eveything"""
         super().__init__()
         if json_path:
             if isinstance(json_path, str):
                 json_path = Path(json_path)
             self.json_path = json_path
-            self.load_from_json_file(json_path=json_path, n_first=n_first)
-        elif json_dict:
-            self.load_from_dict(json_dict=json_dict, n_first=n_first)
+            self.load_from_json(path=json_path, n_first=n_first)
 
     def stats(self) -> dict:
         """Returns stats about the expe : nb models, nb questions, nb facts, nb answers, nb human eval, nb auto eval"""
@@ -270,27 +267,17 @@ class Expe(RagtimeList[QA]):
 
         return result_path
 
-    def load_from_json_file(self, json_path: Path, n_first:int=0):
-        with open(json_path, mode="r", encoding="utf-8") as file:
-            self.load_from_dict(json.load(file), n_first)
-    
-    def load_from_dict(self, json_dict: dict, n_first:int=0):
-        qa_list: dict = json_dict
-        if "meta" in json_dict:
-            self.meta = json_dict["meta"]
-            qa_list = json_dict["items"]
-        n_first = n_first if n_first else len(qa_list)
-        for json_qa in qa_list[:n_first]:
-            if isinstance(json_qa['question'], str): # adapt when "question" is a simple string
-                json_qa['question'] = {"text": json_qa['question']}
-                # adapt when only "answer" is given as a string, not "answers"
-            if ("answer" in json_qa) and isinstance(json_qa['answer'], str) and ("answers" not in json_qa):
-                json_qa['answers'] = {"items": [{"text": json_qa['answer'], "eval": {"human": 1.0}}]}
-                json_qa.pop("answer", None)
-
-            qa: QA = QA(**json_qa)
-            self.append(qa)
-
+    def load_from_json(self, path: Path, n_first:int=0):
+        with open(path, mode="r", encoding="utf-8") as file:
+            data: list = json.load(file)
+            qa_list: dict = data
+            if "meta" in data:
+                self.meta = data["meta"]
+                qa_list = data["items"]
+            n_first = n_first if n_first else len(qa_list)
+            for json_qa in qa_list[:n_first]:
+                qa: QA = QA(**json_qa)
+                self.append(qa)
 
     def filter_answer(self, llm_facts_name: str):
         """
