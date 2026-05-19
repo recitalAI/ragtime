@@ -158,7 +158,14 @@
       />
 
       <p v-if="!qa.length && !showQuestionForm" class="text-caption text-center my-4">
-        No questions available. Import a JSON file or add a new question to get started.
+        No questions available. Import a JSON file or add a new question to get started.<br/>
+        <code>
+          <br/>Simple JSON file can be :<br/>
+          [<br/>
+            {"question": "a question", "answer": "an answer"},<br/>
+            {"question": "another question", "answer": "another answer"},<br/>
+          ]<br/>
+        </code>
       </p>
 
       <div class="save-section mt-6" v-if="qa.length">
@@ -229,12 +236,12 @@
 </template>
 
 <script>
-import { ref, onMounted, computed, onBeforeUnmount, watch, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import QuestionEditor from './QuestionEditor/index.vue';
 import { loadJsonFile, saveJsonFile } from '@/services/fileService';
 import { answerGeneratorService, factGeneratorService } from '@/services/generatorService';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs } from '@/services/apiKeyService';
 
 export default {
   name: 'CreateValidationSet',
@@ -288,13 +295,13 @@ export default {
       mistral: true
     });
 
-    const fetchApiKeyAvailability = async () => {
-      try {
-        apiKeyAvailability.value = await apiKeyService.checkApiKeyAvailability();
-      } catch (error) {
-        console.error('Error fetching API key availability:', error);
-      }
-    };
+    // const fetchApiKeyAvailability = async () => {
+    //   try {
+    //     apiKeyAvailability.value = await apiKeyService.checkApiKeyAvailability();
+    //   } catch (error) {
+    //     console.error('Error fetching API key availability:', error);
+    //   }
+    // };
 
     const showMessage = (msg, type) => {
       message.value = msg;
@@ -334,6 +341,7 @@ export default {
       if (!files.length) return;
 
       isLoading.value = true;
+      let totalImportedCount = 0;
       
       try {
         for (let file of files) {
@@ -349,7 +357,7 @@ export default {
           const newQuestions = normalizedData.map(item => ({
             question: item.question && typeof item.question === 'object' ? item.question : { text: item.question || '' },
             answers: {
-              items: Array.isArray(item.answers?.items) 
+              items: Array.isArray(item.answers?.items)
                 ? item.answers.items.map(answer => ({
                     ...answer,
                     text: answer.text || (answer.llm_answer ? answer.llm_answer.text : ''),
@@ -370,11 +378,18 @@ export default {
 
           qa.value = [...qa.value, ...newQuestions];
           importedFiles.value.push(file.name);
+          totalImportedCount += newQuestions.length;
         }
         
         hasUnsavedChanges.value = true;
         await nextTick();
         saveToLocalStorage();
+        
+        const msg = totalImportedCount === 0 
+          ? 'No valid questions found in the imported file(s)'
+          : `${totalImportedCount} ${totalImportedCount === 1 ? 'question' : 'questions'} imported`;
+        showMessage(msg, totalImportedCount === 0 ? 'error' : 'success');
+
       } catch (error) {
         console.error('Error loading file:', error);
         showMessage(`Error loading file: ${error.message}`, 'error');
@@ -628,9 +643,9 @@ export default {
       isComponentMounted.value = true;
     });
 
-    onMounted(async () => {
-      await fetchApiKeyAvailability();
-    });
+    // onMounted(async () => {
+    //   await fetchApiKeyAvailability();
+    // });
 
 
 

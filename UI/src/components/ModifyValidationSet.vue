@@ -223,13 +223,13 @@
 
 
 <script>
-import { ref, onMounted, computed, onBeforeUnmount, watch, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import QuestionEditor from './QuestionEditor/index.vue';
 import { loadJsonFile, updateJsonFile } from '@/services/fileService';
 import { answerGeneratorService, factGeneratorService } from '@/services/generatorService';
 import { http } from '@/plugins/axios';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs } from '@/services/apiKeyService';
 
 export default {
   name: 'ModifyValidationSet',

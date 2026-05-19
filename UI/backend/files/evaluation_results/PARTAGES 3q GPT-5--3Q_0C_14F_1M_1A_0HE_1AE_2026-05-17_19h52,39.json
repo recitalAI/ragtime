@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "validation_set": "PARTAGES_3q_Validation_set_Q3_F14.json",
+    "retriever_name": "No retriever"
+  },
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Chantale Peruchon Né le : 05/07/1949 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Clélya Mouraille Renseignements cliniques : Immunodéprimé. Contexte de leucémie lymphoïde chronique allogreffée. Pneumopathie du lobe supérieur gauche. BIOPSIES BRONCHIQUES MACROSCOPIE Pot 1 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 2 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 3 / Eperon LSG / LIG : trois fragments mesurant de 1 à 2 mm. Pot 4 / Carène : trois fragments mesurant 1 à 2 mm. Inclusion en totalité en 4 blocs. Analyse après coloration HES sur 3 niveaux de coupe/bloc. MICROSCOPIE Les prélèvements des pots n° 1 et 2 ont un aspect comparable. La muqueuse bronchique est bordée d'un épithélium de type respiratoire, sans atypie cytonucléaire ou désorganisation architecturale. Le chorion apparaît massivement envahi par une prolifération tumorale carcinomateuse formant des travées et petits nids. Les cellules tumorales ont un noyau volumineux, hyperchromatique et un cytoplasme abondant, éosinophile. L'étude immunohistochimique montre que ces cellules tumorales sont P40+ et TTF1-. Le PDL1 (22C3, Dako) est faiblement positif sur 20% des cellules tumorales. Les prélèvements des pots n°3 et 4 ont intéressé une muqueuse bronchique d'aspect normal."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Deux pots indiquent une localisation bronchique de carcinome épidermoïde.\n2. Deux autres pots montrent une muqueuse bronchique d'apparence normale.\n3. La codification ADICAP pour le carcinome épidermoïde est E7T0.",
+          "prompt": {
+            "meta": {},
+            "user": "Pots N°1 et 2 : localisation bronchique d'un carcinome épidermoïde. - Pots N°3 et 4 : muqueuse bronchique d'aspect normal. Codification ADICAP : E7T0",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-17T19:45:49",
+          "duration": 1.078813,
+          "cost": 0.000020459999999999997,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Deux pots indiquent une localisation bronchique de carcinome épidermoïde."
+          },
+          {
+            "meta": {},
+            "text": "2. Deux autres pots montrent une muqueuse bronchique d'apparence normale."
+          },
+          {
+            "meta": {},
+            "text": "3. La codification ADICAP pour le carcinome épidermoïde est E7T0."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": []
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Colette Lorilleux Né le : 02/04/1966 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Yves Taillandier Renseignements cliniques : Antécédent de lymphome folliculaire. Suspicion de rechute. MICRO-BIOPSIES SOUS CONTRÔLE ÉCHOGRAPHIQUE (AIGUILLE 16G) D'UNE ADÉNOPATHIE SUS CLAVICULAIRE DROITE MACROSCOPIE Il a été communiqué, fixé au formol, deux prélèvements biopsiques dissociés en cinq fragments mesurant entre 1 et 5 mm de grand axe, inclus en totalité en deux blocs. Analyse après coloration HES. Congélation : oui (deux prélèvements parvenus à part). MICROSCOPIE Le parenchyme ganglionnaire est le siège d'une prolifération tumorale d'architecture nodulaire et diffuse, faite de cellules de petite taille, à noyau parfois irrégulier. Il s'y associe quelques éléments de grande taille, à noyau volumineux, nucléolé, d'aspect centroblastique (< 15/champ au grandissement 400). Il n'est pas observé de plages de grande cellule d'architecture diffuse. Il n'y a pas de nécrose. L'étude immunohistochimique montre que ces cellules tumorales sont CD20+, CD5-, BCL2+, CD10+ et Cycline D1-. Le Ki67 est évalué à 20%."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 est localisé.\n2. Ce lymphome est classé selon la classification OMS 2022.\n3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'est présente.\n4. Le codage ADICAP associé est SGJ7F4.",
+          "prompt": {
+            "meta": {},
+            "user": "Localisation d'un lymphome folliculaire classique (grade 1-2 selon la classification OMS 2022). Il n'y a pas d'argument pour une transformation en lymphome B diffus à grandes cellules sur ces prélèvements. Codification ADICAP : SGJ7F4",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-17T19:45:49",
+          "duration": 0.832629,
+          "cost": 0.00001812,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 est localisé."
+          },
+          {
+            "meta": {},
+            "text": "2. Ce lymphome est classé selon la classification OMS 2022."
+          },
+          {
+            "meta": {},
+            "text": "3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'est présente."
+          },
+          {
+            "meta": {},
+            "text": "4. Le codage ADICAP associé est SGJ7F4."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": []
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Kaena Koska Né le : 26/06/1956 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Dominique Zeghbib BIOPSIE DU SEIN DROIT RENSEIGNEMENTS CLINIQUES Biopsie sous stéréotaxie d'une lésion stellaire infra-centimétrique du QIE du sein droit ACR 4 (image peu dense). Prélèvement de deux carottes par une aiguille de 14 G. Petit malaise vagal pendant le geste a empêché de prélever plus de tissus. EXAMEN MACROSCOPIQUE Deux carottes biopsiques de 0,6 et 0,8 cm de grand axe inclus en totalité en un bloc pour examen microscopique après trois niveaux de coupe différents. EXAMEN MICROSCOPIQUE A l'examen histologique, les carottes biopsiques intéressent un parenchyme mammaire infiltré sur 80 % de leur surface par un processus adénocarcinomateux de type lobulaire de grade Elston et Ellis II (3 ,2 , 1). En effet, cette prolifération est d'architecture trabéculo-cordonale, avec des cellules qui s'agencent en files indiennes ou sont parfois isolées. Les cellules qui composent ces structures sont au cytoplasme abondant, acidophile ou éosinophile, à limite cytoplasmique souvent mal définies. L'anisocaryose reste modérée avec des noyaux chromatiques, ou parfois vésiculeux. Les mitoses sont au nombre de 5 pour 10 champs au fort grossissement. La prolifération se dispose au sein d'un abondant stroma fibro-œdémateux, légèrement inflammatoire. Il s'y associe des images de carcinome canalaire in situ de grade nucléaire intermédiaire. L'immunohistochimie à l'aide de la E-cadhérine confirme la nature lobulaire des cellules tumorales (absence de marquage). L'étude immunohistochimique est réalisée après application des anticorps anti-RO (clone SP1, Ventana) et anti-RP (clone 1E2, Ventana). 100 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le premier. 80 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le second. L'étude immunohistochimique est réalisée après application de l'anticorps anti-HER2. Aucune immunoréactivité membranaire (intensité = 0) n'est observée au niveau des cellules tumorales infiltrante permettant de conclure à l'absence de surexpression du récepteur HER2 dans ce matériel."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Une biopsie du sein droit a révélé la présence d'un carcinome lobulaire infiltrant.\n2. Le grade histologique du cancer est de grade II selon Elston et Ellis.\n3. Les scores de grade attribués sont 3, 2 et 1 pour les critères respectifs.\n4. Les récepteurs hormonaux RO sont positifs à 100 %.\n5. Les récepteurs hormonaux RP sont positifs à 80 %.\n6. Il n'y a pas de surexpression de l'oncogène HER2.\n7. Le code ADICAP pour cette pathologie est BHSGA7B1.",
+          "prompt": {
+            "meta": {},
+            "user": "SEIN DROIT -- QIE (biopsie) : carcinome lobulaire infiltrant de grade Elston et Ellis II (3, 2, 1). Récepteurs hormonaux (immunohistochimie) : RO + (100 %), RP + (80 %). Absence de surexpression d'HER2. Codification ADICAP : BHSGA7B1",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-17T19:45:49",
+          "duration": 1.263981,
+          "cost": 0.00003756,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Une biopsie du sein droit a révélé la présence d'un carcinome lobulaire infiltrant."
+          },
+          {
+            "meta": {},
+            "text": "2. Le grade histologique du cancer est de grade II selon Elston et Ellis."
+          },
+          {
+            "meta": {},
+            "text": "3. Les scores de grade attribués sont 3, 2 et 1 pour les critères respectifs."
+          },
+          {
+            "meta": {},
+            "text": "4. Les récepteurs hormonaux RO sont positifs à 100 %."
+          },
+          {
+            "meta": {},
+            "text": "5. Les récepteurs hormonaux RP sont positifs à 80 %."
+          },
+          {
+            "meta": {},
+            "text": "6. Il n'y a pas de surexpression de l'oncogène HER2."
+          },
+          {
+            "meta": {},
+            "text": "7. Le code ADICAP pour cette pathologie est BHSGA7B1."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "Souhaitez-vous que je vous fasse un résumé clair de ce compte‑rendu et des étapes habituelles ensuite ? En attendant, voici l’essentiel en termes simples:\n\n- Diagnostic: la biopsie confirme un cancer du sein droit de type carcinome lobulaire infiltrant (CLI), grade 2 (intermédiaire). Il occupe une large partie des fragments prélevés. Il existe aussi des petits foyers associés de carcinome canalaire in situ (stade précoce non infiltrant).\n- Profil biologique: récepteurs hormonaux très positifs (œstrogènes 100 %, progestérone 80 %) → tumeur très hormonodépendante; HER2 négatif → pas d’indication aux thérapies anti‑HER2.\n- Marqueur E‑cadhérine négatif: cela confirme bien le type lobulaire (caractéristique habituelle du CLI).\n- La biopsie était limitée (2 carottes de petite taille) → le compte‑rendu définitif viendra surtout après la chirurgie, qui précisera la taille réelle, les marges et l’atteinte ganglionnaire.\n\nCe que cela implique le plus souvent:\n- Traitements efficaces: chirurgie (tumorectomie si possible ou mastectomie selon l’étendue) avec prélèvement du ou des ganglions sentinelles; radiothérapie si conservation du sein; hormonothérapie adjuvante (souvent un inhibiteur de l’aromatase chez la femme ménopausée, ou tamoxifène), généralement 5 à 10 ans. La chimiothérapie n’est pas systématique et dépendra de la taille, des ganglions, du Ki‑67 (non indiqué ici) et parfois d’un test génomique.\n- Examens complémentaires fréquents: IRM mammaire pour cartographier l’étendue (le CLI peut être multifocal/plus diffus), éventuellement imagerie du côté gauche; bilan ganglionnaire au bloc (ganglion sentinelle). Un indice de prolifération (Ki‑67) est souvent précisé sur la pièce opératoire.\n\nQuestions utiles à aborder avec l’équipe soignante:\n- Faut‑il une IRM mammaire avant l’opération ?\n- Quel type de chirurgie est envisageable (tumorectomie vs mastectomie) et pourquoi ?\n- Quand sera fait le prélèvement du ganglion sentinelle ?\n- Le Ki‑67 sera‑t‑il mesuré ? Un test génomique est‑il pertinent dans mon cas ?\n- Quelle hormonothérapie me serait proposée et pour combien de temps ? Effets secondaires possibles ?\n- La radiothérapie sera‑t‑elle nécessaire ?\n\nSi vous le souhaitez, je peux:\n- Résumer le rapport en une page pour un proche.\n- Préparer une liste personnalisée de questions pour votre rendez‑vous.\n- Expliquer un terme du compte‑rendu qui vous pose question.",
+              "prompt": {
+                "meta": {},
+                "user": "COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Kaena Koska Né le : 26/06/1956 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Dominique Zeghbib BIOPSIE DU SEIN DROIT RENSEIGNEMENTS CLINIQUES Biopsie sous stéréotaxie d'une lésion stellaire infra-centimétrique du QIE du sein droit ACR 4 (image peu dense). Prélèvement de deux carottes par une aiguille de 14 G. Petit malaise vagal pendant le geste a empêché de prélever plus de tissus. EXAMEN MACROSCOPIQUE Deux carottes biopsiques de 0,6 et 0,8 cm de grand axe inclus en totalité en un bloc pour examen microscopique après trois niveaux de coupe différents. EXAMEN MICROSCOPIQUE A l'examen histologique, les carottes biopsiques intéressent un parenchyme mammaire infiltré sur 80 % de leur surface par un processus adénocarcinomateux de type lobulaire de grade Elston et Ellis II (3 ,2 , 1). En effet, cette prolifération est d'architecture trabéculo-cordonale, avec des cellules qui s'agencent en files indiennes ou sont parfois isolées. Les cellules qui composent ces structures sont au cytoplasme abondant, acidophile ou éosinophile, à limite cytoplasmique souvent mal définies. L'anisocaryose reste modérée avec des noyaux chromatiques, ou parfois vésiculeux. Les mitoses sont au nombre de 5 pour 10 champs au fort grossissement. La prolifération se dispose au sein d'un abondant stroma fibro-œdémateux, légèrement inflammatoire. Il s'y associe des images de carcinome canalaire in situ de grade nucléaire intermédiaire. L'immunohistochimie à l'aide de la E-cadhérine confirme la nature lobulaire des cellules tumorales (absence de marquage). L'étude immunohistochimique est réalisée après application des anticorps anti-RO (clone SP1, Ventana) et anti-RP (clone 1E2, Ventana). 100 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le premier. 80 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le second. L'étude immunohistochimique est réalisée après application de l'anticorps anti-HER2. Aucune immunoréactivité membranaire (intensité = 0) n'est observée au niveau des cellules tumorales infiltrante permettant de conclure à l'absence de surexpression du récepteur HER2 dans ce matériel.",
+                "system": "",
+                "prompter": "AnsPrompterBase"
+              },
+              "name": "gpt-5",
+              "full_name": "gpt-5-2025-08-07",
+              "timestamp": "2026-05-17T19:51:15.081034",
+              "duration": 52.401468,
+              "cost": 0.01964625,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p>Souhaitez-vous que je vous fasse un résumé clair de ce compte‑rendu et des étapes habituelles ensuite ? En attendant, voici l’essentiel en termes simples:</p>\n<ul>\n<li>Diagnostic: la biopsie confirme un cancer du sein droit de type carcinome lobulaire infiltrant (CLI), grade 2 (intermédiaire). Il occupe une large partie des fragments prélevés. Il existe aussi des petits foyers associés de carcinome canalaire in situ (stade précoce non infiltrant).</li>\n<li>Profil biologique: récepteurs hormonaux très positifs (œstrogènes 100 %, progestérone 80 %) → tumeur très hormonodépendante; HER2 négatif → pas d’indication aux thérapies anti‑HER2.</li>\n<li>Marqueur E‑cadhérine négatif: cela confirme bien le type lobulaire (caractéristique habituelle du CLI).</li>\n<li>La biopsie était limitée (2 carottes de petite taille) → le compte‑rendu définitif viendra surtout après la chirurgie, qui précisera la taille réelle, les marges et l’atteinte ganglionnaire.</li>\n</ul>\n<p>Ce que cela implique le plus souvent:\n- Traitements efficaces: chirurgie (tumorectomie si possible ou mastectomie selon l’étendue) avec prélèvement du ou des ganglions sentinelles; radiothérapie si conservation du sein; hormonothérapie adjuvante (souvent un inhibiteur de l’aromatase chez la femme ménopausée, ou tamoxifène), généralement 5 à 10 ans. La chimiothérapie n’est pas systématique et dépendra de la taille, des ganglions, du Ki‑67 (non indiqué ici) et parfois d’un test génomique.\n- Examens complémentaires fréquents: IRM mammaire pour cartographier l’étendue (le CLI peut être multifocal/plus diffus), éventuellement imagerie du côté gauche; bilan ganglionnaire au bloc (ganglion sentinelle). Un indice de prolifération (Ki‑67) est souvent précisé sur la pièce opératoire.</p>\n<p>Questions utiles à aborder avec l’équipe soignante:\n- Faut‑il une IRM mammaire avant l’opération ?\n- Quel type de chirurgie est envisageable (tumorectomie vs mastectomie) et pourquoi ?\n- Quand sera fait le prélèvement du ganglion sentinelle ?\n- Le Ki‑67 sera‑t‑il mesuré ? Un test génomique est‑il pertinent dans mon cas ?\n- Quelle hormonothérapie me serait proposée et pour combien de temps ? Effets secondaires possibles ?\n- La radiothérapie sera‑t‑elle nécessaire ?</p>\n<p>Si vous le souhaitez, je peux:\n- Résumer le rapport en une page pour un proche.\n- Préparer une liste personnalisée de questions pour votre rendez‑vous.\n- Expliquer un terme du compte‑rendu qui vous pose question.</p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Une biopsie du sein droit a révélé la présence d'un carcinome lobulaire infiltrant.\n2. 2. Le grade histologique du cancer est de grade II selon Elston et Ellis.\n3. 3. Les scores de grade attribués sont 3, 2 et 1 pour les critères respectifs.\n4. 4. Les récepteurs hormonaux RO sont positifs à 100 %.\n5. 5. Les récepteurs hormonaux RP sont positifs à 80 %.\n6. 6. Il n'y a pas de surexpression de l'oncogène HER2.\n7. 7. Le code ADICAP pour cette pathologie est BHSGA7B1.\n\n-- PARAGRAPH --\n<p>Souhaitez-vous que je vous fasse un résumé clair de ce compte‑rendu et des étapes habituelles ensuite ? En attendant, voici l’essentiel en termes simples:</p>\n<ul>\n<li>Diagnostic: la biopsie confirme un cancer du sein droit de type carcinome lobulaire infiltrant (CLI), grade 2 (intermédiaire). Il occupe une large partie des fragments prélevés. Il existe aussi des petits foyers associés de carcinome canalaire in situ (stade précoce non infiltrant).</li>\n<li>Profil biologique: récepteurs hormonaux très positifs (œstrogènes 100 %, progestérone 80 %) → tumeur très hormonodépendante; HER2 négatif → pas d’indication aux thérapies anti‑HER2.</li>\n<li>Marqueur E‑cadhérine négatif: cela confirme bien le type lobulaire (caractéristique habituelle du CLI).</li>\n<li>La biopsie était limitée (2 carottes de petite taille) → le compte‑rendu définitif viendra surtout après la chirurgie, qui précisera la taille réelle, les marges et l’atteinte ganglionnaire.</li>\n</ul>\n<p>Ce que cela implique le plus souvent:\n- Traitements efficaces: chirurgie (tumorectomie si possible ou mastectomie selon l’étendue) avec prélèvement du ou des ganglions sentinelles; radiothérapie si conservation du sein; hormonothérapie adjuvante (souvent un inhibiteur de l’aromatase chez la femme ménopausée, ou tamoxifène), généralement 5 à 10 ans. La chimiothérapie n’est pas systématique et dépendra de la taille, des ganglions, du Ki‑67 (non indiqué ici) et parfois d’un test génomique.\n- Examens complémentaires fréquents: IRM mammaire pour cartographier l’étendue (le CLI peut être multifocal/plus diffus), éventuellement imagerie du côté gauche; bilan ganglionnaire au bloc (ganglion sentinelle). Un indice de prolifération (Ki‑67) est souvent précisé sur la pièce opératoire.</p>\n<p>Questions utiles à aborder avec l’équipe soignante:\n- Faut‑il une IRM mammaire avant l’opération ?\n- Quel type de chirurgie est envisageable (tumorectomie vs mastectomie) et pourquoi ?\n- Quand sera fait le prélèvement du ganglion sentinelle ?\n- Le Ki‑67 sera‑t‑il mesuré ? Un test génomique est‑il pertinent dans mon cas ?\n- Quelle hormonothérapie me serait proposée et pour combien de temps ? Effets secondaires possibles ?\n- La radiothérapie sera‑t‑elle nécessaire ?</p>\n<p>Si vous le souhaitez, je peux:\n- Résumer le rapport en une page pour un proche.\n- Préparer une liste personnalisée de questions pour votre rendez‑vous.\n- Expliquer un terme du compte‑rendu qui vous pose question.</p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n- [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n- la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n- la partie dans le PARAGRAPHE liée à la raison\nÀ la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n- Hors sujet\n- Elle donne des informations différentes des idées factuelles.\n- Contexte supplémentaire non désiré.\n\n## Format de réponse :\n\n1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n   Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n...\n\n[EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "EvalPrompterFRV2"
+                },
+                "name": "gpt-5",
+                "full_name": "gpt-5-2025-08-07",
+                "timestamp": "2026-05-17T19:52:07.501654",
+                "duration": 32.216361,
+                "cost": 0.02138375,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "",
+                "nb_extra": 0,
+                "missing": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "nb_missing": 7,
+                "ok": [],
+                "nb_ok": 0,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "",
+              "human": null,
+              "auto": 0.0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

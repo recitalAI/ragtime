@@ -10,3 +10,4 @@ UI/backend/.env
 **/logs.txt
 logs/experiment_logs.txt
 UI/backend/instance/app.db
+**/PARTAGES

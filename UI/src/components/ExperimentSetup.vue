@@ -96,7 +96,7 @@
             />
 
             <v-card class="mt-4 pa-4">
-              <v-card-title>LLM configuration</v-card-title>
+              <v-card-title>Models used for Answer generation</v-card-title>
               <v-card-text>
                 <div class="providers-container d-flex flex-wrap">
                   <v-btn
@@ -363,7 +363,7 @@ import { experimentService, modelService } from '@/services/generatorService';
 import { formatDateForBackend } from '@/utils/dateFormatter';
 import * as XLSX from 'xlsx';
 import { http } from '@/plugins/axios';
-import { apiKeyService } from '@/services/apiKeyService';
+import { apiKeyService, availableLLMs, groupedLLMs } from '@/services/apiKeyService';
 import { logService } from '@/services/logService';
 
 export default {
