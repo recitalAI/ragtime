@@ -1,0 +1,178 @@
+<!--
+This Jinja templates needs the "expe" variable to generate the HTML.
+Moreover, it uses several boolean variables to control the rendering:
+- "show_answers": True to show the answers for each model
+- "show_chunks": True to show the Chunks in a table (images on the left column, text on the right)
+- "show_facts": True to show the Facts
+- "show_evals": True to show the Evaluations
+-->
+<html>
+<head>
+  <style>
+    h3 {
+      background-color: LightGray;
+      padding: 0px;
+    }
+
+    table {
+      border-collapse: collapse;
+      background-color: #FFFFFF;
+    }
+
+    tr {
+      border-bottom: 1px solid #ccc;
+    }
+
+    img {
+      width: 100%;
+      width: 800;
+      display: block;
+    }
+
+    .my_img {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    * {
+      font-family: Arial
+    }
+
+    .collapsible {
+      background-color: #777;
+      border-bottom: 1px solid #ccc;
+      color: white;
+      cursor: pointer;
+      padding: 3px;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0px;
+      display: none;
+      overflow: hidden;
+      /*background-color: #f1f1f1;*/
+    }
+    .facts {
+      text-decoration: underline;
+      color: #0000EE;
+      font-weight: bold;
+    }
+    .facts2 {
+      text-decoration: underline;
+      color: #4c00b0;
+      font-weight: bold;
+    }
+    .ok {
+      text-decoration: underline;
+      color: #019477;
+      font-weight: bold;
+    }
+    .notfound {
+      text-decoration: underline;
+      color: #082f6d;
+      font-weight: bold;
+    }
+    .hallu {
+      text-decoration: underline;
+      color: #FF1111;
+      font-weight: bold;
+    }
+    .chunk {
+      text-decoration: underline;
+      color: #FFA500;
+      font-weight: bold;
+    } 
+    .extra {
+      text-decoration: underline;
+      color: #e47a0a;
+      font-weight: bold;
+    } 
+    .model_name {
+      background-color: #ffffa0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <span style="font-size: 20px;">{{ report_name }}</span>
+  <!-- For each QA -->
+  {% for qa in expe %}
+    <!-- Question -->
+    <button type="button" class="collapsible">
+      <h2>{{ loop.index }}. {{ qa.question.text }}</h2>
+    </button>
+    <div class="content">
+      <!-- Facts -->
+      {% if show_facts is defined and show_facts %}
+        <h3>Facts{% if (qa.facts.llm_answer) %} <i>({{qa.facts.llm_answer.name}})</i>{% endif %}</h3>
+        {% for fact in qa.facts %}
+          {{ sub('^\d+\.', '<span class="facts">\g<0></span>', fact.text) }}<br/>
+        {% endfor %}
+      {% endif %}
+      <!-- Answers -->
+      {% if (show_answers is defined and show_answers) or (show_evals is defined and show_evals) %}
+        {% if (show_answers is defined and show_answers) %}<h3>Answers</h3>{% else %}<br/>{% endif %}
+        {% for answer in qa.answers %}
+          <span class="model_name">{{ answer.llm_answer.full_name }}</span> &nbsp;
+          {% if (show_answers is defined and show_answers) %}{{ answer.text }}<br /><br />{% endif %}
+          <!-- Evals -->
+          {% if show_evals is defined and show_evals and answer.eval.text %}
+            <i>Auto : {% if answer.eval and answer.eval.auto %}{{ '%0.2f' % answer.eval.auto if answer.eval.auto }}{% else %}N/A{% endif %} -
+            Ok: {{ answer.eval.meta['nb_ok'] }} {{ answer.eval.meta['ok'] }} -
+            Missing: {{ answer.eval.meta['nb_missing'] }} {{ answer.eval.meta['missing'] }} - 
+            Hallus : {{ answer.eval.meta['nb_hallu'] }} {{ answer.eval.meta['hallu'] }} - 
+            Nb extra: {{ answer.eval.meta['nb_extra'] }} - 
+            Human : {% if answer.eval and answer.eval.human %}{{ '%0.2f' % answer.eval.human if answer.eval.human }}{% else %}N/A{% endif %} -
+            Eval made with {% if answer.eval and answer.eval.llm_answer %}"{{ answer.eval.llm_answer.name }}"{% else %}(?){% endif %}</i>&nbsp;&gt;&nbsp;
+            {{ sub('\[?OK\]?', '<span class="ok">\g<0></span>', sub('\[?NOT FOUND\]?', '<span class="notfound">\g<0></span>', sub('\[?HALLU\]?', '<span class="hallu">\g<0></span>', sub('\[EXTRA\]\s*=\s*(\d+)', '<span class="extra"> \g<0></span>', sub('\[?MISSING\]?', '<span class="notfound"> \g<0></span>',sub('(?i)chunk_\d+', '<span class="chunk"> \g<0></span>',sub('\[Fait \d+\]', '<span class="facts2"> \g<0></span>', answer.eval.text)))))))}}<br><br>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <!-- Chunks -->
+      {% if show_chunks is defined and show_chunks %}
+        <h3>Chunks</h3>
+        <table>
+          {% for chunk in qa.chunks %}
+            <tr>
+              <td><a href={{ chunk.meta['url'] }} target="_blank"><img src={{ chunk.meta['image'] }}></a></td>
+              <td><i>{{ chunk.meta['display_name'] }} (p. {{ chunk.meta['page_number'] }})</i><br /><br />{{ chunk.text }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].nextElementSibling.style.display = "block"
+    }
+  </script>
+</body>
+
+</html>
