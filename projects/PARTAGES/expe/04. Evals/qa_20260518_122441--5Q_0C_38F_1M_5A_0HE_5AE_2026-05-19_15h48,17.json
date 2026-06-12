@@ -1,0 +1,651 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Chantale Peruchon Né le : 05/07/1949 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Clélya Mouraille Renseignements cliniques : Immunodéprimé. Contexte de leucémie lymphoïde chronique allogreffée. Pneumopathie du lobe supérieur gauche. BIOPSIES BRONCHIQUES MACROSCOPIE Pot 1 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 2 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 3 / Eperon LSG / LIG : trois fragments mesurant de 1 à 2 mm. Pot 4 / Carène : trois fragments mesurant 1 à 2 mm. Inclusion en totalité en 4 blocs. Analyse après coloration HES sur 3 niveaux de coupe/bloc. MICROSCOPIE Les prélèvements des pots n° 1 et 2 ont un aspect comparable. La muqueuse bronchique est bordée d'un épithélium de type respiratoire, sans atypie cytonucléaire ou désorganisation architecturale. Le chorion apparaît massivement envahi par une prolifération tumorale carcinomateuse formant des travées et petits nids. Les cellules tumorales ont un noyau volumineux, hyperchromatique et un cytoplasme abondant, éosinophile. L'étude immunohistochimique montre que ces cellules tumorales sont P40+ et TTF1-. Le PDL1 (22C3, Dako) est faiblement positif sur 20% des cellules tumorales. Les prélèvements des pots n°3 et 4 ont intéressé une muqueuse bronchique d'aspect normal."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Les pots N°1 et N°2 contiennent des échantillons de carcinome épidermoïde localisés dans les bronches.\n2. Les pots N°3 et N°4 contiennent des muqueuses bronchiques normales.\n3. La codification ADICAP pour ces échantillons est E7T0.",
+          "prompt": {
+            "meta": {},
+            "user": "Pots N°1 et 2 : localisation bronchique d'un carcinome épidermoïde. - Pots N°3 et 4 : muqueuse bronchique d'aspect normal. Codification ADICAP : E7T0",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.215074",
+          "duration": 1.219875,
+          "cost": 0.00002316,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Les pots N°1 et N°2 contiennent des échantillons de carcinome épidermoïde localisés dans les bronches."
+          },
+          {
+            "meta": {},
+            "text": "2. Les pots N°3 et N°4 contiennent des muqueuses bronchiques normales."
+          },
+          {
+            "meta": {},
+            "text": "3. La codification ADICAP pour ces échantillons est E7T0."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "**Conclusion :**\n\nFragments bronchiques analysés (4 blocs) révélant une **infiltration carcinomateuse majeure** des bronches du culmen (Pots 1 et 2), compatible avec un **carcinome épidermoïde** (positivity P40+, TTF1-, PDL1+ à 20%). Muqueuses bronchiques normales des Pots 3 et 4.\n\n**Codification CIM-10 :**\n- C34.1 (tumeur maligne de la bronche du lobe supérieur)\n- Z51.1 (immunosuppression thérapeutique, contexte d'allogreffe)\n\n*(Aucun signe de récidive de leucémie lymphoïde chronique ou de pneumopathie infectieuse identifié.)*",
+              "prompt": {
+                "meta": {},
+                "user": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Chantale Peruchon Né le : 05/07/1949 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Clélya Mouraille Renseignements cliniques : Immunodéprimé. Contexte de leucémie lymphoïde chronique allogreffée. Pneumopathie du lobe supérieur gauche. BIOPSIES BRONCHIQUES MACROSCOPIE Pot 1 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 2 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 3 / Eperon LSG / LIG : trois fragments mesurant de 1 à 2 mm. Pot 4 / Carène : trois fragments mesurant 1 à 2 mm. Inclusion en totalité en 4 blocs. Analyse après coloration HES sur 3 niveaux de coupe/bloc. MICROSCOPIE Les prélèvements des pots n° 1 et 2 ont un aspect comparable. La muqueuse bronchique est bordée d'un épithélium de type respiratoire, sans atypie cytonucléaire ou désorganisation architecturale. Le chorion apparaît massivement envahi par une prolifération tumorale carcinomateuse formant des travées et petits nids. Les cellules tumorales ont un noyau volumineux, hyperchromatique et un cytoplasme abondant, éosinophile. L'étude immunohistochimique montre que ces cellules tumorales sont P40+ et TTF1-. Le PDL1 (22C3, Dako) est faiblement positif sur 20% des cellules tumorales. Les prélèvements des pots n°3 et 4 ont intéressé une muqueuse bronchique d'aspect normal.",
+                "system": "Tu es un médecin qui doit rédiger une conclusion par rapport à un compte-rendu médical.La conclusion doit être courte et factuelle et inclure une codification si possible.",
+                "prompter": "PARTAGESAnswerPrompter"
+              },
+              "name": "mistral/mistral-small-latest",
+              "full_name": "mistral-small-latest",
+              "timestamp": "2026-05-18T22:10:38.519689",
+              "duration": 1.999686,
+              "cost": 0.000059579999999999995,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p><strong>Conclusion :</strong></p>\n<p>Fragments bronchiques analysés (4 blocs) révélant une <strong>infiltration carcinomateuse majeure</strong> des bronches du culmen (Pots 1 et 2), compatible avec un <strong>carcinome épidermoïde</strong> (positivity P40+, TTF1-, PDL1+ à 20%). Muqueuses bronchiques normales des Pots 3 et 4.</p>\n<p><strong>Codification CIM-10 :</strong>\n- C34.1 (tumeur maligne de la bronche du lobe supérieur)\n- Z51.1 (immunosuppression thérapeutique, contexte d'allogreffe)</p>\n<p><em>(Aucun signe de récidive de leucémie lymphoïde chronique ou de pneumopathie infectieuse identifié.)</em></p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. **[OK]** - Le fait 1 est soutenu car le paragraphe mentionne une \"infiltration carcinomateuse majeure\" dans les Pots 1 et 2, compatible avec un \"carcinome épidermoïde\".\n   Partie dans le paragraphe : *\"Fragments bronchiques analysés (4 blocs) révélant une infiltration carcinomateuse majeure des bronches du culmen (Pots 1 et 2), compatible avec un carcinome épidermoïde (positivity P40+, TTF1-, PDL1+ à 20%).\"*\n\n2. **[OK]** - Le fait 2 est soutenu car le paragraphe indique explicitement que les Pots 3 et 4 contiennent des \"muqueuses bronchiques normales\".\n   Partie dans le paragraphe : *\"Muqueuses bronchiques normales des Pots 3 et 4.\"*\n\n3. **[HALLU]** - Le fait 3 n'est **pas soutenu** car la codification mentionnée est la **CIM-10 (C34.1 et Z51.1)**, et non l'**ADICAP E7T0**. Aucune mention de ADICAP n'est présente.\n   Partie dans le paragraphe : *\"Codification CIM-10 : - C34.1 (tumeur maligne de la bronche du lobe supérieur) - Z51.1 (immunosuppression thérapeutique, contexte d'allogreffe)\"*\n\n[EXTRA] = 0\n*(Aucune information supplémentaire non liée aux faits n'est présente dans le paragraphe.)*",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Les pots N°1 et N°2 contiennent des échantillons de carcinome épidermoïde localisés dans les bronches.\n2. 2. Les pots N°3 et N°4 contiennent des muqueuses bronchiques normales.\n3. 3. La codification ADICAP pour ces échantillons est E7T0.\n\n-- PARAGRAPH --\n<p><strong>Conclusion :</strong></p>\n<p>Fragments bronchiques analysés (4 blocs) révélant une <strong>infiltration carcinomateuse majeure</strong> des bronches du culmen (Pots 1 et 2), compatible avec un <strong>carcinome épidermoïde</strong> (positivity P40+, TTF1-, PDL1+ à 20%). Muqueuses bronchiques normales des Pots 3 et 4.</p>\n<p><strong>Codification CIM-10 :</strong>\n- C34.1 (tumeur maligne de la bronche du lobe supérieur)\n- Z51.1 (immunosuppression thérapeutique, contexte d'allogreffe)</p>\n<p><em>(Aucun signe de récidive de leucémie lymphoïde chronique ou de pneumopathie infectieuse identifié.)</em></p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n    - [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n    - la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n    - la partie dans le PARAGRAPHE liée à la raison\n    À la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n    - Hors sujet\n    - Elle donne des informations différentes des idées factuelles.\n    - Contexte supplémentaire non désiré.\n\n    ## Format de réponse :\n\n    1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    ...\n\n    [EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "PARTAGESEvalPrompter"
+                },
+                "name": "mistral/mistral-small-latest",
+                "full_name": "mistral-small-latest",
+                "timestamp": "2026-05-19T15:46:58.379834",
+                "duration": 54.151518,
+                "cost": 0.00010074,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "*(Aucune information supplémentaire non liée aux faits n'est présente dans le paragraphe.)*",
+                "nb_extra": 0,
+                "missing": [],
+                "nb_missing": 0,
+                "ok": [
+                  1,
+                  2
+                ],
+                "nb_ok": 2,
+                "hallu": [
+                  3
+                ],
+                "nb_hallu": 1
+              },
+              "text": "<ol>\n<li>\n<p><strong>[OK]</strong> - Le fait 1 est soutenu car le paragraphe mentionne une \"infiltration carcinomateuse majeure\" dans les Pots 1 et 2, compatible avec un \"carcinome épidermoïde\".\n   Partie dans le paragraphe : <em>\"Fragments bronchiques analysés (4 blocs) révélant une infiltration carcinomateuse majeure des bronches du culmen (Pots 1 et 2), compatible avec un carcinome épidermoïde (positivity P40+, TTF1-, PDL1+ à 20%).\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 2 est soutenu car le paragraphe indique explicitement que les Pots 3 et 4 contiennent des \"muqueuses bronchiques normales\".\n   Partie dans le paragraphe : <em>\"Muqueuses bronchiques normales des Pots 3 et 4.\"</em></p>\n</li>\n<li>\n<p><strong>[HALLU]</strong> - Le fait 3 n'est <strong>pas soutenu</strong> car la codification mentionnée est la <strong>CIM-10 (C34.1 et Z51.1)</strong>, et non l'<strong>ADICAP E7T0</strong>. Aucune mention de ADICAP n'est présente.\n   Partie dans le paragraphe : <em>\"Codification CIM-10 : - C34.1 (tumeur maligne de la bronche du lobe supérieur) - Z51.1 (immunosuppression thérapeutique, contexte d'allogreffe)\"</em></p>\n</li>\n</ol>\n<p>[EXTRA] = 0\n<em>(Aucune information supplémentaire non liée aux faits n'est présente dans le paragraphe.)</em></p>",
+              "human": null,
+              "auto": 0.3333333333333333
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Colette Lorilleux Né le : 02/04/1966 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Yves Taillandier Renseignements cliniques : Antécédent de lymphome folliculaire. Suspicion de rechute. MICRO-BIOPSIES SOUS CONTRÔLE ÉCHOGRAPHIQUE (AIGUILLE 16G) D'UNE ADÉNOPATHIE SUS CLAVICULAIRE DROITE MACROSCOPIE Il a été communiqué, fixé au formol, deux prélèvements biopsiques dissociés en cinq fragments mesurant entre 1 et 5 mm de grand axe, inclus en totalité en deux blocs. Analyse après coloration HES. Congélation : oui (deux prélèvements parvenus à part). MICROSCOPIE Le parenchyme ganglionnaire est le siège d'une prolifération tumorale d'architecture nodulaire et diffuse, faite de cellules de petite taille, à noyau parfois irrégulier. Il s'y associe quelques éléments de grande taille, à noyau volumineux, nucléolé, d'aspect centroblastique (< 15/champ au grandissement 400). Il n'est pas observé de plages de grande cellule d'architecture diffuse. Il n'y a pas de nécrose. L'étude immunohistochimique montre que ces cellules tumorales sont CD20+, CD5-, BCL2+, CD10+ et Cycline D1-. Le Ki67 est évalué à 20%."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 a été localisé.\n2. La classification OMS 2022 a été utilisée pour déterminer le grade.\n3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'a été trouvée.\n4. Le code ADICAP correspondant est SGJ7F4.",
+          "prompt": {
+            "meta": {},
+            "user": "Localisation d'un lymphome folliculaire classique (grade 1-2 selon la classification OMS 2022). Il n'y a pas d'argument pour une transformation en lymphome B diffus à grandes cellules sur ces prélèvements. Codification ADICAP : SGJ7F4",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.339583",
+          "duration": 0.946978,
+          "cost": 0.00002442,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 a été localisé."
+          },
+          {
+            "meta": {},
+            "text": "2. La classification OMS 2022 a été utilisée pour déterminer le grade."
+          },
+          {
+            "meta": {},
+            "text": "3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'a été trouvée."
+          },
+          {
+            "meta": {},
+            "text": "4. Le code ADICAP correspondant est SGJ7F4."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "**Conclusion :**\nProlifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2), confirmé par l'immunohistochimie (CD20+, CD10+, BCL2+).\n\n**Codification CIM-10 possible :**\n- C82.1 (Lymphome folliculaire de grade 1-2)\n- Z85.7 (Antécédent de lymphome folliculaire)\n\n*Remarque : L'évaluation immunohistochimique et le Ki67 orientent vers un profil de grade histologique bas.*",
+              "prompt": {
+                "meta": {},
+                "user": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Colette Lorilleux Né le : 02/04/1966 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Yves Taillandier Renseignements cliniques : Antécédent de lymphome folliculaire. Suspicion de rechute. MICRO-BIOPSIES SOUS CONTRÔLE ÉCHOGRAPHIQUE (AIGUILLE 16G) D'UNE ADÉNOPATHIE SUS CLAVICULAIRE DROITE MACROSCOPIE Il a été communiqué, fixé au formol, deux prélèvements biopsiques dissociés en cinq fragments mesurant entre 1 et 5 mm de grand axe, inclus en totalité en deux blocs. Analyse après coloration HES. Congélation : oui (deux prélèvements parvenus à part). MICROSCOPIE Le parenchyme ganglionnaire est le siège d'une prolifération tumorale d'architecture nodulaire et diffuse, faite de cellules de petite taille, à noyau parfois irrégulier. Il s'y associe quelques éléments de grande taille, à noyau volumineux, nucléolé, d'aspect centroblastique (< 15/champ au grandissement 400). Il n'est pas observé de plages de grande cellule d'architecture diffuse. Il n'y a pas de nécrose. L'étude immunohistochimique montre que ces cellules tumorales sont CD20+, CD5-, BCL2+, CD10+ et Cycline D1-. Le Ki67 est évalué à 20%.",
+                "system": "Tu es un médecin qui doit rédiger une conclusion par rapport à un compte-rendu médical.La conclusion doit être courte et factuelle et inclure une codification si possible.",
+                "prompter": "PARTAGESAnswerPrompter"
+              },
+              "name": "mistral/mistral-small-latest",
+              "full_name": "mistral-small-latest",
+              "timestamp": "2026-05-18T22:10:38.663934",
+              "duration": 1.694867,
+              "cost": 0.000049739999999999995,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p><strong>Conclusion :</strong>\nProlifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2), confirmé par l'immunohistochimie (CD20+, CD10+, BCL2+).</p>\n<p><strong>Codification CIM-10 possible :</strong>\n- C82.1 (Lymphome folliculaire de grade 1-2)\n- Z85.7 (Antécédent de lymphome folliculaire)</p>\n<p><em>Remarque : L'évaluation immunohistochimique et le Ki67 orientent vers un profil de grade histologique bas.</em></p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. **[OK]** - Le paragraphe indique clairement la présence d'un lymphome folliculaire de bas grade (grade 1-2), ce qui soutient le fait 1.\nPartie dans le paragraphe : *\"Prolifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2)\"*\n\n2. **[NOT FOUND]** - Le paragraphe ne mentionne pas explicitement l'utilisation de la classification OMS 2022 pour déterminer le grade.\nPartie dans le paragraphe : *\"L'évaluation immunohistochimique et le Ki67 orientent vers un profil de grade histologique bas.\"* (ne confirme pas l'utilisation de l'OMS 2022)\n\n3. **[OK]** - Le paragraphe ne mentionne aucune preuve de transformation en lymphome B diffus à grandes cellules, ce qui implique qu'aucune transformation n'a été trouvée, soutenant ainsi le fait 3.\nPartie dans le paragraphe : *\"Prolifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2)\"*\n\n4. **[NOT FOUND]** - Le paragraphe ne mentionne pas le code ADICAP SGJ7F4.\nPartie dans le paragraphe : Aucun élément ne correspond à ce code.\n\n[EXTRA] = 2\n(Les idées supplémentaires sont :\n- La mention de la classification CIM-10 (C82.1 et Z85.7).\n- La précision sur l'immunohistochimie (CD20+, CD10+, BCL2+) et le Ki67.)",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Un lymphome folliculaire classique de grade 1 ou 2 a été localisé.\n2. 2. La classification OMS 2022 a été utilisée pour déterminer le grade.\n3. 3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'a été trouvée.\n4. 4. Le code ADICAP correspondant est SGJ7F4.\n\n-- PARAGRAPH --\n<p><strong>Conclusion :</strong>\nProlifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2), confirmé par l'immunohistochimie (CD20+, CD10+, BCL2+).</p>\n<p><strong>Codification CIM-10 possible :</strong>\n- C82.1 (Lymphome folliculaire de grade 1-2)\n- Z85.7 (Antécédent de lymphome folliculaire)</p>\n<p><em>Remarque : L'évaluation immunohistochimique et le Ki67 orientent vers un profil de grade histologique bas.</em></p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n    - [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n    - la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n    - la partie dans le PARAGRAPHE liée à la raison\n    À la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n    - Hors sujet\n    - Elle donne des informations différentes des idées factuelles.\n    - Contexte supplémentaire non désiré.\n\n    ## Format de réponse :\n\n    1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    ...\n\n    [EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "PARTAGESEvalPrompter"
+                },
+                "name": "mistral/mistral-small-latest",
+                "full_name": "mistral-small-latest",
+                "timestamp": "2026-05-19T15:47:49.876318",
+                "duration": 23.967024,
+                "cost": 0.00010085999999999999,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "(Les idées supplémentaires sont :",
+                "nb_extra": 2,
+                "missing": [
+                  2,
+                  4
+                ],
+                "nb_missing": 2,
+                "ok": [
+                  1,
+                  3
+                ],
+                "nb_ok": 2,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<ol>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe indique clairement la présence d'un lymphome folliculaire de bas grade (grade 1-2), ce qui soutient le fait 1.\nPartie dans le paragraphe : <em>\"Prolifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2)\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le paragraphe ne mentionne pas explicitement l'utilisation de la classification OMS 2022 pour déterminer le grade.\nPartie dans le paragraphe : <em>\"L'évaluation immunohistochimique et le Ki67 orientent vers un profil de grade histologique bas.\"</em> (ne confirme pas l'utilisation de l'OMS 2022)</p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe ne mentionne aucune preuve de transformation en lymphome B diffus à grandes cellules, ce qui implique qu'aucune transformation n'a été trouvée, soutenant ainsi le fait 3.\nPartie dans le paragraphe : <em>\"Prolifération lymphomateuse compatible avec une rechute d'un lymphome folliculaire de bas grade (grade 1-2)\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le paragraphe ne mentionne pas le code ADICAP SGJ7F4.\nPartie dans le paragraphe : Aucun élément ne correspond à ce code.</p>\n</li>\n</ol>\n<p>[EXTRA] = 2\n(Les idées supplémentaires sont :\n- La mention de la classification CIM-10 (C82.1 et Z85.7).\n- La précision sur l'immunohistochimie (CD20+, CD10+, BCL2+) et le Ki67.)</p>",
+              "human": null,
+              "auto": 0.25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Kaena Koska Né le : 26/06/1956 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Dominique Zeghbib BIOPSIE DU SEIN DROIT RENSEIGNEMENTS CLINIQUES Biopsie sous stéréotaxie d'une lésion stellaire infra-centimétrique du QIE du sein droit ACR 4 (image peu dense). Prélèvement de deux carottes par une aiguille de 14 G. Petit malaise vagal pendant le geste a empêché de prélever plus de tissus. EXAMEN MACROSCOPIQUE Deux carottes biopsiques de 0,6 et 0,8 cm de grand axe inclus en totalité en un bloc pour examen microscopique après trois niveaux de coupe différents. EXAMEN MICROSCOPIQUE A l'examen histologique, les carottes biopsiques intéressent un parenchyme mammaire infiltré sur 80 % de leur surface par un processus adénocarcinomateux de type lobulaire de grade Elston et Ellis II (3 ,2 , 1). En effet, cette prolifération est d'architecture trabéculo-cordonale, avec des cellules qui s'agencent en files indiennes ou sont parfois isolées. Les cellules qui composent ces structures sont au cytoplasme abondant, acidophile ou éosinophile, à limite cytoplasmique souvent mal définies. L'anisocaryose reste modérée avec des noyaux chromatiques, ou parfois vésiculeux. Les mitoses sont au nombre de 5 pour 10 champs au fort grossissement. La prolifération se dispose au sein d'un abondant stroma fibro-œdémateux, légèrement inflammatoire. Il s'y associe des images de carcinome canalaire in situ de grade nucléaire intermédiaire. L'immunohistochimie à l'aide de la E-cadhérine confirme la nature lobulaire des cellules tumorales (absence de marquage). L'étude immunohistochimique est réalisée après application des anticorps anti-RO (clone SP1, Ventana) et anti-RP (clone 1E2, Ventana). 100 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le premier. 80 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le second. L'étude immunohistochimique est réalisée après application de l'anticorps anti-HER2. Aucune immunoréactivité membranaire (intensité = 0) n'est observée au niveau des cellules tumorales infiltrante permettant de conclure à l'absence de surexpression du récepteur HER2 dans ce matériel."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Une biopsie du sein droit a révélé un carcinome lobulaire infiltrant.\n2. Ce carcinome est de grade Elston et Ellis II.\n3. Le grade II est composé des scores 3, 2 et 1.\n4. Les récepteurs hormonaux RO sont positifs à 100 %.\n5. Les récepteurs hormonaux RP sont positifs à 80 %.\n6. Il n'y a pas de surexpression de HER2.\n7. La codification ADICAP est BHSGA7B1.",
+          "prompt": {
+            "meta": {},
+            "user": "SEIN DROIT -- QIE (biopsie) : carcinome lobulaire infiltrant de grade Elston et Ellis II (3, 2, 1). Récepteurs hormonaux (immunohistochimie) : RO + (100 %), RP + (80 %). Absence de surexpression d'HER2. Codification ADICAP : BHSGA7B1",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.343160",
+          "duration": 1.150184,
+          "cost": 0.00003395999999999999,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Une biopsie du sein droit a révélé un carcinome lobulaire infiltrant."
+          },
+          {
+            "meta": {},
+            "text": "2. Ce carcinome est de grade Elston et Ellis II."
+          },
+          {
+            "meta": {},
+            "text": "3. Le grade II est composé des scores 3, 2 et 1."
+          },
+          {
+            "meta": {},
+            "text": "4. Les récepteurs hormonaux RO sont positifs à 100 %."
+          },
+          {
+            "meta": {},
+            "text": "5. Les récepteurs hormonaux RP sont positifs à 80 %."
+          },
+          {
+            "meta": {},
+            "text": "6. Il n'y a pas de surexpression de HER2."
+          },
+          {
+            "meta": {},
+            "text": "7. La codification ADICAP est BHSGA7B1."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "**Conclusion du compte-rendu :**\n\nCarcinome mammaire infiltrant de type **lobulaire de grade histopronostique Elston et Ellis II (3,2,1)** avec composante in situ. Expression immunohistochimique des récepteurs hormonaux (RO : 100 %, RP : 80 %) et HER2 négatif.\n\n**Cotation CIM-O-3 :** **8520/3** (Carcinome lobulaire infiltrant)\n\n*Recommandation : complément d'évaluation oncologique (stade, prise en charge thérapeutique).*",
+              "prompt": {
+                "meta": {},
+                "user": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Kaena Koska Né le : 26/06/1956 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Dominique Zeghbib BIOPSIE DU SEIN DROIT RENSEIGNEMENTS CLINIQUES Biopsie sous stéréotaxie d'une lésion stellaire infra-centimétrique du QIE du sein droit ACR 4 (image peu dense). Prélèvement de deux carottes par une aiguille de 14 G. Petit malaise vagal pendant le geste a empêché de prélever plus de tissus. EXAMEN MACROSCOPIQUE Deux carottes biopsiques de 0,6 et 0,8 cm de grand axe inclus en totalité en un bloc pour examen microscopique après trois niveaux de coupe différents. EXAMEN MICROSCOPIQUE A l'examen histologique, les carottes biopsiques intéressent un parenchyme mammaire infiltré sur 80 % de leur surface par un processus adénocarcinomateux de type lobulaire de grade Elston et Ellis II (3 ,2 , 1). En effet, cette prolifération est d'architecture trabéculo-cordonale, avec des cellules qui s'agencent en files indiennes ou sont parfois isolées. Les cellules qui composent ces structures sont au cytoplasme abondant, acidophile ou éosinophile, à limite cytoplasmique souvent mal définies. L'anisocaryose reste modérée avec des noyaux chromatiques, ou parfois vésiculeux. Les mitoses sont au nombre de 5 pour 10 champs au fort grossissement. La prolifération se dispose au sein d'un abondant stroma fibro-œdémateux, légèrement inflammatoire. Il s'y associe des images de carcinome canalaire in situ de grade nucléaire intermédiaire. L'immunohistochimie à l'aide de la E-cadhérine confirme la nature lobulaire des cellules tumorales (absence de marquage). L'étude immunohistochimique est réalisée après application des anticorps anti-RO (clone SP1, Ventana) et anti-RP (clone 1E2, Ventana). 100 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le premier. 80 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le second. L'étude immunohistochimique est réalisée après application de l'anticorps anti-HER2. Aucune immunoréactivité membranaire (intensité = 0) n'est observée au niveau des cellules tumorales infiltrante permettant de conclure à l'absence de surexpression du récepteur HER2 dans ce matériel.",
+                "system": "Tu es un médecin qui doit rédiger une conclusion par rapport à un compte-rendu médical.La conclusion doit être courte et factuelle et inclure une codification si possible.",
+                "prompter": "PARTAGESAnswerPrompter"
+              },
+              "name": "mistral/mistral-small-latest",
+              "full_name": "mistral-small-latest",
+              "timestamp": "2026-05-18T22:10:38.684480",
+              "duration": 2.002771,
+              "cost": 0.000059579999999999995,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p><strong>Conclusion du compte-rendu :</strong></p>\n<p>Carcinome mammaire infiltrant de type <strong>lobulaire de grade histopronostique Elston et Ellis II (3,2,1)</strong> avec composante in situ. Expression immunohistochimique des récepteurs hormonaux (RO : 100 %, RP : 80 %) et HER2 négatif.</p>\n<p><strong>Cotation CIM-O-3 :</strong> <strong>8520/3</strong> (Carcinome lobulaire infiltrant)</p>\n<p><em>Recommandation : complément d'évaluation oncologique (stade, prise en charge thérapeutique).</em></p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. **[OK]** - Le paragraphe confirme la présence d'un carcinome mammaire infiltrant de type lobulaire de grade histopronostique Elston et Ellis II, ce qui correspond au fait 1 et 2.\nPartie dans le paragraphe : *\"Carcinome mammaire infiltrant de type lobulaire de grade histopronostique Elston et Ellis II (3,2,1)\"*\n\n2. **[OK]** - Le paragraphe précise bien que le grade II est composé des scores 3, 2 et 1, ce qui correspond au fait 3.\nPartie dans le paragraphe : *\"grade histopronostique Elston et Ellis II (3,2,1)\"*\n\n3. **[OK]** - Le paragraphe indique que les récepteurs hormonaux RO sont à 100 %, ce qui correspond au fait 4.\nPartie dans le paragraphe : *\"Expression immunohistochimique des récepteurs hormonaux (RO : 100 %,\"*\n\n4. **[OK]** - Le paragraphe indique que les récepteurs hormonaux RP sont à 80 %, ce qui correspond au fait 5.\nPartie dans le paragraphe : *\"RP : 80 %,\"*\n\n5. **[OK]** - Le paragraphe mentionne que HER2 est négatif, ce qui correspond au fait 6 (pas de surexpression de HER2).\nPartie dans le paragraphe : *\"HER2 négatif.\"*\n\n6. **[NOT FOUND]** - Le paragraphe ne mentionne pas la codification ADICAP BHSGA7B1, donc le fait n'est pas soutenu.\nPartie dans le paragraphe : *(Aucune mention de la codification ADICAP)*\n\n7. **[NOT FOUND]** - Le paragraphe ne fournit pas la codification ADICAP, mais donne une cotation CIM-O-3 (8520/3), qui n'est pas demandée dans les faits.\nPartie dans le paragraphe : *\"Cotation CIM-O-3 : 8520/3\"*\n\n[EXTRA] = 1 (La mention de la cotation CIM-O-3 est une information supplémentaire non demandée dans les faits).",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Une biopsie du sein droit a révélé un carcinome lobulaire infiltrant.\n2. 2. Ce carcinome est de grade Elston et Ellis II.\n3. 3. Le grade II est composé des scores 3, 2 et 1.\n4. 4. Les récepteurs hormonaux RO sont positifs à 100 %.\n5. 5. Les récepteurs hormonaux RP sont positifs à 80 %.\n6. 6. Il n'y a pas de surexpression de HER2.\n7. 7. La codification ADICAP est BHSGA7B1.\n\n-- PARAGRAPH --\n<p><strong>Conclusion du compte-rendu :</strong></p>\n<p>Carcinome mammaire infiltrant de type <strong>lobulaire de grade histopronostique Elston et Ellis II (3,2,1)</strong> avec composante in situ. Expression immunohistochimique des récepteurs hormonaux (RO : 100 %, RP : 80 %) et HER2 négatif.</p>\n<p><strong>Cotation CIM-O-3 :</strong> <strong>8520/3</strong> (Carcinome lobulaire infiltrant)</p>\n<p><em>Recommandation : complément d'évaluation oncologique (stade, prise en charge thérapeutique).</em></p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n    - [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n    - la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n    - la partie dans le PARAGRAPHE liée à la raison\n    À la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n    - Hors sujet\n    - Elle donne des informations différentes des idées factuelles.\n    - Contexte supplémentaire non désiré.\n\n    ## Format de réponse :\n\n    1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    ...\n\n    [EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "PARTAGESEvalPrompter"
+                },
+                "name": "mistral/mistral-small-latest",
+                "full_name": "mistral-small-latest",
+                "timestamp": "2026-05-19T15:47:49.928837",
+                "duration": 26.079265,
+                "cost": 0.00012881999999999998,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "(La mention de la cotation CIM-O-3 est une information supplémentaire non demandée dans les faits).",
+                "nb_extra": 1,
+                "missing": [
+                  6,
+                  7
+                ],
+                "nb_missing": 2,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "nb_ok": 5,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<ol>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe confirme la présence d'un carcinome mammaire infiltrant de type lobulaire de grade histopronostique Elston et Ellis II, ce qui correspond au fait 1 et 2.\nPartie dans le paragraphe : <em>\"Carcinome mammaire infiltrant de type lobulaire de grade histopronostique Elston et Ellis II (3,2,1)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe précise bien que le grade II est composé des scores 3, 2 et 1, ce qui correspond au fait 3.\nPartie dans le paragraphe : <em>\"grade histopronostique Elston et Ellis II (3,2,1)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe indique que les récepteurs hormonaux RO sont à 100 %, ce qui correspond au fait 4.\nPartie dans le paragraphe : <em>\"Expression immunohistochimique des récepteurs hormonaux (RO : 100 %,\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe indique que les récepteurs hormonaux RP sont à 80 %, ce qui correspond au fait 5.\nPartie dans le paragraphe : <em>\"RP : 80 %,\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le paragraphe mentionne que HER2 est négatif, ce qui correspond au fait 6 (pas de surexpression de HER2).\nPartie dans le paragraphe : <em>\"HER2 négatif.\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le paragraphe ne mentionne pas la codification ADICAP BHSGA7B1, donc le fait n'est pas soutenu.\nPartie dans le paragraphe : <em>(Aucune mention de la codification ADICAP)</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le paragraphe ne fournit pas la codification ADICAP, mais donne une cotation CIM-O-3 (8520/3), qui n'est pas demandée dans les faits.\nPartie dans le paragraphe : <em>\"Cotation CIM-O-3 : 8520/3\"</em></p>\n</li>\n</ol>\n<p>[EXTRA] = 1 (La mention de la cotation CIM-O-3 est une information supplémentaire non demandée dans les faits).</p>",
+              "human": null,
+              "auto": 0.6071428571428572
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Annette Tournoux Né le : 19/10/1969 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Patrick Moge MASTECTOMIE PARTIELLE GAUCHE (QSE) ET LYMPHADENECTOMIE AXILLAIRE LIMITEE AU SENTINELLE Renseignements cliniques : - Imagerie : 3 h - 4 cm lésion mesurée à 7 mm - Macrobiopsie : CCI, grade II, IM bas, RO 90%, RP 100%, Ki 67 : 20%, HER2- 1-Mastectomie partielle Prélèvement(s) reçu(s) : à l'état frais Fixateur utilisé : Formol Taille du prélèvement : 48 mm x 32 mm x 8 mm Prélèvement avec repère(s) métallique(s) Orientation du prélèvement : Repères inférieur, externe, superficiel Nombre de blocs : 9 Lésion(s) macroscopique(s) : unique Taille macroscopique de la lésion principale : 8 mm x 7 mm située à 5 mm de la limite inférieure, 6 mm de la limite interne, 7 mm de la limite supérieure et 25 mm de la limite externe. Carcinome Type histologique : Carcinome Infiltrant TNS (Carcinome Canalaire Infiltrant SAI) Taille du carcinome infiltrant : 8 x 7 mm Grade Elston & Ellis : 2. Différenciation : 3 Noyaux : 2 Mitoses : 1 Nombre de mitoses : 0,96/mm² (3/10HPF) Emboles vasculaires : Non vus CCIS associé : oui, 5% s'étendant en inférieur, Grade nucléaire : intermédiaire CLIS : absence Stroma : 10 % de lymphocytes Nécrose tumorale, infiltration périnerveuse : non Berges d'exérèse Qualité de l'exérèse chirurgicale : R0 La prolifération carcinomateuse infiltrante arrive à 5 mm de la limite inférieure et reste plus à distance des autres limites latérales. La prolifération carcinomateuse in situ arrive à 2 mm de la limite inférieure et reste plus à distance des autres limites latérales. Elles arrivent à plus de 3 mm des plans profond et superficiel. 2-Ganglion sentinelle Ganglion sentinelle n° GS1 : Statut définitif : pas de cellules carcinomateuses. 3-Ganglions palpés Nombre de ganglions : 3 (G1-G3) Nombre de ganglions positifs : 0 Immunohistochimie (bloc PTx) - Récepteur à l'Estrogène : 80 % cellules positives, Intensité : 3, Témoins int, ext : positifs Statut RE GEFPICS 1999 (seuil à 10%) : positif - Récepteur à la Progestérone : 90 % cellules positives, Intensité : 2, Témoins int, ext : positifs Statut RP GEFPICS 1999 (seuil à 10%) : négatif - Score HER2 : 1+ - Index Ki-67 : 25 %"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. La taille de la tumeur est de 8 x 7 millimètres.\n2. Le carcinome est classé de grade histopronostique 2.\n3. Le carcinome est RE positif.\n4. Le carcinome est RP positif.\n5. Le carcinome est HER2 négatif.\n6. Le taux de Ki67 est de 25%.\n7. Le stroma tumoral contient 10% de lymphocytes.\n8. Aucun embole tumoral n'est présent.\n9. Le carcinome canalaire in situ est de grade intermédiaire.\n10. Le carcinome canalaire in situ représente 5% de la tumeur.\n11. L'exérèse chirurgicale est de qualité R0.\n12. La marge latérale minimale pour la composante infiltrante est de 5 mm.\n13. La marge latérale minimale pour la composante in situ est de 2 mm en inférieur.\n14. Le stade UICC/TNM est pT1b N0.\n15. Le carcinome est codifié ADICAP : OHGSA7B2.",
+          "prompt": {
+            "meta": {},
+            "user": "Mastectomie partielle : Carcinome Infiltrant TNS (Carcinome Canalaire Infiltrant SAI) -Taille tumorale : 8 x 7 mm -Grade histopronostique (EE) : 2 (3+2+1), RE+, RP+, HER2 -, Ki67 25 % -Stroma tumoral : 10% de lymphocytes -Absence d'embole tumoral -CCIS de grade intermédiaire 5% -Qualité de l'exérèse chirurgicale : R0 (marge minimale latérale de 5 mm pour la composante infiltrante et 2 mm pour la composante in situ en inférieur) Stade UICC/TNM version 8 : pT1b N0(4N- dont 1GS-) Codification ADICAP : OHGSA7B2",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.347488",
+          "duration": 1.831977,
+          "cost": 0.00006072,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. La taille de la tumeur est de 8 x 7 millimètres."
+          },
+          {
+            "meta": {},
+            "text": "2. Le carcinome est classé de grade histopronostique 2."
+          },
+          {
+            "meta": {},
+            "text": "3. Le carcinome est RE positif."
+          },
+          {
+            "meta": {},
+            "text": "4. Le carcinome est RP positif."
+          },
+          {
+            "meta": {},
+            "text": "5. Le carcinome est HER2 négatif."
+          },
+          {
+            "meta": {},
+            "text": "6. Le taux de Ki67 est de 25%."
+          },
+          {
+            "meta": {},
+            "text": "7. Le stroma tumoral contient 10% de lymphocytes."
+          },
+          {
+            "meta": {},
+            "text": "8. Aucun embole tumoral n'est présent."
+          },
+          {
+            "meta": {},
+            "text": "9. Le carcinome canalaire in situ est de grade intermédiaire."
+          },
+          {
+            "meta": {},
+            "text": "10. Le carcinome canalaire in situ représente 5% de la tumeur."
+          },
+          {
+            "meta": {},
+            "text": "11. L'exérèse chirurgicale est de qualité R0."
+          },
+          {
+            "meta": {},
+            "text": "12. La marge latérale minimale pour la composante infiltrante est de 5 mm."
+          },
+          {
+            "meta": {},
+            "text": "13. La marge latérale minimale pour la composante in situ est de 2 mm en inférieur."
+          },
+          {
+            "meta": {},
+            "text": "14. Le stade UICC/TNM est pT1b N0."
+          },
+          {
+            "meta": {},
+            "text": "15. Le carcinome est codifié ADICAP : OHGSA7B2."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "**Conclusion anatomopathologique :**\n\n**1. Tumeur mammaire gauche (QSE, mastectomie partielle + curage sentinelle) :**\n- **Carcinome canalaire infiltrant (CCI)** de grade histopronostique **2 (Elston & Ellis)**, taille **8 x 7 mm**, RE **+, RP -, HER2 -, Ki-67 25%**.\n- **Extension en place (CCIS associé)** : 5% de grade intermédiaire.\n- **Berges d’exérèse saines (R0)** : marge minimale à **2 mm** en inférieur.\n- **0 ganglion sentinelle envahi** sur 1 examiné.\n\n**2. Classification pTNM (AJCC 8ᵉ édition) :**\n- **pT1c** (tumeur ≤ 20 mm)\n- **pN0** (ganglions négatifs)\n- **Grade moléculaire** : Luminal A-like (selon récepteurs hormonaux et HER2).\n\n**Recommandations :**\n- Prise en charge oncologique adaptée (chirurgie complémentaire à discuter si marge insuffisante).\n- Bilan d’extension à finaliser si non réalisé.\n\n**Codification CIM-10 / CCAM si applicable :**\n- **C50.9** (Tumeur maligne du sein, sans précision)\n- **Z90.1** (Statut de mastectomie).\n\n*Dr [Votre nom]*\n*Anatomopathologiste*",
+              "prompt": {
+                "meta": {},
+                "user": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Annette Tournoux Né le : 19/10/1969 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Patrick Moge MASTECTOMIE PARTIELLE GAUCHE (QSE) ET LYMPHADENECTOMIE AXILLAIRE LIMITEE AU SENTINELLE Renseignements cliniques : - Imagerie : 3 h - 4 cm lésion mesurée à 7 mm - Macrobiopsie : CCI, grade II, IM bas, RO 90%, RP 100%, Ki 67 : 20%, HER2- 1-Mastectomie partielle Prélèvement(s) reçu(s) : à l'état frais Fixateur utilisé : Formol Taille du prélèvement : 48 mm x 32 mm x 8 mm Prélèvement avec repère(s) métallique(s) Orientation du prélèvement : Repères inférieur, externe, superficiel Nombre de blocs : 9 Lésion(s) macroscopique(s) : unique Taille macroscopique de la lésion principale : 8 mm x 7 mm située à 5 mm de la limite inférieure, 6 mm de la limite interne, 7 mm de la limite supérieure et 25 mm de la limite externe. Carcinome Type histologique : Carcinome Infiltrant TNS (Carcinome Canalaire Infiltrant SAI) Taille du carcinome infiltrant : 8 x 7 mm Grade Elston & Ellis : 2. Différenciation : 3 Noyaux : 2 Mitoses : 1 Nombre de mitoses : 0,96/mm² (3/10HPF) Emboles vasculaires : Non vus CCIS associé : oui, 5% s'étendant en inférieur, Grade nucléaire : intermédiaire CLIS : absence Stroma : 10 % de lymphocytes Nécrose tumorale, infiltration périnerveuse : non Berges d'exérèse Qualité de l'exérèse chirurgicale : R0 La prolifération carcinomateuse infiltrante arrive à 5 mm de la limite inférieure et reste plus à distance des autres limites latérales. La prolifération carcinomateuse in situ arrive à 2 mm de la limite inférieure et reste plus à distance des autres limites latérales. Elles arrivent à plus de 3 mm des plans profond et superficiel. 2-Ganglion sentinelle Ganglion sentinelle n° GS1 : Statut définitif : pas de cellules carcinomateuses. 3-Ganglions palpés Nombre de ganglions : 3 (G1-G3) Nombre de ganglions positifs : 0 Immunohistochimie (bloc PTx) - Récepteur à l'Estrogène : 80 % cellules positives, Intensité : 3, Témoins int, ext : positifs Statut RE GEFPICS 1999 (seuil à 10%) : positif - Récepteur à la Progestérone : 90 % cellules positives, Intensité : 2, Témoins int, ext : positifs Statut RP GEFPICS 1999 (seuil à 10%) : négatif - Score HER2 : 1+ - Index Ki-67 : 25 %",
+                "system": "Tu es un médecin qui doit rédiger une conclusion par rapport à un compte-rendu médical.La conclusion doit être courte et factuelle et inclure une codification si possible.",
+                "prompter": "PARTAGESAnswerPrompter"
+              },
+              "name": "mistral/mistral-small-latest",
+              "full_name": "mistral-small-latest",
+              "timestamp": "2026-05-18T22:10:38.694737",
+              "duration": 3.463265,
+              "cost": 0.00010685999999999999,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p><strong>Conclusion anatomopathologique :</strong></p>\n<p><strong>1. Tumeur mammaire gauche (QSE, mastectomie partielle + curage sentinelle) :</strong>\n- <strong>Carcinome canalaire infiltrant (CCI)</strong> de grade histopronostique <strong>2 (Elston &amp; Ellis)</strong>, taille <strong>8 x 7 mm</strong>, RE <strong>+, RP -, HER2 -, Ki-67 25%</strong>.\n- <strong>Extension en place (CCIS associé)</strong> : 5% de grade intermédiaire.\n- <strong>Berges d’exérèse saines (R0)</strong> : marge minimale à <strong>2 mm</strong> en inférieur.\n- <strong>0 ganglion sentinelle envahi</strong> sur 1 examiné.</p>\n<p><strong>2. Classification pTNM (AJCC 8ᵉ édition) :</strong>\n- <strong>pT1c</strong> (tumeur ≤ 20 mm)\n- <strong>pN0</strong> (ganglions négatifs)\n- <strong>Grade moléculaire</strong> : Luminal A-like (selon récepteurs hormonaux et HER2).</p>\n<p><strong>Recommandations :</strong>\n- Prise en charge oncologique adaptée (chirurgie complémentaire à discuter si marge insuffisante).\n- Bilan d’extension à finaliser si non réalisé.</p>\n<p><strong>Codification CIM-10 / CCAM si applicable :</strong>\n- <strong>C50.9</strong> (Tumeur maligne du sein, sans précision)\n- <strong>Z90.1</strong> (Statut de mastectomie).</p>\n<p><em>Dr [Votre nom]</em>\n<em>Anatomopathologiste</em></p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. **[OK]** - Le fait indique une taille de tumeur de 8 x 7 millimètres, ce qui correspond exactement à la mesure donnée dans le paragraphe.\n   Partie dans le paragraphe : *\"taille **8 x 7 mm**\"*\n\n2. **[OK]** - Le grade histopronostique 2 du carcinome infiltrant est explicitement mentionné dans le paragraphe.\n   Partie dans le paragraphe : *\"Carcinome canalaire infiltrant (CCI) de grade histopronostique **2** (Elston & Ellis)\"*\n\n3. **[OK]** - Le fait indique que le carcinome est RE positif, ce qui est confirmé par le paragraphe.\n   Partie dans le paragraphe : *\"RE **+**\"*\n\n4. **[HALLU]** - Le fait indique que le carcinome est RP positif, mais le paragraphe précise que le RP est négatif.\n   Partie dans le paragraphe : *\"RP **-\"\"*\n\n5. **[OK]** - Le fait indique que le carcinome est HER2 négatif, ce qui est confirmé par le paragraphe.\n   Partie dans le paragraphe : *\"HER2 **-\"\"*\n\n6. **[OK]** - Le taux de Ki67 de 25% est mentionné dans le paragraphe.\n   Partie dans le paragraphe : *\"Ki-67 **25%**\"*\n\n7. **[NOT FOUND]** - Le fait mentionne la présence de 10% de lymphocytes dans le stroma tumoral, mais le paragraphe n'en fait pas mention.\n   Partie dans le paragraphe : *Aucune mention de pourcentage de lymphocytes.*\n\n8. **[OK]** - Le fait indique qu'aucun embole tumoral n'est présent, ce qui est implicite dans le paragraphe (absence de mention d'emboles tumoraux).\n   Partie dans le paragraphe : *Absence de mention d'emboles tumoraux.*\n\n9. **[NOT FOUND]** - Le fait indique que le carcinome canalaire in situ (CCIS) est de grade intermédiaire, mais le paragraphe ne précise pas le grade du CCIS, seulement qu'il représente 5% de la tumeur.\n   Partie dans le paragraphe : *\"Extension en place (CCIS associé) : 5% de grade intermédiaire.\"* (Le grade n'est pas précisé, seulement le pourcentage).\n\n10. **[OK]** - Le fait indique que le carcinome canalaire in situ représente 5% de la tumeur, ce qui est confirmé par le paragraphe.\n    Partie dans le paragraphe : *\"Extension en place (CCIS associé) : **5%** de grade intermédiaire.\"*\n\n11. **[OK]** - Le fait indique une exérèse chirurgicale de qualité R0, ce qui est confirmé par le paragraphe.\n    Partie dans le paragraphe : *\"Berges d’exérèse saines (**R0**)\"*\n\n12. **[NOT FOUND]** - Le fait indique une marge latérale minimale de 5 mm pour la composante infiltrante, mais le paragraphe précise une marge minimale de 2 mm en inférieur (sans distinction entre infiltrant et in situ).\n    Partie dans le paragraphe : *\"marge minimale à **2 mm** en inférieur.\"*\n\n13. **[NOT FOUND]** - Le fait indique une marge latérale minimale de 2 mm en inférieur pour la composante in situ, mais le paragraphe ne précise pas de distinction entre composantes infiltrante et in situ pour les marges.\n    Partie dans le paragraphe : *\"marge minimale à **2 mm** en inférieur.\"* (sans distinction de composante).\n\n14. **[HALLU]** - Le fait indique un stade UICC/TNM pT1b N0, mais le paragraphe mentionne pT1c N0 (la taille de 8x7 mm correspond à un pT1c et non pT1b).\n    Partie dans le paragraphe : *\"pT1c (tumeur ≤ 20 mm)\"*\n\n15. **[NOT FOUND]** - Le fait indique un codage ADICAP OHGSA7B2, mais le paragraphe mentionne une codification CIM-10/CCAM (C50.9 et Z90.1) sans référence à ADICAP.\n    Partie dans le paragraphe : *\"Codification CIM-10 / CCAM si applicable : C50.9, Z90.1\"*\n\n**[EXTRA] = 3**\n- Informations supplémentaires non demandées dans les faits :\n  1. *\"Grade moléculaire : Luminal A-like\"*\n  2. *\"0 ganglion sentinelle envahi sur 1 examiné.\"*\n  3. *\"Recommandations : Prise en charge oncologique adaptée...\"*",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. La taille de la tumeur est de 8 x 7 millimètres.\n2. 2. Le carcinome est classé de grade histopronostique 2.\n3. 3. Le carcinome est RE positif.\n4. 4. Le carcinome est RP positif.\n5. 5. Le carcinome est HER2 négatif.\n6. 6. Le taux de Ki67 est de 25%.\n7. 7. Le stroma tumoral contient 10% de lymphocytes.\n8. 8. Aucun embole tumoral n'est présent.\n9. 9. Le carcinome canalaire in situ est de grade intermédiaire.\n10. 10. Le carcinome canalaire in situ représente 5% de la tumeur.\n11. 11. L'exérèse chirurgicale est de qualité R0.\n12. 12. La marge latérale minimale pour la composante infiltrante est de 5 mm.\n13. 13. La marge latérale minimale pour la composante in situ est de 2 mm en inférieur.\n14. 14. Le stade UICC/TNM est pT1b N0.\n15. 15. Le carcinome est codifié ADICAP : OHGSA7B2.\n\n-- PARAGRAPH --\n<p><strong>Conclusion anatomopathologique :</strong></p>\n<p><strong>1. Tumeur mammaire gauche (QSE, mastectomie partielle + curage sentinelle) :</strong>\n- <strong>Carcinome canalaire infiltrant (CCI)</strong> de grade histopronostique <strong>2 (Elston &amp; Ellis)</strong>, taille <strong>8 x 7 mm</strong>, RE <strong>+, RP -, HER2 -, Ki-67 25%</strong>.\n- <strong>Extension en place (CCIS associé)</strong> : 5% de grade intermédiaire.\n- <strong>Berges d’exérèse saines (R0)</strong> : marge minimale à <strong>2 mm</strong> en inférieur.\n- <strong>0 ganglion sentinelle envahi</strong> sur 1 examiné.</p>\n<p><strong>2. Classification pTNM (AJCC 8ᵉ édition) :</strong>\n- <strong>pT1c</strong> (tumeur ≤ 20 mm)\n- <strong>pN0</strong> (ganglions négatifs)\n- <strong>Grade moléculaire</strong> : Luminal A-like (selon récepteurs hormonaux et HER2).</p>\n<p><strong>Recommandations :</strong>\n- Prise en charge oncologique adaptée (chirurgie complémentaire à discuter si marge insuffisante).\n- Bilan d’extension à finaliser si non réalisé.</p>\n<p><strong>Codification CIM-10 / CCAM si applicable :</strong>\n- <strong>C50.9</strong> (Tumeur maligne du sein, sans précision)\n- <strong>Z90.1</strong> (Statut de mastectomie).</p>\n<p><em>Dr [Votre nom]</em>\n<em>Anatomopathologiste</em></p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n    - [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n    - la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n    - la partie dans le PARAGRAPHE liée à la raison\n    À la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n    - Hors sujet\n    - Elle donne des informations différentes des idées factuelles.\n    - Contexte supplémentaire non désiré.\n\n    ## Format de réponse :\n\n    1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    ...\n\n    [EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "PARTAGESEvalPrompter"
+                },
+                "name": "mistral/mistral-small-latest",
+                "full_name": "mistral-small-latest",
+                "timestamp": "2026-05-19T15:47:49.932433",
+                "duration": 27.93832,
+                "cost": 0.00023514,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "**",
+                "nb_extra": 3,
+                "missing": [
+                  7,
+                  9,
+                  12,
+                  13,
+                  15
+                ],
+                "nb_missing": 5,
+                "ok": [
+                  1,
+                  2,
+                  3,
+                  5,
+                  6,
+                  8,
+                  10,
+                  11
+                ],
+                "nb_ok": 8,
+                "hallu": [
+                  4,
+                  14
+                ],
+                "nb_hallu": 2
+              },
+              "text": "<ol>\n<li>\n<p><strong>[OK]</strong> - Le fait indique une taille de tumeur de 8 x 7 millimètres, ce qui correspond exactement à la mesure donnée dans le paragraphe.\n   Partie dans le paragraphe : <em>\"taille </em><em>8 x 7 mm</em><em>\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le grade histopronostique 2 du carcinome infiltrant est explicitement mentionné dans le paragraphe.\n   Partie dans le paragraphe : <em>\"Carcinome canalaire infiltrant (CCI) de grade histopronostique </em><em>2</em><em> (Elston &amp; Ellis)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait indique que le carcinome est RE positif, ce qui est confirmé par le paragraphe.\n   Partie dans le paragraphe : <em>\"RE </em><em>+</em><em>\"</em></p>\n</li>\n<li>\n<p><strong>[HALLU]</strong> - Le fait indique que le carcinome est RP positif, mais le paragraphe précise que le RP est négatif.\n   Partie dans le paragraphe : <em>\"RP </em><em>-\"\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait indique que le carcinome est HER2 négatif, ce qui est confirmé par le paragraphe.\n   Partie dans le paragraphe : <em>\"HER2 </em><em>-\"\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le taux de Ki67 de 25% est mentionné dans le paragraphe.\n   Partie dans le paragraphe : <em>\"Ki-67 </em><em>25%</em><em>\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait mentionne la présence de 10% de lymphocytes dans le stroma tumoral, mais le paragraphe n'en fait pas mention.\n   Partie dans le paragraphe : <em>Aucune mention de pourcentage de lymphocytes.</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait indique qu'aucun embole tumoral n'est présent, ce qui est implicite dans le paragraphe (absence de mention d'emboles tumoraux).\n   Partie dans le paragraphe : <em>Absence de mention d'emboles tumoraux.</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait indique que le carcinome canalaire in situ (CCIS) est de grade intermédiaire, mais le paragraphe ne précise pas le grade du CCIS, seulement qu'il représente 5% de la tumeur.\n   Partie dans le paragraphe : <em>\"Extension en place (CCIS associé) : 5% de grade intermédiaire.\"</em> (Le grade n'est pas précisé, seulement le pourcentage).</p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait indique que le carcinome canalaire in situ représente 5% de la tumeur, ce qui est confirmé par le paragraphe.\n    Partie dans le paragraphe : <em>\"Extension en place (CCIS associé) : </em><em>5%</em><em> de grade intermédiaire.\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait indique une exérèse chirurgicale de qualité R0, ce qui est confirmé par le paragraphe.\n    Partie dans le paragraphe : <em>\"Berges d’exérèse saines (</em><em>R0</em><em>)\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait indique une marge latérale minimale de 5 mm pour la composante infiltrante, mais le paragraphe précise une marge minimale de 2 mm en inférieur (sans distinction entre infiltrant et in situ).\n    Partie dans le paragraphe : <em>\"marge minimale à </em><em>2 mm</em><em> en inférieur.\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait indique une marge latérale minimale de 2 mm en inférieur pour la composante in situ, mais le paragraphe ne précise pas de distinction entre composantes infiltrante et in situ pour les marges.\n    Partie dans le paragraphe : <em>\"marge minimale à </em><em>2 mm</em><em> en inférieur.\"</em> (sans distinction de composante).</p>\n</li>\n<li>\n<p><strong>[HALLU]</strong> - Le fait indique un stade UICC/TNM pT1b N0, mais le paragraphe mentionne pT1c N0 (la taille de 8x7 mm correspond à un pT1c et non pT1b).\n    Partie dans le paragraphe : <em>\"pT1c (tumeur ≤ 20 mm)\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait indique un codage ADICAP OHGSA7B2, mais le paragraphe mentionne une codification CIM-10/CCAM (C50.9 et Z90.1) sans référence à ADICAP.\n    Partie dans le paragraphe : <em>\"Codification CIM-10 / CCAM si applicable : C50.9, Z90.1\"</em></p>\n</li>\n</ol>\n<p><strong>[EXTRA] = 3</strong>\n- Informations supplémentaires non demandées dans les faits :\n  1. <em>\"Grade moléculaire : Luminal A-like\"</em>\n  2. <em>\"0 ganglion sentinelle envahi sur 1 examiné.\"</em>\n  3. <em>\"Recommandations : Prise en charge oncologique adaptée...\"</em></p>",
+              "human": null,
+              "auto": 0.2666666666666667
+            }
+          }
+        ]
+      }
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Elisabeta Riaud Né le : 24/02/1951 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Katia Alba MASTECTOMIE PARTIELLE GAUCHE (QSI) RENSEIGNEMENTS CLINIQUES Patiente de 74 ans, G2P2. CCI de grade II découvert à la mammographie. EXAMEN MACROSCOPIQUE Mastectomie partielle gauche (QSI) reçue à l'état frais, repérée, orientée, pesant 82 g, mesurant 7,5 x 6,5 x 2,5 cm. A la coupe, on repère une lésion tumorale de contours mal limités, de consistance pierreuse, blanchâtre, mesurant 1,3 x 0,7 cm. Cette lésion se situe à : - 1,2 cm de la tranche de section supérieure. - 1,5 cm de la tranche de section inférieure. - 1,6 cm de la tranche de section interne. - 1,5 cm de la tranche de section externe. - plus de 2,5 cm de la tranche de section antérieure. - 1 cm de la tranche de section postérieure. EXAMEN MICROSCOPIQUE A l'examen microscopique, on observe une prolifération tumorale s'agençant essentiellement sous la forme de petits massifs, travées avec quelques différenciations glandulaires sous la forme de tubes (score 3). Les cellules présentent une anisocaryose qui apparaît variable pouvant emboutir par places un score 3 avec des noyaux de taille très variable, pouvant mesurer plus de 3 fois le noyau d'une cellule canalaire non tumorale, présentant des contours irréguliers, encochés, une chromatine vésiculeuse avec identification de macronucléoles. On dénombre jusqu'à 7 mitoses pour 10 champs à fort grossissement (x40, 0,65 mm de diamètre de champs, score 1). Il s'associe des lésions de carcinome canalaire in situ, focales, au sein ou au pourtour immédiat de la lésion infiltrante, de grade nucléaire intermédiaire, d'architecture massive focalement ponctuées de lumière de petite taille, sans remaniement nécrotique. On observe à proximité dans les canaux indemnes de prolifération la présence de quelques petites calcifications. Les marges d'exérèse correspondent à ce qui a été observé dans le paragraphe macroscopique. On observe sur le versant externe du prélèvement, à 2 cm du processus carcinomateux infiltrant, une prolifération intra-canalaire, de bas grade nucléaire, d'architecture cribriforme, s'étendant sur moins de 1 mm de grand axe. Cette lésion se situe à moins de 0,1 cm de la berge externe. Par ailleurs, on observe au sein du carcinome infiltrant ainsi que sur son versant antérieur des remaniements fibreux cicatriciels secondaires au prélèvement biopsique initial, fait d'une fibrose collagène dense, par places hyalinisée, ponctuée de sidérophages, de foyers granulomateux résorptifs à cellules géantes plurinucléées, s'accompagnant de foyers lipogranulomateux. EXAMEN IMMUNOHISTOCHIMIQUE Récepteurs aux oestrogènes : 98% des cellules montrent une immunoréactivité variable, majoritairement intense. Récepteurs à la progestérone : 70 % des cellules montrent une immunoréactivité légère à modérée. HER2 : absence de marquage (0). Les cellules carcinomateuses infiltrantes sont immunoréactives pour l'anticorps anti-ECadhérine."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Le cancer du sein gauche est un carcinome canalaire infiltrant.\n2. Le carcinome est de grade SBRm II.\n3. Le carcinome s'étend sur 1,3 cm de grand axe.\n4. Le carcinome se situe en marges saines d'au moins 1 cm.\n5. Le taux de récepteurs d'œstrogènes (RO) est de 98%.\n6. Le taux de récepteurs de progestérone (RP) est de 70%.\n7. La protéine HER2 n'est pas surexprimée.\n8. Un petit foyer de carcinome canalaire de bas grade nucléaire est présent.\n9. Ce foyer est situé à moins de 0,1 cm de la section externe.",
+          "prompt": {
+            "meta": {},
+            "user": "SEIN GAUCHE QSI : carcinome canalaire infiltrant de grade SBRm II (3, 3, 1) s'étendant sur 1,3 cm de grand axe, se localisant en marges saines au moins centimétriques par rapport aux différentes sections. - RO 98%, RP 70%, absence de surexpression de HER2 (0). - Présence d'un petit foyer de carcinome canalaire de bas grade nucléaire, situé à moins de 0,1 cm de la section externe. Codification ADICAP : OHSGA7B2",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.351733",
+          "duration": 1.359799,
+          "cost": 0.00004416,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Le cancer du sein gauche est un carcinome canalaire infiltrant."
+          },
+          {
+            "meta": {},
+            "text": "2. Le carcinome est de grade SBRm II."
+          },
+          {
+            "meta": {},
+            "text": "3. Le carcinome s'étend sur 1,3 cm de grand axe."
+          },
+          {
+            "meta": {},
+            "text": "4. Le carcinome se situe en marges saines d'au moins 1 cm."
+          },
+          {
+            "meta": {},
+            "text": "5. Le taux de récepteurs d'œstrogènes (RO) est de 98%."
+          },
+          {
+            "meta": {},
+            "text": "6. Le taux de récepteurs de progestérone (RP) est de 70%."
+          },
+          {
+            "meta": {},
+            "text": "7. La protéine HER2 n'est pas surexprimée."
+          },
+          {
+            "meta": {},
+            "text": "8. Un petit foyer de carcinome canalaire de bas grade nucléaire est présent."
+          },
+          {
+            "meta": {},
+            "text": "9. Ce foyer est situé à moins de 0,1 cm de la section externe."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": {
+        "meta": {},
+        "items": [
+          {
+            "llm_answer": {
+              "meta": {},
+              "text": "**Conclusion :**\nCarcinome canalaire infiltrant de grade histopronostique SBR II (score 3-1-1) et grade nucléaire intermédiaire pour le contingent in situ associé. Marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant, mais présence d’un carcinome canalaire in situ de bas grade à moins de 0,1 cm (berge externe : à considérer à réévaluer).\n\n**Codification :**\n- **CIM-10 :** C50.9 (tumeur maligne du sein, non précisé)\n- **OMS :** Invasive ductal carcinoma (NOS)\n- **Classification pTNM :** pT1c (tumeur >0,5 à ≤1 cm, mais infiltration multiple) / pNX (non évalué)\n- **Biologie moléculaire :** RH+ (RE 98% / RP 70%) / HER2- (score 0) → profil luminal A/B selon Oncotype Dx si réalisé\n\n*Recommandation :*\nSurveillance clinique et imagerie mammaire, évaluation ganglionnaire complémentaire (ganglion sentinelle ou curage axillaire) selon l’étendue lésionnelle résiduelle et discussion en RCP oncologique.",
+              "prompt": {
+                "meta": {},
+                "user": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Elisabeta Riaud Né le : 24/02/1951 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Katia Alba MASTECTOMIE PARTIELLE GAUCHE (QSI) RENSEIGNEMENTS CLINIQUES Patiente de 74 ans, G2P2. CCI de grade II découvert à la mammographie. EXAMEN MACROSCOPIQUE Mastectomie partielle gauche (QSI) reçue à l'état frais, repérée, orientée, pesant 82 g, mesurant 7,5 x 6,5 x 2,5 cm. A la coupe, on repère une lésion tumorale de contours mal limités, de consistance pierreuse, blanchâtre, mesurant 1,3 x 0,7 cm. Cette lésion se situe à : - 1,2 cm de la tranche de section supérieure. - 1,5 cm de la tranche de section inférieure. - 1,6 cm de la tranche de section interne. - 1,5 cm de la tranche de section externe. - plus de 2,5 cm de la tranche de section antérieure. - 1 cm de la tranche de section postérieure. EXAMEN MICROSCOPIQUE A l'examen microscopique, on observe une prolifération tumorale s'agençant essentiellement sous la forme de petits massifs, travées avec quelques différenciations glandulaires sous la forme de tubes (score 3). Les cellules présentent une anisocaryose qui apparaît variable pouvant emboutir par places un score 3 avec des noyaux de taille très variable, pouvant mesurer plus de 3 fois le noyau d'une cellule canalaire non tumorale, présentant des contours irréguliers, encochés, une chromatine vésiculeuse avec identification de macronucléoles. On dénombre jusqu'à 7 mitoses pour 10 champs à fort grossissement (x40, 0,65 mm de diamètre de champs, score 1). Il s'associe des lésions de carcinome canalaire in situ, focales, au sein ou au pourtour immédiat de la lésion infiltrante, de grade nucléaire intermédiaire, d'architecture massive focalement ponctuées de lumière de petite taille, sans remaniement nécrotique. On observe à proximité dans les canaux indemnes de prolifération la présence de quelques petites calcifications. Les marges d'exérèse correspondent à ce qui a été observé dans le paragraphe macroscopique. On observe sur le versant externe du prélèvement, à 2 cm du processus carcinomateux infiltrant, une prolifération intra-canalaire, de bas grade nucléaire, d'architecture cribriforme, s'étendant sur moins de 1 mm de grand axe. Cette lésion se situe à moins de 0,1 cm de la berge externe. Par ailleurs, on observe au sein du carcinome infiltrant ainsi que sur son versant antérieur des remaniements fibreux cicatriciels secondaires au prélèvement biopsique initial, fait d'une fibrose collagène dense, par places hyalinisée, ponctuée de sidérophages, de foyers granulomateux résorptifs à cellules géantes plurinucléées, s'accompagnant de foyers lipogranulomateux. EXAMEN IMMUNOHISTOCHIMIQUE Récepteurs aux oestrogènes : 98% des cellules montrent une immunoréactivité variable, majoritairement intense. Récepteurs à la progestérone : 70 % des cellules montrent une immunoréactivité légère à modérée. HER2 : absence de marquage (0). Les cellules carcinomateuses infiltrantes sont immunoréactives pour l'anticorps anti-ECadhérine.",
+                "system": "Tu es un médecin qui doit rédiger une conclusion par rapport à un compte-rendu médical.La conclusion doit être courte et factuelle et inclure une codification si possible.",
+                "prompter": "PARTAGESAnswerPrompter"
+              },
+              "name": "mistral/mistral-small-latest",
+              "full_name": "mistral-small-latest",
+              "timestamp": "2026-05-18T22:10:38.702358",
+              "duration": 3.217632,
+              "cost": 0.00010464,
+              "chunks": []
+            },
+            "meta": {},
+            "text": "<p><strong>Conclusion :</strong>\nCarcinome canalaire infiltrant de grade histopronostique SBR II (score 3-1-1) et grade nucléaire intermédiaire pour le contingent in situ associé. Marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant, mais présence d’un carcinome canalaire in situ de bas grade à moins de 0,1 cm (berge externe : à considérer à réévaluer).</p>\n<p><strong>Codification :</strong>\n- <strong>CIM-10 :</strong> C50.9 (tumeur maligne du sein, non précisé)\n- <strong>OMS :</strong> Invasive ductal carcinoma (NOS)\n- <strong>Classification pTNM :</strong> pT1c (tumeur &gt;0,5 à ≤1 cm, mais infiltration multiple) / pNX (non évalué)\n- <strong>Biologie moléculaire :</strong> RH+ (RE 98% / RP 70%) / HER2- (score 0) → profil luminal A/B selon Oncotype Dx si réalisé</p>\n<p><em>Recommandation :</em>\nSurveillance clinique et imagerie mammaire, évaluation ganglionnaire complémentaire (ganglion sentinelle ou curage axillaire) selon l’étendue lésionnelle résiduelle et discussion en RCP oncologique.</p>",
+            "eval": {
+              "llm_answer": {
+                "meta": {},
+                "text": "1. **[OK]** - Le fait 1 est soutenu car le paragraphes mentionne un \"Carcinome canalaire infiltrant\".\n   Partie dans le paragraphe : *\"Carcinome canalaire infiltrant de grade histopronostique SBR II\"*\n\n2. **[NOT FOUND]** - Le fait 2 mentionne un grade SBRm II, mais le paragraphe indique un grade SBR II (sans le \"m\").\n   Partie dans le paragraphe : *\"grade histopronostique SBR II (score 3-1-1)\"*\n\n3. **[NOT FOUND]** - Le fait 3 mentionne une taille de 1,3 cm, mais le paragraphe ne fournit pas cette taille. Il indique \"pT1c\" (tumeur >0,5 à ≤1 cm).\n   Partie dans le paragraphe : *\"pT1c (tumeur >0,5 à ≤1 cm, mais infiltration multiple)\"*\n\n4. **[OK]** - Le fait 4 est soutenu car le paragraphe indique des \"marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant\".\n   Partie dans le paragraphe : *\"Marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant\"*\n\n5. **[OK]** - Le fait 5 est soutenu car le paragraphe mentionne \"RE 98%\".\n   Partie dans le paragraphe : *\"RH+ (RE 98% / RP 70%)\"*\n\n6. **[OK]** - Le fait 6 est soutenu car le paragraphe mentionne \"RP 70%\".\n   Partie dans le paragraphe : *\"RH+ (RE 98% / RP 70%)\"*\n\n7. **[OK]** - Le fait 7 est soutenu car le paragraphe indique \"HER2- (score 0)\".\n   Partie dans le paragraphe : *\"HER2- (score 0)\"*\n\n8. **[OK]** - Le fait 8 est soutenu car le paragraphe mentionne un \"contingent in situ associé\" et \"carcinome canalaire in situ de bas grade\".\n   Partie dans le paragraphe : *\"grade nucléaire intermédiaire pour le contingent in situ associé\" + \"carcinome canalaire in situ de bas grade\"*\n\n9. **[OK]** - Le fait 9 est soutenu car le paragraphe indique que le carcinome canalaire in situ est à moins de 0,1 cm.\n   Partie dans le paragraphe : *\"présence d’un carcinome canalaire in situ de bas grade à moins de 0,1 cm (berge externe : à considérer à réévaluer)\"*\n\n[EXTRA] = 2 (Les éléments \"Classification pTNM : pT1c\" et \"OMS : Invasive ductal carcinoma (NOS)\" ne sont pas explicitement demandés dans les faits.)",
+                "prompt": {
+                  "meta": {},
+                  "user": "-- FAITS --\n1. 1. Le cancer du sein gauche est un carcinome canalaire infiltrant.\n2. 2. Le carcinome est de grade SBRm II.\n3. 3. Le carcinome s'étend sur 1,3 cm de grand axe.\n4. 4. Le carcinome se situe en marges saines d'au moins 1 cm.\n5. 5. Le taux de récepteurs d'œstrogènes (RO) est de 98%.\n6. 6. Le taux de récepteurs de progestérone (RP) est de 70%.\n7. 7. La protéine HER2 n'est pas surexprimée.\n8. 8. Un petit foyer de carcinome canalaire de bas grade nucléaire est présent.\n9. 9. Ce foyer est situé à moins de 0,1 cm de la section externe.\n\n-- PARAGRAPH --\n<p><strong>Conclusion :</strong>\nCarcinome canalaire infiltrant de grade histopronostique SBR II (score 3-1-1) et grade nucléaire intermédiaire pour le contingent in situ associé. Marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant, mais présence d’un carcinome canalaire in situ de bas grade à moins de 0,1 cm (berge externe : à considérer à réévaluer).</p>\n<p><strong>Codification :</strong>\n- <strong>CIM-10 :</strong> C50.9 (tumeur maligne du sein, non précisé)\n- <strong>OMS :</strong> Invasive ductal carcinoma (NOS)\n- <strong>Classification pTNM :</strong> pT1c (tumeur &gt;0,5 à ≤1 cm, mais infiltration multiple) / pNX (non évalué)\n- <strong>Biologie moléculaire :</strong> RH+ (RE 98% / RP 70%) / HER2- (score 0) → profil luminal A/B selon Oncotype Dx si réalisé</p>\n<p><em>Recommandation :</em>\nSurveillance clinique et imagerie mammaire, évaluation ganglionnaire complémentaire (ganglion sentinelle ou curage axillaire) selon l’étendue lésionnelle résiduelle et discussion en RCP oncologique.</p>",
+                  "system": "\n    Pour chaque fait dans une liste de FAITS, déterminez si le fait est soutenu dans le PARAGRAPHE ou non et retournez :\n    - [OK] si le fait est soutenu, [NOT FOUND] s'il n'est pas soutenu et [HALLU] si un fait opposé est soutenu\n    - la raison pour laquelle vous retournez OK, NON TROUVÉ ou HALLU\n    - la partie dans le PARAGRAPHE liée à la raison\n    À la fin de la réponse, ajoutez \"[EXTRA] = nombre d'idées trouvées dans le PARAGRAPHE qui ne correspondent pas aux idées factuelles.\" Une idée est considérée comme [EXTRA] si :\n    - Hors sujet\n    - Elle donne des informations différentes des idées factuelles.\n    - Contexte supplémentaire non désiré.\n\n    ## Format de réponse :\n\n    1. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 1]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    2. [Statut] - [Explication de comment le paragraphe soutient ou ne soutient pas le Fait 2]\n    Partie dans le paragraphe : \"[Citation pertinente du paragraphe]\"\n\n    ...\n\n    [EXTRA] = [Nombre de faits ou d'informations supplémentaires dans le paragraphe non mentionnés dans les faits]\n        ",
+                  "prompter": "PARTAGESEvalPrompter"
+                },
+                "name": "mistral/mistral-small-latest",
+                "full_name": "mistral-small-latest",
+                "timestamp": "2026-05-19T15:47:49.936945",
+                "duration": 27.918795,
+                "cost": 0.00016745999999999997,
+                "chunks": []
+              },
+              "meta": {
+                "extra": "(Les éléments \"Classification pTNM : pT1c\" et \"OMS : Invasive ductal carcinoma (NOS)\" ne sont pas explicitement demandés dans les faits.)",
+                "nb_extra": 2,
+                "missing": [
+                  2,
+                  3
+                ],
+                "nb_missing": 2,
+                "ok": [
+                  1,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ],
+                "nb_ok": 7,
+                "hallu": [],
+                "nb_hallu": 0
+              },
+              "text": "<ol>\n<li>\n<p><strong>[OK]</strong> - Le fait 1 est soutenu car le paragraphes mentionne un \"Carcinome canalaire infiltrant\".\n   Partie dans le paragraphe : <em>\"Carcinome canalaire infiltrant de grade histopronostique SBR II\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait 2 mentionne un grade SBRm II, mais le paragraphe indique un grade SBR II (sans le \"m\").\n   Partie dans le paragraphe : <em>\"grade histopronostique SBR II (score 3-1-1)\"</em></p>\n</li>\n<li>\n<p><strong>[NOT FOUND]</strong> - Le fait 3 mentionne une taille de 1,3 cm, mais le paragraphe ne fournit pas cette taille. Il indique \"pT1c\" (tumeur &gt;0,5 à ≤1 cm).\n   Partie dans le paragraphe : <em>\"pT1c (tumeur &gt;0,5 à ≤1 cm, mais infiltration multiple)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 4 est soutenu car le paragraphe indique des \"marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant\".\n   Partie dans le paragraphe : <em>\"Marges exemptes de prolongement tumoral à plus de 1 cm du foyer infiltrant\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 5 est soutenu car le paragraphe mentionne \"RE 98%\".\n   Partie dans le paragraphe : <em>\"RH+ (RE 98% / RP 70%)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 6 est soutenu car le paragraphe mentionne \"RP 70%\".\n   Partie dans le paragraphe : <em>\"RH+ (RE 98% / RP 70%)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 7 est soutenu car le paragraphe indique \"HER2- (score 0)\".\n   Partie dans le paragraphe : <em>\"HER2- (score 0)\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 8 est soutenu car le paragraphe mentionne un \"contingent in situ associé\" et \"carcinome canalaire in situ de bas grade\".\n   Partie dans le paragraphe : <em>\"grade nucléaire intermédiaire pour le contingent in situ associé\" + \"carcinome canalaire in situ de bas grade\"</em></p>\n</li>\n<li>\n<p><strong>[OK]</strong> - Le fait 9 est soutenu car le paragraphe indique que le carcinome canalaire in situ est à moins de 0,1 cm.\n   Partie dans le paragraphe : <em>\"présence d’un carcinome canalaire in situ de bas grade à moins de 0,1 cm (berge externe : à considérer à réévaluer)\"</em></p>\n</li>\n</ol>\n<p>[EXTRA] = 2 (Les éléments \"Classification pTNM : pT1c\" et \"OMS : Invasive ductal carcinoma (NOS)\" ne sont pas explicitement demandés dans les faits.)</p>",
+              "human": null,
+              "auto": 0.6666666666666667
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
