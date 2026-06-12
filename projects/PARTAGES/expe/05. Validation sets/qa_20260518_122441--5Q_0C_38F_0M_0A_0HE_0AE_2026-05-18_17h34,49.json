@@ -1,0 +1,327 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Chantale Peruchon Né le : 05/07/1949 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Clélya Mouraille Renseignements cliniques : Immunodéprimé. Contexte de leucémie lymphoïde chronique allogreffée. Pneumopathie du lobe supérieur gauche. BIOPSIES BRONCHIQUES MACROSCOPIE Pot 1 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 2 / Bronche du culmen : trois fragments mesurant de 1 à 2 mm. Pot 3 / Eperon LSG / LIG : trois fragments mesurant de 1 à 2 mm. Pot 4 / Carène : trois fragments mesurant 1 à 2 mm. Inclusion en totalité en 4 blocs. Analyse après coloration HES sur 3 niveaux de coupe/bloc. MICROSCOPIE Les prélèvements des pots n° 1 et 2 ont un aspect comparable. La muqueuse bronchique est bordée d'un épithélium de type respiratoire, sans atypie cytonucléaire ou désorganisation architecturale. Le chorion apparaît massivement envahi par une prolifération tumorale carcinomateuse formant des travées et petits nids. Les cellules tumorales ont un noyau volumineux, hyperchromatique et un cytoplasme abondant, éosinophile. L'étude immunohistochimique montre que ces cellules tumorales sont P40+ et TTF1-. Le PDL1 (22C3, Dako) est faiblement positif sur 20% des cellules tumorales. Les prélèvements des pots n°3 et 4 ont intéressé une muqueuse bronchique d'aspect normal."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Les pots N°1 et N°2 contiennent des échantillons de carcinome épidermoïde localisés dans les bronches.\n2. Les pots N°3 et N°4 contiennent des muqueuses bronchiques normales.\n3. La codification ADICAP pour ces échantillons est E7T0.",
+          "prompt": {
+            "meta": {},
+            "user": "Pots N°1 et 2 : localisation bronchique d'un carcinome épidermoïde. - Pots N°3 et 4 : muqueuse bronchique d'aspect normal. Codification ADICAP : E7T0",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.215074",
+          "duration": 1.219875,
+          "cost": 0.00002316,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Les pots N°1 et N°2 contiennent des échantillons de carcinome épidermoïde localisés dans les bronches."
+          },
+          {
+            "meta": {},
+            "text": "2. Les pots N°3 et N°4 contiennent des muqueuses bronchiques normales."
+          },
+          {
+            "meta": {},
+            "text": "3. La codification ADICAP pour ces échantillons est E7T0."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": []
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Colette Lorilleux Né le : 02/04/1966 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Yves Taillandier Renseignements cliniques : Antécédent de lymphome folliculaire. Suspicion de rechute. MICRO-BIOPSIES SOUS CONTRÔLE ÉCHOGRAPHIQUE (AIGUILLE 16G) D'UNE ADÉNOPATHIE SUS CLAVICULAIRE DROITE MACROSCOPIE Il a été communiqué, fixé au formol, deux prélèvements biopsiques dissociés en cinq fragments mesurant entre 1 et 5 mm de grand axe, inclus en totalité en deux blocs. Analyse après coloration HES. Congélation : oui (deux prélèvements parvenus à part). MICROSCOPIE Le parenchyme ganglionnaire est le siège d'une prolifération tumorale d'architecture nodulaire et diffuse, faite de cellules de petite taille, à noyau parfois irrégulier. Il s'y associe quelques éléments de grande taille, à noyau volumineux, nucléolé, d'aspect centroblastique (< 15/champ au grandissement 400). Il n'est pas observé de plages de grande cellule d'architecture diffuse. Il n'y a pas de nécrose. L'étude immunohistochimique montre que ces cellules tumorales sont CD20+, CD5-, BCL2+, CD10+ et Cycline D1-. Le Ki67 est évalué à 20%."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 a été localisé.\n2. La classification OMS 2022 a été utilisée pour déterminer le grade.\n3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'a été trouvée.\n4. Le code ADICAP correspondant est SGJ7F4.",
+          "prompt": {
+            "meta": {},
+            "user": "Localisation d'un lymphome folliculaire classique (grade 1-2 selon la classification OMS 2022). Il n'y a pas d'argument pour une transformation en lymphome B diffus à grandes cellules sur ces prélèvements. Codification ADICAP : SGJ7F4",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.339583",
+          "duration": 0.946978,
+          "cost": 0.00002442,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Un lymphome folliculaire classique de grade 1 ou 2 a été localisé."
+          },
+          {
+            "meta": {},
+            "text": "2. La classification OMS 2022 a été utilisée pour déterminer le grade."
+          },
+          {
+            "meta": {},
+            "text": "3. Aucune preuve de transformation en lymphome B diffus à grandes cellules n'a été trouvée."
+          },
+          {
+            "meta": {},
+            "text": "4. Le code ADICAP correspondant est SGJ7F4."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": []
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Kaena Koska Né le : 26/06/1956 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Dominique Zeghbib BIOPSIE DU SEIN DROIT RENSEIGNEMENTS CLINIQUES Biopsie sous stéréotaxie d'une lésion stellaire infra-centimétrique du QIE du sein droit ACR 4 (image peu dense). Prélèvement de deux carottes par une aiguille de 14 G. Petit malaise vagal pendant le geste a empêché de prélever plus de tissus. EXAMEN MACROSCOPIQUE Deux carottes biopsiques de 0,6 et 0,8 cm de grand axe inclus en totalité en un bloc pour examen microscopique après trois niveaux de coupe différents. EXAMEN MICROSCOPIQUE A l'examen histologique, les carottes biopsiques intéressent un parenchyme mammaire infiltré sur 80 % de leur surface par un processus adénocarcinomateux de type lobulaire de grade Elston et Ellis II (3 ,2 , 1). En effet, cette prolifération est d'architecture trabéculo-cordonale, avec des cellules qui s'agencent en files indiennes ou sont parfois isolées. Les cellules qui composent ces structures sont au cytoplasme abondant, acidophile ou éosinophile, à limite cytoplasmique souvent mal définies. L'anisocaryose reste modérée avec des noyaux chromatiques, ou parfois vésiculeux. Les mitoses sont au nombre de 5 pour 10 champs au fort grossissement. La prolifération se dispose au sein d'un abondant stroma fibro-œdémateux, légèrement inflammatoire. Il s'y associe des images de carcinome canalaire in situ de grade nucléaire intermédiaire. L'immunohistochimie à l'aide de la E-cadhérine confirme la nature lobulaire des cellules tumorales (absence de marquage). L'étude immunohistochimique est réalisée après application des anticorps anti-RO (clone SP1, Ventana) et anti-RP (clone 1E2, Ventana). 100 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le premier. 80 % des cellules tumorales infiltrantes présentent une immunoréactivité nucléaire d'intensité forte pour le second. L'étude immunohistochimique est réalisée après application de l'anticorps anti-HER2. Aucune immunoréactivité membranaire (intensité = 0) n'est observée au niveau des cellules tumorales infiltrante permettant de conclure à l'absence de surexpression du récepteur HER2 dans ce matériel."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Une biopsie du sein droit a révélé un carcinome lobulaire infiltrant.\n2. Ce carcinome est de grade Elston et Ellis II.\n3. Le grade II est composé des scores 3, 2 et 1.\n4. Les récepteurs hormonaux RO sont positifs à 100 %.\n5. Les récepteurs hormonaux RP sont positifs à 80 %.\n6. Il n'y a pas de surexpression de HER2.\n7. La codification ADICAP est BHSGA7B1.",
+          "prompt": {
+            "meta": {},
+            "user": "SEIN DROIT -- QIE (biopsie) : carcinome lobulaire infiltrant de grade Elston et Ellis II (3, 2, 1). Récepteurs hormonaux (immunohistochimie) : RO + (100 %), RP + (80 %). Absence de surexpression d'HER2. Codification ADICAP : BHSGA7B1",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.343160",
+          "duration": 1.150184,
+          "cost": 0.00003395999999999999,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Une biopsie du sein droit a révélé un carcinome lobulaire infiltrant."
+          },
+          {
+            "meta": {},
+            "text": "2. Ce carcinome est de grade Elston et Ellis II."
+          },
+          {
+            "meta": {},
+            "text": "3. Le grade II est composé des scores 3, 2 et 1."
+          },
+          {
+            "meta": {},
+            "text": "4. Les récepteurs hormonaux RO sont positifs à 100 %."
+          },
+          {
+            "meta": {},
+            "text": "5. Les récepteurs hormonaux RP sont positifs à 80 %."
+          },
+          {
+            "meta": {},
+            "text": "6. Il n'y a pas de surexpression de HER2."
+          },
+          {
+            "meta": {},
+            "text": "7. La codification ADICAP est BHSGA7B1."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": []
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Annette Tournoux Né le : 19/10/1969 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Patrick Moge MASTECTOMIE PARTIELLE GAUCHE (QSE) ET LYMPHADENECTOMIE AXILLAIRE LIMITEE AU SENTINELLE Renseignements cliniques : - Imagerie : 3 h - 4 cm lésion mesurée à 7 mm - Macrobiopsie : CCI, grade II, IM bas, RO 90%, RP 100%, Ki 67 : 20%, HER2- 1-Mastectomie partielle Prélèvement(s) reçu(s) : à l'état frais Fixateur utilisé : Formol Taille du prélèvement : 48 mm x 32 mm x 8 mm Prélèvement avec repère(s) métallique(s) Orientation du prélèvement : Repères inférieur, externe, superficiel Nombre de blocs : 9 Lésion(s) macroscopique(s) : unique Taille macroscopique de la lésion principale : 8 mm x 7 mm située à 5 mm de la limite inférieure, 6 mm de la limite interne, 7 mm de la limite supérieure et 25 mm de la limite externe. Carcinome Type histologique : Carcinome Infiltrant TNS (Carcinome Canalaire Infiltrant SAI) Taille du carcinome infiltrant : 8 x 7 mm Grade Elston & Ellis : 2. Différenciation : 3 Noyaux : 2 Mitoses : 1 Nombre de mitoses : 0,96/mm² (3/10HPF) Emboles vasculaires : Non vus CCIS associé : oui, 5% s'étendant en inférieur, Grade nucléaire : intermédiaire CLIS : absence Stroma : 10 % de lymphocytes Nécrose tumorale, infiltration périnerveuse : non Berges d'exérèse Qualité de l'exérèse chirurgicale : R0 La prolifération carcinomateuse infiltrante arrive à 5 mm de la limite inférieure et reste plus à distance des autres limites latérales. La prolifération carcinomateuse in situ arrive à 2 mm de la limite inférieure et reste plus à distance des autres limites latérales. Elles arrivent à plus de 3 mm des plans profond et superficiel. 2-Ganglion sentinelle Ganglion sentinelle n° GS1 : Statut définitif : pas de cellules carcinomateuses. 3-Ganglions palpés Nombre de ganglions : 3 (G1-G3) Nombre de ganglions positifs : 0 Immunohistochimie (bloc PTx) - Récepteur à l'Estrogène : 80 % cellules positives, Intensité : 3, Témoins int, ext : positifs Statut RE GEFPICS 1999 (seuil à 10%) : positif - Récepteur à la Progestérone : 90 % cellules positives, Intensité : 2, Témoins int, ext : positifs Statut RP GEFPICS 1999 (seuil à 10%) : négatif - Score HER2 : 1+ - Index Ki-67 : 25 %"
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. La taille de la tumeur est de 8 x 7 millimètres.\n2. Le carcinome est classé de grade histopronostique 2.\n3. Le carcinome est RE positif.\n4. Le carcinome est RP positif.\n5. Le carcinome est HER2 négatif.\n6. Le taux de Ki67 est de 25%.\n7. Le stroma tumoral contient 10% de lymphocytes.\n8. Aucun embole tumoral n'est présent.\n9. Le carcinome canalaire in situ est de grade intermédiaire.\n10. Le carcinome canalaire in situ représente 5% de la tumeur.\n11. L'exérèse chirurgicale est de qualité R0.\n12. La marge latérale minimale pour la composante infiltrante est de 5 mm.\n13. La marge latérale minimale pour la composante in situ est de 2 mm en inférieur.\n14. Le stade UICC/TNM est pT1b N0.\n15. Le carcinome est codifié ADICAP : OHGSA7B2.",
+          "prompt": {
+            "meta": {},
+            "user": "Mastectomie partielle : Carcinome Infiltrant TNS (Carcinome Canalaire Infiltrant SAI) -Taille tumorale : 8 x 7 mm -Grade histopronostique (EE) : 2 (3+2+1), RE+, RP+, HER2 -, Ki67 25 % -Stroma tumoral : 10% de lymphocytes -Absence d'embole tumoral -CCIS de grade intermédiaire 5% -Qualité de l'exérèse chirurgicale : R0 (marge minimale latérale de 5 mm pour la composante infiltrante et 2 mm pour la composante in situ en inférieur) Stade UICC/TNM version 8 : pT1b N0(4N- dont 1GS-) Codification ADICAP : OHGSA7B2",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.347488",
+          "duration": 1.831977,
+          "cost": 0.00006072,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. La taille de la tumeur est de 8 x 7 millimètres."
+          },
+          {
+            "meta": {},
+            "text": "2. Le carcinome est classé de grade histopronostique 2."
+          },
+          {
+            "meta": {},
+            "text": "3. Le carcinome est RE positif."
+          },
+          {
+            "meta": {},
+            "text": "4. Le carcinome est RP positif."
+          },
+          {
+            "meta": {},
+            "text": "5. Le carcinome est HER2 négatif."
+          },
+          {
+            "meta": {},
+            "text": "6. Le taux de Ki67 est de 25%."
+          },
+          {
+            "meta": {},
+            "text": "7. Le stroma tumoral contient 10% de lymphocytes."
+          },
+          {
+            "meta": {},
+            "text": "8. Aucun embole tumoral n'est présent."
+          },
+          {
+            "meta": {},
+            "text": "9. Le carcinome canalaire in situ est de grade intermédiaire."
+          },
+          {
+            "meta": {},
+            "text": "10. Le carcinome canalaire in situ représente 5% de la tumeur."
+          },
+          {
+            "meta": {},
+            "text": "11. L'exérèse chirurgicale est de qualité R0."
+          },
+          {
+            "meta": {},
+            "text": "12. La marge latérale minimale pour la composante infiltrante est de 5 mm."
+          },
+          {
+            "meta": {},
+            "text": "13. La marge latérale minimale pour la composante in situ est de 2 mm en inférieur."
+          },
+          {
+            "meta": {},
+            "text": "14. Le stade UICC/TNM est pT1b N0."
+          },
+          {
+            "meta": {},
+            "text": "15. Le carcinome est codifié ADICAP : OHGSA7B2."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": []
+    },
+    {
+      "meta": {},
+      "question": {
+        "llm_answer": null,
+        "meta": {},
+        "text": "Quelle est la conclusion ou le résumé à apporter pour le compte-rendu médical suivant : COMPTE-RENDU ANATOMO PATHOLOGIQUE Patient : Elisabeta Riaud Né le : 24/02/1951 Sexe : F Prélevé le Reçu le : 19/05/2025 Prescripteur : Dr Katia Alba MASTECTOMIE PARTIELLE GAUCHE (QSI) RENSEIGNEMENTS CLINIQUES Patiente de 74 ans, G2P2. CCI de grade II découvert à la mammographie. EXAMEN MACROSCOPIQUE Mastectomie partielle gauche (QSI) reçue à l'état frais, repérée, orientée, pesant 82 g, mesurant 7,5 x 6,5 x 2,5 cm. A la coupe, on repère une lésion tumorale de contours mal limités, de consistance pierreuse, blanchâtre, mesurant 1,3 x 0,7 cm. Cette lésion se situe à : - 1,2 cm de la tranche de section supérieure. - 1,5 cm de la tranche de section inférieure. - 1,6 cm de la tranche de section interne. - 1,5 cm de la tranche de section externe. - plus de 2,5 cm de la tranche de section antérieure. - 1 cm de la tranche de section postérieure. EXAMEN MICROSCOPIQUE A l'examen microscopique, on observe une prolifération tumorale s'agençant essentiellement sous la forme de petits massifs, travées avec quelques différenciations glandulaires sous la forme de tubes (score 3). Les cellules présentent une anisocaryose qui apparaît variable pouvant emboutir par places un score 3 avec des noyaux de taille très variable, pouvant mesurer plus de 3 fois le noyau d'une cellule canalaire non tumorale, présentant des contours irréguliers, encochés, une chromatine vésiculeuse avec identification de macronucléoles. On dénombre jusqu'à 7 mitoses pour 10 champs à fort grossissement (x40, 0,65 mm de diamètre de champs, score 1). Il s'associe des lésions de carcinome canalaire in situ, focales, au sein ou au pourtour immédiat de la lésion infiltrante, de grade nucléaire intermédiaire, d'architecture massive focalement ponctuées de lumière de petite taille, sans remaniement nécrotique. On observe à proximité dans les canaux indemnes de prolifération la présence de quelques petites calcifications. Les marges d'exérèse correspondent à ce qui a été observé dans le paragraphe macroscopique. On observe sur le versant externe du prélèvement, à 2 cm du processus carcinomateux infiltrant, une prolifération intra-canalaire, de bas grade nucléaire, d'architecture cribriforme, s'étendant sur moins de 1 mm de grand axe. Cette lésion se situe à moins de 0,1 cm de la berge externe. Par ailleurs, on observe au sein du carcinome infiltrant ainsi que sur son versant antérieur des remaniements fibreux cicatriciels secondaires au prélèvement biopsique initial, fait d'une fibrose collagène dense, par places hyalinisée, ponctuée de sidérophages, de foyers granulomateux résorptifs à cellules géantes plurinucléées, s'accompagnant de foyers lipogranulomateux. EXAMEN IMMUNOHISTOCHIMIQUE Récepteurs aux oestrogènes : 98% des cellules montrent une immunoréactivité variable, majoritairement intense. Récepteurs à la progestérone : 70 % des cellules montrent une immunoréactivité légère à modérée. HER2 : absence de marquage (0). Les cellules carcinomateuses infiltrantes sont immunoréactives pour l'anticorps anti-ECadhérine."
+      },
+      "facts": {
+        "llm_answer": {
+          "meta": {},
+          "text": "1. Le cancer du sein gauche est un carcinome canalaire infiltrant.\n2. Le carcinome est de grade SBRm II.\n3. Le carcinome s'étend sur 1,3 cm de grand axe.\n4. Le carcinome se situe en marges saines d'au moins 1 cm.\n5. Le taux de récepteurs d'œstrogènes (RO) est de 98%.\n6. Le taux de récepteurs de progestérone (RP) est de 70%.\n7. La protéine HER2 n'est pas surexprimée.\n8. Un petit foyer de carcinome canalaire de bas grade nucléaire est présent.\n9. Ce foyer est situé à moins de 0,1 cm de la section externe.",
+          "prompt": {
+            "meta": {},
+            "user": "SEIN GAUCHE QSI : carcinome canalaire infiltrant de grade SBRm II (3, 3, 1) s'étendant sur 1,3 cm de grand axe, se localisant en marges saines au moins centimétriques par rapport aux différentes sections. - RO 98%, RP 70%, absence de surexpression de HER2 (0). - Présence d'un petit foyer de carcinome canalaire de bas grade nucléaire, situé à moins de 0,1 cm de la section externe. Codification ADICAP : OHSGA7B2",
+            "system": "Génère un minimum de phrases numérotées courtes et simples qui décrivent ce paragraphe.\nChaque phrase ne doit contenir qu'une seule information.\nChaque phrase doit être indépendante et aucune phrase ne doit contenir la même information qu'une autre phrase.\nLes phrases ne doivent pas contenir de référence au document source ni à sa page.\nLes phrases doivent être compréhensibles seules et donc ne pas contenir de référence aux autres phrases ni nécessiter les autres phrases pour être comprises.",
+            "prompter": "FactPrompterFR_2024_06_04"
+          },
+          "name": "mistral/mistral-small-latest",
+          "full_name": "mistral-small-latest",
+          "timestamp": "2026-05-18T12:27:56.351733",
+          "duration": 1.359799,
+          "cost": 0.00004416,
+          "chunks": []
+        },
+        "meta": {},
+        "items": [
+          {
+            "meta": {},
+            "text": "1. Le cancer du sein gauche est un carcinome canalaire infiltrant."
+          },
+          {
+            "meta": {},
+            "text": "2. Le carcinome est de grade SBRm II."
+          },
+          {
+            "meta": {},
+            "text": "3. Le carcinome s'étend sur 1,3 cm de grand axe."
+          },
+          {
+            "meta": {},
+            "text": "4. Le carcinome se situe en marges saines d'au moins 1 cm."
+          },
+          {
+            "meta": {},
+            "text": "5. Le taux de récepteurs d'œstrogènes (RO) est de 98%."
+          },
+          {
+            "meta": {},
+            "text": "6. Le taux de récepteurs de progestérone (RP) est de 70%."
+          },
+          {
+            "meta": {},
+            "text": "7. La protéine HER2 n'est pas surexprimée."
+          },
+          {
+            "meta": {},
+            "text": "8. Un petit foyer de carcinome canalaire de bas grade nucléaire est présent."
+          },
+          {
+            "meta": {},
+            "text": "9. Ce foyer est situé à moins de 0,1 cm de la section externe."
+          }
+        ]
+      },
+      "chunks": {
+        "meta": {},
+        "items": []
+      },
+      "answers": []
+    }
+  ]
+}
