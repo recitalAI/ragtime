@@ -11,3 +11,4 @@ UI/backend/.env
 **/PARTAGES
 UI/backend/instance/
 UI/backend/files/temp/
+UI/backend/instance/app.db
