@@ -1,25 +1,18 @@
-Flask
-Flask-CORS
-python-dotenv
-litellm
+# Backend (Flask) direct dependencies only.
+# Everything the ragtime package needs (litellm, llama_index, openpyxl,
+# pydantic, jinja2, ...) is declared in package/pyproject.toml and installed
+# by `pip install ./package` — do not duplicate it here.
+# Removed in Phase 7: flask-smorest, flask_jwt_extended, marshmallow (dead
+# since the duplicate API layer was deleted in Phase 1), and the stdlib/py2
+# placeholders `pathlib` and `asyncio` (the PyPI `asyncio` package is a
+# broken Python-2 artifact).
+# For exact reproducibility, freeze from a known-good container:
+#   docker compose exec ragtime pip freeze > UI/requirements.lock
+Flask>=3.0,<4
+Flask-CORS>=4,<7
+flask_sqlalchemy>=3.1,<4
+python-dotenv>=1,<2
+gunicorn>=21,<24
+# kept: used by report generation / data handling in the backend context
 markdown
-requests
-gunicorn
-retry
-pathlib
-openpyxl
-langdetect
-pydantic
-jinja2
-tabulate
-unidecode
-setenv
-py_setenv
-lazy_import
-asyncio
 pandas
-llama_index
-flask_jwt_extended
-flask_sqlalchemy
-flask-smorest
-marshmallow

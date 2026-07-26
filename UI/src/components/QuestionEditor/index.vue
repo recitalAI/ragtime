@@ -27,7 +27,7 @@ export default defineComponent({
       props.qa.map(q => ({
         ...q,
         answers: {
-          items: q.answers.items.map(a => ({ ...a, isEditing: false, eval: a.eval || { human: 0 } }))
+          items: (q.answers?.items || []).map(a => ({ ...a, isEditing: false, eval: a.eval || { human: 0 } }))
         }
       }))
     );

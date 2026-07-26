@@ -1,4 +1,4 @@
-import { http } from '@/plugins/axios';
+import { http, LONG_REQUEST } from '@/plugins/axios';
 
 
 export const answerGeneratorService = {
@@ -13,17 +13,13 @@ export const answerGeneratorService = {
       useRetriever: useRetriever,
       retrieverType: retrieverType
     };
-    return http.post('generate-answers', payload)
+    return http.post('generate-answers', payload, LONG_REQUEST)
     .then(response => {
       if (response.data && response.data.items) {
         return response.data.items;
       } else {
         throw new Error('Unexpected response format from server');
       }
-    })
-    .catch(error => {
-      console.error('Error generating answers:', error);
-      throw error;
     });
   },
 
@@ -43,17 +39,13 @@ export const factGeneratorService = {
       })),
       model: model
     };
-    return http.post('generate-facts', payload)
+    return http.post('generate-facts', payload, LONG_REQUEST)
     .then(response => {
       if (response.data && response.data.items) {
         return response.data.items;
       } else {
         throw new Error('Unexpected response format from server');
       }
-    })
-    .catch(error => {
-      console.error('Error generating facts:', error);
-      throw error;
     });
   },
 
@@ -65,122 +57,86 @@ export const factGeneratorService = {
 
 export const modelService = {
   async getAvailableModels() {
-    try {
-      const response = await http.get('available-models');
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching available models:', error);
-      throw error;
-    }
+    const response = await http.get('available-models');
+    return response.data;
   },
 
   async getAvailableRetrievers() {
-    try {
-      const response = await http.get('available-retrievers');
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching available retrievers:', error);
-      throw error;
-    }
+    const response = await http.get('available-retrievers');
+    return response.data;
   }
 };
 
 export const experimentService = {
+  async createExperimentJob(config) {
+    // Starts the experiment as a background job; poll getExperimentJob for
+    // progress. Replaces holding the HTTP request open for the whole run.
+    const response = await http.post('jobs', config);
+    return response.data;
+  },
+
+  async getExperimentJob(jobId, offset = 0) {
+    const response = await http.get(`jobs/${jobId}?offset=${offset}`);
+    return response.data;
+  },
+
   startExperiment(config) {
-    return http.post('start-experiment', config)
+    return http.post('start-experiment', config, LONG_REQUEST)
     .then(response => {
       if (response.data && response.data.results_path) {
         return response.data;
       } else {
         throw new Error('Unexpected response format from server');
       }
-    })
-    .catch(error => {
-      console.error('Error starting experiment:', error);
-      if (error.response) {
-        console.error('Error response from server:', error.response.data);
-        console.error('Error status:', error.response.status);
-        console.error('Error headers:', error.response.headers);
-      } else if (error.request) {
-        console.error('No response received:', error.request);
-      } else {
-        console.error('Error setting up request:', error.message);
-      }
-      throw error;
     });
   },
 
 
   async deleteValidationSet(name) {
-    try {
-      // Find the full filename based on the displayed name
-      const response = await http.get('validation-sets');
-      const validationSet = response.data.find(set => set.name === name);
-      if (!validationSet) {
-        throw new Error('Validation set not found');
-      }
-      const fullFileName = `${name}_Validation_set_Q${validationSet.questions}_F${validationSet.facts}.json`;
-      
-      await http.delete(`delete-validation-set/${encodeURIComponent(fullFileName)}`);
-      return { message: 'Validation set deleted successfully' };
-    } catch (error) {
-      console.error('Error deleting validation set:', error);
-      throw error;
-    }
+    // 'name' is the exact filename returned by /api/validation-sets.
+    // Reconstructing it from stats was appending the _Validation_set_QxFy
+    // suffix a second time and made deletion fail with a 404.
+    await http.delete(`delete-validation-set/${encodeURIComponent(name)}`);
+    return { message: 'Validation set deleted successfully' };
   },
 
   async deleteExperiment(name) {
-    try {
-      await http.delete(`delete-experiment/${encodeURIComponent(name)}`);
-      return { message: 'Experiment deleted successfully' };
-    } catch (error) {
-      console.error('Error deleting experiment:', error);
-      throw error;
-    }
+    await http.delete(`delete-experiment/${encodeURIComponent(name)}`);
+    return { message: 'Experiment deleted successfully' };
+  },
+
+  async getValidationSets() {
+    const response = await http.get('validation-sets');
+    return response.data;
   },
 
   async getValidationSet(name) {
-    try {
-      const response = await http.get(`validation-set/${encodeURIComponent(name)}`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching validation set:', error);
-      throw error;
-    }
+    const response = await http.get(`validation-set/${encodeURIComponent(name)}`);
+    return response.data;
   },
   async getAllExperiments() {
-    try {
-      const response = await http.get('experiments');
-      return response.data.map(experiment => ({
-        ...experiment,
-        chunks: experiment.chunks || 0,
-        retriever: experiment.retriever || 'Not specified'
-      }));
-    } catch (error) {
-      console.error('Error fetching all experiments:', error);
-      throw error;
-    }
+    const response = await http.get('experiments');
+    return response.data.map(experiment => ({
+      ...experiment,
+      chunks: experiment.chunks || 0,
+      retriever: experiment.retriever || 'Not specified'
+    }));
   },
   
-  async getExperimentResults(resultsPath) {
-    try {
-      const response = await http.get(`experiment-results?path=${encodeURIComponent(resultsPath)}`);
-      const expe = response.data;
+  async getExperimentResults(resultsName) {
+    const response = await http.get(`experiment-results?name=${encodeURIComponent(resultsName)}`);
+    const expe = response.data;
 
-      // Process summary results
-      const summary = this.processExperimentSummary(expe);
+    // Process summary results
+    const summary = this.processExperimentSummary(expe);
 
-      // Process detailed results
-      const detailed = this.processDetailedResults(expe);
+    // Process detailed results
+    const detailed = this.processDetailedResults(expe);
 
-      // Process full evaluation
-      const full = this.processFullEvaluation(expe);
+    // Process full evaluation
+    const full = this.processFullEvaluation(expe);
 
-      return { summary, detailed, full };
-    } catch (error) {
-      console.error('Error fetching experiment results:', error);
-      throw error;
-    }
+    return { summary, detailed, full };
   },
 
   processExperimentSummary(expe) {
@@ -203,6 +159,7 @@ export const experimentService = {
             totalHallu: 0,
             totalMissing: 0,
             totalExtra: 0,
+            totalCost: 0,
             isChunkEval: modelName === "Missings Eval" || modelName === "Hallucinations Eval" || modelName === "Hallucination Eval"
           };
         }
@@ -223,6 +180,10 @@ export const experimentService = {
         result.totalHallu += answer.eval?.meta?.nb_hallu || 0;
         result.totalMissing += answer.eval?.meta?.nb_missing || 0;
         result.totalExtra += answer.eval?.meta?.nb_extra || 0;
+        // Total price for this model row = answer generation + evaluation cost,
+        // summed from the costs already stored on each call (0 for imported
+        // data). Mirrors the Home experiment total (answer + eval).
+        result.totalCost += (answer.llm_answer?.cost || 0) + (answer.eval?.llm_answer?.cost || 0);
       });
     });
 
@@ -236,6 +197,7 @@ export const experimentService = {
       hallu: result.totalHallu,
       missing: result.totalMissing,
       extra: result.totalExtra,
+      cost: result.totalCost,
       isChunkEval: result.isChunkEval
     }));
   },

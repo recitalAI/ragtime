@@ -91,7 +91,10 @@ export default {
             name: 'Human',
             timestamp: formatDateForBackend(new Date()) 
           },
-          eval: { human: 0 }
+          // An answer typed by the user is human-validated by definition,
+          // consistent with editing an answer and with the simple import
+          // format {"question": ..., "answer": ...}.
+          eval: { human: 1 }
         };
         this.$emit('update', [...this.answers, newAnswer]);
         this.isAddingNew = false;

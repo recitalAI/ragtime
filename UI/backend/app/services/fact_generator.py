@@ -1,35 +1,30 @@
-from ragtime.expe import Expe, Facts, Fact
-from ragtime.generators import FactGenerator
-from ragtime.prompters import FactPrompterJazz
-from ragtime.llms import LiteLLM
-import os
+"""Fact generation. Built per request with the target model — no shared
+singleton state (B3 fix).
+"""
 import logging
 
+from ragtime.expe import Expe
+from ragtime.generators import FactGenerator
+from ragtime.llms import LiteLLM
+
+from app.services.llm_factory import build_llm
 from ragtime.prompters.fact_prompters import FactPrompterFR_2024_06_04
 
+from app.infra.event_loop import ensure_event_loop
+
+
 class FactGeneratorService:
-    _instance = None
-
-    @classmethod
-    def get_instance(cls):
-        if cls._instance is None:
-            cls._instance = cls()
-        return cls._instance
-
-    def __init__(self):
-        # self.prompter = FactPrompterJazz()
-        self.prompter= FactPrompterFR_2024_06_04()
-        self.fact_generator = None
-
-    def set_model(self, model: str):
-        llm = LiteLLM(name=model, prompter=self.prompter)
-        self.fact_generator = FactGenerator(llms=[llm])
+    def __init__(self, model: str):
+        self.prompter = FactPrompterFR_2024_06_04()
+        # build_llm returns a ReasoningLLM for reasoning models (gpt-5,
+        # o4-mini, opus, OVH classes) so their hidden reasoning does not
+        # eat the token budget and leave the fact list empty.
+        self.fact_generator = FactGenerator(llms=[build_llm(model, self.prompter)])
 
     def generate_facts(self, expe: Expe) -> Expe:
         try:
             logging.info(f"Generating facts for {len(expe)} questions")
-            if not self.fact_generator:
-                raise ValueError("Model not set. Call set_model() before generating facts.")
+            ensure_event_loop()
             self.fact_generator.generate(expe=expe)
             logging.info("Facts generated successfully")
             return expe

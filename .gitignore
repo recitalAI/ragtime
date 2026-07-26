@@ -9,3 +9,5 @@ UI/backend/.env
 **/LSA*
 **/logs.txt
 **/PARTAGES
+UI/backend/instance/
+UI/backend/files/temp/

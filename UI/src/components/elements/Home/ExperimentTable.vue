@@ -37,12 +37,15 @@
       </v-btn>
     </div>
     <TableWithFooter
-      :items="filteredExperiments"
+      :items="paginatedExperiments"
+      :paginated-items-length="paginatedExperiments.length"
       :loading="loading"
       :current-page="currentPage"
       :items-per-page="itemsPerPage"
       :total="total"
-      :show-footer="false"
+      :show-footer="total > itemsPerPage"
+      @change-page="onPageChange"
+      @change-items-per-page="onItemsPerPageChange"
     >
       <template #header>
         <v-col cols="1">
@@ -52,11 +55,19 @@
             hideDetails
           />
         </v-col>
-        <v-col cols="3">
+        <v-col cols="2">
           Name
         </v-col>
         <v-col cols="1">
           Date
+        </v-col>
+        <v-col
+          class="justify-center"
+          cols="1"
+        >
+          <div class="horizontal-centered">
+            Price
+          </div>
         </v-col>
         <v-col cols="2">
           Models
@@ -89,7 +100,7 @@
       </template>
       <template #body>
         <v-row
-          v-for="experiment in filteredExperiments"
+          v-for="experiment in paginatedExperiments"
           class="table-row table-row-height"
           :key="experiment.id"
         >
@@ -100,7 +111,7 @@
               hideDetails
             />
           </v-col>
-          <v-col cols="3">
+          <v-col cols="2">
             <div
               class="ellipsis clickable primary--text"
               style="max-width: fit-content"
@@ -113,6 +124,11 @@
             <small>
               {{ experiment.date }}
             </small>
+          </v-col>
+          <v-col cols="1">
+            <div class="horizontal-centered">
+              {{ formatCostUSD(experiment.cost) }}
+            </div>
           </v-col>
           <v-col cols="2">
             <MaxWidthChip
@@ -178,6 +194,7 @@
 <script>
 import { experimentService } from '@/services/generatorService';
 import { formatDate } from '@/utils/dateFormatter';
+import { formatCostUSD } from '@/composables/experimentResultsTransforms';
 import TableWithFooter from '@/components/elements/Tables/TableWithFooter';
 import MaxWidthChip from '@/components/elements/general/MaxWidthChip';
 
@@ -212,6 +229,13 @@ export default {
       });
     },
 
+    // One page of the filtered list. The footer only appears when
+    // total > itemsPerPage, so short lists render exactly as before.
+    paginatedExperiments() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      return this.filteredExperiments.slice(start, start + this.itemsPerPage);
+    },
+
     selectedItems() {      
       return this.experiments.filter(exp => exp.selected);
     },
@@ -221,12 +245,32 @@ export default {
     },
   },
 
+  watch: {
+    // Filtering can shrink the list below the current page — snap back so the
+    // table never shows an empty page.
+    total(newTotal) {
+      const maxPage = Math.max(1, Math.ceil(newTotal / this.itemsPerPage));
+      if (this.currentPage > maxPage) this.currentPage = 1;
+    },
+  },
+
   mounted() {
     this.fetchExperiments();
   },
 
   methods: {
     formatDate,
+    formatCostUSD,
+
+    onPageChange(page) {
+      this.currentPage = page;
+    },
+
+    onItemsPerPageChange(count) {
+      this.itemsPerPage = count;
+      this.currentPage = 1;
+    },
+
     selectAllItems() {
       this.experiments.forEach(exp => exp.selected = this.selectAll);
     },
@@ -275,7 +319,9 @@ export default {
     viewExperimentResults(experiment) {
       this.$router.push({ 
         name: 'ExperimentResults', 
-        query: { path: experiment.resultsPath } 
+        // Results are addressed by name; the backend resolves it inside
+        // the results folder (legacy ?path= bookmarks are still accepted).
+        query: { name: experiment.name } 
       });
     },
   },

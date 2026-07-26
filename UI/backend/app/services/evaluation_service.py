@@ -1,50 +1,49 @@
-from ragtime.expe import Expe, StartFrom, Eval, Answer
-from ragtime.generators import EvalGenerator, EvalGeneratorChunks
-from ragtime.prompters import EvalPrompterFRV2, EvalPrompterChunks
-from ragtime.llms import LLM, LiteLLM
-import os
+"""Answer/chunk evaluation. Built per request/job with the judge model —
+no shared singleton state (B3 fix).
+"""
 import logging
 
+from ragtime.expe import Answer, Eval, Expe
+from ragtime.generators import EvalGenerator, EvalGeneratorChunks
+
+from app.services.llm_factory import build_llm
+from ragtime.prompters import EvalPrompterChunks, EvalPrompterFRV2
+
+from app.infra.event_loop import ensure_event_loop
+
+
 class EvaluationService:
-    _instance = None
-
-    @classmethod
-    def get_instance(cls):
-        if cls._instance is None:
-            cls._instance = cls()
-        return cls._instance
-
-    def __init__(self):
+    def __init__(self, model_name: str):
         self.answer_prompter = EvalPrompterFRV2()
         self.chunk_prompter = EvalPrompterChunks()
-        self.model = None
-
-    def set_model(self, model_name: str):
         self.model = model_name
 
     def evaluate_answers(self, expe: Expe) -> Expe:
-        if not self.model:
-            raise ValueError("Model not set. Call set_model() before evaluating.")
-        eval_gen = EvalGenerator(llms=self.model, prompter=self.answer_prompter)
+        ensure_event_loop()
+        # Pass an LLM OBJECT, not a bare string: the package would wrap a
+        # string in a plain LiteLLM, which for a reasoning judge (o4-mini,
+        # gpt-5) means the 2000-token budget is consumed by hidden reasoning
+        # and the verdict text comes back EMPTY -> every fact scored missing.
+        eval_gen = EvalGenerator(llms=[build_llm(self.model, self.answer_prompter)],
+                                 prompter=self.answer_prompter)
         eval_gen.generate(expe=expe)
         return expe
 
     def evaluate_chunks(self, expe: Expe) -> Expe:
-        if not self.model:
-            raise ValueError("Model not set. Call set_model() before evaluating.")
-        
+        ensure_event_loop()
         # Initialize metadata for all answers before evaluation
         self._initialize_metadata(expe)
-        
-        chunk_eval_gen = EvalGeneratorChunks(llms=self.model, prompter=self.chunk_prompter)
-        
+
+        chunk_eval_gen = EvalGeneratorChunks(llms=[build_llm(self.model, self.chunk_prompter)],
+                                             prompter=self.chunk_prompter)
+
         try:
             chunk_eval_gen.generate(expe=expe)
         except Exception as e:
             logging.error(f"Error in evaluate_chunks: {str(e)}")
             # If an error occurs during generation, we'll log it and return the expe as is
             # This allows the experiment to continue and save partial results
-        
+
         return expe
 
     def _initialize_metadata(self, expe: Expe):
@@ -56,7 +55,7 @@ class EvaluationService:
                     ans.eval = Eval()
                 if not hasattr(ans.eval, 'meta') or ans.eval.meta is None:
                     ans.eval.meta = {}
-                
+
                 # Initialize all required metadata fields
                 meta = ans.eval.meta
                 meta.setdefault('missing', [])
