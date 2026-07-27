@@ -1,6 +1,7 @@
 {
   "name": "Name",
   "date": "Date",
+  "price": "Price",
   "questions": "Questions",
   "facts": "Facts",
   "chunks": "Chunks",

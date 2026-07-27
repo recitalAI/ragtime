@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/components/views/HomePage.vue';
-import CreateValidationSet from '@/components/CreateValidationSet.vue';
-import ModifyValidationSet from '@/components/ModifyValidationSet.vue';
-import ExperimentSetup from '@/components/ExperimentSetup.vue';
-import ExperimentResults from '@/components/ExperimentResults.vue';
+import ValidationSetEditor from '@/components/ValidationSetEditor.vue';
+import ExperimentSetupView from '@/components/views/ExperimentSetupView.vue';
+import ExperimentResultsView from '@/components/views/ExperimentResultsView.vue';
 import QuestionEvaluation from '@/components/QuestionEvaluation.vue';
 import LoginPage from '@/components/views/LoginView.vue';
+import { cancelPendingRequests } from '@/plugins/axios';
 import LogoutView from '@/components/views/LogoutView.vue';
 import UserSettings from '@/components/UserSettings.vue';
 
@@ -19,27 +19,29 @@ const routes = [
   {
     path: '/create-validation-set',
     name: 'CreateValidationSet',
-    component: CreateValidationSet,
+    component: ValidationSetEditor,
+    props: { mode: 'create' },
     meta: { requiresAuth: true }
   },
   {
     path: '/modify-validation-set',
     name: 'ModifyValidationSet',
-    component: ModifyValidationSet,
+    component: ValidationSetEditor,
+    props: { mode: 'edit' },
     meta: { requiresAuth: true }
   },
   {
     path: '/experiment-setup',
     name: 'ExperimentSetup',
-    component: ExperimentSetup,
+    component: ExperimentSetupView,
     props: true,
     meta: { requiresAuth: true }
   },
   {
     path: '/experiment-results',
     name: 'ExperimentResults',
-    component: ExperimentResults,
-    props: (route) => ({ path: route.query.path }),
+    component: ExperimentResultsView,
+    props: (route) => ({ name: route.query.name, path: route.query.path }),
     meta: { requiresAuth: true }
   },
   {
@@ -74,6 +76,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
+  // Abort API requests still pending for the page being left — their
+  // responses would land on an unmounted component.
+  cancelPendingRequests();
+
   const isAuthenticated = !!localStorage.getItem('user');
   
   if (to.matched.some(record => record.meta.requiresAuth) && !isAuthenticated) {

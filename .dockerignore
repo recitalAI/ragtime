@@ -1,0 +1,12 @@
+.git
+projects/
+UI/node_modules/
+UI/dist/
+UI/backend/files/
+UI/backend/instance/
+UI/backend/logs/
+UI/backend/.env
+logs/
+**/__pycache__/
+**/*.pyc
+*.zip

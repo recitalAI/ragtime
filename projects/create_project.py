@@ -1,4 +1,4 @@
-PROJECT_NAME:str = "LDS"
+PROJECT_NAME:str = "PARTAGES"
 
 import ragtime
 import shutil
