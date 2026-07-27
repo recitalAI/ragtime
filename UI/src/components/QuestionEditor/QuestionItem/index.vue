@@ -88,7 +88,7 @@
         <v-list v-if="hasFacts">
           <v-list-item v-for="(fact, factIndex) in question.facts.items" :key="factIndex" class="mb-3 fact-item">
             <template v-slot:default>
-              <v-list-item-title class="fact-text">{{ `${factIndex + 1}. ${fact.text}` }}</v-list-item-title>
+              <v-list-item-title class="fact-text">{{ `${factIndex + 1}. ${stripFactNumber(fact.text)}` }}</v-list-item-title>
               <v-list-item-action>
                 <v-btn color="primary" variant="text" @click="startEditingFact(factIndex)" class="mr-2">
                   <v-icon start>fa-solid fa-pen-to-square</v-icon>
@@ -234,6 +234,7 @@
 import QuestionText from './QuestionText.vue';
 import AnswerList from './AnswerList.vue';
 import { answerGeneratorService, factGeneratorService } from '@/services/generatorService';
+import { selectReferenceAnswer, buildFactAnswerPayload } from '@/services/validationHelper';
 import { formatDate } from '@/utils/dateFormatter';
 
 export default {
@@ -360,7 +361,8 @@ export default {
         }
       } catch (error) {
         console.error('Error generating answer:', error);
-        this.showMessage('Error generating answer. Please try again.', 'error');
+        const details = error.response?.data?.error || error.message || 'Unknown error';
+        this.showMessage(`Error generating answer: ${details}`, 'error');
       } finally {
         this.isGenerating = false;
       }
@@ -433,6 +435,13 @@ export default {
       this.isAddingFact = false;
       this.newFactText = '';
     },
+    stripFactNumber(text) {
+      // Stored fact text keeps its own "N. " prefix (that is the format the
+      // ragtime fact prompter produces and what gets saved), while the list
+      // numbers facts by position. Strip the stored prefix at render time so
+      // it does not show as "1. 1. text".
+      return (text || '').replace(/^\s*\d+[.)]\s*/, '');
+    },
     renumberFacts(facts) {
       return facts.map((fact, index) => {
         const numberMatch = fact.text.match(/^\d+\.\s/);
@@ -465,10 +474,11 @@ export default {
         return;
       }
       
-      const validatedAnswers = this.question.answers.items.filter(answer => answer.eval?.human === 1);
-      
-      if (validatedAnswers.length !== 1) {
-        this.showMessage("Please ensure that this question has exactly one answer before generating facts.", 'error');
+      // Facts are generated from the question's reference answer:
+      // the first human-validated answer if any, otherwise the first answer.
+      const reference = selectReferenceAnswer(this.question);
+      if (!reference) {
+        this.showMessage('This question has no answer yet. Add or generate an answer before generating facts.', 'error');
         return;
       }
 
@@ -479,7 +489,7 @@ export default {
             text: this.question.question.text
           },
           answers: {
-            items: [validatedAnswers[0]]
+            items: [buildFactAnswerPayload(reference)]
           }
         };
 
@@ -496,7 +506,8 @@ export default {
         }
       } catch (error) {
         console.error('Error generating facts:', error);
-        this.showMessage('Error generating facts. Please check the console for details.', 'error');
+        const details = error.response?.data?.error || error.message || 'Unknown error';
+        this.showMessage(`Error generating facts: ${details}`, 'error');
       } finally {
         this.isGeneratingFacts = false;
       }

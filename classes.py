@@ -1,7 +1,7 @@
 from ragtime.base import call_api, REQ_GET, REQ_POST
 from ragtime.llms import LLM
 from ragtime.expe import QA, Prompt, LLMAnswer, Chunk
-from ragtime.config import logger
+from ragtime.config import logger, DEFAULT_TEMPERATURE
 from ragtime.prompters import Prompter
 import re
 import json
@@ -22,7 +22,6 @@ load_dotenv()
 ALBERT_BASE_URL = os.environ.get('ALBERT_BASE_URL')
 ALBERT_MODEL = os.environ.get('ALBERT_MODEL')
 DEFAULT_MAX_TOKENS = 2000
-DEFAULT_TEMPERATURE = 0.7
 
 logger = logging.getLogger(__name__)
 SEARCH_USERNAME: str = "..."

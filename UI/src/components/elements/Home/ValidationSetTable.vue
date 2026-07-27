@@ -38,13 +38,15 @@
     </div>
     <TableWithFooter
       no-results-message="validation_sets.not_found"
-      :items="filteredValidationSets"
-      :paginated-items-length="filteredValidationSets.length"
+      :items="paginatedValidationSets"
+      :paginated-items-length="paginatedValidationSets.length"
       :loading="loading"
       :current-page="currentPage"
       :items-per-page="itemsPerPage"
       :total="total"
-      :show-footer="false"
+      :show-footer="total > itemsPerPage"
+      @change-page="onPageChange"
+      @change-items-per-page="onItemsPerPageChange"
     >
       <template #header>
         <v-col cols="1">
@@ -59,6 +61,12 @@
         </v-col>
         <v-col cols="1">
           {{ $t('date') }}
+        </v-col>
+        <v-col
+          class="justify-center"
+          cols="1"
+        >
+          {{ $t('price') }}
         </v-col>
         <v-col
           class="justify-center"
@@ -87,7 +95,7 @@
       </template>
       <template #body>
         <v-row
-          v-for="set in filteredValidationSets"
+          v-for="set in paginatedValidationSets"
           class="table-row table-row-height"
           :key="set.id"
         >
@@ -111,6 +119,12 @@
             <small>
               {{ set.date }}
             </small>
+          </v-col>
+          <v-col
+            class="justify-center"
+            cols="1"
+          >
+            {{ formatCostUSD(set.cost) }}
           </v-col>
           <v-col
             class="justify-center"
@@ -143,10 +157,10 @@
   </div>
 </template>
 <script>
-import { http } from '@/plugins/axios';
 import TableWithFooter from '@/components/elements/Tables/TableWithFooter';
 import { experimentService } from '@/services/generatorService';
 import { formatDate } from '@/utils/dateFormatter';
+import { formatCostUSD } from '@/composables/experimentResultsTransforms';
 
 export default {
   name: 'ValidationSetTable',
@@ -178,6 +192,13 @@ export default {
       });
     },
 
+    // One page of the filtered list. The footer is shown by TableWithFooter
+    // only when total > itemsPerPage, so short lists look unchanged.
+    paginatedValidationSets() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      return this.filteredValidationSets.slice(start, start + this.itemsPerPage);
+    },
+
     selectedItems() {      
       return this.validationSets.filter(set => set.selected);
     },
@@ -187,12 +208,32 @@ export default {
     },
   },
 
+  watch: {
+    // A filter can shrink the list below the current page — snap back to a
+    // valid page so the table never shows an empty page.
+    total(newTotal) {
+      const maxPage = Math.max(1, Math.ceil(newTotal / this.itemsPerPage));
+      if (this.currentPage > maxPage) this.currentPage = 1;
+    },
+  },
+
   mounted() {
     this.fetchValidationSets();
   },
 
   methods: {
     formatDate,
+    formatCostUSD,
+
+    onPageChange(page) {
+      this.currentPage = page;
+    },
+
+    onItemsPerPageChange(count) {
+      this.itemsPerPage = count;
+      this.currentPage = 1;
+    },
+
     openSettings() {
       this.$router.push('/settings');
     },
@@ -204,12 +245,7 @@ export default {
     async fetchValidationSets() {
       this.loading = true;
       try {
-        const response = await http.get('validation-sets');
-        if (!response) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = response.data;
-        this.validationSets = data;
+        this.validationSets = await experimentService.getValidationSets();
         this.error = null;
       } catch (e) {
         console.error('Error fetching validation sets:', e);

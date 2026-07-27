@@ -1,6 +1,7 @@
 {
   "name": "Nom",
   "date": "Date",
+  "price": "Prix",
   "questions": "Questions",
   "facts": "Facts",
   "chunks": "Chunks",
@@ -9,6 +10,15 @@
   "not_found": "Aucun ensemble de validation trouvé",
   "no_results": "Aucun résultat",
   "delete": "Supprimer",
+  "validation_sets": {
+    "title": "Ensembles de validation",
+    "not_found": "Aucun ensemble de validation trouvé"
+  },
+  "datatable": {
+    "footer": {
+      "per_page": "Éléments par page"
+    }
+  },
   "login": {
     "lostPassword": {
       "reset": "Réinitialiser le mot de passe",
