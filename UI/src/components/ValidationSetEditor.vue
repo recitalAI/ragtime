@@ -344,7 +344,12 @@ export default {
         // answer/fact generation selects (they remain available for the
         // experiment answer generation).
         const options = buildModelOptions(catalog.builtins, availability, {
-          hideUnavailable: true,
+          // Show every eligible model, but grey out the ones whose API key
+          // isn't configured (they render disabled with an "API key not
+          // available" note) instead of hiding them — an empty dropdown when
+          // no key is set was confusing. buildModelOptions still sets each
+          // option's `disabled` from availability.
+          hideUnavailable: false,
           excludeProviders: ['OVH'],
           // New GPT-5.x / Anthropic models are answer-generation only for now
           // (feature 3): keep them out of validation-set answer/fact selects.

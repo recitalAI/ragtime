@@ -1,10 +1,21 @@
+import os
+
+# Use LiteLLM's bundled (local) model-cost map instead of fetching it from
+# GitHub at startup. In a locked-down container the remote fetch times out on
+# the SSL handshake and prints several noisy warnings before falling back to
+# the local copy anyway; forcing local skips the timeout and the noise. Must
+# be set before litellm is first imported (directly or via the ragtime
+# package), so it sits at the very top of the app package. The local map
+# already contains every model we price (OpenAI/Anthropic/Mistral); OVH prices
+# are registered separately at runtime.
+os.environ.setdefault('LITELLM_LOCAL_MODEL_COST_MAP', 'True')
+
 from flask import Flask
 from flask_cors import CORS
 from config import Config
 from dotenv import load_dotenv
 import logging
 from logging.handlers import RotatingFileHandler
-import os
 from app.models import db
 
 

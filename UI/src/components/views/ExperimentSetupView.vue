@@ -39,7 +39,11 @@
               required
             >
               <template #item="{ item, props }">
-                <v-list-item v-bind="props" :disabled="item.raw.disabled">
+                <v-list-item
+                  v-bind="props"
+                  :disabled="item.raw.disabled"
+                  :subtitle="evalModelPrice(item.raw)"
+                >
                   <template v-if="item.raw.disabled && item.raw.value !== ''">
                     (API key not available)
                   </template>
@@ -249,7 +253,7 @@ import { ref, computed, onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vue-router';
 import { experimentService, modelService } from '@/services/generatorService';
 import * as XLSX from 'xlsx';
-import { fetchModelCatalog, refreshAvailability, buildModelOptions } from '@/services/modelCatalog';
+import { fetchModelCatalog, refreshAvailability, buildModelOptions, formatModelPrice } from '@/services/modelCatalog';
 import { useExperimentLauncher } from '@/composables/useExperimentLauncher';
 import ValidationSetPicker from '@/components/setup/ValidationSetPicker.vue';
 import DataFileImport from '@/components/setup/DataFileImport.vue';
@@ -365,11 +369,22 @@ export default {
     // Evaluation dropdown options come from the unified catalog; `disabled`
     // is derived generically from each model's required_key.
     const evaluationModelOptions = computed(() =>
-      // The evaluation select must not offer the answer-generation-only models
-      // (new GPT-5.x / Anthropic entries, feature 3) — they are for answer
-      // generation only for now.
-      buildModelOptions(builtinLLMs.value, apiKeyAvailability.value, { excludeAnswerGenOnly: true })
+      // The evaluation select mirrors the validation-set fact-generation list:
+      // no answer-generation-only models (new GPT-5.x / Anthropic entries,
+      // feature 3), and no OVH models. Unavailable models are shown greyed out
+      // rather than hidden, so the price is still visible.
+      buildModelOptions(builtinLLMs.value, apiKeyAvailability.value, {
+        excludeAnswerGenOnly: true,
+        excludeProviders: ['OVH'],
+      })
     );
+
+    // Price line for an eval option's subtitle (empty for the placeholder or
+    // when no price is known).
+    const evalModelPrice = (raw) => {
+      if (!raw || !raw.value || !raw.pricing) return '';
+      return formatModelPrice(raw.pricing);
+    };
 
     const isAlbertSelected = computed(() => {
       return selectedCustomLLMs.value.some(llmName => {
@@ -744,6 +759,7 @@ export default {
       cancelEdit,
       selectedModels,
       evaluationModelOptions,
+      evalModelPrice,
       apiKeyAvailability,
       liveLogs,
       isShowingLogs,
