@@ -48,7 +48,7 @@
         <slot name="body" />
       </div>
       <TableFooter
-        v-if="showFoother && total > 0 && includeFooterInTableCard === true"
+        v-if="showFooter && total > 0 && includeFooterInTableCard === true"
         class="custom-footer-margins"
         :initial-items-per-page="itemsPerPage"
         :current-page="currentPage"

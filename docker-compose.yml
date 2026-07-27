@@ -2,6 +2,7 @@ services:
   ragtime:
     container_name: ragtime
     build: .
+    restart: unless-stopped
     ports:
       - 8887:5000
     command: >
@@ -10,8 +11,17 @@ services:
         if [ ! -f /app/.env ]; then
           echo '# Default environment variables' > /app/.env;
         fi &&
-        gunicorn --workers 4 --bind 0.0.0.0:5000 --timeout 3600 wsgi:application
-      "    
+        gunicorn --workers 4 --threads 4 --bind 0.0.0.0:5000 --timeout 60 wsgi:application
+      "
+    # timeout 3600 -> 60: since Phase 3, experiments run as background jobs
+    # (POST /api/jobs), so no HTTP request is long-running anymore. --threads 4
+    # keeps 1s job/status polling snappy while a worker is busy.
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/test', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
     volumes:
       - ./UI/backend:/app
       - ./logs:/app/logs
@@ -22,8 +32,15 @@ services:
   frontend:
     container_name: frontend
     build: ./UI/
+    restart: unless-stopped
     ports:
       - 8080:8080
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8080', r => process.exit(r.statusCode < 500 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
     volumes:
       - ./UI:/app
       - /app/node_modules

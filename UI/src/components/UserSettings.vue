@@ -12,7 +12,7 @@
             class="api-key-item mb-4"
           >
             <v-text-field
-              :model-value="key.visible ? key.value : maskKey(key.value)"
+              :model-value="key.stored ? key.value : (key.visible ? key.value : maskKey(key.value))"
               @input="updateKeyValue(index, $event)"
               :label="key.name"
               type="text"
@@ -147,7 +147,9 @@ export default {
     const keyTypeOptions = [
       { value: '', title: 'Select API Key Type' },
       { value: 'OPENAI_API_KEY', title: 'OpenAI API Key' },
+      { value: 'ANTHROPIC_API_KEY', title: 'Anthropic API Key' },
       { value: 'MISTRAL_API_KEY', title: 'Mistral API Key' },
+      { value: 'OVH_API_KEY', title: 'OVH API Key' },
       { value: 'custom', title: 'Custom API Key' },
     ];
 

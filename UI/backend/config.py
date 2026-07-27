@@ -84,5 +84,13 @@ class Config:
         return cls.get_api_key('MISTRAL_API_KEY')
 
     @classmethod
+    def get_anthropic_api_key(cls):
+        return cls.get_api_key('ANTHROPIC_API_KEY')
+
+    @classmethod
+    def get_ovh_api_key(cls):
+        return cls.get_api_key('OVH_API_KEY')
+
+    @classmethod
     def get_custom_api_key(cls, key_name):
         return cls.get_api_key(key_name)

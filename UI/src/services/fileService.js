@@ -1,57 +1,48 @@
 import { http } from '@/plugins/axios';
-import { validateData } from './validationHelper';
+import { validateData, FormatError } from './validationHelper';
 
 export async function saveJsonFile(data, filename) {
-  try {
-    // Validate data before saving
-    const validatedData = validateData(data);
-    const response = await http.post('save-json', { data: validatedData, filename });
-    return response.data;
-  } catch (error) {
-    console.error('Error saving JSON file:', error);
-    if (error.response) {
-      console.error('Error response from server:', error.response.data);
-      console.error('Error status:', error.response.status);
-      console.error('Error headers:', error.response.headers);
-    } else if (error.request) {
-      console.error('No response received:', error.request);
-    } else {
-      console.error('Error setting up request:', error.message);
-    }
-    throw error;
-  }
+  // Validate data before saving
+  const validatedData = validateData(data);
+  const response = await http.post('save-json', { data: validatedData, filename });
+  return response.data;
 }
 
 export async function updateJsonFile(data, newFilename, oldFilename) {
-  try {
-    // Validate data before updating
-    const validatedData = validateData(data);
-    const response = await http.put('update-json', { 
-      data: validatedData, 
-      newFilename, 
-      oldFilename 
-    });
-    return response.data;
-  } catch (error) {
-    console.error('Error updating JSON file:', error);
-    throw error;
-  }
+  // Validate data before updating
+  const validatedData = validateData(data);
+  const response = await http.put('update-json', { 
+    data: validatedData, 
+    newFilename, 
+    oldFilename 
+  });
+  return response.data;
 }
 
 export function loadJsonFile(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {
+      let data;
       try {
-        const data = JSON.parse(e.target.result);
-        // Validate data after loading
-        const validatedData = validateData(data);
-        resolve(validatedData);
+        data = JSON.parse(e.target.result);
+      } catch (parseError) {
+        reject(new Error(`"${file.name}" is not valid JSON (${parseError.message}).`));
+        return;
+      }
+      try {
+        // Normalize and validate the structure (throws FormatError with
+        // the expected-format hint when the structure is not supported)
+        resolve(validateData(data));
       } catch (error) {
-        reject(new Error('Invalid JSON file'));
+        if (error instanceof FormatError) {
+          reject(new Error(`"${file.name}": ${error.message}`));
+        } else {
+          reject(new Error(`"${file.name}" could not be read: ${error.message}`));
+        }
       }
     };
-    reader.onerror = (error) => reject(error);
+    reader.onerror = () => reject(new Error(`Could not read the file "${file.name}".`));
     reader.readAsText(file);
   });
 }
