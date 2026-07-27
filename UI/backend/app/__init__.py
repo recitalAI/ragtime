@@ -52,7 +52,21 @@ def create_app(config_class=Config):
         app.register_blueprint(bp)
 
     with app.app_context():
-        db.create_all()
+        # With multiple gunicorn workers all calling create_app() at boot,
+        # db.create_all() races: create_all() checks "does the table exist?"
+        # then issues CREATE TABLE, and two workers can both pass the check on
+        # a fresh SQLite file, so the second CREATE fails with
+        # "table api_key already exists" and that worker crashes on boot
+        # (taking the whole server down). create_all() is meant to be
+        # idempotent, so treat "already exists" as success — whichever worker
+        # created the table won the race, which is exactly what we want.
+        from sqlalchemy.exc import OperationalError
+        try:
+            db.create_all()
+        except OperationalError as e:
+            if 'already exists' not in str(e).lower():
+                raise
+            app.logger.info('DB tables already exist (created by another worker) — continuing.')
         config_class.init_app(app, db)
 
     # NOTE (B4 fix): the per-request .env reload + DB query that used to run
