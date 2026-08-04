@@ -239,6 +239,8 @@
       @download-template="downloadValidationTemplate"
     />
 
+    <OfflineDialog v-model="showOfflineDialog" />
+
     <v-snackbar
       v-model="showSnackbar"
       :color="snackbarColor"
@@ -256,6 +258,8 @@ import QuestionEditor from './QuestionEditor/index.vue';
 import { loadJsonFile, saveJsonFile, updateJsonFile } from '@/services/fileService';
 import FormatHelp from '@/components/elements/general/FormatHelp.vue';
 import FormatErrorDialog from '@/components/elements/general/FormatErrorDialog.vue';
+import OfflineDialog from '@/components/elements/general/OfflineDialog.vue';
+import { useConnectivityGuard } from '@/composables/useConnectivityGuard';
 import {
   VALIDATION_SET_FORMAT,
   downloadValidationSetTemplate,
@@ -276,12 +280,14 @@ export default {
   components: { 
     FormatHelp,
     FormatErrorDialog,
+    OfflineDialog,
     QuestionEditor,
   },
   setup(props) {
     const router = useRouter();
     const route = useRoute();
     const isCreate = props.mode === 'create';
+    const { showOfflineDialog, ensureOnline, handleOfflineError } = useConnectivityGuard();
     const rootClass = isCreate ? 'create-validation-set' : 'modify-validation-set';
     // Exact filename on disk (with suffix + .json) — edit mode only; used
     // for fetch and update so saving never re-appends the suffix.
@@ -548,6 +554,7 @@ export default {
 
     const generateAnswers = async () => {
       if (!qa.value.length) return;
+      if (!ensureOnline()) return;
       
       isGeneratingAll.value = true;
       try {
@@ -567,6 +574,7 @@ export default {
         showMessage('Answers generated successfully!', 'success');
       } catch (error) {
         console.error('Error generating answers:', error);
+        if (handleOfflineError(error)) return;
         const details = error.response?.data?.error || error.message || 'Unknown error';
         showMessage(`Error generating answers: ${details}`, 'error');
       } finally {
@@ -576,6 +584,7 @@ export default {
 
     const generateFacts = async () => {
       if (!qa.value.length) return;
+      if (!ensureOnline()) return;
 
       // Facts are generated for every question, using its reference answer:
       // the first human-validated answer if any, otherwise the first answer.
@@ -614,6 +623,7 @@ export default {
         }
       } catch (error) {
         console.error('Error generating facts:', error);
+        if (handleOfflineError(error)) return;
         const details = error.response?.data?.error || error.message || 'Unknown error';
         showMessage(`Error generating facts: ${details}`, 'error');
       } finally {
@@ -810,6 +820,7 @@ export default {
       factModelOptions,
       answerModelOptions,
       modelPriceTooltip,
+      showOfflineDialog,
       apiKeyAvailability,
       showSnackbar,
       snackbarColor,

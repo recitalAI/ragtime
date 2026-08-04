@@ -42,5 +42,10 @@
     "email_required": "L'e-mail est requis",
     "email_must_valid": "L'e-mail doit être valide",
     "password_required": "Le mot de passe est requis"
+  },
+  "offline": {
+    "title": "Pas de connexion internet",
+    "message": "Vous n'êtes pas connecté à internet. La génération nécessite une connexion active. Vérifiez votre connexion, puis réessayez.",
+    "ok": "Compris"
   }
 }

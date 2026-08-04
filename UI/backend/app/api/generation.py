@@ -7,6 +7,7 @@ from ragtime.expe import QA, Answer, Expe, Question
 from app.services import key_service
 from app.services.answer_generator import AnswerGeneratorService
 from app.services.fact_generator import FactGeneratorService
+from app.services.connectivity import check_internet, OFFLINE_STATUS, OFFLINE_ERROR
 
 generation_bp = Blueprint('generation', __name__, url_prefix='/api')
 
@@ -49,6 +50,14 @@ def api_generate_answers():
         use_retriever = data.get('useRetriever', False)
         retriever_type = data.get('retrieverType')
         logging.info(f"Using model: {model}")
+
+        # Outbound-connectivity gate: answer generation calls an external
+        # provider for every question. If the container has no internet, fail
+        # fast here with a clear message instead of launching N doomed calls
+        # that flood the logs with provider errors.
+        if not check_internet():
+            logging.warning("Answer generation blocked: no outbound internet connectivity.")
+            return jsonify(OFFLINE_ERROR), OFFLINE_STATUS
 
         # Keys may have been saved through another worker process since this
         # one started — re-apply DB -> env before the LLM call.
@@ -98,6 +107,13 @@ def api_generate_facts():
 
         model = data['model']
         logging.info(f"Using model: {model}")
+
+        # Outbound-connectivity gate (see api_generate_answers): fact
+        # generation calls the provider for every question, so bail out fast
+        # with a clear message when the container is offline.
+        if not check_internet():
+            logging.warning("Fact generation blocked: no outbound internet connectivity.")
+            return jsonify(OFFLINE_ERROR), OFFLINE_STATUS
 
         key_service.ensure_fresh()
         generator = FactGeneratorService(model)

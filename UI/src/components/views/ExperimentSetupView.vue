@@ -238,6 +238,8 @@
       @download-template="downloadExperimentTemplate"
     />
 
+    <OfflineDialog v-model="showOfflineDialog" />
+
     <v-snackbar
       v-model="showSnackbar"
       :color="snackbarColor"
@@ -258,6 +260,7 @@ import { useExperimentLauncher } from '@/composables/useExperimentLauncher';
 import ValidationSetPicker from '@/components/setup/ValidationSetPicker.vue';
 import DataFileImport from '@/components/setup/DataFileImport.vue';
 import FormatErrorDialog from '@/components/elements/general/FormatErrorDialog.vue';
+import OfflineDialog from '@/components/elements/general/OfflineDialog.vue';
 import { EXPERIMENT_DATA_FORMAT, downloadExperimentDataTemplate } from '@/services/spreadsheetFormats';
 import ModelSelection from '@/components/setup/ModelSelection.vue';
 import RetrieverOptions from '@/components/setup/RetrieverOptions.vue';
@@ -267,6 +270,7 @@ export default {
   name: 'ExperimentSetupView',
   components: {
     FormatErrorDialog,
+    OfflineDialog,
     ValidationSetPicker,
     DataFileImport,
     ModelSelection,
@@ -677,6 +681,7 @@ export default {
       autoScroll,
       startExperiment,
       resumeRunningJob,
+      showOfflineDialog,
     } = useExperimentLauncher({
       experimentName,
       selectedValidationSet,
@@ -732,6 +737,7 @@ export default {
       isFormValid,
       isExperimentRunning,
       startExperiment,
+      showOfflineDialog,
       lockedValidationSet,
       fullValidationSetName,
       groupedLLMs,

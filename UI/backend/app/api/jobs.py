@@ -2,6 +2,7 @@ from flask import Blueprint, current_app, jsonify, request
 
 from app.infra import job_store
 from app.services.experiment_runner import submit_job, validate_config
+from app.services.connectivity import check_internet, OFFLINE_STATUS, OFFLINE_ERROR
 
 jobs_bp = Blueprint('jobs', __name__, url_prefix='/api')
 
@@ -16,6 +17,14 @@ def create_experiment_job():
     error = validate_config(config)
     if error:
         return jsonify({'error': error}), 400
+    # Outbound-connectivity gate: an experiment runs answer generation and/or
+    # evaluation, all of which call external providers. Check before creating
+    # the job so an offline container fails fast with a clear message instead
+    # of spawning a job that errors on every call.
+    if not check_internet():
+        import logging
+        logging.warning("Experiment launch blocked: no outbound internet connectivity.")
+        return jsonify(OFFLINE_ERROR), OFFLINE_STATUS
     job = submit_job(current_app._get_current_object(), config)
     return jsonify({'job_id': job['id'], 'status': job['status']}), 202
 

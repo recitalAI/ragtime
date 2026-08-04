@@ -41,5 +41,10 @@
     "email_required": "Email is required",
     "email_must_valid": "Email must be valid",
     "password_required": "Password is required"
+  },
+  "offline": {
+    "title": "No internet connection",
+    "message": "You are not connected to the internet. Generation requires an active connection. Check your connection and try again.",
+    "ok": "Got it"
   }
 }

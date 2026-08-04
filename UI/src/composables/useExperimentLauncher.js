@@ -11,11 +11,13 @@ import { onUnmounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { experimentService } from '@/services/generatorService';
 import { formatDateForBackend } from '@/utils/dateFormatter';
+import { useConnectivityGuard } from '@/composables/useConnectivityGuard';
 
 const JOB_STORAGE_KEY = 'ragtime_running_job_id';
 
 export function useExperimentLauncher(form, showMessage) {
   const router = useRouter();
+  const { showOfflineDialog, ensureOnline, handleOfflineError } = useConnectivityGuard();
 
   const isExperimentRunning = ref(false);
   const liveLogs = ref([]);
@@ -102,6 +104,10 @@ export function useExperimentLauncher(form, showMessage) {
     // Re-entrancy guard: form submit, double clicks, or Enter presses must
     // never create a second job while one is being submitted or running.
     if (isExperimentRunning.value) return;
+    // Offline guard: block the launch and show the popup when the browser
+    // reports no connection (the experiment runs generation + evaluation,
+    // which need the network).
+    if (!ensureOnline()) return;
     if (!form.validationSetData.value) {
       showMessage('Validation set data is not loaded. Please select a validation set.', 'error');
       return;
@@ -172,12 +178,13 @@ export function useExperimentLauncher(form, showMessage) {
       attachToJob(job.job_id);
     } catch (error) {
       console.error('Error starting experiment:', error);
+      isExperimentRunning.value = false;
+      if (handleOfflineError(error)) return;
       let errorMessage = 'An unexpected error occurred.';
       if (error.response && error.response.data && error.response.data.error) {
         errorMessage = error.response.data.error;
       }
       showMessage(`Error starting experiment: ${errorMessage}`, 'error');
-      isExperimentRunning.value = false;
     }
   };
 
@@ -192,6 +199,7 @@ export function useExperimentLauncher(form, showMessage) {
     liveLogs,
     isShowingLogs,
     autoScroll,
+    showOfflineDialog,
     startExperiment,
     resumeRunningJob,
   };
