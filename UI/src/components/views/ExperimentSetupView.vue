@@ -1,110 +1,190 @@
 <template>
   <div class="experiment-setup page-padding py-7">
-    <h2 class="text-h4 mb-4">Start experiment</h2>
+    <h2 class="h2-text mb-5">Start experiment</h2>
 
-    <v-card class="pa-6">
-      <!-- Behavior fix (5.4): while a job is submitting or running, every
-           form input is disabled (v-form propagates `disabled`); read-only
-           toggles like chunk show/hide stay interactive. -->
-      <v-form @submit.prevent="startExperiment" :disabled="isExperimentRunning">
-        <v-text-field
-          v-model="experimentName"
-          label="Experiment Name"
-          variant="outlined"
-          color="primary"
-          density="comfortable"
-          placeholder="Enter experiment name"
-          required
-        />
+    <!-- Behavior fix (5.4): while a job is submitting or running, every
+         form input is disabled (v-form propagates `disabled`); read-only
+         toggles like chunk show/hide stay interactive. -->
+    <v-form @submit.prevent="startExperiment" :disabled="isExperimentRunning">
 
-        <v-row>
-          <ValidationSetPicker
-            :validation-sets="validationSets"
-            v-model:selected-validation-set="selectedValidationSet"
-            :locked-validation-set="lockedValidationSet"
-            @change="onValidationSetChange"
+      <!-- ── Section 1: Experiment basics ──────────────────────────────── -->
+      <v-card class="mb-6">
+        <v-card-title>
+          <v-icon size="18" start>fas fa-flask</v-icon>
+          Experiment basics
+        </v-card-title>
+        <v-card-text>
+          <v-text-field
+            v-model="experimentName"
+            label="Experiment Name"
+            variant="outlined"
+            color="primary"
+            density="comfortable"
+            placeholder="Enter experiment name"
+            hide-details="auto"
+            class="mb-4"
+            required
           />
 
-          <v-col cols="12" sm="6">
-            <v-select
-              v-model="evaluationModel"
-              :items="evaluationModelOptions"
-              item-title="title"
-              item-value="value"
-              label="Evaluation Model"
-              variant="outlined"
-              color="primary"
-              density="comfortable"
-              style="min-width: 200px; height: 80px"
-              required
-            >
-              <template #item="{ item, props }">
-                <v-list-item
-                  v-bind="props"
-                  :disabled="item.raw.disabled"
-                  :subtitle="evalModelPrice(item.raw)"
-                >
-                  <template v-if="item.raw.disabled && item.raw.value !== ''">
-                    (API key not available)
-                  </template>
-                </v-list-item>
-              </template>
-            </v-select>
-          </v-col>
-        </v-row>
-
-        <DataFileImport
-          v-if="selectedValidationSet || lockedValidationSet"
-          @file-change="handleFileUpload"
-          @clear="clearFileUpload"
-        />
-
-        <v-expand-transition>
-          <div v-if="!fileName">
-            <RetrieverOptions
-              v-model:use-retriever="useRetriever"
-              :disabled="isRetrieverSelectionDisabled"
-              :retrievers="availableRetrievers"
-              v-model:selected-retriever="selectedRetriever"
+          <v-row>
+            <ValidationSetPicker
+              :validation-sets="validationSets"
+              v-model:selected-validation-set="selectedValidationSet"
+              :locked-validation-set="lockedValidationSet"
+              @change="onValidationSetChange"
             />
 
-            <ModelSelection
-              :grouped="groupedLLMs"
-              :builtins="builtinLLMs"
-              :customizedLLMs="customizedLLMs"
-              v-model:active-provider="activeProvider"
-              v-model:selectedLLMs="selectedLLMs"
-              v-model:selectedCustomLLMs="selectedCustomLLMs"
-              v-model:reasoningChoices="reasoningChoices"
-              v-model:reasoningEffortChoices="reasoningEffortChoices"
-              :evaluate-chunks="evaluateChunks"
-              :availability="apiKeyAvailability"
-            />
-          </div>
-        </v-expand-transition>
+            <v-col cols="12" sm="6">
+              <v-select
+                v-model="evaluationModel"
+                :items="evaluationModelOptions"
+                item-title="title"
+                item-value="value"
+                label="Evaluation Model"
+                variant="outlined"
+                color="primary"
+                density="comfortable"
+                hide-details="auto"
+                class="basics-select"
+                required
+              >
+                <template #item="{ item, props }">
+                  <v-list-item
+                    v-bind="props"
+                    :disabled="item.raw.disabled"
+                    :subtitle="evalModelPrice(item.raw)"
+                  >
+                    <template v-if="item.raw.disabled && item.raw.value !== ''">
+                      (API key not available)
+                    </template>
+                  </v-list-item>
+                </template>
+              </v-select>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
 
+      <!-- ── Section 2: Answers (import Excel OR generate with models) ──── -->
+      <v-card
+        class="mb-6"
+        :class="{ 'section-disabled': !(selectedValidationSet || lockedValidationSet) }"
+      >
+        <v-card-title>
+          <v-icon size="18" start>fas fa-comment-dots</v-icon>
+          Answers
+        </v-card-title>
+        <v-card-subtitle class="px-0 pb-4">
+          Import an Excel, or pick models to generate answers.
+        </v-card-subtitle>
         <v-card-text>
-          <div class="d-flex flex-column flex-sm-row align-center justify-space-between mb-6">
+          <DataFileImport
+            @file-change="handleFileUpload"
+            @clear="clearFileUpload"
+          />
+
+          <!-- When a file is imported, answers come from it: hide generation. -->
+          <v-expand-transition>
+            <div v-if="!fileName" class="mt-4">
+              <RetrieverOptions
+                v-model:use-retriever="useRetriever"
+                :disabled="isRetrieverSelectionDisabled"
+                :retrievers="availableRetrievers"
+                v-model:selected-retriever="selectedRetriever"
+              />
+
+              <ModelSelection
+                :grouped="groupedLLMs"
+                :builtins="builtinLLMs"
+                :customizedLLMs="customizedLLMs"
+                v-model:active-provider="activeProvider"
+                v-model:selectedLLMs="selectedLLMs"
+                v-model:selectedCustomLLMs="selectedCustomLLMs"
+                v-model:reasoningChoices="reasoningChoices"
+                v-model:reasoningEffortChoices="reasoningEffortChoices"
+                :evaluate-chunks="evaluateChunks"
+                :availability="apiKeyAvailability"
+              />
+            </div>
+          </v-expand-transition>
+
+          <!-- Selected model (from an imported file) -->
+          <div v-if="selectedModels.length > 0" class="mt-4">
+            <div class="text-body-2 text-medium-emphasis mb-2">Selected model</div>
+            <div class="d-flex align-center">
+              <v-chip
+                v-if="!isEditingModel"
+                :disabled="isExperimentRunning"
+                @click="!isExperimentRunning && startEditingModel()"
+              >
+                {{ selectedModels[0] }}
+              </v-chip>
+              <v-text-field
+                v-else
+                v-model="editingModelName"
+                dense
+                hide-details
+                class="model-edit-field"
+                @keyup.enter="saveModelEdit"
+                @blur="saveModelEdit"
+              ></v-text-field>
+              <v-btn
+                v-if="isEditingModel"
+                icon
+                size="small"
+                variant="text"
+                class="ml-2"
+                @click="saveModelEdit"
+              >
+                <v-icon>fas fa-check</v-icon>
+              </v-btn>
+            </div>
+          </div>
+        </v-card-text>
+      </v-card>
+
+      <!-- ── Section 3: Evaluation options ─────────────────────────────── -->
+      <v-card
+        class="mb-6"
+        :class="{ 'section-disabled': !(selectedValidationSet || lockedValidationSet) }"
+      >
+        <v-card-title>
+          <v-icon size="18" start>fas fa-circle-check</v-icon>
+          Evaluation options
+        </v-card-title>
+        <v-card-text>
+          <div class="d-flex flex-column flex-sm-row" style="gap: 8px 32px;">
             <v-checkbox
               v-model="evaluateAnswers"
               label="Evaluate Answers"
+              color="primary"
               class="ma-0 pa-0"
               hide-details
             />
             <v-checkbox
               v-model="evaluateChunks"
               label="Evaluate Chunks"
+              color="primary"
               class="ma-0 pa-0"
               hide-details
               :disabled="!canEvaluateChunks"
             />
           </div>
         </v-card-text>
+      </v-card>
 
-        <v-expand-transition>
-          <div v-if="matchedQuestions.length > 0" class="matched-questions mt-4">
-            <v-card-title>Questions and Answers</v-card-title>
-            <v-card-text>
+      <!-- ── Section 4: Questions and Answers (matched, from import) ───── -->
+      <v-expand-transition>
+        <v-card
+          v-if="matchedQuestions.length > 0"
+          class="mb-6"
+        >
+          <v-card-title>
+            <v-icon size="18" start>fas fa-list-ul</v-icon>
+            Questions and Answers
+          </v-card-title>
+          <v-card-text>
+            <div class="matched-questions">
               <v-expansion-panels>
                 <v-expansion-panel
                   v-for="(item, index) in matchedQuestions"
@@ -125,6 +205,8 @@
                     <v-btn
                       v-if="item.isEditing"
                       color="primary"
+                      variant="outlined"
+                      rounded
                       :disabled="isExperimentRunning"
                       @click="saveAnswer(index)"
                       class="mr-2"
@@ -133,6 +215,8 @@
                     </v-btn>
                     <v-btn
                       v-if="item.isEditing"
+                      variant="outlined"
+                      rounded
                       :disabled="isExperimentRunning"
                       @click="cancelEdit(index)"
                     >
@@ -141,18 +225,20 @@
                     <v-btn
                       v-else
                       color="primary"
+                      variant="outlined"
+                      rounded
                       :disabled="isExperimentRunning"
                       @click="editAnswer(index)"
                     >
                       Modify
                     </v-btn>
-                    
+
                     <div v-if="item.chunks.length > 0" class="mt-4">
-                      <v-card-subtitle>Chunks:</v-card-subtitle>
+                      <v-card-subtitle class="px-0">Chunks:</v-card-subtitle>
                       <div class="chunk-container">
-                        <button 
+                        <button
                           type="button"
-                          v-for="(chunk, chunkIndex) in item.chunks" 
+                          v-for="(chunk, chunkIndex) in item.chunks"
                           :key="chunkIndex"
                           @click="toggleChunk(index, chunkIndex)"
                           class="chunk-button"
@@ -160,10 +246,10 @@
                           Chunk {{ chunkIndex + 1 }}
                         </button>
                       </div>
-                      <div 
-                        v-for="(chunk, chunkIndex) in item.chunks" 
-                        :key="`text-${chunkIndex}`" 
-                        v-show="item.visibleChunks[chunkIndex]" 
+                      <div
+                        v-for="(chunk, chunkIndex) in item.chunks"
+                        :key="`text-${chunkIndex}`"
+                        v-show="item.visibleChunks[chunkIndex]"
                         class="chunk-text mt-2"
                       >
                         <p><strong>Chunk {{ chunkIndex + 1 }}:</strong> {{ chunk }}</p>
@@ -172,63 +258,38 @@
                   </v-expansion-panel-text>
                 </v-expansion-panel>
               </v-expansion-panels>
-            </v-card-text>
-          </div>
-        </v-expand-transition>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-expand-transition>
 
-        <v-card-text v-if="selectedModels.length > 0">
-          <v-card-title>Selected Model:</v-card-title>
-          <div class="d-flex align-center">
-            <v-chip
-              v-if="!isEditingModel"
-              class="ma-2"
-              :disabled="isExperimentRunning"
-              @click="!isExperimentRunning && startEditingModel()"
-            >
-              {{ selectedModels[0] }}
-            </v-chip>
-            <v-text-field
-              v-else
-              v-model="editingModelName"
-              dense
-              hide-details
-              class="model-edit-field ma-2"
-              @keyup.enter="saveModelEdit"
-              @blur="saveModelEdit"
-            ></v-text-field>
-            <v-btn
-              v-if="isEditingModel"
-              icon
-              small
-              @click="saveModelEdit"
-            >
-              <v-icon>mdi-check</v-icon>
-            </v-btn>
-          </div>
-        </v-card-text>
+      <!-- Live logs while running -->
+      <LiveLogPanel
+        v-if="isShowingLogs"
+        :logs="liveLogs"
+        v-model:auto-scroll="autoScroll"
+        class="mb-6"
+      />
 
-        <LiveLogPanel
-          v-if="isShowingLogs"
-          :logs="liveLogs"
-          v-model:auto-scroll="autoScroll"
-        />
-
-        <v-card-actions>
-          <!-- type="submit" already routes the click through the form's
-               @submit.prevent handler; a duplicate @click here used to fire
-               startExperiment twice per click and queue two jobs. -->
-          <v-btn
-            color="primary"
-            type="submit"
-            :loading="isExperimentRunning"
-            :disabled="!isFormValid || isExperimentRunning"
-            block
-          >
-            {{ isExperimentRunning ? 'Experiment in Progress...' : 'Start Experiment' }}
-          </v-btn>
-        </v-card-actions>
-      </v-form>
-    </v-card>
+      <!-- Launch -->
+      <div class="d-flex justify-end mb-4">
+        <!-- type="submit" already routes the click through the form's
+             @submit.prevent handler; a duplicate @click here used to fire
+             startExperiment twice per click and queue two jobs. -->
+        <v-btn
+          color="primary"
+          variant="flat"
+          rounded
+          size="large"
+          type="submit"
+          :loading="isExperimentRunning"
+          :disabled="!isFormValid || isExperimentRunning"
+        >
+          <v-icon size="17" start>fas fa-play</v-icon>
+          {{ isExperimentRunning ? 'Experiment in Progress...' : 'Start Experiment' }}
+        </v-btn>
+      </div>
+    </v-form>
 
     <FormatErrorDialog
       v-model="formatError.open"
@@ -784,17 +845,22 @@ export default {
 
 <style scoped>
 .experiment-setup {
-  height: calc(100vh - 64px); /* Adjust based on your app's header height */
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.v-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+.section-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* The global `.v-select { height: 40px }` (in _form.scss) clips a
+   comfortable-density select and pushes its text to the top. Neutralize it
+   for the basics selects so the field keeps its natural height and the text
+   sits centered. */
+.basics-select.v-select {
+  height: auto;
 }
 
 .matched-questions {

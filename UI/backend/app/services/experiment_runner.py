@@ -46,11 +46,33 @@ def _normalize_csv_items(items):
     return items
 
 
+def _csv_items_have_chunks(items):
+    """True if any imported CSV/Excel item actually carries retrieved chunks.
+    Chunks can sit at the QA level (`chunks.items`) or on the answer
+    (`answers.items[].llm_answer.chunks`); we treat the item as having chunks
+    if either holds a non-empty list. Used to label the experiment's retriever
+    correctly: importing only answers must read as "No retriever", while
+    importing answers *with* chunks reads as a custom retriever."""
+    for item in items or []:
+        qa_chunks = (item.get('chunks') or {})
+        if isinstance(qa_chunks, dict) and qa_chunks.get('items'):
+            return True
+        if isinstance(qa_chunks, list) and qa_chunks:
+            return True
+        for ans in ((item.get('answers') or {}).get('items') or []):
+            la = ans.get('llm_answer') or {}
+            if la.get('chunks'):
+                return True
+    return False
+
+
 def build_expe(config):
     validation_set_data = config.get('validationSetData')
-    if config.get('withCSV') and isinstance(validation_set_data, dict) and validation_set_data.get('items'):
+    is_csv = bool(config.get('withCSV') and isinstance(validation_set_data, dict) and validation_set_data.get('items'))
+    if is_csv:
         # Excel/CSV path: use the answers the user imported and matched.
-        expe = Expe(json_dict=_normalize_csv_items(validation_set_data['items']))
+        items = _normalize_csv_items(validation_set_data['items'])
+        expe = Expe(json_dict=items)
     else:
         validation_set_path = safe_path(VALIDATION_SETS_FOLDER, config['validationSet'])
         if not validation_set_path.exists():
@@ -58,7 +80,13 @@ def build_expe(config):
         expe = Expe(validation_set_path)
 
     expe.meta['validation_set'] = config['validationSet']
-    expe.meta['retriever_name'] = config.get('retrieverType', 'Not used')
+    if is_csv:
+        # No retriever ran here - the answers (and any chunks) were imported.
+        # Label by what was actually imported: chunks present => a retriever
+        # produced them upstream (custom), otherwise answers only => none.
+        expe.meta['retriever_name'] = 'Custom retriever' if _csv_items_have_chunks(items) else 'No retriever'
+    else:
+        expe.meta['retriever_name'] = config.get('retrieverType', 'Not used')
     return expe
 
 

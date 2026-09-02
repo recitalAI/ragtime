@@ -10,7 +10,9 @@
       variant="outlined"
       color="primary"
       density="comfortable"
-      style="min-width: 200px; height: 80px"
+      hide-details="auto"
+      class="basics-select"
+      style="min-width: 200px"
       required
       @update:model-value="onChange"
     />
@@ -55,3 +57,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* The global `.v-select { height: 40px }` (_form.scss) clips a
+   comfortable-density select and top-aligns its text. Keep natural height so
+   the selected text stays vertically centered, matching the Evaluation Model
+   select on the setup page. */
+.basics-select.v-select {
+  height: auto;
+}
+</style>
