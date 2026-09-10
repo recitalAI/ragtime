@@ -94,6 +94,7 @@
               />
 
               <ModelSelection
+                v-if="!isSearchSelected"
                 :grouped="groupedLLMs"
                 :builtins="builtinLLMs"
                 :customizedLLMs="customizedLLMs"
@@ -105,6 +106,19 @@
                 :evaluate-chunks="evaluateChunks"
                 :availability="apiKeyAvailability"
               />
+
+              <!-- Search provides the answers itself: no model to pick. -->
+              <v-alert
+                v-else
+                type="info"
+                variant="tonal"
+                density="comfortable"
+                class="mt-2"
+              >
+                Answers and chunks come from Search. No answer model is needed —
+                configure your Search token in Profile settings. You'll review
+                the retrieved answers and chunks before evaluation runs.
+              </v-alert>
             </div>
           </v-expand-transition>
 
@@ -263,6 +277,72 @@
         </v-card>
       </v-expand-transition>
 
+      <!-- Search checkpoint: review retrieved answers + chunks before eval -->
+      <v-card v-if="isAwaitingReview" class="mb-6">
+        <v-card-title>
+          <v-icon size="18" start>fas fa-clipboard-check</v-icon>
+          Review retrieved answers
+        </v-card-title>
+        <v-card-subtitle class="px-0 pb-4">
+          Check the answers and chunks returned by Search, then launch the
+          evaluation — or stop and download them for debugging.
+        </v-card-subtitle>
+        <v-card-text>
+          <div class="matched-questions">
+            <v-expansion-panels>
+              <v-expansion-panel
+                v-for="(item, index) in reviewItems"
+                :key="index"
+              >
+                <v-expansion-panel-title>
+                  {{ item.question }}
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
+                  <div class="text-body-2 text-medium-emphasis mb-1">Answer</div>
+                  <p class="mb-4">{{ item.answer || '(empty answer)' }}</p>
+
+                  <div v-if="item.chunks && item.chunks.length > 0">
+                    <div class="text-body-2 text-medium-emphasis mb-1">
+                      Chunks ({{ item.chunks.length }})
+                    </div>
+                    <div
+                      v-for="(chunk, cIdx) in item.chunks"
+                      :key="cIdx"
+                      class="chunk-text mt-2"
+                    >
+                      <p><strong>Chunk {{ cIdx + 1 }}:</strong> {{ chunk }}</p>
+                    </div>
+                  </div>
+                  <p v-else class="text-caption text-medium-emphasis">No chunks returned.</p>
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row justify-end mt-6" style="gap: 12px;">
+            <v-btn
+              variant="outlined"
+              rounded
+              :disabled="isEvaluating"
+              @click="stopExperiment"
+            >
+              <v-icon size="17" start>fas fa-stop</v-icon>
+              Stop &amp; download
+            </v-btn>
+            <v-btn
+              color="primary"
+              variant="flat"
+              rounded
+              :loading="isEvaluating"
+              @click="launchEvaluation"
+            >
+              <v-icon size="17" start>fas fa-play</v-icon>
+              Launch evaluation
+            </v-btn>
+          </div>
+        </v-card-text>
+      </v-card>
+
       <!-- Live logs while running -->
       <LiveLogPanel
         v-if="isShowingLogs"
@@ -272,7 +352,7 @@
       />
 
       <!-- Launch -->
-      <div class="d-flex justify-end mb-4">
+      <div v-if="!isAwaitingReview" class="d-flex justify-end mb-4">
         <!-- type="submit" already routes the click through the form's
              @submit.prevent handler; a duplicate @click here used to fire
              startExperiment twice per click and queue two jobs. -->
@@ -480,6 +560,12 @@ export default {
             hasChunks.value && !moreThanOneLLMSelected.value;
     });
 
+    // Search retriever supplies both answers and chunks, so no answer-LLM is
+    // chosen; the model selection is hidden and evaluation waits for a review.
+    const isSearchSelected = computed(() =>
+      useRetriever.value && String(selectedRetriever.value || '').toLowerCase() === 'search'
+    );
+
     const moreThanOneLLMSelected = computed(() => {
       return (selectedLLMs.value.length + selectedCustomLLMs.value.length) > 1;
     });
@@ -492,10 +578,16 @@ export default {
     });
 
     const isFormValid = computed(() => {
+      // Search supplies the answers itself, so it satisfies the "answers
+      // source" requirement without a file or an LLM selection.
+      const hasAnswerSource = isSearchSelected.value
+        || fileName.value !== ''
+        || selectedLLMs.value.length > 0
+        || selectedCustomLLMs.value.length > 0;
       return experimentName.value.trim() !== '' &&
-              evaluationModel.value !=='' &&
+             evaluationModel.value !== '' &&
              (lockedValidationSet.value || selectedValidationSet.value !== '') &&
-             (fileName.value !== '' || (selectedLLMs.value.length > 0 || selectedCustomLLMs.value.length > 0)) &&
+             hasAnswerSource &&
              (evaluateAnswers.value || (evaluateChunks.value && hasChunks.value));
     });
 
@@ -743,6 +835,12 @@ export default {
       startExperiment,
       resumeRunningJob,
       showOfflineDialog,
+      isAwaitingReview,
+      reviewItems,
+      reviewName,
+      isEvaluating,
+      launchEvaluation,
+      stopExperiment,
     } = useExperimentLauncher({
       experimentName,
       selectedValidationSet,
@@ -838,6 +936,14 @@ export default {
       editingModelName,
       startEditingModel,
       saveModelEdit,
+      // Search: hide model selection + checkpoint review
+      isSearchSelected,
+      isAwaitingReview,
+      reviewItems,
+      reviewName,
+      isEvaluating,
+      launchEvaluation,
+      stopExperiment,
     };
   },
 }

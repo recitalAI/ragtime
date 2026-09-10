@@ -5,6 +5,7 @@ JSON response. Filesystem access goes through app.infra.storage.
 """
 from .experiments import experiments_bp
 from .generation import generation_bp
+from .feedback import feedback_bp
 from .jobs import jobs_bp
 from .keys import keys_bp
 from .logs import logs_bp
@@ -19,4 +20,5 @@ blueprints = [
     jobs_bp,
     experiments_bp,
     models_info_bp,
+    feedback_bp,
 ]

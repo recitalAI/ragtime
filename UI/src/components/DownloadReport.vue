@@ -27,7 +27,11 @@ export default {
     experimentData: {
       type: Object,
       required: true
-    }
+    },
+    meta: {
+      type: Object,
+      default: () => ({})
+    },
   },
 
   computed: {

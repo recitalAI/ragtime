@@ -12,6 +12,7 @@ FILES_FOLDER = _BACKEND_DIR / 'files'
 VALIDATION_SETS_FOLDER = FILES_FOLDER / 'validation_sets'
 EVALS_FOLDER = FILES_FOLDER / 'evaluation_results'
 TEMP_FOLDER = FILES_FOLDER / 'temp'
+FEEDBACK_FOLDER = FILES_FOLDER / 'feedback'
 
 
 def safe_path(folder, filename):

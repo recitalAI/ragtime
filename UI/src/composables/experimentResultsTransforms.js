@@ -44,7 +44,7 @@ export const splitSummaryResults = (results) => ({
 });
 
 export const extractFactEvaluation = (evalText, factNumber) => {
-  if (!evalText) return { result: '', evalShow: '' };
+  if (!evalText) return { result: '', evalShow: '', extract: '', comment: '' };
   // Remove HTML tags and normalize newlines
   const cleanText = evalText.replace(/<\/?[^>]+(>|$)/g, "\n").replace(/\n+/g, "\n").trim();
 
@@ -111,7 +111,7 @@ export const extractFactEvaluation = (evalText, factNumber) => {
       matches = [];
     }
   }
-  if (!matches) return { result: '', evalShow: '' };
+  if (!matches) return { result: '', evalShow: '', extract: '', comment: '' };
 
   const stateMatch = result.match(/^\s*(?:\d+\.|\[\d+\])?\s*\[(OK|NOT FOUND|HALLU)\]/i);
   const state = stateMatch ? stateMatch[1] : '';
@@ -127,7 +127,15 @@ export const extractFactEvaluation = (evalText, factNumber) => {
   processedPartMatch = processedPartMatch.replace(/N\/A|None/gi, "").trim();
   const evalShow = `<p><em>${processedPartMatch || ' '}</em></p><p>${uniqueResult}</p>`;
 
-  return { result: `[${state}] ${uniqueResult}`, evalShow };
+  // Also return the two parts separately, for the 3-column eval display
+  // (Fact | Generated text | Comment). `extract` is the quoted passage from the
+  // answer (shown in italic today); `comment` is the eval LLM's explanation.
+  return {
+    result: `[${state}] ${uniqueResult}`,
+    evalShow,
+    extract: processedPartMatch || '',
+    comment: uniqueResult || '',
+  };
 };
 
 export const extractChunkEvaluation = (chunkEvals, factNumber, qaChunks) => {
@@ -277,6 +285,8 @@ export const buildDetailedGroups = (results, fullEval) => {
             ...fact,
             status,
             evaluation: factEvaluation.evalShow,
+            evalExtract: factEvaluation.extract || '',
+            evalComment: factEvaluation.comment || '',
             chunkEval: chunkEvaluation,
             chunkButtons: chunkButtons.map(button => ({ ...button, isVisible: false })),
             problemType,
@@ -369,3 +379,39 @@ export const computeChunksSummary = (fullEvaluationItems, modelName) => {
     }
   };
 };
+
+// ── Results clarity helpers (per-question badge + global imputation) ─────────
+
+// Buckets a fact's problemType into who's responsible: 'retriever', 'llm', or
+// '' (no chunk-eval attribution available). Mirrors analyzeFactAndChunkStatus.
+export const imputationOf = (problemType) => {
+  if (problemType === 'Retriever or source issue' || problemType === 'Corpus') return 'retriever';
+  if (problemType === 'LLM issue' || problemType === 'Contradiction' || problemType === 'Invention') return 'llm';
+  return '';
+};
+
+// One badge summarizing a question's detailed group. Returns
+// { level: 'ok'|'warn', label, errors, retriever, llm }.
+export const computeQuestionBadge = (group) => {
+  const facts = group.facts || [];
+  let errors = 0, retriever = 0, llm = 0;
+  for (const f of facts) {
+    if (f.status === 'hallu' || f.status === 'missing') {
+      errors += 1;
+      const who = imputationOf(f.problemType);
+      if (who === 'retriever') retriever += 1;
+      else if (who === 'llm') llm += 1;
+    }
+  }
+  if (errors === 0) {
+    return { level: 'ok', label: 'All OK', errors: 0, retriever: 0, llm: 0 };
+  }
+  // Build a compact attribution suffix when chunk eval attributed anything.
+  const parts = [];
+  if (retriever) parts.push(`${retriever} retriever`);
+  if (llm) parts.push(`${llm} LLM`);
+  const suffix = parts.length ? ` (${parts.join(', ')})` : '';
+  const label = `${errors} error${errors > 1 ? 's' : ''}${suffix}`;
+  return { level: 'warn', label, errors, retriever, llm };
+};
+

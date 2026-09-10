@@ -80,6 +80,33 @@ export const experimentService = {
     return response.data;
   },
 
+  // Search checkpoint: fetch the retrieved question/answer/chunks to review.
+  async getReviewedJob(jobId) {
+    const response = await http.get(`jobs/${jobId}/review`);
+    return response.data;
+  },
+
+  // Approve the checkpoint: launch phase-2 evaluation. Poll as usual after.
+  async evaluateReviewedJob(jobId) {
+    const response = await http.post(`jobs/${jobId}/evaluate`);
+    return response.data;
+  },
+
+  // Stop at the checkpoint: download a debug .xlsx (question/answer/chunks),
+  // then the pending data is dropped server-side. Triggers a browser download.
+  async discardReviewedJob(jobId, downloadName = 'search_debug.xlsx') {
+    const response = await http.post(`jobs/${jobId}/discard`, null, { responseType: 'blob' });
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', downloadName);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url);
+    return true;
+  },
+
   startExperiment(config) {
     return http.post('start-experiment', config, LONG_REQUEST)
     .then(response => {
@@ -136,7 +163,28 @@ export const experimentService = {
     // Process full evaluation
     const full = this.processFullEvaluation(expe);
 
-    return { summary, detailed, full };
+    // Pass the experiment meta through (retriever_name, evaluate_answers,
+    // evaluate_chunks, validation_set) so the results UI can, e.g., explain an
+    // empty chunk evaluation or show the retriever.
+    const meta = expe.meta || {};
+
+    return { summary, detailed, full, meta };
+  },
+
+  // ── Human feedback (I1) ────────────────────────────────────────────────
+  async getFeedback(experimentName) {
+    const response = await http.get(`feedback?name=${encodeURIComponent(experimentName)}`);
+    return response.data;
+  },
+  async saveFeedback(experimentName, entry) {
+    const response = await http.post('feedback', { experiment: experimentName, entry });
+    return response.data;
+  },
+  async deleteFeedback(experimentName, questionIndex, factIndex, which = null) {
+    const response = await http.delete('feedback', {
+      data: { experiment: experimentName, question_index: questionIndex, fact_index: factIndex, which },
+    });
+    return response.data;
   },
 
   processExperimentSummary(expe) {
@@ -159,6 +207,7 @@ export const experimentService = {
             totalHallu: 0,
             totalMissing: 0,
             totalExtra: 0,
+            totalUnevaluated: 0,
             totalCost: 0,
             isChunkEval: modelName === "Missings Eval" || modelName === "Hallucinations Eval" || modelName === "Hallucination Eval"
           };
@@ -174,6 +223,9 @@ export const experimentService = {
         } else {
           result.totalScore += answer.eval?.auto || 0;
           result.totalFacts += qa.facts?.items?.length || 0;
+          const _m = answer.eval?.meta;
+          const _hasVerdict = _m && ((_m.nb_ok || 0) + (_m.nb_hallu || 0) + (_m.nb_missing || 0)) > 0;
+          if (!_hasVerdict) { result.totalUnevaluated += qa.facts?.items?.length || 0; }
         }
 
         result.totalOk += answer.eval?.meta?.nb_ok || 0;
@@ -197,6 +249,7 @@ export const experimentService = {
       hallu: result.totalHallu,
       missing: result.totalMissing,
       extra: result.totalExtra,
+      unevaluated: result.totalUnevaluated,
       cost: result.totalCost,
       isChunkEval: result.isChunkEval
     }));

@@ -150,6 +150,8 @@ export default {
       { value: 'ANTHROPIC_API_KEY', title: 'Anthropic API Key' },
       { value: 'MISTRAL_API_KEY', title: 'Mistral API Key' },
       { value: 'OVH_API_KEY', title: 'OVH API Key' },
+      { value: 'SEARCH_TOKEN', title: 'Search Token (reciTAL Search retriever)' },
+      { value: 'SEARCH_FOLDER_ID', title: 'Search Folder ID (optional, scopes retrieval)' },
       { value: 'custom', title: 'Custom API Key' },
     ];
 

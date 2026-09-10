@@ -10,10 +10,13 @@
       <DownloadReport 
         v-if="hasChunkEvaluations && fullEvaluation && fullEvaluation.length > 0"
         :experiment-data="{ items: fullEvaluation }" 
+        :meta="experimentMeta"
       />
       <DownloadSimpleReport
         v-else-if="fullEvaluation && fullEvaluation.length > 0"
         :experiment-data="{ items: fullEvaluation }" 
+        :meta="experimentMeta"
+        :chunk-eval-empty="chunkEvalRequestedButEmpty"
       />
     </h2>
     <!-- Main Summary table -->
@@ -33,6 +36,36 @@
       @close="closeChunksSummary"
     />
 
+    <!-- Chunk eval was requested but there was nothing to attribute (no
+         hallucination / missing fact). Explain the empty state instead of
+         showing nothing. -->
+    <v-alert
+      v-if="chunkEvalRequestedButEmpty"
+      type="success"
+      variant="tonal"
+      density="comfortable"
+      class="mt-2 mb-4"
+    >
+      Chunk evaluation was enabled, but there was nothing to diagnose — every
+      answer is correct (0 hallucinations, 0 missing facts). The LLM-vs-retriever
+      attribution only appears when there are errors to attribute.
+    </v-alert>
+
+    <!-- Some questions' evaluation failed silently (empty eval); surface it
+         so totals make sense and the user can re-run. -->
+    <v-alert
+      v-if="totalUnevaluated > 0"
+      type="warning"
+      variant="tonal"
+      density="comfortable"
+      class="mt-2 mb-4"
+    >
+      {{ totalUnevaluated }} fact(s) could not be evaluated — the evaluation
+      failed on some questions (e.g. timeout or provider error), so they are
+      not counted as OK / Hallu / Missing. Re-running the evaluation usually
+      resolves this.
+    </v-alert>
+
     <!-- Detailed question-by-question results -->
     <div class="detailed-results">
       <div class="results-header">
@@ -43,6 +76,7 @@
       </div>
       <DetailedResultsTable
         :items="filteredDetailedResults"
+        :experiment-name="experimentName"
         @toggle-expand="toggleExpandedDetails"
         @toggle-fact-chunk="showChunk"
         @toggle-chunk="showChunkContent"
@@ -90,6 +124,9 @@ export default {
       selectedModel,
       chunksSummary,
       hasChunkEvaluations,
+      chunkEvalRequestedButEmpty,
+      totalUnevaluated,
+      experimentMeta,
       filteredDetailedResults,
       filters,
       fetchResults,
@@ -112,6 +149,9 @@ export default {
       selectedModel,
       chunksSummary,
       hasChunkEvaluations,
+      chunkEvalRequestedButEmpty,
+      totalUnevaluated,
+      experimentMeta,
       filteredDetailedResults,
       filters,
       toggleExpandedDetails,
@@ -144,4 +184,5 @@ export default {
   align-items: center;
   margin-bottom: 12px;
 }
+
 </style>

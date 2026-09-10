@@ -297,6 +297,14 @@ export default {
     experimentData: {
       type: Object,
       required: true
+    },
+    meta: {
+      type: Object,
+      default: () => ({})
+    },
+    chunkEvalEmpty: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -395,6 +403,15 @@ export default {
           headStyles: { fillColor: RC.brand, textColor: RC.white, fontStyle: 'bold', fontSize: 8 },
           alternateRowStyles: { fillColor: RC.cardBg },
         });
+
+        // ── Chunk-eval empty state note ───────────────────────────────────
+        if (this.chunkEvalEmpty) {
+          lm.currentY += 2;
+          lm.addContent(
+            'Chunk evaluation was enabled, but there was nothing to diagnose — every answer is correct (0 hallucinations, 0 missing facts).',
+            { fontSize: 8, fontStyle: 'italic', color: RC.sub, gapAfter: 3 }
+          );
+        }
 
         // ── Per-question ──────────────────────────────────────────────────
         for (const result of detailedResults) {
